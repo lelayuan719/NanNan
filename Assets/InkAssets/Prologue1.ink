@@ -1,5 +1,5 @@
 Nan Nan: Who are you?
-Monster: I am nothing, I am color, I am oblivion, I am the past ... I am ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇
+Monster: I am nothing, I am color, I am oblivion, I am the past ... I am $!`\&**@(!%$^/&%^@
 Nan Nan: Who am I?
 Monster: You are in this world, you are gray, you are looking for you, you are tracing ...
 Nannan: Where is this place?
