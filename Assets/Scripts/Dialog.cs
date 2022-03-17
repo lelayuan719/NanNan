@@ -17,6 +17,7 @@ public class Dialog : MonoBehaviour
     private AudioSource source;
     public PlayerController playerController;
     public GameObject npc;
+    public GameObject npc2;
 
 
     void Start()
@@ -66,6 +67,9 @@ public class Dialog : MonoBehaviour
             Color tmp = npc.GetComponent<SpriteRenderer>().color;
             tmp.a = 0f;
             npc.GetComponent<SpriteRenderer>().color = tmp;
+            Color tmp2 = npc2.GetComponent<SpriteRenderer>().color;
+            tmp2.a = 0f;
+            npc2.GetComponent<SpriteRenderer>().color = tmp2;
         }
     }
 }
