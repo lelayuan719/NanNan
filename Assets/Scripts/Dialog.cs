@@ -15,6 +15,8 @@ public class Dialog : MonoBehaviour
     private int index;
     public float typingSpeed;
     private AudioSource source;
+    public PlayerController playerController;
+    public GameObject npc;
 
 
     void Start()
@@ -26,6 +28,8 @@ public class Dialog : MonoBehaviour
 
     public void TriggerDialog()
     {
+        playerController.playerCanMove = false;
+        playerController.speed = 0;
         StartCoroutine(Type());
     }
 
@@ -40,8 +44,6 @@ public class Dialog : MonoBehaviour
     }
 
     IEnumerator Type(){
-        charName.text = "";
-        charName.text += character[index];
         foreach(char letter in sentence){
             textDisplay.text += letter;
             yield return new WaitForSeconds(typingSpeed);
@@ -59,6 +61,11 @@ public class Dialog : MonoBehaviour
             StartCoroutine(Type());
         } else{
             textDisplay.text = "";
+            playerController.playerCanMove = true;
+            playerController.speed = 50;
+            Color tmp = npc.GetComponent<SpriteRenderer>().color;
+            tmp.a = 0f;
+            npc.GetComponent<SpriteRenderer>().color = tmp;
         }
     }
 }

@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsLadder;
     private bool isClimbing;
     private float distWalked;
+    public bool playerCanMove = true;
 
     Animator anim;
 
@@ -31,39 +32,24 @@ public class PlayerController : MonoBehaviour
     }
 
     void FixedUpdate(){
-        inputHorizontal = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(inputHorizontal * speed, rb.velocity.y);
-        distWalked += inputHorizontal*speed;
-        if(inputHorizontal!=0){
-            anim.SetBool("isWalking",true);
+        if (playerCanMove){
+            inputHorizontal = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(inputHorizontal * speed, rb.velocity.y);
+            distWalked += inputHorizontal*speed;
+            if(inputHorizontal!=0){
+                anim.SetBool("isWalking",true);
+            } else {
+                anim.SetBool("isWalking",false);
+            }
+            
+            if (distWalked > 200000 || distWalked < -5000){
+                rb.velocity = new Vector2(0, rb.velocity.y);
+                distWalked -= inputHorizontal*speed;
+                //Instantiate(gameObject,mountain);
+            }
         } else {
             anim.SetBool("isWalking",false);
         }
         
-        if (distWalked > 200000 || distWalked < -5000){
-            rb.velocity = new Vector2(0, rb.velocity.y);
-            distWalked -= inputHorizontal*speed;
-            //Instantiate(gameObject,mountain);
-        }
-        /*RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, 
-                                            Vector2.up, distance, whatIsLadder);
-
-        if(hitInfo.collider != null){
-            if(Input.GetKeyDown(KeyCode.UpArrow) 
-               || Input.GetKeyDown(KeyCode.W)){
-                isClimbing = true;
-            }
-        } else {
-            isClimbing = false;
-        }
-
-        if(isClimbing){
-            rb.gravityScale = 0;
-            inputVertical = Input.GetAxisRaw("Vertical");
-            rb.velocity = new Vector2(rb.velocity.x, inputVertical * speed);
-        } else {
-            rb.gravityScale = 10;
-        }
-        */
     }
 }
