@@ -90,6 +90,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -640,6 +641,29 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      nanna_idle1_sprite_sheet_right_black_and_white_19: 5747231110256649372
+      nanna_idle1_sprite_sheet_right_black_and_white_14: -78763412028613263
+      nanna_idle1_sprite_sheet_right_black_and_white_5: -6304240962442444557
+      nanna_idle1_sprite_sheet_right_black_and_white_1: 7523938769789039210
+      nanna_idle1_sprite_sheet_right_black_and_white_10: -8451708343800103424
+      nanna_idle1_sprite_sheet_right_black_and_white_7: 2492778766234438244
+      nanna_idle1_sprite_sheet_right_black_and_white_20: 4484402690503329022
+      nanna_idle1_sprite_sheet_right_black_and_white_17: 1157545942974305284
+      nanna_idle1_sprite_sheet_right_black_and_white_11: 1336855274490277959
+      nanna_idle1_sprite_sheet_right_black_and_white_9: -9172934223741813382
+      nanna_idle1_sprite_sheet_right_black_and_white_2: 6716319156512720422
+      nanna_idle1_sprite_sheet_right_black_and_white_16: 2811929439821176361
+      nanna_idle1_sprite_sheet_right_black_and_white_4: 1830139855688347283
+      nanna_idle1_sprite_sheet_right_black_and_white_12: -392568874512300004
+      nanna_idle1_sprite_sheet_right_black_and_white_13: -5766266978617794325
+      nanna_idle1_sprite_sheet_right_black_and_white_3: 7134178119593296979
+      nanna_idle1_sprite_sheet_right_black_and_white_6: 3135159520883577509
+      nanna_idle1_sprite_sheet_right_black_and_white_15: 7454607011588547618
+      nanna_idle1_sprite_sheet_right_black_and_white_0: -2397520537840267576
+      nanna_idle1_sprite_sheet_right_black_and_white_8: 1786630843000316965
+      nanna_idle1_sprite_sheet_right_black_and_white_21: 4991008150013814124
+      nanna_idle1_sprite_sheet_right_black_and_white_18: -5129638753488993899
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

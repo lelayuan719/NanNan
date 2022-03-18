@@ -90,6 +90,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -628,6 +629,29 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      nannan_idle1_bw_4: 2236786757686143361
+      nannan_idle1_bw_15: -269963642724355962
+      nannan_idle1_bw_18: -1361564882501779700
+      nannan_idle1_bw_20: 3341644302682063362
+      nannan_idle1_bw_2: 6431003385380027433
+      nannan_idle1_bw_8: -8655928431821221164
+      nannan_idle1_bw_10: -4313852931026372647
+      nannan_idle1_bw_12: 7725550626792142896
+      nannan_idle1_bw_0: 6790744701983551529
+      nannan_idle1_bw_9: -5285135475609011137
+      nannan_idle1_bw_13: -4564215945216820842
+      nannan_idle1_bw_21: 3163933460938463096
+      nannan_idle1_bw_6: -1202170143889636575
+      nannan_idle1_bw_1: -6383377726456006891
+      nannan_idle1_bw_11: 7337999431083503336
+      nannan_idle1_bw_19: 436136085626624696
+      nannan_idle1_bw_3: -3905233735826994810
+      nannan_idle1_bw_14: -9205527081538691720
+      nannan_idle1_bw_17: -3848522496538388668
+      nannan_idle1_bw_16: 1028271047914193037
+      nannan_idle1_bw_7: 3438238375027690713
+      nannan_idle1_bw_5: -1693602139568171087
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
