@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         } else if (rb.transform.position.x > 4050 && inputHorizontal > 0){
             rb.velocity = new Vector2(0, rb.velocity.y);
-            SceneManager.LoadScene("Chapter 1", LoadSceneMode.Single);
+            SceneManager.LoadScene("Chapter_1_House", LoadSceneMode.Single);
         }
     }
 }

@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Prologue.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Chapter 1.unity
-    guid: d396f14503225a24ba5ea22d5d7ae129
+    path: Assets/Scenes/Chapter_1_House.unity
+    guid: 3072b916ce93daf42b44ae675d0222bb
   m_configObjects: {}
