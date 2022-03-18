@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -244,6 +245,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Nannan_walk_3: -1775646758647860889
+      Nannan_walk_2: 2066813490329845199
+      Nannan_walk_5: -6757302378703650862
+      Nannan_walk_4: 3207633900575140743
+      Nannan_walk_1: 6834115158158833281
+      Nannan_walk_0: -7975780568005716001
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

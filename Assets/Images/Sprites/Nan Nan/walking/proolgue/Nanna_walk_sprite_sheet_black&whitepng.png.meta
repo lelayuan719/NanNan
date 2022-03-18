@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -256,6 +257,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Nanna_walk_sprite_sheet_black&whitepng_3: 1581127884082842302
+      Nanna_walk_sprite_sheet_black&whitepng_2: 6477160621596200250
+      Nanna_walk_sprite_sheet_black&whitepng_5: 2888931141728986240
+      Nanna_walk_sprite_sheet_black&whitepng_4: -6394327099654364372
+      Nanna_walk_sprite_sheet_black&whitepng_0: -8081812282755507919
+      Nanna_walk_sprite_sheet_black&whitepng_1: 8519873465562755955
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
