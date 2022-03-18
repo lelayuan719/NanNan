@@ -1,0 +1,636 @@
+fileFormatVersion: 2
+guid: 90a1d7e443756064bb4bbc293de3136e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6790744701983551529
+    second: nannan_idle1_bw_0
+  - first:
+      213: -6383377726456006891
+    second: nannan_idle1_bw_1
+  - first:
+      213: 6431003385380027433
+    second: nannan_idle1_bw_2
+  - first:
+      213: -3905233735826994810
+    second: nannan_idle1_bw_3
+  - first:
+      213: 2236786757686143361
+    second: nannan_idle1_bw_4
+  - first:
+      213: -1693602139568171087
+    second: nannan_idle1_bw_5
+  - first:
+      213: -1202170143889636575
+    second: nannan_idle1_bw_6
+  - first:
+      213: 3438238375027690713
+    second: nannan_idle1_bw_7
+  - first:
+      213: -8655928431821221164
+    second: nannan_idle1_bw_8
+  - first:
+      213: -5285135475609011137
+    second: nannan_idle1_bw_9
+  - first:
+      213: -4313852931026372647
+    second: nannan_idle1_bw_10
+  - first:
+      213: 7337999431083503336
+    second: nannan_idle1_bw_11
+  - first:
+      213: 7725550626792142896
+    second: nannan_idle1_bw_12
+  - first:
+      213: -4564215945216820842
+    second: nannan_idle1_bw_13
+  - first:
+      213: -9205527081538691720
+    second: nannan_idle1_bw_14
+  - first:
+      213: -269963642724355962
+    second: nannan_idle1_bw_15
+  - first:
+      213: 1028271047914193037
+    second: nannan_idle1_bw_16
+  - first:
+      213: -3848522496538388668
+    second: nannan_idle1_bw_17
+  - first:
+      213: -1361564882501779700
+    second: nannan_idle1_bw_18
+  - first:
+      213: 436136085626624696
+    second: nannan_idle1_bw_19
+  - first:
+      213: 3341644302682063362
+    second: nannan_idle1_bw_20
+  - first:
+      213: 3163933460938463096
+    second: nannan_idle1_bw_21
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nannan_idle1_bw_0
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 5005
+        width: 267
+        height: 774
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920781ad3529d3e50800000000000000
+      internalID: 6790744701983551529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_1
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 5005
+        width: 269
+        height: 774
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517f27347cfa967a0800000000000000
+      internalID: -6383377726456006891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_2
+      rect:
+        serializedVersion: 2
+        x: 2826
+        y: 5005
+        width: 263
+        height: 774
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c39ee81838f3950800000000000000
+      internalID: 6431003385380027433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_3
+      rect:
+        serializedVersion: 2
+        x: 4027
+        y: 5005
+        width: 266
+        height: 773
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689092bab92ddc9c0800000000000000
+      internalID: -3905233735826994810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_4
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 5005
+        width: 267
+        height: 771
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1892e2284b9aa0f10800000000000000
+      internalID: 2236786757686143361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_5
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 3807
+        width: 267
+        height: 768
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b79230c3dd1f78e0800000000000000
+      internalID: -1693602139568171087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_6
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 3807
+        width: 269
+        height: 768
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123c0ed9f98015fe0800000000000000
+      internalID: -1202170143889636575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_7
+      rect:
+        serializedVersion: 2
+        x: 2826
+        y: 3807
+        width: 266
+        height: 768
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc44a4e59317bf20800000000000000
+      internalID: 3438238375027690713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_8
+      rect:
+        serializedVersion: 2
+        x: 4027
+        y: 3807
+        width: 266
+        height: 771
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2971cc3f6ffd780800000000000000
+      internalID: -8655928431821221164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_9
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 3807
+        width: 264
+        height: 771
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c728a694d67a6b0800000000000000
+      internalID: -5285135475609011137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_10
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 2606
+        width: 267
+        height: 773
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d735e07d9d1224c0800000000000000
+      internalID: -4313852931026372647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_11
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 2606
+        width: 268
+        height: 773
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee20cbaa9fc5d560800000000000000
+      internalID: 7337999431083503336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_12
+      rect:
+        serializedVersion: 2
+        x: 2826
+        y: 2606
+        width: 266
+        height: 773
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038fd340d5ba63b60800000000000000
+      internalID: 7725550626792142896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_13
+      rect:
+        serializedVersion: 2
+        x: 4027
+        y: 2606
+        width: 263
+        height: 773
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6997d23b7c5a8a0c0800000000000000
+      internalID: -4564215945216820842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_14
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 2606
+        width: 267
+        height: 773
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87dd5ae64e56f3080800000000000000
+      internalID: -9205527081538691720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_15
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1408
+        width: 267
+        height: 767
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680f42d4f75e04cf0800000000000000
+      internalID: -269963642724355962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_16
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1406
+        width: 269
+        height: 769
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d808ebfe117254e00800000000000000
+      internalID: 1028271047914193037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_17
+      rect:
+        serializedVersion: 2
+        x: 2826
+        y: 1406
+        width: 266
+        height: 769
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 447dab30e2d479ac0800000000000000
+      internalID: -3848522496538388668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_18
+      rect:
+        serializedVersion: 2
+        x: 4027
+        y: 1408
+        width: 266
+        height: 767
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0fb5d704ffba1de0800000000000000
+      internalID: -1361564882501779700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_19
+      rect:
+        serializedVersion: 2
+        x: 5228
+        y: 1408
+        width: 267
+        height: 770
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba118985777d0600800000000000000
+      internalID: 436136085626624696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_20
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 207
+        width: 264
+        height: 773
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202821bd9c7ef5e20800000000000000
+      internalID: 3341644302682063362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_idle1_bw_21
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 207
+        width: 269
+        height: 773
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 877953038bc88eb20800000000000000
+      internalID: 3163933460938463096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

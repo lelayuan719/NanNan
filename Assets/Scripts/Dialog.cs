@@ -18,6 +18,7 @@ public class Dialog : MonoBehaviour
     public PlayerController playerController;
     public GameObject npc;
     public GameObject npc2;
+    private bool spacePressed = false;
 
 
     void Start()
@@ -35,20 +36,24 @@ public class Dialog : MonoBehaviour
     }
 
     void Update(){
-
-
         if(textDisplay.text == sentence
-           && Input.GetKeyDown(KeyCode.Space)){
+           && Input.GetKeyDown(KeyCode.Space) && !spacePressed){
+            spacePressed = false;
             NextSentence();
-
-        }
+        } /*else if (Input.GetKeyDown(KeyCode.Space) && !spacePressed){
+            StopCoroutine(Type());
+            textDisplay.text = sentence;
+            spacePressed = true;
+        }*/
     }
 
     IEnumerator Type(){
-        foreach(char letter in sentence){
+        if (!spacePressed){
+           foreach(char letter in sentence){
             textDisplay.text += letter;
             yield return new WaitForSeconds(typingSpeed);
-        }
+            }
+        } 
         
     }
     
