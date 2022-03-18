@@ -68,7 +68,7 @@ public class Dialog : MonoBehaviour
         } else{
             textDisplay.text = "";
             playerController.playerCanMove = true;
-            playerController.speed = 50;
+            playerController.speed = 100;
             Color tmp = npc.GetComponent<SpriteRenderer>().color;
             tmp.a = 0f;
             npc.GetComponent<SpriteRenderer>().color = tmp;
