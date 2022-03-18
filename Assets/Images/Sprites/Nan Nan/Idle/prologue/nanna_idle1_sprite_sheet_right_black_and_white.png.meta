@@ -1,7 +1,73 @@
 fileFormatVersion: 2
 guid: e3ae277f88868774089c6bcd7a62f0da
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2397520537840267576
+    second: nanna_idle1_sprite_sheet_right_black_and_white_0
+  - first:
+      213: 7523938769789039210
+    second: nanna_idle1_sprite_sheet_right_black_and_white_1
+  - first:
+      213: 6716319156512720422
+    second: nanna_idle1_sprite_sheet_right_black_and_white_2
+  - first:
+      213: 7134178119593296979
+    second: nanna_idle1_sprite_sheet_right_black_and_white_3
+  - first:
+      213: 1830139855688347283
+    second: nanna_idle1_sprite_sheet_right_black_and_white_4
+  - first:
+      213: -6304240962442444557
+    second: nanna_idle1_sprite_sheet_right_black_and_white_5
+  - first:
+      213: 3135159520883577509
+    second: nanna_idle1_sprite_sheet_right_black_and_white_6
+  - first:
+      213: 2492778766234438244
+    second: nanna_idle1_sprite_sheet_right_black_and_white_7
+  - first:
+      213: 1786630843000316965
+    second: nanna_idle1_sprite_sheet_right_black_and_white_8
+  - first:
+      213: -9172934223741813382
+    second: nanna_idle1_sprite_sheet_right_black_and_white_9
+  - first:
+      213: -8451708343800103424
+    second: nanna_idle1_sprite_sheet_right_black_and_white_10
+  - first:
+      213: 1336855274490277959
+    second: nanna_idle1_sprite_sheet_right_black_and_white_11
+  - first:
+      213: -392568874512300004
+    second: nanna_idle1_sprite_sheet_right_black_and_white_12
+  - first:
+      213: -5766266978617794325
+    second: nanna_idle1_sprite_sheet_right_black_and_white_13
+  - first:
+      213: -78763412028613263
+    second: nanna_idle1_sprite_sheet_right_black_and_white_14
+  - first:
+      213: 7454607011588547618
+    second: nanna_idle1_sprite_sheet_right_black_and_white_15
+  - first:
+      213: 2811929439821176361
+    second: nanna_idle1_sprite_sheet_right_black_and_white_16
+  - first:
+      213: 1157545942974305284
+    second: nanna_idle1_sprite_sheet_right_black_and_white_17
+  - first:
+      213: -5129638753488993899
+    second: nanna_idle1_sprite_sheet_right_black_and_white_18
+  - first:
+      213: 5747231110256649372
+    second: nanna_idle1_sprite_sheet_right_black_and_white_19
+  - first:
+      213: 4484402690503329022
+    second: nanna_idle1_sprite_sheet_right_black_and_white_20
+  - first:
+      213: 4991008150013814124
+    second: nanna_idle1_sprite_sheet_right_black_and_white_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +107,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +141,495 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_0
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 5005
+        width: 269
+        height: 774
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cec35006cb4abed0800000000000000
+      internalID: -2397520537840267576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_1
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 5005
+        width: 269
+        height: 774
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62b01592766a6860800000000000000
+      internalID: 7523938769789039210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_2
+      rect:
+        serializedVersion: 2
+        x: 2829
+        y: 5005
+        width: 260
+        height: 774
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626871230b8253d50800000000000000
+      internalID: 6716319156512720422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_3
+      rect:
+        serializedVersion: 2
+        x: 4027
+        y: 5005
+        width: 266
+        height: 774
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35409b68331b10360800000000000000
+      internalID: 7134178119593296979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_4
+      rect:
+        serializedVersion: 2
+        x: 5228
+        y: 5005
+        width: 267
+        height: 771
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ea6939086f56910800000000000000
+      internalID: 1830139855688347283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_5
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 3807
+        width: 269
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0c627fe36d288a0800000000000000
+      internalID: -6304240962442444557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_6
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 3807
+        width: 269
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a2137439f2528b20800000000000000
+      internalID: 3135159520883577509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_7
+      rect:
+        serializedVersion: 2
+        x: 2826
+        y: 3807
+        width: 266
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a4a01a411289220800000000000000
+      internalID: 2492778766234438244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_8
+      rect:
+        serializedVersion: 2
+        x: 4027
+        y: 3807
+        width: 266
+        height: 771
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5246ac529436bc810800000000000000
+      internalID: 1786630843000316965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_9
+      rect:
+        serializedVersion: 2
+        x: 5228
+        y: 3807
+        width: 264
+        height: 771
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d78dd7ce033b080800000000000000
+      internalID: -9172934223741813382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_10
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 2606
+        width: 269
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ef6965a0085ba80800000000000000
+      internalID: -8451708343800103424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_11
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 2606
+        width: 267
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740b9180ac67d8210800000000000000
+      internalID: 1336855274490277959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_12
+      rect:
+        serializedVersion: 2
+        x: 2826
+        y: 2606
+        width: 269
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18c1d440b05d8af0800000000000000
+      internalID: -392568874512300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_13
+      rect:
+        serializedVersion: 2
+        x: 4027
+        y: 2606
+        width: 264
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0eb63ebba1affa0800000000000000
+      internalID: -5766266978617794325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_14
+      rect:
+        serializedVersion: 2
+        x: 5228
+        y: 2606
+        width: 267
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d9cb4181d28eef0800000000000000
+      internalID: -78763412028613263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_15
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1408
+        width: 267
+        height: 767
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2242fd1b495147760800000000000000
+      internalID: 7454607011588547618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_16
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1406
+        width: 269
+        height: 769
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e11026deaf50720800000000000000
+      internalID: 2811929439821176361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_17
+      rect:
+        serializedVersion: 2
+        x: 2826
+        y: 1406
+        width: 266
+        height: 769
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4049d26f6ed601010800000000000000
+      internalID: 1157545942974305284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_18
+      rect:
+        serializedVersion: 2
+        x: 4027
+        y: 1408
+        width: 266
+        height: 767
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59106305bbcdfc8b0800000000000000
+      internalID: -5129638753488993899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_19
+      rect:
+        serializedVersion: 2
+        x: 5228
+        y: 1408
+        width: 267
+        height: 770
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94ebe0ae3442cf40800000000000000
+      internalID: 5747231110256649372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_20
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 207
+        width: 264
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef4c145dc7ccb3e30800000000000000
+      internalID: 4484402690503329022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanna_idle1_sprite_sheet_right_black_and_white_21
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 207
+        width: 269
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6527ac087f934540800000000000000
+      internalID: 4991008150013814124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
