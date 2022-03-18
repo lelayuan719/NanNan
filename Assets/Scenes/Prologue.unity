@@ -4906,6 +4906,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   playerCanMove: 1
+  left: 300
+  right: 4050
+  NextScene: Chapter 1_village
 --- !u!212 &1982690848
 SpriteRenderer:
   m_ObjectHideFlags: 0

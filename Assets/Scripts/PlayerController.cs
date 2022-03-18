@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     private bool isClimbing;
     private float distWalked;
     public bool playerCanMove = true;
+    public int left;
+    public int right;
+    public string NextScene;
 
     Animator anim;
 
@@ -39,11 +42,11 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isWalking",false);
         }
         
-        if (rb.transform.position.x < 300 && inputHorizontal < 0){
+        if (rb.transform.position.x < left && inputHorizontal < 0){
             rb.velocity = new Vector2(0, rb.velocity.y);
-        } else if (rb.transform.position.x > 4050 && inputHorizontal > 0){
+        } else if (rb.transform.position.x > right && inputHorizontal > 0){
             rb.velocity = new Vector2(0, rb.velocity.y);
-            SceneManager.LoadScene("Chapter 1_village", LoadSceneMode.Single);
+            SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
         }
     }
 }
