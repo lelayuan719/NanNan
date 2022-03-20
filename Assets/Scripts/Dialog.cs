@@ -19,6 +19,7 @@ public class Dialog : MonoBehaviour
     public GameObject npc;
     public GameObject npc2;
     private bool spacePressed = false;
+    public Coroutine typer;
 
 
     void Start()
@@ -26,25 +27,24 @@ public class Dialog : MonoBehaviour
         source = GetComponent<AudioSource>();
         story = new Story(inkJSON.text);
         sentence = story.Continue();
+        typer = null;
     }
 
     public void TriggerDialog()
     {
         playerController.playerCanMove = false;
         playerController.speed = 0;
-        StartCoroutine(Type());
+        typer = StartCoroutine(Type());
     }
 
     void Update(){
         if(textDisplay.text == sentence
-           && Input.GetKeyDown(KeyCode.Space) && !spacePressed){
-            spacePressed = false;
+           && Input.GetKeyDown(KeyCode.Space)){
             NextSentence();
-        } /*else if (Input.GetKeyDown(KeyCode.Space) && !spacePressed){
-            StopCoroutine(Type());
+        } else if (Input.GetKeyDown(KeyCode.Space)){
+            StopCoroutine(typer);
             textDisplay.text = sentence;
-            spacePressed = true;
-        }*/
+        }
     }
 
     IEnumerator Type(){
@@ -64,7 +64,7 @@ public class Dialog : MonoBehaviour
             sentence = story.Continue();
             index++;
             textDisplay.text = "";
-            StartCoroutine(Type());
+            typer = StartCoroutine(Type());
         } else{
             textDisplay.text = "";
             playerController.playerCanMove = true;
