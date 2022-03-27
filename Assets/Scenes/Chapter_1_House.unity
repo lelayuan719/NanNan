@@ -568,6 +568,9 @@ MonoBehaviour:
   playerCanMove: 1
   left: -8
   right: 8
+  upper: 20
+  lower: -5
+  padding: 0
   NextScene: Maze
 --- !u!50 &724302194
 Rigidbody2D:

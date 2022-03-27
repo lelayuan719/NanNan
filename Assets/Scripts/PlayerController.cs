@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     public bool playerCanMove = true;
     public int left;
     public int right;
+    public int upper;
+    public int lower;
+    public int padding;
     public string NextScene;
 
     Animator anim;
@@ -46,6 +49,13 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         } else if (rb.transform.position.x > right && inputHorizontal > 0){
             rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+
+        if ((rb.transform.position.x < left - padding) || 
+            (rb.transform.position.x > right + padding) ||
+            (rb.transform.position.y > upper + padding) ||
+            (rb.transform.position.y < lower - padding))
+        {
             SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
         }
     }
