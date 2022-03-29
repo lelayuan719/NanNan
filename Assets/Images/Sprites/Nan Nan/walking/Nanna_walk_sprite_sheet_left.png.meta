@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: edc357f52d8b3b0468327731cb4f42a8
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8103253635971555939
+    second: Nanna_walk_sprite_sheet_left_0
+  - first:
+      213: 5163566201592886601
+    second: Nanna_walk_sprite_sheet_left_1
+  - first:
+      213: 4921763555626161704
+    second: Nanna_walk_sprite_sheet_left_2
+  - first:
+      213: -3553950137662022302
+    second: Nanna_walk_sprite_sheet_left_3
+  - first:
+      213: -8450013580303310558
+    second: Nanna_walk_sprite_sheet_left_4
+  - first:
+      213: 3832280875165040841
+    second: Nanna_walk_sprite_sheet_left_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +59,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +93,147 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Nanna_walk_sprite_sheet_left_0
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 1430
+        width: 402
+        height: 749
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9dd50f30c57b8f80800000000000000
+      internalID: -8103253635971555939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanna_walk_sprite_sheet_left_1
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 1436
+        width: 287
+        height: 763
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94538244a1ca8a740800000000000000
+      internalID: 5163566201592886601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanna_walk_sprite_sheet_left_2
+      rect:
+        serializedVersion: 2
+        x: 2796
+        y: 1409
+        width: 272
+        height: 774
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8269f8190ed9d4440800000000000000
+      internalID: 4921763555626161704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanna_walk_sprite_sheet_left_3
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 226
+        width: 402
+        height: 747
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d543fed25ddaec0800000000000000
+      internalID: -3553950137662022302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanna_walk_sprite_sheet_left_4
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 230
+        width: 294
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2216bc63b658bba80800000000000000
+      internalID: -8450013580303310558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nanna_walk_sprite_sheet_left_5
+      rect:
+        serializedVersion: 2
+        x: 2815
+        y: 207
+        width: 260
+        height: 778
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c04cb3d62ffe2530800000000000000
+      internalID: 3832280875165040841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
