@@ -227,12 +227,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   playerCanMove: 1
-  left: 0
-  right: 0
-  upper: 0
-  lower: 0
-  padding: 0
-  NextScene: 
+  left: 1000
+  right: 1000
+  upper: 1000
+  lower: 1000
+  padding: 1000
+  NextScene: Chapter 1_village
 --- !u!61 &481321539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -279,7 +279,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!95 &481321541
 Animator:
   serializedVersion: 3
@@ -412,6 +412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1151622867}
   - component: {fileID: 1151622866}
+  - component: {fileID: 1151622868}
   m_Layer: 0
   m_Name: IMG_0498
   m_TagString: Untagged
@@ -484,3 +485,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1151622868
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151622865}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -9}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 40.98, y: 20.49}
+    newSize: {x: 40.98, y: 20.49}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 40.98, y: 2}
+  m_EdgeRadius: 0
