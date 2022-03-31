@@ -25,9 +25,9 @@ public class ClimbingController : MonoBehaviour
     private void FixedUpdate(){
         if (isClimbing){
             rb.gravityScale = 0f;
-            rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
+            rb.velocity = new Vector2(0, vertical * speed);
         } else {
-            rb.gravityScale = 4f;
+            rb.gravityScale = 10f;
         }
     }
 
