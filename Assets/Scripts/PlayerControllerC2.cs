@@ -49,14 +49,8 @@ public class PlayerControllerC2 : MonoBehaviour
             anim.SetBool("isWalking", false);
         }
 
-        if (rb.transform.position.x < left && inputHorizontal < 0)
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-        }
-        else if (rb.transform.position.x > right && inputHorizontal > 0)
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-        }
+    
+     
 
     }
 
