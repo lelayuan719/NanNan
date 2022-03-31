@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public int lower;
     public int padding;
     public string NextScene;
+    public SpriteRenderer sr;
 
     Animator anim;
 
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         anim.SetBool("isWalking",false);
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -41,6 +43,11 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(inputHorizontal * speed, rb.velocity.y);
         if(inputHorizontal!=0){
             anim.SetBool("isWalking",true);
+            if (inputHorizontal < 0) {
+               sr.flipX = true;
+            } else {
+                sr.flipX = false;
+            }
         } else {
             anim.SetBool("isWalking",false);
         }
