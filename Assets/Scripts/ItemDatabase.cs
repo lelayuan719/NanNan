@@ -19,7 +19,11 @@ public class ItemDatabase : MonoBehaviour
     }
     void BuildDatabase(){
         items = new List<Item>(){
-            new Item(0,"Bear","stuffed bear")
+            new Item(0,"bear","stuffed bear"),
+            new Item(1,"book","a book"),
+            new Item(2,"amulet","magical amulet"),
+            new Item(3,"matches","matches"),
+            new Item(4,"shard","sharp shard")
         };
     }
 }

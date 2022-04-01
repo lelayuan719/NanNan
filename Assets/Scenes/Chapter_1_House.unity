@@ -572,6 +572,7 @@ MonoBehaviour:
   lower: -5
   padding: 0
   NextScene: Maze
+  sr: {fileID: 0}
 --- !u!50 &724302194
 Rigidbody2D:
   serializedVersion: 4
