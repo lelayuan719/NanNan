@@ -22,6 +22,11 @@ public class Game2Script : MonoBehaviour
         glowTiles[i].Change(true);
     }
 
+    public IEnumerator Remove(int i){
+        yield return new WaitForSeconds(0.2f);
+        glowTiles[i].Change(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -50,33 +55,45 @@ public class Game2Script : MonoBehaviour
                 string objectName = a.name;
                 if (!a.finalPosition){
                     if (objectName == "Tile (0)"){
-                        glowTiles[0].Change(false);
+                        StartCoroutine(Remove(0));
+                        StopCoroutine(Remove(0));
+                        // glowTiles[0].Change(false);
                     }
                     else if (objectName == "Tile (1)"){
-                        glowTiles[1].Change(false);
+                        StartCoroutine(Remove(1));
+                        StopCoroutine(Remove(1));
+                        // glowTiles[1].Change(false);
                     }
                     else if (objectName == "Tile (2)"){
-                        glowTiles[2].Change(false);
+                        StartCoroutine(Remove(2));
+                        StopCoroutine(Remove(2));
+                        // glowTiles[2].Change(false);
                     }
                     else if (objectName == "Tile (3)"){
-                        glowTiles[3].Change(false);
+                        StartCoroutine(Remove(3));
+                        StopCoroutine(Remove(3));
+                        // glowTiles[3].Change(false);
                     }
                 }
                 else {
                     if (objectName == "Tile (0)"){
                         StartCoroutine(Pause(0));
+                        StopCoroutine(Pause(0));
                         // glowTiles[0].Change(true);
                     }
                     else if (objectName == "Tile (1)"){
                         StartCoroutine(Pause(1));
+                        StopCoroutine(Pause(1));
                         // glowTiles[1].Change(true);
                     }
                     else if (objectName == "Tile (2)"){
                         StartCoroutine(Pause(2));
+                        StopCoroutine(Pause(2));
                         // glowTiles[2].Change(true);
                     }
                     else if (objectName == "Tile (3)"){
                         StartCoroutine(Pause(3));
+                        StopCoroutine(Pause(3));
                         // glowTiles[3].Change(true);
                     }
                     correctTiles++;
@@ -84,10 +101,13 @@ public class Game2Script : MonoBehaviour
             }
         }
         if (correctTiles != tiles.Length - 1){
-            glowTiles[4].Change(false);
+            StartCoroutine(Remove(4));
+            StopCoroutine(Remove(4));
+            // dglowTiles[4].Change(false);
         }
         else {
             StartCoroutine(Pause(4));
+            StopCoroutine(Pause(4));
             // glowTiles[4].Change(true);
             Debug.Log(message: "You Won!");
         }
