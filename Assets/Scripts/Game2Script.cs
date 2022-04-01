@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class Game2Script : MonoBehaviour
 {
+    public bool isSolved;
     [SerializeField] private Transform emptySpace = null;
     private Camera cam;
     [SerializeField] private Tiles2Script[] tiles;
@@ -13,6 +14,7 @@ public class Game2Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isSolved = false;
         cam = Camera.main;
         Shuffle();
     }
@@ -110,6 +112,7 @@ public class Game2Script : MonoBehaviour
             StopCoroutine(Pause(4));
             // glowTiles[4].Change(true);
             Debug.Log(message: "You Won!");
+            isSolved = true;
         }
     }
     public void Shuffle() {
