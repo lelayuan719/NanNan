@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class LockCorrectScript : MonoBehaviour
 {
+    public bool isSolved;
     private string codeSequence;
     private int codeLength;
     // Start is called before the first frame update
     void Start()
     {
+        isSolved = false;
         codeSequence = "";
-        codeLength = 4;
+        codeLength = 7;
         PushButtonScript.ButtonPressed += AddDigitToSequence;
     }
 
@@ -64,8 +66,9 @@ public class LockCorrectScript : MonoBehaviour
 
     private void CheckResult(){
         Debug.Log("Checking result");
-        if (codeSequence == "1542"){
+        if (codeSequence == "1964618"){
             Debug.Log("Correct!");
+            isSolved = true;
         }
         else{
             Debug.Log("Incorrect!");
