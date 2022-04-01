@@ -6,6 +6,10 @@ public class panelOpener : MonoBehaviour {
 
     public GameObject Panel;
 
+    public void Start(){
+        Panel.SetActive(false);
+    }
+
     public void openPanel()
     {
         if(Panel != null)
