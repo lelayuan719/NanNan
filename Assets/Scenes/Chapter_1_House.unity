@@ -625,9 +625,9 @@ GameObject:
   - component: {fileID: 724302190}
   - component: {fileID: 724302195}
   - component: {fileID: 724302194}
-  - component: {fileID: 724302193}
   - component: {fileID: 724302192}
   - component: {fileID: 724302196}
+  - component: {fileID: 724302193}
   m_Layer: 0
   m_Name: Nan_Nan_Side_Right
   m_TagString: Untagged
@@ -674,7 +674,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f79e241e3eb58064799cbd9b31e3c874, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -728,22 +728,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 724302189}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e01e93d028bc8a41bb0db236c72405d, type: 3}
+  m_Script: {fileID: 11500000, guid: 750c31f861f0d4e0384576e043ec414f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
   distance: 0
   whatIsLadder:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   playerCanMove: 1
-  left: -100
-  right: 100
-  upper: 20
-  lower: -5
+  left: 0
+  right: 0
+  upper: 0
+  lower: 0
   padding: 0
-  NextScene: Maze
-  sr: {fileID: 0}
+  NextScene: chapter_1
+  sr: {fileID: 724302190}
 --- !u!50 &724302194
 Rigidbody2D:
   serializedVersion: 4
