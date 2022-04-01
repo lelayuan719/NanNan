@@ -20,6 +20,7 @@ public class PlayerControllerC2 : MonoBehaviour
     public int lower;
     public int padding;
     public string NextScene;
+    public SpriteRenderer sr;
 
     Animator anim;
 
@@ -42,7 +43,12 @@ public class PlayerControllerC2 : MonoBehaviour
         rb.velocity = new Vector2(inputHorizontal * speed, rb.velocity.y);
         if (inputHorizontal != 0)
         {
-            anim.SetBool("isWalking", true);
+            anim.SetBool("isWalking",true);
+            if (inputHorizontal < 0) {
+               sr.flipX = true;
+            } else {
+                sr.flipX = false;
+            }
         }
         else
         {
