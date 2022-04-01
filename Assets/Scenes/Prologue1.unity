@@ -709,7 +709,7 @@ MonoBehaviour:
   left: 250
   lower: 0
   player: {fileID: 584357050}
-  offset: {x: 50, y: 50, z: -970}
+  offset: {x: 20, y: 50, z: -970}
   smoothFactor: 5
 --- !u!81 &287990746
 AudioListener:
