@@ -62,6 +62,8 @@ public class PlayerControllerC2 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
+        if (collision.tag == "boundary") {
+            SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
+        }
     }
 }
