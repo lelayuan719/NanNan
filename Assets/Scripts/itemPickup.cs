@@ -6,13 +6,13 @@ public class itemPickup : MonoBehaviour
 {
     public Texture2D texture;
     public Inventory inv;
-    public GameObject item;
+    public SpriteRenderer spr;
 
 
     // Start is called before the first frame update
     void OnMouseDown(){
         Cursor.SetCursor(null,Vector2.zero,CursorMode.Auto);
-        inv.GiveItem(item.name);
+        inv.GiveItem(gameObject.name);
     }
 
     void OnMouseOver(){
