@@ -24,6 +24,7 @@ public class Dialog : MonoBehaviour
 
     void Start()
     {
+        ExecuteAfterTime(1);
         source = GetComponent<AudioSource>();
         story = new Story(inkJSON.text);
         sentence = story.Continue();
@@ -76,5 +77,10 @@ public class Dialog : MonoBehaviour
             tmp2.a = 0f;
             npc2.GetComponent<SpriteRenderer>().color = tmp2;
         }
+    }
+
+    IEnumerator ExecuteAfterTime(float time)
+    {
+     yield return new WaitForSeconds(time);
     }
 }
