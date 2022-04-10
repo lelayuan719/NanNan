@@ -8,7 +8,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
 {
     public Item item;
     private Image spriteImage;
-    private UIItem selectedItem;
+    public UIItem selectedItem;
     private Tooltip tooltip;
 
     private void Awake(){
@@ -37,12 +37,15 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
                 UpdateItem(clone);
             }
             else {
+
                 selectedItem.UpdateItem(this.item);
                 UpdateItem(null);
             }
         }
         else if(selectedItem.item != null){
+           
             UpdateItem(selectedItem.item);
+            print("new item set" + selectedItem.item.title);
             selectedItem.UpdateItem(null);
         }
     }

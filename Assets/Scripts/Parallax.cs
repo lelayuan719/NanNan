@@ -5,6 +5,7 @@ using UnityEngine;
 public class Parallax : MonoBehaviour
 {
     private float length, startpos;
+    private float startposY;
     public GameObject cam;
     public float parallaxEffect;
 
@@ -12,6 +13,7 @@ public class Parallax : MonoBehaviour
     void Start()
     {
         startpos = transform.position.x;
+        startposY = transform.position.x;
         length = GetComponent<SpriteRenderer>().bounds.size.x;
 
     }
@@ -21,8 +23,9 @@ public class Parallax : MonoBehaviour
     {
         float temp = cam.transform.position.x * (1-parallaxEffect);
         float dist = cam.transform.position.x * parallaxEffect;
+        float distY = cam.transform.position.y * parallaxEffect;
         transform.position = new Vector3(startpos + dist, 
-                                         transform.position.y,
+                                         startposY + distY,
                                          transform.position.z);
         
         //infinite scrolling
