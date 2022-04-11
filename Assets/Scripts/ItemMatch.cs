@@ -14,7 +14,7 @@ public class ItemMatch: MonoBehaviour
     {
         collectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
         item = collectedItem.item;
-        print(item);
+        //print(item);
         success = false;
     }
 
@@ -25,18 +25,20 @@ public class ItemMatch: MonoBehaviour
     }
     void OnMouseDown()
     {
-        //collectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
+        //gets the information from inventory UI to figure out what item is currently selected 
         item = collectedItem.item;
-        if (collectedItem == null)
+        //checks if item is correct to assigned item
+        if (item.title == null)
         {
             print("no item selected");
         }
-        if (collectedItem.item == null)
+        if (item.title == null)
          {
              print("whattt");
          }
          else if(item.title == itemCheck)
         {
+            //if correct item is selecteed success bool will be true
             success = true;
             print(itemCheck + " match successful");
         } else

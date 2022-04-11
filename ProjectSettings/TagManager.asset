@@ -9,6 +9,10 @@ TagManager:
   - boundary
   - pause
   - Password Puzzle
+  - Walls
+  - Keys
+  - Warlock's Diary
+  - Info Item
   layers:
   - Default
   - TransparentFX
