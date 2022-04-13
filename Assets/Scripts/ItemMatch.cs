@@ -41,6 +41,8 @@ public class ItemMatch: MonoBehaviour
             //if correct item is selecteed success bool will be true
             success = true;
             print(itemCheck + " match successful");
+            //UIInventory inventoryItem = GameObject.Find("InventoryPanel").GetComponent<UIInventory>();
+            //inventoryItem.RemoveItem(item);
         } else
         {
             print("wrong item match");

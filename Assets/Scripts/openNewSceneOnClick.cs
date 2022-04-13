@@ -24,9 +24,11 @@ public class openNewSceneOnClick : MonoBehaviour
     {
         // print(pauseRootScene.isActive())
         // Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-        pauseRootScene.SetActive(false);
         Puzzle.SetActive(true);
+        pauseRootScene.SetActive(false);
+       
         print("what1");
+        print(Puzzle.name);
         //Time.timeScale = 0.00f;
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName(innerScene));
         print("what2");

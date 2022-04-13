@@ -23,7 +23,8 @@ public class ItemDatabase : MonoBehaviour
             new Item(1,"book","a book"),
             new Item(2,"amulet","magical amulet"),
             new Item(3,"matches","matches"),
-            new Item(4,"shard","sharp shard")
+            new Item(4,"shard","sharp shard"),
+            new Item(5, "key", "A strange key")
         };
     }
 }
