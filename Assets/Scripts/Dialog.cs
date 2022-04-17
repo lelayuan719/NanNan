@@ -17,7 +17,6 @@ public class Dialog : MonoBehaviour
     private AudioSource source;
     public PlayerController playerController;
     public GameObject npc;
-    public GameObject npc2;
     private bool spacePressed = false;
     public Coroutine typer;
 
@@ -70,12 +69,12 @@ public class Dialog : MonoBehaviour
             textDisplay.text = "";
             playerController.playerCanMove = true;
             playerController.speed = 100;
-            Color tmp = npc.GetComponent<SpriteRenderer>().color;
-            tmp.a = 0f;
-            npc.GetComponent<SpriteRenderer>().color = tmp;
-            Color tmp2 = npc2.GetComponent<SpriteRenderer>().color;
-            tmp2.a = 0f;
-            npc2.GetComponent<SpriteRenderer>().color = tmp2;
+            SpriteRenderer npcspr = npc.GetComponent<SpriteRenderer>();
+            npcspr.enabled = false;
+            foreach (Renderer r in npc.GetComponentsInChildren(typeof(Renderer)))
+            {
+                r.enabled = false;
+            }
         }
     }
 

@@ -7,18 +7,18 @@ using Ink.Runtime;
 public class Dialog2 : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
-    public TextMeshProUGUI charName;
+    public GameObject background;
     public TextAsset inkJSON;
     private Story story;
     private string sentence;
-    public string[] character;
     private int index;
     public float typingSpeed;
     private AudioSource source;
     public PlayerControllerC2 playerController;
     public GameObject npc;
     private bool spacePressed = false;
-    public Coroutine typer;
+    private Coroutine typer;
+    public bool disappear;
 
 
     void Start()
@@ -33,6 +33,8 @@ public class Dialog2 : MonoBehaviour
     {
         playerController.playerCanMove = false;
         playerController.speed = 0;
+        background.SetActive(true);
+        textDisplay.enabled = true;
         typer = StartCoroutine(Type());
     }
 
@@ -66,11 +68,19 @@ public class Dialog2 : MonoBehaviour
             typer = StartCoroutine(Type());
         } else{
             textDisplay.text = "";
+            textDisplay.enabled = false;
+            background.SetActive(false);
             playerController.playerCanMove = true;
-            playerController.speed = 100;
-            Color tmp = npc.GetComponent<SpriteRenderer>().color;
-            tmp.a = 0f;
-            npc.GetComponent<SpriteRenderer>().color = tmp;
+            playerController.speed = 4;
+            if(disappear){
+                SpriteRenderer npcspr = npc.GetComponent<SpriteRenderer>();
+                npcspr.enabled = false;
+                foreach (Renderer r in npc.GetComponentsInChildren(typeof(Renderer)))
+                {
+                    r.enabled = false;
+                }
+            }
+            
         }
     }
 }

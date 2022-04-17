@@ -13,6 +13,7 @@ TagManager:
   - Keys
   - Warlock's Diary
   - Info Item
+  - darkness
   layers:
   - Default
   - TransparentFX
