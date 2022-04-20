@@ -41,7 +41,7 @@ public class Dialog : MonoBehaviour
         if(textDisplay.text == sentence
            && Input.GetKeyDown(KeyCode.Space)){
             NextSentence();
-        } else if (Input.GetKeyDown(KeyCode.Space)){
+        } else if (npc.GetComponent<NPC>().dialogStarted && Input.GetKeyDown(KeyCode.Space)){
             StopCoroutine(typer);
             textDisplay.text = sentence;
         }
@@ -67,6 +67,8 @@ public class Dialog : MonoBehaviour
             typer = StartCoroutine(Type());
         } else{
             textDisplay.text = "";
+            textDisplay.enabled = false;
+            source.enabled = false;
             playerController.playerCanMove = true;
             playerController.speed = 100;
             SpriteRenderer npcspr = npc.GetComponent<SpriteRenderer>();

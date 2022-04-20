@@ -1487,6 +1487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog: {fileID: 1671605176}
+  dialogStarted: 0
 --- !u!61 &595084662
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4426,7 +4427,6 @@ MonoBehaviour:
   typingSpeed: 0.05
   playerController: {fileID: 584357044}
   npc: {fileID: 595084660}
-  npc2: {fileID: 719281659}
 --- !u!1 &1695423633
 GameObject:
   m_ObjectHideFlags: 0
