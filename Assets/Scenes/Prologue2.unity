@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 87133763}
   - component: {fileID: 87133762}
   - component: {fileID: 87133761}
+  - component: {fileID: 87133765}
   m_Layer: 0
   m_Name: Grandma
   m_TagString: Untagged
@@ -431,6 +432,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &87133765
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87133760}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a916d4f741151544d863b9706f8a3f65, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &104068932
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,18 +762,12 @@ MonoBehaviour:
   charName: {fileID: 1828168363}
   inkJSON: {fileID: 4900000, guid: 48c205b182c6e314cb0e7b5612f4e5fc, type: 3}
   character:
-  - NAN NAN
-  - MONSTER
-  - NAN NAN
-  - MONSTER
-  - NAN NAN
-  - MONSTER
-  - NAN NAN
-  - MONSTER
-  - NAN NAN
-  - MONSTER
-  - NAN NAN
-  - MONSTER
+  - NanNan
+  - Grandma
+  - NanNan
+  - Grandma
+  - NanNan
+  - Grandma
   typingSpeed: 0.05
   playerController: {fileID: 1982690847}
   npc: {fileID: 87133760}
@@ -3047,7 +3061,7 @@ GameObject:
   - component: {fileID: 1982690849}
   - component: {fileID: 1982690850}
   m_Layer: 0
-  m_Name: character
+  m_Name: NanNan
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
