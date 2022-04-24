@@ -17,6 +17,10 @@ public class Item
 
     }
 
+    public int getId(){
+        return this.id;
+    }
+
     public Item(Item item){
         this.id = item.id;
         this.title = item.title;

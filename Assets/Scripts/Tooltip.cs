@@ -10,7 +10,7 @@ public class Tooltip : MonoBehaviour
 
     void Start(){
         tooltip = GetComponentInChildren<Text>();
-        tooltip.gameObject.SetActive(false);
+        tooltip.gameObject.SetActive(true);
     }
 
     public void GenerateTooltip(Item item){

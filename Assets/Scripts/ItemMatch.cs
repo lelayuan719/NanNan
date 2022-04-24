@@ -41,8 +41,12 @@ public class ItemMatch: MonoBehaviour
             //if correct item is selecteed success bool will be true
             success = true;
             print(itemCheck + " match successful");
-            //UIInventory inventoryItem = GameObject.Find("InventoryPanel").GetComponent<UIInventory>();
-            //inventoryItem.RemoveItem(item);
+            //old codd
+            UIInventory inventoryItem = GameObject.Find("InventoryPanel").GetComponent<UIInventory>();
+            inventoryItem.RemoveItem(item);
+            //new code, pulls right thing, seems like "item" is the issue
+            //Inventory inventory = GameObject.Find("Nan_Nan_Side_Right").GetComponent<Inventory>();
+            //inventory.RemoveItem(inventory.CheckForItem(item.getId()));
         } else
         {
             print("wrong item match");

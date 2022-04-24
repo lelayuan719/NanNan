@@ -10,7 +10,9 @@ public class Inventory : MonoBehaviour
 
     public void Start(){
         GiveItem("amulet");
-        }
+        GiveItem("bear");
+        RemoveItem(0);
+    }
 
     public void GiveItem(int id){
         Item itemToAdd = itemDatabase.GetItem(id);
@@ -32,6 +34,14 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(int id){
         Item item = CheckForItem(id);
+        if (item != null){
+            characterItems.Remove(item);
+            inventoryUI.RemoveItem(item);
+            Debug.Log("Item removed: " + item.title);
+        }
+    }
+
+    public void RemoveItem(Item item){
         if (item != null){
             characterItems.Remove(item);
             inventoryUI.RemoveItem(item);

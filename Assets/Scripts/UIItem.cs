@@ -28,6 +28,8 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
         spriteImage.color = Color.clear;
     }
     }
+    
+    
 
     public void OnPointerClick(PointerEventData eventData){
         if(this.item != null){
