@@ -75,6 +75,7 @@ public class Dialog : MonoBehaviour
             textDisplay.text = "";
             typer = StartCoroutine(Type());
         } else{
+            curAnim.SetBool("isTalking",false);
             textDisplay.text = "";
             textDisplay.enabled = false;
             source.enabled = false;
