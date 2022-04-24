@@ -10,6 +10,7 @@ public class openNewSceneOnClick : MonoBehaviour
 
     public GameObject pauseRootScene;
     public GameObject Puzzle;
+    //private bool opened;
 
     // Start is called before the first frame update
     private void Start()
@@ -17,6 +18,7 @@ public class openNewSceneOnClick : MonoBehaviour
         //print("whatwhywhere");
         pauseRootScene = GameObject.FindWithTag("pause");
         Puzzle.SetActive(false);
+        //opened = false;
        // pauseRootScene.SetActive(true);
 
     }
@@ -28,18 +30,29 @@ public class openNewSceneOnClick : MonoBehaviour
         pauseRootScene.SetActive(false);
        
         print("what1");
-        print(Puzzle.name);
+        // print(Puzzle.name);
         //Time.timeScale = 0.00f;
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName(innerScene));
+        //opened = true;
         print("what2");
+
         //SceneManager.LoadScene(innerScene, LoadSceneMode.Additive);
   
         
     }
     public void ClosePuzzle()
     {
-        Puzzle.SetActive(false);
-        pauseRootScene.SetActive(true);
+        print("closing 1");
+        if (Puzzle.activeSelf)
+        {
+            print("closing");
+            Puzzle.SetActive(false);
+            pauseRootScene.SetActive(true);
+        }
+        else
+        {
+            print("can't close before open");
+        }
     }
 
     void OnMouseOver()
