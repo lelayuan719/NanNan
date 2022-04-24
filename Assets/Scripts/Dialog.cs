@@ -19,6 +19,8 @@ public class Dialog : MonoBehaviour
     public GameObject npc;
     private bool spacePressed = false;
     public Coroutine typer;
+    private GameObject curChar;
+    private Animator curAnim;
 
 
     void Start()
@@ -34,6 +36,9 @@ public class Dialog : MonoBehaviour
     {
         playerController.playerCanMove = false;
         playerController.speed = 0;
+        curChar = GameObject.Find(character[0]);
+        curAnim = curChar.GetComponent<Animator>();
+        curAnim.SetBool("isTalking",true);
         typer = StartCoroutine(Type());
     }
 
@@ -61,8 +66,12 @@ public class Dialog : MonoBehaviour
         source.Play();
 
         if(story.canContinue){
+            curAnim.SetBool("isTalking",false);
             sentence = story.Continue();
             index++;
+            curChar = GameObject.Find(character[index]);
+            curAnim = curChar.GetComponent<Animator>();
+            curAnim.SetBool("isTalking",true);
             textDisplay.text = "";
             typer = StartCoroutine(Type());
         } else{

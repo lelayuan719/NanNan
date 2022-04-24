@@ -13,7 +13,7 @@ public class Parallax : MonoBehaviour
     void Start()
     {
         startpos = transform.position.x;
-        startposY = transform.position.x;
+        startposY = transform.position.y;
         length = GetComponent<SpriteRenderer>().bounds.size.x;
 
     }
@@ -25,7 +25,7 @@ public class Parallax : MonoBehaviour
         float dist = cam.transform.position.x * parallaxEffect;
         float distY = cam.transform.position.y * parallaxEffect;
         transform.position = new Vector3(startpos + dist, 
-                                         startposY + distY,
+                                         transform.position.y,
                                          transform.position.z);
         
         //infinite scrolling
