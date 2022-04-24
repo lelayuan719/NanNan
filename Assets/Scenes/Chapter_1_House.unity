@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 37619919}
   - component: {fileID: 37619918}
   m_Layer: 0
-  m_Name: Father sitting sprite_0
+  m_Name: Father
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -716,8 +716,9 @@ GameObject:
   m_Component:
   - component: {fileID: 106249991}
   - component: {fileID: 106249990}
+  - component: {fileID: 106249992}
   m_Layer: 0
-  m_Name: mother standing (2)
+  m_Name: Mother
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -788,6 +789,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &106249992
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106249989}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce1ddf52449faa446bd56861bea4c460, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &120533375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,7 +1020,7 @@ GameObject:
   - component: {fileID: 140632418}
   - component: {fileID: 140632417}
   m_Layer: 0
-  m_Name: big brother sitting sprite_0
+  m_Name: Big Brother
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1118,7 +1138,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1788539794850474934, guid: ac0b2ef9b782ba640bf6dd6f43c896e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1567,6 +1587,10 @@ MonoBehaviour:
   textDisplay: {fileID: 401747838}
   background: {fileID: 231243077}
   inkJSON: {fileID: 4900000, guid: c4af46430c1069a4ca74195f11768822, type: 3}
+  character:
+  - Mother
+  - Mother
+  - Father
   typingSpeed: 0.05
   playerController: {fileID: 724302193}
   npc: {fileID: 1251428317}
@@ -5584,6 +5608,13 @@ MonoBehaviour:
   textDisplay: {fileID: 1874868762}
   background: {fileID: 1581085032}
   inkJSON: {fileID: 4900000, guid: 8d94f4d2b885cf74894ed1f27666c43a, type: 3}
+  character:
+  - Big Brother
+  - Mother
+  - Big Brother
+  - Father
+  - Mother
+  - Big Brother
   typingSpeed: 0.05
   playerController: {fileID: 724302193}
   npc: {fileID: 1804795273}
@@ -6829,7 +6860,7 @@ GameObject:
   - component: {fileID: 1804795277}
   - component: {fileID: 1804795276}
   m_Layer: 0
-  m_Name: warlock_sitting
+  m_Name: Warlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6924,7 +6955,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 66.23137, y: 50}
+  m_Size: {x: 40, y: 50}
   m_EdgeRadius: 0
 --- !u!114 &1804795277
 MonoBehaviour:
