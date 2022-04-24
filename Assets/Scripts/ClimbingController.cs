@@ -8,9 +8,14 @@ public class ClimbingController : MonoBehaviour
     private float speed = 80f;
     private bool isLadder;
     private bool isClimbing;
+    public Animator anim;
 
     [SerializeField] private Rigidbody2D rb;
 
+    void Start(){
+        anim = GetComponent<Animator>();
+        anim.SetBool("isClimbing",false);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -18,6 +23,7 @@ public class ClimbingController : MonoBehaviour
 
         if (isLadder && Mathf.Abs(vertical) > 0f){
             isClimbing = true;
+            anim.SetBool("isClimbing",true);
         }
 
     }
@@ -42,6 +48,7 @@ public class ClimbingController : MonoBehaviour
         if (collision.CompareTag("Ladder")){
             isLadder = false;
             isClimbing = false;
+            anim.SetBool("isClimbing",false);
         }
     }
 }
