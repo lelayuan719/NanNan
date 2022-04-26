@@ -96,7 +96,7 @@ public class LockCorrectScript : MonoBehaviour
         numbers[codeSequence.Length-1].sprite = digits[recentDigit-1];
     }
 
-    /*private void OnDestroy(){
+    private void OnDestroy(){
         PushButtonScript.ButtonPressed -= AddDigitToSequence;
-    }*/
+    }
 }
