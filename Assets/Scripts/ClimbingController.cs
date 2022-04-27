@@ -23,7 +23,6 @@ public class ClimbingController : MonoBehaviour
 
         if (isLadder && Mathf.Abs(vertical) > 0f){
             isClimbing = true;
-            anim.SetBool("isClimbing",true);
         }
 
     }
@@ -41,6 +40,7 @@ public class ClimbingController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision){
         if (collision.CompareTag("Ladder")){
             isLadder = true;
+            anim.SetBool("isClimbing",true);
         }
     }
 
