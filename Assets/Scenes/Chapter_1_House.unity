@@ -5026,6 +5026,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSolved: 0
+  digits: []
+  numbers: []
 --- !u!114 &1238346260
 MonoBehaviour:
   m_ObjectHideFlags: 0
