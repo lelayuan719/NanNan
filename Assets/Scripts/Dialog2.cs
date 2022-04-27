@@ -20,8 +20,8 @@ public class Dialog2 : MonoBehaviour
     private bool spacePressed = false;
     private Coroutine typer;
     public bool disappear;
-    private GameObject curChar;
-    private Animator curAnim;
+    /*private GameObject curChar;
+    private Animator curAnim;*/
 
 
     void Start()
@@ -38,9 +38,9 @@ public class Dialog2 : MonoBehaviour
         playerController.speed = 0;
         background.SetActive(true);
         textDisplay.enabled = true;
-        curChar = GameObject.Find(character[0]);
+        /*curChar = GameObject.Find(character[0]);
         curAnim = curChar.GetComponent<Animator>();
-        curAnim.SetBool("isTalking",true);
+        curAnim.SetBool("isTalking",true);*/
         typer = StartCoroutine(Type());
     }
 
@@ -68,17 +68,17 @@ public class Dialog2 : MonoBehaviour
         source.Play();
 
         if(story.canContinue){
-            curAnim.SetBool("isTalking",false);
+            //curAnim.SetBool("isTalking",false);
             sentence = story.Continue();
             index++;
             //character list must match names of character GameObjects
-            curChar = GameObject.Find(character[index]);
+            /*curChar = GameObject.Find(character[index]);
             curAnim = curChar.GetComponent<Animator>();
-            curAnim.SetBool("isTalking",true);
+            curAnim.SetBool("isTalking",true);*/
             textDisplay.text = "";
             typer = StartCoroutine(Type());
         } else{
-            curAnim.SetBool("isTalking",false);
+            //curAnim.SetBool("isTalking",false);
             textDisplay.text = "";
             textDisplay.enabled = false;
             background.SetActive(false);

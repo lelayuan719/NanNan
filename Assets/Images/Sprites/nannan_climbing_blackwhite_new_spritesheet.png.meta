@@ -1,0 +1,396 @@
+fileFormatVersion: 2
+guid: f56883d55be2a89408246c512931496c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6028959425058888627
+    second: nannan_climbing_blackwhite_new_spritesheet_0
+  - first:
+      213: -2748850170033946985
+    second: nannan_climbing_blackwhite_new_spritesheet_1
+  - first:
+      213: 333833054725481214
+    second: nannan_climbing_blackwhite_new_spritesheet_2
+  - first:
+      213: 7227201673091169848
+    second: nannan_climbing_blackwhite_new_spritesheet_3
+  - first:
+      213: -3895977849062443855
+    second: nannan_climbing_blackwhite_new_spritesheet_4
+  - first:
+      213: 7009185221969753742
+    second: nannan_climbing_blackwhite_new_spritesheet_5
+  - first:
+      213: 3884962042045067785
+    second: nannan_climbing_blackwhite_new_spritesheet_6
+  - first:
+      213: 698215169562611302
+    second: nannan_climbing_blackwhite_new_spritesheet_7
+  - first:
+      213: -2987484853749812651
+    second: nannan_climbing_blackwhite_new_spritesheet_8
+  - first:
+      213: 5694370803812403109
+    second: nannan_climbing_blackwhite_new_spritesheet_9
+  - first:
+      213: 9170645459138344393
+    second: nannan_climbing_blackwhite_new_spritesheet_10
+  - first:
+      213: -5862357607184714398
+    second: nannan_climbing_blackwhite_new_spritesheet_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nannan_climbing_blackwhite_new_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 7083
+        width: 523
+        height: 1738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bbd0ef77aa2ba350800000000000000
+      internalID: 6028959425058888627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_climbing_blackwhite_new_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 7083
+        width: 678
+        height: 1738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79eba5a955f1ad9d0800000000000000
+      internalID: -2748850170033946985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_climbing_blackwhite_new_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 5394
+        y: 7171
+        width: 679
+        height: 1650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef22231056302a400800000000000000
+      internalID: 333833054725481214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_climbing_blackwhite_new_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 4892
+        width: 701
+        height: 1659
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e35bc51ad2c4460800000000000000
+      internalID: 7227201673091169848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_climbing_blackwhite_new_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 4901
+        width: 674
+        height: 1650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4b7ddb9c4bee9c0800000000000000
+      internalID: -3895977849062443855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_climbing_blackwhite_new_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 5394
+        y: 4861
+        width: 683
+        height: 1690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86bc68b2d0a54160800000000000000
+      internalID: 7009185221969753742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_climbing_blackwhite_new_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 2574
+        width: 674
+        height: 1707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902f8f1d4682ae530800000000000000
+      internalID: 3884962042045067785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_climbing_blackwhite_new_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 3088
+        y: 2596
+        width: 688
+        height: 1685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e81965ffe80b900800000000000000
+      internalID: 698215169562611302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_climbing_blackwhite_new_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 5394
+        y: 2574
+        width: 674
+        height: 1707
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552f1689a525a86d0800000000000000
+      internalID: -2987484853749812651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_climbing_blackwhite_new_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 321
+        width: 687
+        height: 1690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a708947318760f40800000000000000
+      internalID: 5694370803812403109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_climbing_blackwhite_new_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 361
+        width: 674
+        height: 1650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c57df8f47da44f70800000000000000
+      internalID: 9170645459138344393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nannan_climbing_blackwhite_new_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 5368
+        y: 352
+        width: 700
+        height: 1659
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265327df0d8b4aea0800000000000000
+      internalID: -5862357607184714398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
