@@ -34,7 +34,7 @@ public class PuzzleCandle : MonoBehaviour
             darkness.SetActive(false);
             Dialog1.GetComponent<Dialog2>().enabled = false;
             Dialog2.GetComponent<Dialog2>().enabled = true;
-            scene1.SetActive(true);
+            scene1.SetActive(false);
             scene2.SetActive(true);
             DialogNext.SetActive(true);
             candleLight.enabled = true;
