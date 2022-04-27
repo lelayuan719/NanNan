@@ -15,14 +15,15 @@ public class mouseFollow : MonoBehaviour
         //&& Input.mousePosition.x < (Screen.width / 2 + 20) && Input.mousePosition.y < (Screen.height / 2 + 20) && Input.mousePosition.y > (Screen.height / 2 - 20)
         if (Input.mousePosition.x > ((Screen.width) * 0.40) && Input.mousePosition.x < ((Screen.width) * 0.60) && Input.mousePosition.y > ((Screen.height) * 0.40) && Input.mousePosition.y < ((Screen.height) * 0.60))
         {
-            print("inbounds");
+            //print("inbounds");
             mouseCentered = true;
         }
         if (mouseCentered)
         {
-            float speed = 5f;
+            print("apple");
+            float speed = 30f;
             //print(Input.GetAxisRaw("Mouse Y") + " " + Input.GetAxisRaw("Mouse X"));
-            transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed, 0f);
+            transform.position = new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed, 0f, 0f);
         }
      }
 
