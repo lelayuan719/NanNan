@@ -27,6 +27,7 @@ public class ItemMatch: MonoBehaviour
     {
         //gets the information from inventory UI to figure out what item is currently selected 
         item = collectedItem.item;
+        print("does this work");
         //checks if item is correct to assigned item
         if (item.title == null)
         {
@@ -43,7 +44,7 @@ public class ItemMatch: MonoBehaviour
             print(itemCheck + " match successful");
             //old codd
             UIInventory inventoryItem = GameObject.Find("InventoryPanel").GetComponent<UIInventory>();
-            inventoryItem.RemoveItem(item);
+            //inventoryItem.RemoveItem(item);
             //new code, pulls right thing, seems like "item" is the issue
             //Inventory inventory = GameObject.Find("Nan_Nan_Side_Right").GetComponent<Inventory>();
             //inventory.RemoveItem(inventory.CheckForItem(item.getId()));
