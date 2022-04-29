@@ -6,14 +6,10 @@ public class hover_interactable : MonoBehaviour
 {
     private Color startcolor;
     private SpriteRenderer spriteRenderer;
-    public Material mainSprite;
-    public Material hoverSprite;
+    public Texture2D newCursor;
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        mainSprite = gameObject.GetComponent<SpriteRenderer>().material;
-
     }
 
     // Update is called once per frame
@@ -22,20 +18,16 @@ public class hover_interactable : MonoBehaviour
 
     }
 
-    void ChangeSprite(Material material)
-    {
-        gameObject.GetComponent<SpriteRenderer>().material = material;
-    }
-
     void OnMouseEnter()
     {
         print("hovering");
-        ChangeSprite(hoverSprite);
+        Cursor.SetCursor(newCursor, Vector2.zero, CursorMode.Auto);
     }
 
     void OnMouseExit()
     {
-        ChangeSprite(mainSprite);
+        print("exit");
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
 }
