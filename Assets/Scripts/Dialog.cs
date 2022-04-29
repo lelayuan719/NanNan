@@ -9,7 +9,7 @@ public class Dialog : MonoBehaviour
     public TextMeshProUGUI textDisplay;
     public TextMeshProUGUI charName;
     public TextAsset inkJSON;
-    private Story story;
+    public Story story;
     private string sentence;
     public string[] character;
     private int index;
@@ -21,6 +21,7 @@ public class Dialog : MonoBehaviour
     public Coroutine typer;
     private GameObject curChar;
     private Animator curAnim;
+    public bool completed;
 
 
     void Start()
@@ -30,6 +31,7 @@ public class Dialog : MonoBehaviour
         story = new Story(inkJSON.text);
         sentence = story.Continue();
         typer = null;
+        completed = false;
     }
 
     public void TriggerDialog()
@@ -62,7 +64,7 @@ public class Dialog : MonoBehaviour
         
     }
     
-    public void NextSentence(){
+    private void NextSentence(){
         source.Play();
 
         if(story.canContinue){
@@ -75,6 +77,7 @@ public class Dialog : MonoBehaviour
             textDisplay.text = "";
             typer = StartCoroutine(Type());
         } else{
+            completed = true;
             curAnim.SetBool("isTalking",false);
             textDisplay.text = "";
             textDisplay.enabled = false;
