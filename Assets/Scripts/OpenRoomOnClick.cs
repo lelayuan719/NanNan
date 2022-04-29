@@ -22,8 +22,12 @@ public class OpenRoomOnClick : MonoBehaviour
     }
     void OnMouseDown()
     {
-        Nannan.transform.position = new Vector3(-5.8f, -1.98f, 0f);
+
         Cursor.SetCursor(null,Vector2.zero,CursorMode.Auto);
+
+        Nannan.transform.position = new Vector3(50.41076f, -0.02854919f, 82.30728f);
+        // Room.SetActive(true);
+        //pauseRootScene.SetActive(false);
     }
     public void CloseRoom()
     {
