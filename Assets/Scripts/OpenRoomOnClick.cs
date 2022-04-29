@@ -7,7 +7,7 @@ public class OpenRoomOnClick : MonoBehaviour
 {
 
    // public Texture2D texture;
-
+    private bool opened;
     //public GameObject pauseRootScene;
     // public GameObject Room;
     //private bool opened;
@@ -19,13 +19,14 @@ public class OpenRoomOnClick : MonoBehaviour
         //pauseRootScene = GameObject.FindWithTag("pause");
         // Room.SetActive(false);
     }
+
     void OnMouseDown()
     {
-
-
-        Cursor.SetCursor(null,Vector2.zero,CursorMode.Auto);
-
-        Nannan.transform.position = new Vector3(50.41076f, -0.02854919f, 82.30728f);
+        opened = gameObject.GetComponent<ItemMatch>().success;
+        if(opened){
+            Nannan.transform.position = new Vector3(50.41076f, -0.02854919f, 82.30728f);
+        }
+        
         // Room.SetActive(true);
         //pauseRootScene.SetActive(false);
     }
