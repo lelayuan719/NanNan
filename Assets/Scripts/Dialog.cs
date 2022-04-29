@@ -44,9 +44,9 @@ public class Dialog : MonoBehaviour
 
     void Update(){
         if(textDisplay.text == sentence
-           && Input.GetKeyDown(KeyCode.Space)){
+           && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))){
             NextSentence();
-        } else if (npc.GetComponent<NPC>().dialogStarted && Input.GetKeyDown(KeyCode.Space)){
+        } else if (npc.GetComponent<NPC>().dialogStarted && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))){
             StopCoroutine(typer);
             textDisplay.text = sentence;
         }

@@ -1524,6 +1524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog: {fileID: 1671605176}
   dialogStarted: 0
+  maxDist: 250
 --- !u!61 &595084662
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5181,7 +5182,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 03b6d33a3c5a34eb4a9497dd28622a2d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c52a4757efa29244dae8303fdfd9ce32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
