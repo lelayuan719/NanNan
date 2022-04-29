@@ -11,7 +11,6 @@ public class OnClickHouse : MonoBehaviour
     //public GameObject pauseRootScene;
     // public GameObject Room;
     //private bool opened;
-    public Texture2D texture;
     public GameObject Nannan;
 
     // Start is called before the first frame update
@@ -26,6 +25,7 @@ public class OnClickHouse : MonoBehaviour
         Cursor.SetCursor(null,Vector2.zero,CursorMode.Auto);
 
         Nannan.transform.position = new Vector3(25f, -0.02854919f, 82.30728f);
+
         // Room.SetActive(true);
         //pauseRootScene.SetActive(false);
     }
@@ -46,10 +46,10 @@ public class OnClickHouse : MonoBehaviour
 
     void OnMouseOver()
     {
-        Cursor.SetCursor(texture, Vector2.zero, CursorMode.Auto);
+        //Cursor.SetCursor(texture, Vector2.zero, CursorMode.Auto);
     }
     void OnMouseExit()
     {
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        //Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 }

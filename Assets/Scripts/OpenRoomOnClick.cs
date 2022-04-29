@@ -11,7 +11,6 @@ public class OpenRoomOnClick : MonoBehaviour
     //public GameObject pauseRootScene;
     // public GameObject Room;
     //private bool opened;
-    public Texture2D texture;
     public GameObject Nannan;
 
     // Start is called before the first frame update
@@ -22,6 +21,7 @@ public class OpenRoomOnClick : MonoBehaviour
     }
     void OnMouseDown()
     {
+
 
         Cursor.SetCursor(null,Vector2.zero,CursorMode.Auto);
 
@@ -46,10 +46,10 @@ public class OpenRoomOnClick : MonoBehaviour
 
     void OnMouseOver()
     {
-        Cursor.SetCursor(texture,Vector2.zero,CursorMode.Auto);
+        //Cursor.SetCursor(texture, Vector2.zero, CursorMode.Auto);
     }
     void OnMouseExit()
     {
-        Cursor.SetCursor(null,Vector2.zero,CursorMode.Auto);
+        //Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 }

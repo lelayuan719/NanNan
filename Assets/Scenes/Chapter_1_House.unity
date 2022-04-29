@@ -5241,7 +5241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7a8bb03dff945b8b28c1986f03883b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: 799d5271805cc4c51b7ad12283efa32f, type: 3}
   Nannan: {fileID: 724302189}
 --- !u!114 &1217661762
 MonoBehaviour:
@@ -6539,7 +6538,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc7e020c24ea14bb58e1e48bcfb506f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: 799d5271805cc4c51b7ad12283efa32f, type: 3}
   Nannan: {fileID: 724302189}
 --- !u!212 &1426314262
 SpriteRenderer:
@@ -8675,8 +8673,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2052422414}
   - component: {fileID: 2052422417}
-  - component: {fileID: 2052422415}
   - component: {fileID: 2052422416}
+  - component: {fileID: 2052422415}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -8733,10 +8731,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2052422413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be238b86216f54b89b058ad8ad6bce81, type: 3}
+  m_Script: {fileID: 11500000, guid: ae0def6236c646c41aece1b9bb4d64ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: 799d5271805cc4c51b7ad12283efa32f, type: 3}
+  texture: {fileID: 2800000, guid: f4e541342c07c476094e04dc118fed7b, type: 3}
+  NextScene: chapter_2
 --- !u!212 &2052422417
 SpriteRenderer:
   m_ObjectHideFlags: 0
