@@ -24,6 +24,7 @@ public class grandmaDoneTalking : MonoBehaviour
             updated = true;
             backpack.GetComponent<SpriteRenderer>().enabled = true;
             backpack.GetComponent<BoxCollider2D>().enabled = true;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 }
