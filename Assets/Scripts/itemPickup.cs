@@ -11,6 +11,7 @@ public class itemPickup : MonoBehaviour
     // Start is called before the first frame update
     void OnMouseDown(){
         inv.GiveItem(gameObject.name);
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         gameObject.SetActive(false);
     }
 

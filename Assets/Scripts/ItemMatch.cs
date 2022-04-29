@@ -29,11 +29,7 @@ public class ItemMatch: MonoBehaviour
         item = collectedItem.item;
         print("does this work");
         //checks if item is correct to assigned item
-        if (item.title == null)
-        {
-            print("no item selected");
-        }
-        if (item.title == null)
+        if (item == null)
          {
              print("whattt");
          }

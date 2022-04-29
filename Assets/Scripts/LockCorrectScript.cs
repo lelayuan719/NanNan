@@ -74,7 +74,7 @@ public class LockCorrectScript : MonoBehaviour
 
     private void CheckResult(){
         Debug.Log("Checking result");
-        if (codeSequence == "1964618"){
+        if (codeSequence == "1968618"){
             Debug.Log("Correct!");
             isSolved = true;
         }

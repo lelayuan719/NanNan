@@ -9,9 +9,8 @@ public class Inventory : MonoBehaviour
     public UIInventory inventoryUI;
 
     public void Start(){
-        GiveItem("amulet");
-        GiveItem("bear");
-        RemoveItem(0);
+    
+       
     }
 
     public void GiveItem(int id){

@@ -1640,7 +1640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amulet: {fileID: 661188149}
-  tiger: {fileID: 419613843}
+  tiger: {fileID: 240442916}
 --- !u!114 &293559160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1749,7 +1749,7 @@ RectTransform:
   - {fileID: 251672144}
   - {fileID: 1114627762}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1962,7 +1962,7 @@ GameObject:
   - component: {fileID: 419613845}
   - component: {fileID: 419613844}
   m_Layer: 0
-  m_Name: bear
+  m_Name: bearimage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2031,7 +2031,7 @@ Transform:
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &443314103
 GameObject:
@@ -3044,6 +3044,7 @@ GameObject:
   - component: {fileID: 661188153}
   - component: {fileID: 661188152}
   - component: {fileID: 661188151}
+  - component: {fileID: 661188154}
   m_Layer: 0
   m_Name: amulet
   m_TagString: Untagged
@@ -3143,6 +3144,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &661188154
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661188149}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.43, y: 7.72}
+    newSize: {x: 8.43, y: 7.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.43, y: 7.72}
+  m_EdgeRadius: 0
 --- !u!1 &662598378
 GameObject:
   m_ObjectHideFlags: 0
@@ -3613,7 +3640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69054e2af43864d5da70f4eed3d40208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDatabase: {fileID: 905652538}
+  itemDatabase: {fileID: 2075642918}
   inventoryUI: {fileID: 348928044}
 --- !u!114 &724302197
 MonoBehaviour:
@@ -5371,7 +5398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed6ad3e77b75cb746aee28f2447be0d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openedDoor: {fileID: 0}
+  openedDoor: {fileID: 21300000, guid: e6fe29adc3f3923418fd2b5c5d4ccc23, type: 3}
 --- !u!1 &1222756035
 GameObject:
   m_ObjectHideFlags: 0
