@@ -28,7 +28,7 @@ public class PuzzleDoor : MonoBehaviour
         if (success)
         {
             Debug.Log("to room");
-            SceneManager.LoadScene("chapter_1_room",LoadSceneMode.Single);
+            // SceneManager.LoadScene("chapter_1_room",LoadSceneMode.Single);
         }
     }
    
