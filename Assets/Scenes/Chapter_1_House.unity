@@ -4797,7 +4797,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openDoor: {fileID: 21300000, guid: 2b1d666446bf574438c04c360e178669, type: 3}
-  tiger: {fileID: 419613843}
 --- !u!114 &1217661762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5384,7 +5383,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 6ad4fa389f0c680498e965b0396109f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5599,7 +5598,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 27b00b76a6ff829409ebb04ae0592785, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5998,6 +5997,7 @@ GameObject:
   - component: {fileID: 1490466619}
   - component: {fileID: 1490466618}
   - component: {fileID: 1490466620}
+  - component: {fileID: 1490466621}
   m_Layer: 0
   m_Name: Shrine
   m_TagString: Untagged
@@ -6044,7 +6044,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 13f0f3589c8488044a2aa0943dc84590, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6125,6 +6125,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amulet: {fileID: 897408700}
+--- !u!114 &1490466621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490466615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e004baab7d1274d8dfbacbb7421bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openDoor: {fileID: 0}
+  tiger: {fileID: 0}
 --- !u!1 &1540452831
 GameObject:
   m_ObjectHideFlags: 0
