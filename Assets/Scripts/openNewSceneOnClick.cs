@@ -7,7 +7,6 @@ public class openNewSceneOnClick : MonoBehaviour
 {
 
    // public Texture2D texture;
-
     public GameObject pauseRootScene;
     public GameObject Puzzle;
     //private bool opened;
