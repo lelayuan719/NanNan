@@ -7,6 +7,8 @@ public class PuzzleWarlockBox : MonoBehaviour
     private bool success;
     public GameObject amulet;
     private bool check;
+    public GameObject panel;
+    public GameObject paused;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,8 @@ public class PuzzleWarlockBox : MonoBehaviour
                 print("got key " + check);
                 check = true;
                 amulet.SetActive(true);
+                paused.SetActive(true);
+                panel.SetActive(false);
                 
             }
           
