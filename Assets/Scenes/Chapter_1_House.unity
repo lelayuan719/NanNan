@@ -3634,6 +3634,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amulet: {fileID: 1186527984}
+  panel: {fileID: 1900128889}
+  paused: {fileID: 720299040}
 --- !u!61 &751853342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4066,6 +4068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amulet: {fileID: 0}
+  panel: {fileID: 0}
+  paused: {fileID: 0}
 --- !u!1 &897408700
 GameObject:
   m_ObjectHideFlags: 0
