@@ -1483,7 +1483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e01e93d028bc8a41bb0db236c72405d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 120
   distance: 10
   whatIsLadder:
     serializedVersion: 2
@@ -3166,7 +3166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133458203}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3469.7446, y: 5, z: 0}
+  m_LocalPosition: {x: -3469.7446, y: -3, z: 0}
   m_LocalScale: {x: -17.997229, y: 19.339668, z: 1.0598611}
   m_Children:
   - {fileID: 1545270821}
