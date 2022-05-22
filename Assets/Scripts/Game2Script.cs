@@ -10,6 +10,7 @@ public class Game2Script : MonoBehaviour
     [SerializeField] private Tiles2Script[] tiles;
     private int emptySpaceIndex = 4;
     [SerializeField] private GlowTilesScript[] glowTiles;
+    private int space = 5; 
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +38,7 @@ public class Game2Script : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
             if (hit){
                 //Debug.Log(hit.transform.name);
-                if (Vector2.Distance(a: emptySpace.position, b: hit.transform.position) < 6){
+                if (Vector2.Distance(a: emptySpace.position, b: hit.transform.position) < space){
                     // Debug.Log("IN!");
                     Vector2 lastEmptyPosition = emptySpace.position;
                     // Debug.Log(lastEmptyPosition);
@@ -113,6 +114,7 @@ public class Game2Script : MonoBehaviour
             // glowTiles[4].Change(true);
             Debug.Log(message: "You Won!");
             isSolved = true;
+            space = 0; 
         }
     }
     public void Shuffle() {

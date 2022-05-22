@@ -16,7 +16,7 @@ public class openNewSceneOnClick : MonoBehaviour
     private void Start()
     {
         //print("whatwhywhere");
-        pauseRootScene = GameObject.FindWithTag("pause");
+        //pauseRootScene = GameObject.FindWithTag("pause");
         Puzzle.SetActive(false);
         //opened = false;
        // pauseRootScene.SetActive(true);
@@ -27,7 +27,7 @@ public class openNewSceneOnClick : MonoBehaviour
         // print(pauseRootScene.isActive())
         // Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         Puzzle.SetActive(true);
-        pauseRootScene.SetActive(false);
+        //pauseRootScene.SetActive(false);
        
         print("what1");
         // print(Puzzle.name);
@@ -47,7 +47,7 @@ public class openNewSceneOnClick : MonoBehaviour
         {
             print("closing");
             Puzzle.SetActive(false);
-            pauseRootScene.SetActive(true);
+            //pauseRootScene.SetActive(true);
         }
         else
         {
