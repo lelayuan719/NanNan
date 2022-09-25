@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -244,6 +245,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Father sitting sprite_0: -3006732631056921550
+      Father sitting sprite_4: 7698031736160166775
+      Father sitting sprite_1: -6918519105129339329
+      Father sitting sprite_5: -6032516296707479888
+      Father sitting sprite_2: 8036732869553458785
+      Father sitting sprite_3: 7260993468571879369
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

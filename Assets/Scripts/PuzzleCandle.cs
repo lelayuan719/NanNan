@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+
 
 public class PuzzleCandle : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class PuzzleCandle : MonoBehaviour
     public GameObject Dialog2;
     public GameObject scene1;
     public GameObject scene2;
-    public Light2D candleLight;
+    public UnityEngine.Rendering.Universal.Light2D candleLight;
     private bool updated = false;
     private bool isFlickering = false;
     private float timeDelay;

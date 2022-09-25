@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -244,6 +245,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      big brother sitting sprite_5: -198793233117020073
+      big brother sitting sprite_0: 1788539794850474934
+      big brother sitting sprite_3: 2423238647410810810
+      big brother sitting sprite_4: 7795855252721308810
+      big brother sitting sprite_1: -6289390619857246964
+      big brother sitting sprite_2: -4218796003188420547
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

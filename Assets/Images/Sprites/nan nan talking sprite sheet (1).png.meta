@@ -51,6 +51,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -316,6 +317,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      nan nan talking sprite sheet (1)_3: 5371353353564660319
+      nan nan talking sprite sheet (1)_2: -2961819598104483875
+      nan nan talking sprite sheet (1)_8: -5658772435215190350
+      nan nan talking sprite sheet (1)_1: -5470479322245810977
+      nan nan talking sprite sheet (1)_0: -8564080115084401036
+      nan nan talking sprite sheet (1)_7: 924397709242928522
+      nan nan talking sprite sheet (1)_6: 3022900449599727160
+      nan nan talking sprite sheet (1)_5: 3529779034892855519
+      nan nan talking sprite sheet (1)_4: -4558835943641848769
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

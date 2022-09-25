@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -244,6 +245,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      nannan climbing sprite_4: 5505059305945041602
+      nannan climbing sprite_0: -7092084479505864185
+      nannan climbing sprite_1: -266976407753527898
+      nannan climbing sprite_3: 5292348699381528551
+      nannan climbing sprite_2: -2902522388141665055
+      nannan climbing sprite_5: -1835473480363626847
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

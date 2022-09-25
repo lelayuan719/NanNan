@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -244,6 +245,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      small brother dropping amulet sprite_1: 5825039644082177671
+      small brother dropping amulet sprite_0: 2616980746928078106
+      small brother dropping amulet sprite_5: -4851438639814186342
+      small brother dropping amulet sprite_2: -3787241595962943018
+      small brother dropping amulet sprite_4: -3894922752899492170
+      small brother dropping amulet sprite_3: -8016819362160877175
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
