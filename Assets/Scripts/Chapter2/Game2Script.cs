@@ -6,121 +6,92 @@ public class Game2Script : MonoBehaviour
 {
     public bool isSolved;
     [SerializeField] private Transform emptySpace = null;
-    private Camera cam;
-    [SerializeField] private Tiles2Script[] tiles;
+    [SerializeField] public Tiles2Script[] tiles;
     private int emptySpaceIndex = 4;
     [SerializeField] private GlowTilesScript[] glowTiles;
-    private int space = 5; 
+    public List<Vector3> slotPositions = new List<Vector3>();
+    private int[] disallowedSlots = { 2, 3, 0, 1, -1 };
+    public int emptySpaceLoc = 4;
 
     // Start is called before the first frame update
     void Start()
     {
         isSolved = false;
-        cam = Camera.main;
+
+        InitTiles();
         Shuffle();
+        CheckStartSolved();
     }
 
-    public IEnumerator Pause(int i){
-        yield return new WaitForSeconds(0.2f);
-        glowTiles[i].Change(true);
-    }
-
-    public IEnumerator Remove(int i){
-        yield return new WaitForSeconds(0.2f);
-        glowTiles[i].Change(false);
-    }
-
-    // Update is called once per frame
-    void Update()
+    // Get tile positions
+    void InitTiles()
     {
-        if (Input.GetMouseButtonDown(0)){
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-            if (hit){
-                //Debug.Log(hit.transform.name);
-                if (Vector2.Distance(a: emptySpace.position, b: hit.transform.position) < space){
-                    // Debug.Log("IN!");
-                    Vector2 lastEmptyPosition = emptySpace.position;
-                    // Debug.Log(lastEmptyPosition);
-                    // Debug.Log(hit.transform);
-                    Tiles2Script currTile = hit.transform.GetComponent<Tiles2Script>();
-                    // GlowTilesScript gTile = hit.transform.GetComponent<GlowTilesScript>();
-                    // Debug.Log(currTile);
-                    emptySpace.position = currTile.destPosition;
-                    currTile.destPosition = lastEmptyPosition;
-                    // gTile.destPosition = lastEmptyPosition;
-                }
+        for (int loc = 0; loc < (tiles.Length - 1); loc++)
+        {
+            slotPositions.Add(tiles[loc].transform.position);
+            tiles[loc].correctLoc = loc;
+            tiles[loc].currLoc = loc;
+        }
+        slotPositions.Add(emptySpace.position);
+    }
+
+    void CheckStartSolved()
+    {
+        foreach (var tile in tiles)
+        {
+            // Something is solved
+            if (tile != null)
+            {
+                if (tile.currLoc == tile.correctLoc)
+                    StartGlow(tile.currLoc);
             }
         }
-        int correctTiles = 0;
-        foreach (var a in tiles){
-            if (a != null){
-                string objectName = a.name;
-                if (!a.finalPosition){
-                    if (objectName == "Tile (0)"){
-                        StartCoroutine(Remove(0));
-                        StopCoroutine(Remove(0));
-                        // glowTiles[0].Change(false);
-                    }
-                    else if (objectName == "Tile (1)"){
-                        StartCoroutine(Remove(1));
-                        StopCoroutine(Remove(1));
-                        // glowTiles[1].Change(false);
-                    }
-                    else if (objectName == "Tile (2)"){
-                        StartCoroutine(Remove(2));
-                        StopCoroutine(Remove(2));
-                        // glowTiles[2].Change(false);
-                    }
-                    else if (objectName == "Tile (3)"){
-                        StartCoroutine(Remove(3));
-                        StopCoroutine(Remove(3));
-                        // glowTiles[3].Change(false);
-                    }
-                }
-                else {
-                    if (objectName == "Tile (0)"){
-                        StartCoroutine(Pause(0));
-                        StopCoroutine(Pause(0));
-                        // glowTiles[0].Change(true);
-                    }
-                    else if (objectName == "Tile (1)"){
-                        StartCoroutine(Pause(1));
-                        StopCoroutine(Pause(1));
-                        // glowTiles[1].Change(true);
-                    }
-                    else if (objectName == "Tile (2)"){
-                        StartCoroutine(Pause(2));
-                        StopCoroutine(Pause(2));
-                        // glowTiles[2].Change(true);
-                    }
-                    else if (objectName == "Tile (3)"){
-                        StartCoroutine(Pause(3));
-                        StopCoroutine(Pause(3));
-                        // glowTiles[3].Change(true);
-                    }
-                    correctTiles++;
-                }
-            }
-        }
-        if (correctTiles != tiles.Length - 1){
-            StartCoroutine(Remove(4));
-            StopCoroutine(Remove(4));
-            // dglowTiles[4].Change(false);
-        }
-        else {
-            StartCoroutine(Pause(4));
-            StopCoroutine(Pause(4));
-            // glowTiles[4].Change(true);
-            Debug.Log(message: "You Won!");
-            isSolved = true;
-            space = 0; 
+
+        CheckSolved();
+    }
+
+    public void StartGlow(int loc){
+        glowTiles[loc].Change(true);
+    }
+
+    public void StopGlow(int loc){
+        glowTiles[loc].Change(false);
+    }
+
+    public void SwapTile(int swapLoc)
+    {
+        if ((disallowedSlots[swapLoc] != emptySpaceLoc) && !isSolved)
+        {
+            StartCoroutine(tiles[swapLoc].MoveTo(emptySpaceLoc));
+            emptySpaceLoc = swapLoc;
         }
     }
+
+    public void CheckSolved()
+    {
+        int correct = 0;
+        foreach (var tile in tiles)
+        {
+            // Something is solved
+            if (tile != null) 
+            {
+                if (tile.currLoc == tile.correctLoc)
+                    correct++;
+            }
+        }
+
+        if (correct == 4)
+        {
+            Debug.Log(message: "You Won!");
+            glowTiles[4].Change(true);
+            isSolved = true;
+        }
+    }
+
     public void Shuffle() {
         if (emptySpaceIndex != 4){
-            var tilePos15 = tiles[4].destPosition;
-            tiles[4].destPosition = emptySpace.position;
+            var tilePos15 = tiles[4].transform.position;
+            tiles[4].transform.position = emptySpace.position;
             emptySpace.position = tilePos15;
             tiles[emptySpaceIndex] = tiles[4];
             tiles[4] = null;
@@ -130,24 +101,26 @@ public class Game2Script : MonoBehaviour
         do {
             for (int i = 0; i < 4; i++){
                 if (tiles[i] != null){
-                    var prevPosition = tiles[i].destPosition;
+                    var prevPosition = tiles[i].transform.position;
+                    int prevLoc = tiles[i].currLoc;
                     int randomIndex = Random.Range(0, 3);
-                    tiles[i].destPosition = tiles[randomIndex].destPosition;
-                    // glowTiles[i].destPosition = tiles[randomIndex].destPosition;
-                    tiles[randomIndex].destPosition = prevPosition;
-                    // glowTiles[randomIndex].destPosition = prevPosition;
-                    var tile = tiles[i];
-                    // var gTile = glowTiles[i];
+
+                    tiles[i].transform.position = tiles[randomIndex].transform.position;
+                    tiles[randomIndex].transform.position = prevPosition;
+
+                    tiles[i].currLoc = tiles[randomIndex].currLoc;
+                    tiles[randomIndex].currLoc = prevLoc;
+
+                    var tempTile = tiles[i];
                     tiles[i] = tiles[randomIndex];
-                    // glowTiles[i] = glowTiles[randomIndex];
-                    tiles[randomIndex] = tile;
-                    // glowTiles[randomIndex] = gTile;
+                    tiles[randomIndex] = tempTile;
                 }
             }
             invertion = GetInversions();
             Debug.Log(message: "Puzzle Shuffled");
         } while (invertion % 2 == 1);
     }
+
     public int findIndex(Tiles2Script tileScr){
         for (int i = 0; i < tiles.Length; i++){
             if (tiles[i] != null){
@@ -158,6 +131,7 @@ public class Game2Script : MonoBehaviour
         }
         return -1;
     }
+
     int GetInversions(){
         int sum = 0;
         for (int i = 0; i < tiles.Length; i++){

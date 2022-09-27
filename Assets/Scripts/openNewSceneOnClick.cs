@@ -19,7 +19,7 @@ public class OpenNewSceneOnClick : MonoBehaviour
         //pauseRootScene = GameObject.FindWithTag("pause");
         Puzzle.SetActive(false);
         //opened = false;
-       // pauseRootScene.SetActive(true);
+        // pauseRootScene.SetActive(true);
 
     }
     void OnMouseDown()
