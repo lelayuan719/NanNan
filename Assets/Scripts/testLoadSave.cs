@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class testLoadSave : MonoBehaviour
+public class TestLoadSave : MonoBehaviour
 {
     private GameObject NanNan;
     // Start is called before the first frame update

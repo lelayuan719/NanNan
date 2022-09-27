@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class hover_interactable : MonoBehaviour
+public class HoverInteractable : MonoBehaviour
 {
     private Color startcolor;
     private SpriteRenderer spriteRenderer;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class transitionAnimations : MonoBehaviour
+public class TransitionAnimations : MonoBehaviour
 {
     public GameObject element1;
     public GameObject element2;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class endgame : MonoBehaviour
+public class EndGame : MonoBehaviour
 {
     private bool success;
     public Sprite openDoor;

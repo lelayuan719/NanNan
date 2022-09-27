@@ -9,7 +9,7 @@ public class ClosePuzzle : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        pauseRootScene = GameObject.Find("book").GetComponent<openNewSceneOnClick>().pauseRootScene;
+        pauseRootScene = GameObject.Find("book").GetComponent<OpenNewSceneOnClick>().pauseRootScene;
         pauseRootScene = GameObject.FindWithTag("pause");
     }
 

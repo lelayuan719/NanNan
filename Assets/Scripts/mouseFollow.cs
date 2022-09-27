@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mouseFollow : MonoBehaviour
+public class MouseFollow : MonoBehaviour
 {
     private bool mouseCentered;
     private void Start()

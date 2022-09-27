@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerLight : MonoBehaviour
+public class PlayerLight : MonoBehaviour
 {
     public Transform player;
     public Transform lightObj;

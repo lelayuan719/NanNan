@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class journalButton : MonoBehaviour
+public class JournalButton : MonoBehaviour
 {
     public GameObject otherButton1;
     public GameObject otherButton2;

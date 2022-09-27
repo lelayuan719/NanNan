@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PologueMinimap : MonoBehaviour
+public class PrologueMinimap : MonoBehaviour
 {
     private float startX;
     private float length = 4720.751f;

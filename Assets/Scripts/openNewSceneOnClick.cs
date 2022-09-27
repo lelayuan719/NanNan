@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class openNewSceneOnClick : MonoBehaviour
+public class OpenNewSceneOnClick : MonoBehaviour
 {
 
    // public Texture2D texture;

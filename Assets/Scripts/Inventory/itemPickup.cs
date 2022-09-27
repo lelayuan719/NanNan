@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class itemPickup : MonoBehaviour
+public class ItemPickup : MonoBehaviour
 {
     public Texture2D texture;
     private Inventory inv;

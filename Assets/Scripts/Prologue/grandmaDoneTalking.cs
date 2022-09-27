@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class grandmaDoneTalking : MonoBehaviour
+public class GrandmaDoneTalking : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool done;
@@ -22,8 +22,7 @@ public class grandmaDoneTalking : MonoBehaviour
         done = dialog.GetComponent<Dialog>().completed;
         if (done && !updated){
             updated = true;
-            backpack.GetComponent<SpriteRenderer>().enabled = true;
-            backpack.GetComponent<BoxCollider2D>().enabled = true;
+            backpack.SetActive(true);
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
