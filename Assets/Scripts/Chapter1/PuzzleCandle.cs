@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PuzzleCandle : MonoBehaviour
 {
-    private GameObject candle;
     private bool match;
     public GameObject darkness;
     public GameObject DialogNext;
@@ -20,14 +19,13 @@ public class PuzzleCandle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        candle = GameObject.Find("candle");
-        match = candle.GetComponent<ItemMatch>().success;
+        match = GetComponent<ItemMatch>().success;
     }
 
     // Update is called once per frame
     void Update()
     {
-        match = candle.GetComponent<ItemMatch>().success;
+        match = GetComponent<ItemMatch>().success;
         if (match && !updated)
         {
             updated = true;

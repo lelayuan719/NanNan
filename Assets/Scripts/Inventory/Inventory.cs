@@ -8,16 +8,14 @@ public class Inventory : MonoBehaviour
     public ItemDatabase itemDatabase;
     public UIInventory inventoryUI;
 
-    public void Start(){
-    
-       
+    public void Start() {
+
     }
 
     public void GiveItem(int id){
         Item itemToAdd = itemDatabase.GetItem(id);
         characterItems.Add(itemToAdd);
         Debug.Log("added item: " + itemToAdd.title);
-
     }
 
     public void GiveItem(string itemName){
@@ -47,6 +45,4 @@ public class Inventory : MonoBehaviour
             Debug.Log("Item removed: " + item.title);
         }
     }
-
-
 }

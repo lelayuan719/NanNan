@@ -8,25 +8,25 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
 {
     public Item item;
     private Image spriteImage;
-    public UIItem selectedItem;
+    private UIItem selectedItem;
     private Tooltip tooltip;
 
     private void Awake(){
         spriteImage = GetComponent<Image>();
         UpdateItem(null);
-        selectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
+        selectedItem = GameManager.GM.inventoryUI.selectedItem;
         tooltip = GameObject.Find("Tooltip").GetComponent<Tooltip>();
     }
 
     public void UpdateItem(Item item){
-    this.item = item;
-    if (this.item != null){
-        spriteImage.color = Color.white;
-        spriteImage.sprite = this.item.icon;
-    } 
-    else {
-        spriteImage.color = Color.clear;
-    }
+        this.item = item;
+        if (this.item != null){
+            spriteImage.color = Color.white;
+            spriteImage.sprite = this.item.icon;
+        } 
+        else {
+            spriteImage.color = Color.clear;
+        }
     }
     
     

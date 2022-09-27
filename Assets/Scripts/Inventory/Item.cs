@@ -18,7 +18,7 @@ public class Item
     }
 
     public int getId(){
-        return this.id;
+        return id;
     }
 
     public Item(Item item){

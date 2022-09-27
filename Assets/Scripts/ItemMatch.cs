@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class ItemMatch: MonoBehaviour
 {
-    public UIItem collectedItem;
     public Item item;
-    public GameObject interactionItem;
+    public bool consumeItem = true;
+    //public GameObject interactionItem;
     public string itemCheck;
     public bool success;
+    private UIItem collectedItem;
+
     // Start is called before the first frame update
     void Start()
     {
-        collectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
+        collectedItem = GameManager.GM.inventoryUI.selectedItem;
         item = collectedItem.item;
-        //print(item);
         success = false;
     }
 
@@ -23,6 +24,7 @@ public class ItemMatch: MonoBehaviour
     {
         
     }
+
     void OnMouseDown()
     {
         //gets the information from inventory UI to figure out what item is currently selected 
@@ -35,24 +37,16 @@ public class ItemMatch: MonoBehaviour
          }
          else if(item.title == itemCheck)
         {
-            //if correct item is selecteed success bool will be true
+            //if correct item is selected success bool will be true
             success = true;
             print(itemCheck + " match successful");
-            //old codd
-            UIInventory inventoryItem = GameObject.Find("InventoryPanel").GetComponent<UIInventory>();
-            //inventoryItem.RemoveItem(item);
-            //new code, pulls right thing, seems like "item" is the issue
-            //Inventory inventory = GameObject.Find("Nan_Nan_Side_Right").GetComponent<Inventory>();
-            //inventory.RemoveItem(inventory.CheckForItem(item.getId()));
+
+            collectedItem.UpdateItem(null);
+            GameManager.GM.inventory.RemoveItem(item);
         } else
         {
             print("wrong item match");
         }
-       /* if(collectedItem.item.title == itemCheck)
-         {
-             print("matches used on candle");
-         }
-         */
     }
 
 }

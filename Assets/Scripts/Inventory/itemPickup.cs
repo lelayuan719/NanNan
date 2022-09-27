@@ -5,8 +5,12 @@ using UnityEngine;
 public class itemPickup : MonoBehaviour
 {
     public Texture2D texture;
-    public Inventory inv;
+    private Inventory inv;
 
+    private void Start()
+    {
+        inv = GameManager.GM.inventory;
+    }
 
     // Start is called before the first frame update
     void OnMouseDown(){

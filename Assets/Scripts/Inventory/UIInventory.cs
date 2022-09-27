@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class UIInventory : MonoBehaviour
 {
-    public List<UIItem> uIItems= new List<UIItem>();
+    public List<UIItem> uIItems = new List<UIItem>();
+    public UIItem selectedItem;
     public GameObject slotPrefab;
     public Transform slotPanel;
     public int numberOfSlots = 6;
@@ -26,8 +27,11 @@ public class UIInventory : MonoBehaviour
     }
 
     public void RemoveItem(Item item){
-        UpdateSlot(uIItems.FindIndex(i => i.item == item), null);
-        Debug.Log(uIItems.FindIndex(i => i.item == item));
-        Debug.Log("item removed");
+        int foundIndex = uIItems.FindIndex(i => i.item == item);
+        if (foundIndex != -1)
+        {
+            UpdateSlot(foundIndex, null);
+            Debug.Log("item removed");
+        }
     }
 }
