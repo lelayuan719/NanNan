@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    private float length, startpos;
+    private float startpos;
+    private float length = 4720.751f;
     private float startposY;
     public GameObject cam;
     public float parallaxEffect;
@@ -14,8 +15,7 @@ public class Parallax : MonoBehaviour
     {
         startpos = transform.position.x;
         startposY = transform.position.y;
-        length = GetComponent<SpriteRenderer>().bounds.size.x;
-
+        //length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
     // Update is called once per frame
@@ -24,15 +24,18 @@ public class Parallax : MonoBehaviour
         float temp = cam.transform.position.x * (1-parallaxEffect);
         float dist = cam.transform.position.x * parallaxEffect;
         float distY = cam.transform.position.y * parallaxEffect;
-        transform.position = new Vector3(startpos + dist, 
+        transform.position = new Vector3(startpos + dist,
                                          transform.position.y,
                                          transform.position.z);
-        
+
         //infinite scrolling
-        /*if (temp > startpos + length){
+        if (temp > startpos + length/2)
+        {
             startpos += length;
-        } else if (temp < startpos - length) {
+        }
+        else if (temp < startpos - length/2)
+        {
             startpos -= length;
-        }*/
+        }
     }
 }
