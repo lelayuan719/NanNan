@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Nannan : MonoBehaviour
 {
-    public int score = 0;
+    public int keys = 0;
     public float speed = 5.0f;
     public GameObject door;
 
@@ -38,7 +38,7 @@ public class Nannan : MonoBehaviour
             rb.velocity += new Vector2(0, -speed);
         }
 
-        if (score == 4)
+        if (keys == 4)
         {
             Destroy(door);
         }
@@ -47,7 +47,7 @@ public class Nannan : MonoBehaviour
     {
         if (collision.gameObject.tag == "Keys")
         {
-            score++;
+            keys++;
             Destroy(collision.gameObject);
         }
 

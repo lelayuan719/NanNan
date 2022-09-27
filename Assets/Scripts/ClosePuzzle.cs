@@ -10,7 +10,6 @@ public class ClosePuzzle : MonoBehaviour
     void Awake()
     {
         pauseRootScene = GameObject.Find("book").GetComponent<OpenNewSceneOnClick>().pauseRootScene;
-        pauseRootScene = GameObject.FindWithTag("pause");
     }
 
     // Update is called once per frame

@@ -49,6 +49,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 7553713860508703097}
   inventoryUI: {fileID: 5709118372592456033}
+  Nannan: {fileID: 0}
+  NNSide: {fileID: 0}
+  NNTop: {fileID: 0}
   gameIsRunning: 1
 --- !u!114 &7553713860508703097
 MonoBehaviour:

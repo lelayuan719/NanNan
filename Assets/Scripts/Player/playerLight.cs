@@ -4,26 +4,13 @@ using UnityEngine;
 
 public class PlayerLight : MonoBehaviour
 {
-    public Transform player;
-    public Transform lightObj;
     public GameObject light;
     private bool inDark = false;
     [Range(0,5)]
     public float smoothFactor;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-
-    void FixedUpdate()
-    {
-        if (inDark){
-            Follow();
-        }
     }
 
     void OnTriggerEnter2D(Collider2D collision){
@@ -38,15 +25,5 @@ public class PlayerLight : MonoBehaviour
             light.SetActive(false);
             inDark = false;
         }
-    }
-
-    void Follow()
-    {
-        Vector3 playerPosition = player.position;
-        
-        Vector3 smoothedPosition = 
-            Vector3.Lerp(transform.position,
-            playerPosition,smoothFactor*Time.fixedDeltaTime);
-        lightObj.position = smoothedPosition;
     }
 }

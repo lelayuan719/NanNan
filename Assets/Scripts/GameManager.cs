@@ -41,8 +41,6 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
 
         inventory = GetComponent<Inventory>();
-
-
     }
 
     private void Start()

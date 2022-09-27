@@ -15,7 +15,7 @@ public class Dialog2 : MonoBehaviour
     private int index;
     public float typingSpeed;
     private AudioSource source;
-    public PlayerControllerC2 playerController;
+    public PlayerController playerController;
     public GameObject npc;
     private bool spacePressed = false;
     private Coroutine typer;
