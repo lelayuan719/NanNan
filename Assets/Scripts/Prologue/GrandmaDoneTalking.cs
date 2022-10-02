@@ -14,7 +14,7 @@ public class GrandmaDoneTalking : MonoBehaviour
     {
         updated = false;
         done = dialog.GetComponent<Dialog>().completed;
-    }
+    }//
 
     // Update is called once per frame
     void Update()

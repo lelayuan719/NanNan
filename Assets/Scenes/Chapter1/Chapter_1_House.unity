@@ -1103,6 +1103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Puzzle: {fileID: 1900128889}
+  pauseRootScene: {fileID: 0}
 --- !u!114 &227596614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1425,7 +1426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a846bbcfafda49489edcd6371406f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: f4e541342c07c476094e04dc118fed7b, type: 3}
+  texture: {fileID: 0}
 --- !u!61 &240442919
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2682,7 +2683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a846bbcfafda49489edcd6371406f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: f4e541342c07c476094e04dc118fed7b, type: 3}
+  texture: {fileID: 0}
 --- !u!61 &585667353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3102,7 +3103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a846bbcfafda49489edcd6371406f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: f4e541342c07c476094e04dc118fed7b, type: 3}
+  texture: {fileID: 0}
 --- !u!212 &661188153
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3587,7 +3588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   light: {fileID: 0}
-  smoothFactor: 0.33
+  smoothFactor: 0
 --- !u!114 &724302198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4618,7 +4619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a846bbcfafda49489edcd6371406f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: 53256257fd17e4dfda5f08016551019e, type: 3}
+  texture: {fileID: 0}
 --- !u!61 &997605316
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4709,7 +4710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230cc1fe9b39df84d91144cda767da66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseRootScene: {fileID: 12542443}
+  pauseRootScene: {fileID: 0}
   Puzzle: {fileID: 1114627761}
 --- !u!114 &997605319
 MonoBehaviour:
@@ -5067,7 +5068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1114627762
 Transform:
   m_ObjectHideFlags: 0
@@ -5139,6 +5140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Puzzle: {fileID: 1114627761}
+  pauseRootScene: {fileID: 0}
 --- !u!114 &1162665132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5304,7 +5306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a846bbcfafda49489edcd6371406f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 2800000, guid: f4e541342c07c476094e04dc118fed7b, type: 3}
+  texture: {fileID: 0}
 --- !u!212 &1186527988
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7342,8 +7344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0e004baab7d1274d8dfbacbb7421bb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openDoor: {fileID: 0}
-  tiger: {fileID: 0}
 --- !u!1 &1492231909
 GameObject:
   m_ObjectHideFlags: 0
@@ -7965,7 +7965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf91ae37f77c846b0829219b85d1bc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panel: {fileID: 191859882}
+  Panel: {fileID: 0}
 --- !u!114 &1674452081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9103,7 +9103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1900128890
 Transform:
   m_ObjectHideFlags: 0
