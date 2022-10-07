@@ -12,6 +12,7 @@ public class DoorClicked : MonoBehaviour
     // Start is called before the first frame update
     void OnMouseDown(){
         SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
     
