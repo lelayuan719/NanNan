@@ -37,6 +37,7 @@ public class Dialog : MonoBehaviour
     {
         textDisplay.enabled = true;
         playerController.playerCanMove = false;
+        playerController.GetComponent<Animator>().SetBool("isWalking", false);
         curChar = GameObject.Find(character[0]);
         curChar.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         curAnim = curChar.GetComponent<Animator>();

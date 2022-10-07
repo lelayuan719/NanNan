@@ -35,7 +35,7 @@ public class Dialog2 : MonoBehaviour
     public void TriggerDialog()
     {
         playerController.playerCanMove = false;
-        playerController.speed = 0;
+        playerController.GetComponent<Animator>().SetBool("isWalking", false);
         background.SetActive(true);
         textDisplay.enabled = true;
         /*curChar = GameObject.Find(character[0]);
@@ -83,7 +83,6 @@ public class Dialog2 : MonoBehaviour
             textDisplay.enabled = false;
             background.SetActive(false);
             playerController.playerCanMove = true;
-            playerController.speed = 4;
             if(disappear){
                 SpriteRenderer npcspr = npc.GetComponent<SpriteRenderer>();
                 npcspr.enabled = false;
