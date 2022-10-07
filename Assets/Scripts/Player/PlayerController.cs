@@ -39,17 +39,26 @@ public class PlayerController : MonoBehaviour
     }
 
     void FixedUpdate(){
-        inputHorizontal = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(inputHorizontal * speed, rb.velocity.y);
-        if(inputHorizontal!=0){
-            anim.SetBool("isWalking",true);
-            if (inputHorizontal < 0) {
-               sr.flipX = true;
-            } else {
-                sr.flipX = false;
+        if (playerCanMove)
+        {
+            inputHorizontal = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(inputHorizontal * speed, rb.velocity.y);
+            if (inputHorizontal != 0)
+            {
+                anim.SetBool("isWalking", true);
+                if (inputHorizontal < 0)
+                {
+                    sr.flipX = true;
+                }
+                else
+                {
+                    sr.flipX = false;
+                }
             }
-        } else {
-            anim.SetBool("isWalking",false);
+            else
+            {
+                anim.SetBool("isWalking", false);
+            }
         }
         
         //if (rb.transform.position.x < left && inputHorizontal < 0){

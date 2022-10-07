@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// This should be attached to a global singleton controller, not the floor
-// TODO
-
-public class CurveAtStart : MonoBehaviour
+public class CurvatureController : MonoBehaviour
 {
     Renderer render;
 
@@ -14,10 +11,14 @@ public class CurveAtStart : MonoBehaviour
         render = gameObject.GetComponent<Renderer>();
         render.sharedMaterial.SetFloat("_Direction", -1);
         render.sharedMaterial.SetFloat("_Radius", 900);
-
     }
 
     private void OnApplicationQuit()
+    {
+        ResetCurvature();
+    }
+
+    public void ResetCurvature()
     {
         render.sharedMaterial.SetFloat("_Direction", 0);
         render.sharedMaterial.SetFloat("_Radius", 1000000);

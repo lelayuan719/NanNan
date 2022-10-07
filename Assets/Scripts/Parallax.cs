@@ -29,13 +29,13 @@ public class Parallax : MonoBehaviour
                                          transform.position.z);
 
         //infinite scrolling
-        if (temp > startpos + length/2)
-        {
-            startpos += length;
-        }
-        else if (temp < startpos - length/2)
-        {
-            startpos -= length;
-        }
+        //if (temp > startpos + length / 2)
+        //{
+        //    startpos += length;
+        //}
+        //else if (temp < startpos - length / 2)
+        //{
+        //    startpos -= length;
+        //}
     }
 }

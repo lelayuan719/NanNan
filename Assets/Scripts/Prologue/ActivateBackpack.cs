@@ -7,12 +7,14 @@ public class ActivateBackpack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
     void OnMouseDown()
     {
         GameManager.GM.ActivateInventory();
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         gameObject.SetActive(false);
 
     }
