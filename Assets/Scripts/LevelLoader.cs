@@ -6,16 +6,18 @@ using UnityEngine.UI;
 public class LevelLoader : MonoBehaviour
 {
     public GameObject loadingScreen;
+    public GameObject buttons;
     public Slider slider;
-    public void Loadlevel (int sceneIndex)
+    public void Loadlevel (string sceneName)
     {
-        StartCoroutine(LoadAsync(sceneIndex));
+        StartCoroutine(LoadAsync(sceneName));
     }
 
-    IEnumerator LoadAsync (int sceneIndex)
+    IEnumerator LoadAsync (string sceneName)
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
         loadingScreen.SetActive(true);
+        buttons.SetActive(false);
 
         while(!operation.isDone)
         {

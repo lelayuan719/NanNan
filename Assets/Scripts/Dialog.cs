@@ -23,7 +23,6 @@ public class Dialog : MonoBehaviour
     private Animator curAnim;
     public bool completed;
 
-
     void Start()
     {
         ExecuteAfterTime(1);
@@ -36,9 +35,10 @@ public class Dialog : MonoBehaviour
 
     public void TriggerDialog()
     {
+        textDisplay.enabled = true;
         playerController.playerCanMove = false;
-        playerController.speed = 0;
         curChar = GameObject.Find(character[0]);
+        curChar.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         curAnim = curChar.GetComponent<Animator>();
         curAnim.SetBool("isTalking",true);
         typer = StartCoroutine(Type());
@@ -83,13 +83,13 @@ public class Dialog : MonoBehaviour
             textDisplay.enabled = false;
             source.enabled = false;
             playerController.playerCanMove = true;
-            playerController.speed = 100;
             SpriteRenderer npcspr = npc.GetComponent<SpriteRenderer>();
             npcspr.enabled = false;
             foreach (Renderer r in npc.GetComponentsInChildren(typeof(Renderer)))
             {
                 r.enabled = false;
             }
+            enabled = false;
         }
     }
 

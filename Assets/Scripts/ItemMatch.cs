@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ItemMatch: MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ItemMatch: MonoBehaviour
     public string itemCheck;
     public bool success;
     private UIItem collectedItem;
+    public UnityEvent onMatch;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,7 @@ public class ItemMatch: MonoBehaviour
 
             collectedItem.UpdateItem(null);
             GameManager.GM.inventory.RemoveItem(item);
+            onMatch.Invoke();
         } else
         {
             print("wrong item match");

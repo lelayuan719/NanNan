@@ -7,11 +7,6 @@ public class PuzzleCandle : MonoBehaviour
 {
     private bool match;
     public GameObject darkness;
-    public GameObject DialogNext;
-    public GameObject Dialog1;
-    public GameObject Dialog2;
-    public GameObject scene1;
-    public GameObject scene2;
     public UnityEngine.Rendering.Universal.Light2D candleLight;
     private bool updated = false;
     private bool isFlickering = false;
@@ -30,11 +25,6 @@ public class PuzzleCandle : MonoBehaviour
         {
             updated = true;
             darkness.SetActive(false);
-            Dialog1.GetComponent<Dialog2>().enabled = false;
-            Dialog2.GetComponent<Dialog2>().enabled = true;
-            scene1.SetActive(false);
-            scene2.SetActive(true);
-            DialogNext.SetActive(true);
             candleLight.enabled = true;
         }
         /*if (updated && !isFlickering){

@@ -9,6 +9,7 @@ public class UIInventory : MonoBehaviour
     public GameObject slotPrefab;
     public Transform slotPanel;
     public int numberOfSlots = 6;
+    public InventoryButtonHelper inventoryButtonHelper;
 
     private void Awake(){
         for(int i = 0; i < numberOfSlots; i++){
