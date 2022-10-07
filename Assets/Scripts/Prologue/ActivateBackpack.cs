@@ -13,9 +13,18 @@ public class ActivateBackpack : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
+        Collect();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Collect();
+    }
+
+    void Collect()
+    {
         GameManager.GM.ActivateInventory();
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         gameObject.SetActive(false);
-
     }
 }

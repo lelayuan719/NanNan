@@ -7078,6 +7078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 148075845}
+  buttons: {fileID: 0}
   slider: {fileID: 2006626577}
 --- !u!4 &1707328221
 Transform:
@@ -7474,6 +7475,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45deb1e14eb8b2546aebc259847ff7e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startCurvature: 1500
+  endCurvature: 600
+  maxX: 3125
+  character: {fileID: 1657466529}
 --- !u!4 &1828341122
 Transform:
   m_ObjectHideFlags: 0
