@@ -1414,6 +1414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newCursor: {fileID: 2800000, guid: 6f81427daae9f5b4e92c9162e5e6d800, type: 3}
+  canPickUp: 1
 --- !u!114 &240442918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1831,6 +1832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newCursor: {fileID: 2800000, guid: 6f81427daae9f5b4e92c9162e5e6d800, type: 3}
+  canPickUp: 0
 --- !u!114 &348928044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1848,6 +1850,7 @@ MonoBehaviour:
   slotPrefab: {fileID: 7340811065773967487, guid: cd7f792a5df58473781812fdcc50852e, type: 3}
   slotPanel: {fileID: 1395806847}
   numberOfSlots: 6
+  inventoryButtonHelper: {fileID: 0}
 --- !u!1 &394609874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2636,6 +2639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newCursor: {fileID: 2800000, guid: 6f81427daae9f5b4e92c9162e5e6d800, type: 3}
+  canPickUp: 0
 --- !u!1 &585667350
 GameObject:
   m_ObjectHideFlags: 0
@@ -2775,6 +2779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newCursor: {fileID: 2800000, guid: 6f81427daae9f5b4e92c9162e5e6d800, type: 3}
+  canPickUp: 1
 --- !u!1 &586245578
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,6 +3096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newCursor: {fileID: 2800000, guid: 6f81427daae9f5b4e92c9162e5e6d800, type: 3}
+  canPickUp: 0
 --- !u!114 &661188152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3760,6 +3766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newCursor: {fileID: 2800000, guid: 6f81427daae9f5b4e92c9162e5e6d800, type: 3}
+  canPickUp: 0
 --- !u!1 &758062194
 GameObject:
   m_ObjectHideFlags: 0
@@ -4126,6 +4133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newCursor: {fileID: 2800000, guid: 6f81427daae9f5b4e92c9162e5e6d800, type: 3}
+  canPickUp: 0
 --- !u!212 &863738136
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4725,6 +4733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newCursor: {fileID: 2800000, guid: 6f81427daae9f5b4e92c9162e5e6d800, type: 3}
+  canPickUp: 1
 --- !u!1 &1009146001
 GameObject:
   m_ObjectHideFlags: 0
@@ -5268,6 +5277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newCursor: {fileID: 2800000, guid: 6f81427daae9f5b4e92c9162e5e6d800, type: 3}
+  canPickUp: 1
 --- !u!61 &1186527986
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5532,6 +5542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newCursor: {fileID: 2800000, guid: 5d8038ade9b3d794e9991542898cb3ac, type: 3}
+  canPickUp: 0
 --- !u!114 &1217661763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6903,6 +6914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newCursor: {fileID: 0}
+  canPickUp: 0
 --- !u!114 &1426314261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6997,6 +7009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newCursor: {fileID: 2800000, guid: 5d8038ade9b3d794e9991542898cb3ac, type: 3}
+  canPickUp: 0
 --- !u!114 &1426314265
 MonoBehaviour:
   m_ObjectHideFlags: 0
