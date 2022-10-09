@@ -9,17 +9,32 @@ public class UIInventory : MonoBehaviour
     public GameObject slotPrefab;
     public Transform slotPanel;
     public int numberOfSlots = 6;
+    public int mostRecentSlot;
 
     private void Awake(){
         for(int i = 0; i < numberOfSlots; i++){
             GameObject instance = Instantiate(slotPrefab);
             instance.transform.SetParent(slotPanel);
+            instance.GetComponentInChildren<UIItem>().slot = i;
             uIItems.Add(instance.GetComponentInChildren<UIItem>());
+        }
+    }
+
+    private void Update(){
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            if (selectedItem != null) {
+                print("Escape key was pressed");
+                //AddNewItem(selectedItem.item);
+                UpdateSlot(mostRecentSlot, selectedItem.item);
+                //Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+                selectedItem.UpdateItem(null);
+            }
         }
     }
 
     public void UpdateSlot(int slot, Item item){
         uIItems[slot].UpdateItem(item);
+        uIItems[slot].slot = slot;
     }
 
     public void AddNewItem(Item item){

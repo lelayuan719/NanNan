@@ -23,4 +23,6 @@ public class ItemPickup : MonoBehaviour
     }
     void OnMouseExit(){
     }
+    
+
 }

@@ -10,6 +10,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
     private Image spriteImage;
     private UIItem selectedItem;
     private Tooltip tooltip;
+    public int slot;
 
     private void Awake(){
         spriteImage = GetComponent<Image>();
@@ -37,6 +38,8 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
                 Item clone = new Item(selectedItem.item);
                 selectedItem.UpdateItem(this.item);
                 UpdateItem(clone);
+                slot = GameManager.GM.inventoryUI.uIItems.FindIndex(i => i.item == this.item);
+                GameManager.GM.inventoryUI.mostRecentSlot = slot;
             }
             else {
 
@@ -61,5 +64,5 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
     public void OnPointerExit(PointerEventData eventData){
         tooltip.gameObject.SetActive(false);
     }
-  
+    
 }

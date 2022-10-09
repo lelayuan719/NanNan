@@ -67,7 +67,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: c4d9523a0bd517541a1debe5a2fddb33, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1512,6 +1512,7 @@ MonoBehaviour:
   slotPrefab: {fileID: 7340811065773967487, guid: cd7f792a5df58473781812fdcc50852e, type: 3}
   slotPanel: {fileID: 8394005560393301570}
   numberOfSlots: 6
+  mostRecentSlot: 0
 --- !u!1 &8394005559542264955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,6 +1642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d80766188c2d4318ad0d0c0505374f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slot: 0
 --- !u!225 &8394005559718697863
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1770,7 +1772,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: c4d9523a0bd517541a1debe5a2fddb33, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1853,7 +1855,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: c4d9523a0bd517541a1debe5a2fddb33, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
