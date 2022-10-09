@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     public Dialog dialog;
-    public bool dialogStarted = false;
+    [HideInInspector] public bool dialogStarted = false;
     private GameObject target;
     public float maxDist;
 
