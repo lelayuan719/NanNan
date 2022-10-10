@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class LockCorrectScript : MonoBehaviour
@@ -8,6 +9,7 @@ public class LockCorrectScript : MonoBehaviour
     public bool isSolved;
     private string codeSequence;
     private int codeLength;
+    public UnityEvent onSolved;
     [SerializeField]
     private Sprite[] digits;
     [SerializeField]
@@ -77,6 +79,7 @@ public class LockCorrectScript : MonoBehaviour
         if (codeSequence == "1968618"){
             Debug.Log("Correct!");
             isSolved = true;
+            onSolved.Invoke();
         }
         else {
             Debug.Log("Incorrect!");
