@@ -9,21 +9,17 @@
 ## Git best practices
 
 * Always pull before editing
-
 * Pull often
-
 * Commit often
   * It's better to have lots of small commits that each change one feature than one big commit that does many things
   * If something goes wrong, we can isolate it to one bad commit
-
 * Use reasonably descriptive commit messages
-
   ❌ "Commit"
-
-  - Doesn't say anything about what is in the commit
+  
+  * Doesn't say anything about what is in the commit
 
   ✅ "Fixed bugs"
-
+  
   * Adequate, but could be more descriptive
 
   😄 "Fixed objects disappearing in Chapter 4"
@@ -32,9 +28,7 @@
 
 * I recommend committing to main since branches can easily have merge conflicts
   * If you do make a branch, try not to let it get too out of date since that causes merge conflicts
-
 * Don't leave the project in a broken state after a series of commits
-
 * Push to origin when you have a working feature
 
 ## Project structure and organization
