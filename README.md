@@ -14,6 +14,7 @@
   * It's better to have lots of small commits that each change one feature than one big commit that does many things
   * If something goes wrong, we can isolate it to one bad commit
 * Use reasonably descriptive commit messages
+
   ❌ "Commit"
   
   * Doesn't say anything about what is in the commit
