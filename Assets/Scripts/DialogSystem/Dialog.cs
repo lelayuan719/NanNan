@@ -11,18 +11,23 @@ public class Dialog : MonoBehaviour
     public TextAsset inkJSON;
     public GameObject npc;
     public GameObject background;
-
+    [SerializeField] private bool freezesCharacter = true;
+    [SerializeField] private bool canRepeat = false;
+    [SerializeField] private bool autoContinue = false;
     public float typingSpeed = 0.05f;
+
     public Coroutine typer;
     public UnityEvent onComplete;
 
     public MyStory story;
+    [HideInInspector] public bool running = false;
     [HideInInspector] public bool completed;
 
     private DialogManager dialogManager;
     private string sentence;
     private int index;
     private bool spacePressed = false;
+    private float autoContinueTime = 2.0f;
     private GameObject curChar;
     private Animator curAnim;
 
@@ -39,28 +44,48 @@ public class Dialog : MonoBehaviour
 
     public void TriggerDialog()
     {
+        // If dialog is already playing, do nothing
+        if (dialogManager.dialogActive) return;
+
+        // Otherwise, start the dialog
+        running = true;
+        dialogManager.dialogActive = true;
         dialogManager.textDisplay.enabled = true;
-        dialogManager.player.GetComponent<PlayerController>().playerCanMove = false;
-        dialogManager.player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        dialogManager.player.GetComponent<Animator>().SetBool("isWalking", false);
+        if (freezesCharacter) FreezeCharacter();
         if (background) background.SetActive(true);
 
+        // Update talking character animator
         if (dialogManager.aliases.ContainsKey(story.currentCharacter))
         {
             curChar = dialogManager.aliases[story.currentCharacter];
-            if (curChar.TryGetComponent<Animator>(out curAnim));
-            curAnim.SetBool("isTalking",true);
+            if (curChar.TryGetComponent(out curAnim))
+                curAnim.SetBool("isTalking",true);
         }
         typer = StartCoroutine(Type());
+
+        if (autoContinue) Invoke(nameof(StopDialog), autoContinueTime);
+    }
+
+    void FreezeCharacter()
+    {
+        dialogManager.player.GetComponent<PlayerController>().playerCanMove = false;
+        dialogManager.player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        dialogManager.player.GetComponent<Animator>().SetBool("isWalking", false);
     }
 
     void Update(){
-        if(dialogManager.textDisplay.text == sentence
-           && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))){
-            NextSentence();
-        } else if (npc.GetComponent<NPC>().dialogStarted && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))){
-            StopCoroutine(typer);
-            dialogManager.textDisplay.text = sentence;
+        if (running)
+        {
+            if (dialogManager.textDisplay.text == sentence
+                && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
+            {
+                NextSentence();
+            }
+            else if (running && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
+            {
+                StopCoroutine(typer);
+                dialogManager.textDisplay.text = sentence;
+            }
         }
     }
 
@@ -91,25 +116,36 @@ public class Dialog : MonoBehaviour
 
             dialogManager.textDisplay.text = "";
             typer = StartCoroutine(Type());
-        } 
+        }
+        // Finish dialog
         else
         {
-            completed = true;
-
-            if (background) background.SetActive(false);
-            if (dialogManager.aliases.ContainsKey(story.currentCharacter))
-            {
-                curAnim.SetBool("isTalking", false);
-            }
-
-            dialogManager.textDisplay.text = "";
-            dialogManager.textDisplay.enabled = false;
-
-            dialogManager.player.GetComponent<PlayerController>().playerCanMove = true;
-
-            onComplete.Invoke();
-            enabled = false;
+            StopDialog();
         }
+    }
+
+    void StopDialog()
+    {
+        if (!running) return;
+
+        completed = true;
+        running = false;
+        dialogManager.dialogActive = false;
+
+        if (background) background.SetActive(false);
+        if (dialogManager.aliases.ContainsKey(story.currentCharacter))
+        {
+            curAnim.SetBool("isTalking", false);
+        }
+
+        dialogManager.textDisplay.text = "";
+        dialogManager.textDisplay.enabled = false;
+
+        if (freezesCharacter) dialogManager.player.GetComponent<PlayerController>().playerCanMove = true;
+
+        onComplete.Invoke();
+        if (autoContinue) CancelInvoke(); // Cancels auto continue invokes. Not the same as the onComplete.Invoke()
+        if (!canRepeat) enabled = false;
     }
 
     IEnumerator ExecuteAfterTime(float time)

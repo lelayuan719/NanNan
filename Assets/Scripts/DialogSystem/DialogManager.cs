@@ -9,6 +9,7 @@ public class DialogManager : MonoBehaviour
     public TextMeshProUGUI textDisplay;
     public TextMeshProUGUI charName;
     public GameObject player;
+    public bool dialogActive = false;
     [SerializeField] private Alias[] _aliases;
 
     [HideInInspector] public AudioSource nextDialogSound;

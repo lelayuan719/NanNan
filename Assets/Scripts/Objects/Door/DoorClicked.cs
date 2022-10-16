@@ -5,15 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class DoorClicked : MonoBehaviour
 {
-
-    public Texture2D texture;
     public string NextScene;
+    public Dialog invalidDialog;
+    public bool open = true;
 
     // Start is called before the first frame update
     void OnMouseDown(){
-        SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        if (open)
+        {
+            SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        } else if (invalidDialog)
+        {
+            invalidDialog.TriggerDialog();
+        }
     }
 
-    
+    public void Unlock()
+    {
+        open = true;
+    }
 }

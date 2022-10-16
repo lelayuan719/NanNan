@@ -6,10 +6,11 @@ using UnityEngine.Events;
 public class ItemMatch: MonoBehaviour
 {
     public Item item;
+    public Dialog invalidDialog;
     public bool consumeItem = true;
     //public GameObject interactionItem;
     public string itemCheck;
-    public bool success;
+    [HideInInspector] public bool success;
     private UIItem collectedItem;
     public UnityEvent onMatch;
 
@@ -31,13 +32,8 @@ public class ItemMatch: MonoBehaviour
     {
         //gets the information from inventory UI to figure out what item is currently selected 
         item = collectedItem.item;
-        print("does this work");
         //checks if item is correct to assigned item
-        if (item == null)
-         {
-             print("whattt");
-         }
-         else if(item.title == itemCheck)
+        if((item != null) && (item.title == itemCheck))
         {
             //if correct item is selected success bool will be true
             success = true;
@@ -46,10 +42,9 @@ public class ItemMatch: MonoBehaviour
             collectedItem.UpdateItem(null);
             GameManager.GM.inventory.RemoveItem(item);
             onMatch.Invoke();
-        } else
+        } else if (!success && invalidDialog)
         {
-            print("wrong item match");
+            invalidDialog.TriggerDialog();
         }
     }
-
 }

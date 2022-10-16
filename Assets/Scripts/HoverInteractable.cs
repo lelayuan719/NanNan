@@ -9,15 +9,10 @@ public class HoverInteractable : MonoBehaviour, IPointerEnterHandler, IPointerEx
     private SpriteRenderer spriteRenderer;
     public Texture2D newCursor;
     [SerializeField] private bool canPickUp = false;
+
     // Start is called before the first frame update
     void Start()
     {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     // Mouse entering
@@ -33,7 +28,6 @@ public class HoverInteractable : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     void Hover()
     {
-        print("hovering");
         Cursor.SetCursor(newCursor, Vector2.zero, CursorMode.Auto);
 
         if (canPickUp)
@@ -74,7 +68,6 @@ public class HoverInteractable : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     void ExitHover()
     {
-        print("exit");
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 
         if (canPickUp)
