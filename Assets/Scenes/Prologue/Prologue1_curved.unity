@@ -722,7 +722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e765e98027c514c4abcf3158e5f5e8f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Chapter 1_village
+  sceneName: Chapter1_village
   sceneExitEvents: []
 --- !u!61 &203841759
 BoxCollider2D:
