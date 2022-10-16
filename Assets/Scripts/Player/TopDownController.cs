@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Nannan : MonoBehaviour
+public class TopDownController : MonoBehaviour
 {
     public int keys = 0;
     public float speed = 5.0f;
