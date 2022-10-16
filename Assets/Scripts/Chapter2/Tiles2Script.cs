@@ -47,7 +47,7 @@ public class Tiles2Script : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (!moving)
+        if (!moving && puzzle.canPlay)
         {
             puzzle.SwapTile(currLoc);
         }

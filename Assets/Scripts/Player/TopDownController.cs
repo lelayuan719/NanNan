@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class TopDownController : MonoBehaviour
 {
-    public int keys = 0;
     public float speed = 5.0f;
-    public GameObject door;
+    [HideInInspector] public int tokens;
 
     private Rigidbody2D rb;
 
@@ -37,25 +36,5 @@ public class TopDownController : MonoBehaviour
         {
             rb.velocity += new Vector2(0, -speed);
         }
-
-        if (keys == 4)
-        {
-            Destroy(door);
-        }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Keys")
-        {
-            keys++;
-            Destroy(collision.gameObject);
-        }
-
-        if (collision.gameObject.tag == "Walls")
-        {
-
-        }
-
-
     }
 }

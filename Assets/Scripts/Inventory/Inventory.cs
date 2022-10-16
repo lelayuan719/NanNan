@@ -29,12 +29,24 @@ public class Inventory : MonoBehaviour
         return characterItems.Find(item => item.id == id);
     }
 
+    public Item CheckForItem(string name)
+    {
+        return characterItems.Find(item => item.title == name);
+    }
+
     public void RemoveItem(int id){
         Item item = CheckForItem(id);
         if (item != null){
-            characterItems.Remove(item);
-            inventoryUI.RemoveItem(item);
-            Debug.Log("Item removed: " + item.title);
+            RemoveItem(item);
+        }
+    }
+
+    public void RemoveItem(string name)
+    {
+        Item item = CheckForItem(name);
+        if (item != null)
+        {
+            RemoveItem(item);
         }
     }
 

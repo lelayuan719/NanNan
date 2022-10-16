@@ -28,11 +28,17 @@ public class UIInventory : MonoBehaviour
     }
 
     public void RemoveItem(Item item){
+        // Try in top items
         int foundIndex = uIItems.FindIndex(i => i.item == item);
         if (foundIndex != -1)
         {
             UpdateSlot(foundIndex, null);
             Debug.Log("item removed");
+        }
+        // Try in selected item
+        else if (selectedItem.item == item)
+        {
+            selectedItem.UpdateItem(null);
         }
     }
 }

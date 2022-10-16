@@ -17,6 +17,7 @@ public class Dialog : MonoBehaviour
     public float typingSpeed = 0.05f;
 
     public Coroutine typer;
+    public UnityEvent onStart;
     public UnityEvent onComplete;
 
     public MyStory story;
@@ -64,6 +65,7 @@ public class Dialog : MonoBehaviour
         typer = StartCoroutine(Type());
 
         if (autoContinue) Invoke(nameof(StopDialog), autoContinueTime);
+        onStart.Invoke();
     }
 
     void FreezeCharacter()

@@ -249,7 +249,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -328,6 +328,7 @@ MonoBehaviour:
   textDisplay: {fileID: 126154493164068963}
   charName: {fileID: 126154491894902412}
   player: {fileID: 0}
+  dialogActive: 0
   _aliases: []
   nextDialogSound: {fileID: 0}
 --- !u!82 &126154492889194515
@@ -462,8 +463,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -236, y: -891.91}
-  m_SizeDelta: {x: 2861.0005, y: 197.8423}
+  m_AnchoredPosition: {x: -236, y: -876.7619}
+  m_SizeDelta: {x: 2861.0005, y: 228.1383}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &126154493164068989
 CanvasRenderer:

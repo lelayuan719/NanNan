@@ -9,9 +9,11 @@ public class Game2Script : MonoBehaviour
     [SerializeField] public Tiles2Script[] tiles;
     private int emptySpaceIndex = 4;
     [SerializeField] private GlowTilesScript[] glowTiles;
-    public List<Vector3> slotPositions = new List<Vector3>();
-    private int[] disallowedSlots = { 2, 3, 0, 1, -1 };
+    [HideInInspector] public List<Vector3> slotPositions = new List<Vector3>();
+    [HideInInspector] public bool canPlay = false;
+    private int[] disallowedSlots = { 2, 3, 0, 1, -1 }; // Which slot the tiles can't move into. Ex. index 0 can't move into index 2 because it's opposite
     public int emptySpaceLoc = 4;
+    public TopDownController playerController;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +21,6 @@ public class Game2Script : MonoBehaviour
         isSolved = false;
 
         InitTiles();
-        Shuffle();
-        CheckStartSolved();
     }
 
     // Get tile positions
@@ -48,6 +48,23 @@ public class Game2Script : MonoBehaviour
         }
 
         CheckSolved();
+    }
+
+    // Check if we can play the game
+    private void OnEnable()
+    {
+        if (!canPlay && (playerController.tokens == 4))
+        {
+            canPlay = true;
+            StartGame();
+        }
+    }
+
+    // Starts once all tiles have been collected
+    void StartGame()
+    {
+        Shuffle();
+        CheckStartSolved();
     }
 
     public void StartGlow(int loc){
