@@ -1194,7 +1194,7 @@ MonoBehaviour:
   left: 414
   lower: 0
   player: {fileID: 1657466529}
-  offset: {x: 20, y: 50, z: -970}
+  offset: {x: 0, y: 50, z: -970}
   smoothFactor: 5
 --- !u!81 &287990746
 AudioListener:
@@ -1212,7 +1212,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287990743}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 436, y: 233.79, z: -970.00006}
+  m_LocalPosition: {x: 416, y: 233.79, z: -970.00006}
   m_LocalScale: {x: 0.8925723, y: 0.8925723, z: 1.4049085}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2018,7 +2018,13 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: 48c205b182c6e314cb0e7b5612f4e5fc, type: 3}
   npc: {fileID: 524776905}
   background: {fileID: 0}
+  freezesCharacter: 1
+  canRepeat: 0
+  autoContinue: 0
   typingSpeed: 0.05
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
   onComplete:
     m_PersistentCalls:
       m_Calls:
@@ -2046,6 +2052,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  running: 0
   completed: 0
 --- !u!1 &537438804
 GameObject:
@@ -3170,7 +3177,13 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: 6e4ae5c64caee664d812d311ed0f9f5f, type: 3}
   npc: {fileID: 900834953}
   background: {fileID: 0}
+  freezesCharacter: 1
+  canRepeat: 0
+  autoContinue: 0
   typingSpeed: 0.05
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
   onComplete:
     m_PersistentCalls:
       m_Calls:
@@ -3186,6 +3199,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  running: 0
   completed: 0
 --- !u!1 &913395042
 GameObject:
@@ -4526,7 +4540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 775.01556, y: -372.40292}
+  m_AnchoredPosition: {x: -0, y: 185}
   m_SizeDelta: {x: 233.1357, y: 248.9731}
   m_Pivot: {x: 0.46446526, y: 0.53131706}
 --- !u!114 &1306232730
@@ -4543,7 +4557,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outerR: 250
   minimapR: 128
-  character: {fileID: 1657466529}
+  fadeRate: 1
+  maxAlpha: 0.4
+  player: {fileID: 1657466529}
   marker: {fileID: 1756214263}
 --- !u!114 &1306232731
 MonoBehaviour:

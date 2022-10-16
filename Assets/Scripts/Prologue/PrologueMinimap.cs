@@ -2,31 +2,46 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PrologueMinimap : MonoBehaviour
 {
     private float startX;
-    [SerializeField] private float outerR = 4720.751f;
     private float spiralM;
-    [SerializeField] private float minimapR;
     private float minimapSpiralM;
     private int rotations = 0;
 
     private float[] distances = new float[1000];
     private float[] thetas = new float[1000];
     private int posIndex = 0;
+    private float alpha = 0.0f;
+    private Image render;
+    private Image markerRender;
 
-    public Transform character;
+    [SerializeField] private float outerR = 4720.751f;
+    [SerializeField] private float minimapR;
+    [SerializeField] private float fadeRate;
+    [Range(0,1)][SerializeField] private float maxAlpha;
+    public Transform player;
     public RectTransform marker;
 
-    void Start()
+    private void Awake()
     {
-        startX = character.position.x;
+        render = GetComponent<Image>();
+        markerRender = marker.GetComponent<Image>();
 
         spiralM = outerR / 4;
         minimapSpiralM = minimapR / 4;
 
         PrecalcDistances();
+    }
+
+    void Start()
+    {
+        startX = player.position.x;
+
+        render.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+        markerRender.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
     }
 
     // Calculates distances along the spiral through integration
@@ -66,7 +81,7 @@ public class PrologueMinimap : MonoBehaviour
 
     void Update()
     {
-        float distance = character.position.x - startX;
+        float distance = player.position.x - startX;
 
         // Update interpolating distance
         while ((posIndex < (distances.Length-2)) && (distance > distances[posIndex]))
@@ -87,5 +102,21 @@ public class PrologueMinimap : MonoBehaviour
             rotations++;
             Debug.LogFormat("Completed {0} rotation(s)", rotations);
         }
+        UpdateAlpha(Time.deltaTime);
+    }
+
+    void UpdateAlpha(float time)
+    {
+        if (player.GetComponent<Animator>().GetBool("isWalking"))
+        {
+            alpha += time * fadeRate * maxAlpha;
+        } 
+        else
+        {
+            alpha -= time * fadeRate * maxAlpha;
+        }
+        alpha = Mathf.Clamp(alpha, 0, maxAlpha);
+        render.color = new Color(1.0f, 1.0f, 1.0f, alpha);
+        markerRender.color = new Color(1.0f, 1.0f, 1.0f, alpha);
     }
 }
