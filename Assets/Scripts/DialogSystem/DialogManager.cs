@@ -18,6 +18,7 @@ public class DialogManager : MonoBehaviour
     {
         aliases = _aliases.ToDictionary(x => x.name, x => x.obj);
         nextDialogSound = GetComponent<AudioSource>();
+        GameManager.GM.dialogManager = this;
     }
 }
 

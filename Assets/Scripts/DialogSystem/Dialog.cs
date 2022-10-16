@@ -30,7 +30,7 @@ public class Dialog : MonoBehaviour
     {
         ExecuteAfterTime(1);
 
-        dialogManager = GetComponentInParent<DialogManager>();
+        dialogManager = GameManager.GM.dialogManager;
         story = new MyStory(inkJSON.text);
         sentence = story.Continue();
         typer = null;

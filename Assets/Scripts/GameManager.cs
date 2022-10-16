@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     public Inventory inventory;
     public UIInventory inventoryUI;
+    public DialogManager dialogManager;
 
     public bool gameIsRunning = true;
 
@@ -58,9 +59,10 @@ public class GameManager : MonoBehaviour
     {
         // Disables inventory in prologue
         // If we add prologue scene after Grandma this will need to be changed
-        if (scene.name.StartsWith("Prologue")) {
+        if (scene.name.StartsWith("Prologue") || scene.name.StartsWith("menu")) {
             transform.Find("Inventory").gameObject.SetActive(false);
         }
+
     }
 
     // Activates the inventory for the first time
