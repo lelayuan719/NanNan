@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : GenericController
 {
     public float speed;
     private Rigidbody2D rb;
@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsLadder;
     private bool isClimbing;
     private float distWalked;
-    public bool playerCanMove = true;
     public int left;
     public int right;
     public int upper;

@@ -21,6 +21,18 @@ public class DialogManager : MonoBehaviour
         nextDialogSound = GetComponent<AudioSource>();
         GameManager.GM.dialogManager = this;
     }
+
+    public void FreezeCharacter()
+    {
+        player.GetComponent<GenericController>().playerCanMove = false;
+        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        player.GetComponent<Animator>().SetBool("isWalking", false);
+    }
+
+    public void UnfreezeCharacter()
+    {
+        player.GetComponent<GenericController>().playerCanMove = true;
+    }
 }
 
 [System.Serializable]

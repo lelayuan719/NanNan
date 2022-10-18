@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TopDownController : MonoBehaviour
+public class TopDownController : GenericController
 {
     public float speed = 5.0f;
-    [HideInInspector] public int tokens;
 
     private Rigidbody2D rb;
 
@@ -18,6 +17,8 @@ public class TopDownController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!playerCanMove) return;
+
         rb.velocity = Vector2.zero;
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))

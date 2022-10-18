@@ -13,7 +13,7 @@ public class Game2Script : MonoBehaviour
     [HideInInspector] public bool canPlay = false;
     private int[] disallowedSlots = { 2, 3, 0, 1, -1 }; // Which slot the tiles can't move into. Ex. index 0 can't move into index 2 because it's opposite
     public int emptySpaceLoc = 4;
-    public TopDownController playerController;
+    public TokenTracker playerController;
 
     // Start is called before the first frame update
     void Start()

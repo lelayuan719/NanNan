@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9019238020282102707}
   - component: {fileID: 9019238020282102705}
   - component: {fileID: 9019238020282102706}
+  - component: {fileID: 5775222072476489405}
   m_Layer: 0
   m_Name: Nannan
   m_TagString: Untagged
@@ -99,9 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c8f659ff4ce480da9530fc9977bf10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  playerCanMove: 1
   speed: 3
-  door: {fileID: 0}
 --- !u!61 &9019238020282102705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,3 +149,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &5775222072476489405
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9019238020282102710}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -11,7 +11,7 @@ public class MazeToken : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             boxPuzzleTile.SetActive(true);
-            other.GetComponent<TopDownController>().tokens++;
+            other.GetComponent<TokenTracker>().AddToken();
             gameObject.SetActive(false);
         }
     }

@@ -52,7 +52,7 @@ public class Dialog : MonoBehaviour
         running = true;
         dialogManager.dialogActive = true;
         dialogManager.textDisplay.enabled = true;
-        if (freezesCharacter) FreezeCharacter();
+        if (freezesCharacter) dialogManager.FreezeCharacter();
         if (background) background.SetActive(true);
 
         // Update talking character animator
@@ -66,13 +66,6 @@ public class Dialog : MonoBehaviour
 
         if (autoContinue) Invoke(nameof(StopDialog), autoContinueTime);
         onStart.Invoke();
-    }
-
-    void FreezeCharacter()
-    {
-        dialogManager.player.GetComponent<PlayerController>().playerCanMove = false;
-        dialogManager.player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        dialogManager.player.GetComponent<Animator>().SetBool("isWalking", false);
     }
 
     void Update(){
@@ -143,7 +136,7 @@ public class Dialog : MonoBehaviour
         dialogManager.textDisplay.text = "";
         dialogManager.textDisplay.enabled = false;
 
-        if (freezesCharacter) dialogManager.player.GetComponent<PlayerController>().playerCanMove = true;
+        if (freezesCharacter) dialogManager.UnfreezeCharacter();
 
         onComplete.Invoke();
         if (autoContinue) CancelInvoke(); // Cancels auto continue invokes. Not the same as the onComplete.Invoke()
