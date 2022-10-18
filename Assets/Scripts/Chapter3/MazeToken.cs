@@ -5,12 +5,14 @@ using UnityEngine;
 public class MazeToken : MonoBehaviour
 {
     public GameObject boxPuzzleTile;
+    public GameObject minimapIcon;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             boxPuzzleTile.SetActive(true);
+            minimapIcon.SetActive(false);
             other.GetComponent<TokenTracker>().AddToken();
             gameObject.SetActive(false);
         }
