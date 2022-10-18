@@ -47,11 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4cbec9922bfb1646955519306272a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryObj: {fileID: 5709118371920127514}
   inventory: {fileID: 7553713860508703097}
   inventoryUI: {fileID: 5709118372592456033}
-  Nannan: {fileID: 0}
-  NNSide: {fileID: 0}
-  NNTop: {fileID: 0}
+  dialogManager: {fileID: 0}
+  cam: {fileID: 0}
   gameIsRunning: 1
 --- !u!114 &7553713860508703097
 MonoBehaviour:
@@ -113,6 +113,10 @@ PrefabInstance:
     - target: {fileID: 8394005558871259801, guid: 907e33688f0cea541aee55c60c2a1712, type: 3}
       propertyPath: m_Name
       value: Inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394005558871259801, guid: 907e33688f0cea541aee55c60c2a1712, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8394005558871259877, guid: 907e33688f0cea541aee55c60c2a1712, type: 3}
       propertyPath: m_Pivot.x
@@ -204,6 +208,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907e33688f0cea541aee55c60c2a1712, type: 3}
+--- !u!1 &5709118371920127514 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8394005558871259801, guid: 907e33688f0cea541aee55c60c2a1712, type: 3}
+  m_PrefabInstance: {fileID: 4271562525123304579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5709118371920127590 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8394005558871259877, guid: 907e33688f0cea541aee55c60c2a1712, type: 3}

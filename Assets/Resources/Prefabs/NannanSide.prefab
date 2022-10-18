@@ -214,12 +214,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e01e93d028bc8a41bb0db236c72405d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCanMove: 1
   speed: 120
   distance: 10
   whatIsLadder:
     serializedVersion: 2
     m_Bits: 64
-  playerCanMove: 1
   left: 0
   right: 0
   upper: 0
@@ -275,7 +275,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &4603072348880616934
 BoxCollider2D:
   m_ObjectHideFlags: 0
