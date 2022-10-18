@@ -15,8 +15,7 @@ public class Game2Script : MonoBehaviour
     public int emptySpaceLoc = 4;
     public TokenTracker playerController;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         isSolved = false;
 
