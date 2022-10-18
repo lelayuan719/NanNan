@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 using Ink.Runtime;
-using System;
 
 public class Dialog : MonoBehaviour
 {
@@ -19,9 +19,12 @@ public class Dialog : MonoBehaviour
     public Coroutine typer;
     public UnityEvent onStart;
     public UnityEvent onComplete;
+    [SerializeField] private ChoiceAction[] _choiceActions;
+    public Dictionary<string, ChoiceHandler> choiceActions;
 
     public MyStory story;
     [HideInInspector] public bool running = false;
+    [HideInInspector] public bool choosing;
     [HideInInspector] public bool completed;
 
     private DialogManager dialogManager;
@@ -31,6 +34,13 @@ public class Dialog : MonoBehaviour
     private float autoContinueTime = 2.0f;
     private GameObject curChar;
     private Animator curAnim;
+    private UnityAction onChoose;
+
+    void Awake()
+    {
+        choiceActions = _choiceActions.ToDictionary(x => x.name, x => x.choiceHandler);
+        onChoose += MakeChoice;
+    }
 
     void Start()
     {
@@ -38,7 +48,6 @@ public class Dialog : MonoBehaviour
 
         dialogManager = GameManager.GM.dialogManager;
         story = new MyStory(inkJSON.text);
-        sentence = story.Continue();
         typer = null;
         completed = false;
     }
@@ -55,15 +64,7 @@ public class Dialog : MonoBehaviour
         if (freezesCharacter) dialogManager.FreezeCharacter();
         if (background) background.SetActive(true);
 
-        // Update talking character animator
-        if (dialogManager.aliases.ContainsKey(story.currentCharacter))
-        {
-            curChar = dialogManager.aliases[story.currentCharacter];
-            if (curChar.TryGetComponent(out curAnim))
-                curAnim.SetBool("isTalking",true);
-        }
-        typer = StartCoroutine(Type());
-
+        NextSentence();
         if (autoContinue) Invoke(nameof(StopDialog), autoContinueTime);
         onStart.Invoke();
     }
@@ -72,14 +73,20 @@ public class Dialog : MonoBehaviour
         if (running)
         {
             if (dialogManager.textDisplay.text == sentence
-                && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
+                && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) 
+                && !choosing)
             {
                 NextSentence();
             }
-            else if (running && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
+            else if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
             {
                 StopCoroutine(typer);
                 dialogManager.textDisplay.text = sentence;
+            }
+            else if (Input.GetKeyDown("."))
+            {
+                story.ContinueMaximally();
+                NextSentence();
             }
         }
     }
@@ -109,6 +116,7 @@ public class Dialog : MonoBehaviour
                 curAnim.SetBool("isTalking", true);
             }
 
+            SetupChoices();
             dialogManager.textDisplay.text = "";
             typer = StartCoroutine(Type());
         }
@@ -117,6 +125,29 @@ public class Dialog : MonoBehaviour
         {
             StopDialog();
         }
+    }
+
+    void SetupChoices()
+    {
+        if (story.canChoose)
+        {
+            choosing = true;
+            string choiceName = story.currentTags[0];
+            var actions = choiceActions[choiceName];
+            List<string> choices = story.GetChoices();
+
+            dialogManager.SetupChoices(choices, actions, onChoose);
+        }
+        else
+        {
+            dialogManager.RemoveChoices();
+        }
+    }
+
+    void MakeChoice()
+    {
+        choosing = false;
+        NextSentence();
     }
 
     void StopDialog()
@@ -135,11 +166,12 @@ public class Dialog : MonoBehaviour
 
         dialogManager.textDisplay.text = "";
         dialogManager.textDisplay.enabled = false;
+        dialogManager.RemoveChoices();
 
         if (freezesCharacter) dialogManager.UnfreezeCharacter();
 
         onComplete.Invoke();
-        if (autoContinue) CancelInvoke(); // Cancels auto continue invokes. Not the same as the onComplete.Invoke()
+        if (autoContinue) CancelInvoke(); // Cancels auto continue invokes. This is unrelated to the previous line!
         if (!canRepeat) enabled = false;
     }
 
@@ -147,4 +179,11 @@ public class Dialog : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
     }
+}
+
+[System.Serializable]
+public class ChoiceAction
+{
+    public string name;
+    public ChoiceHandler choiceHandler;
 }

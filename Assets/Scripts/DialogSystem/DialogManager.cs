@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Linq;
+using UnityEngine.UI;
+using UnityEngine.Events;
+using System;
 
 public class DialogManager : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
     public TextMeshProUGUI charName;
+    public GameObject buttonObject;
     public GameObject player;
+    public GameObject choiceButtonPrefab;
     public bool dialogActive = false;
     [SerializeField] private Alias[] _aliases;
 
+    private List<GameObject> choiceButtons = new List<GameObject>();
     [HideInInspector] public AudioSource nextDialogSound;
     public Dictionary<string, GameObject> aliases;
 
@@ -32,6 +38,37 @@ public class DialogManager : MonoBehaviour
     public void UnfreezeCharacter()
     {
         player.GetComponent<GenericController>().playerCanMove = true;
+    }
+
+    public void SetupChoices(List<string> choices, ChoiceHandler actions, UnityAction onChoose)
+    {
+        buttonObject.SetActive(true);
+
+        // Instantiate choices
+        for (int i = 0; i < choices.Count; i++)
+        {
+            GameObject choiceObject = Instantiate(choiceButtonPrefab, buttonObject.transform);
+
+            Button choiceButton = choiceObject.GetComponent<Button>();
+            (choiceButton.targetGraphic as TextMeshProUGUI).text = choices[i];
+
+            int j = i; // Very necessary to make the delegate closure work!
+            choiceButton.onClick.AddListener(delegate { actions.MakeChoice(j); });
+            choiceButton.onClick.AddListener(onChoose);
+
+            choiceButtons.Add(choiceObject);
+        }
+    }
+
+    public void RemoveChoices()
+    {
+        foreach (var button in choiceButtons)
+        {
+            Destroy(button);
+        }
+
+        choiceButtons = new List<GameObject>();
+        buttonObject.SetActive(false);
     }
 }
 

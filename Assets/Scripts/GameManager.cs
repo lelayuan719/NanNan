@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
 
     public bool gameIsRunning = true;
 
+    // Game state
+    public bool gaveAmulet;
+
     // Runs before a scene gets loaded
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void LoadGM()
@@ -70,5 +73,18 @@ public class GameManager : MonoBehaviour
     public void ActivateInventory()
     {
         inventoryObj.SetActive(true);
+    }
+
+    public void GiveAmulet(bool didGive)
+    {
+        gaveAmulet = didGive;
+
+        if (didGive)
+        {
+            inventory.RemoveItem("amulet");
+            print("Gave amulet. Oh no.");
+        }
+        else
+            print("Didn't give amulet.");
     }
 }

@@ -7,6 +7,11 @@ public class MyStory : Ink.Runtime.Story
 {
     public string currentCharacter;
 
+    public bool canChoose
+    {
+        get { return currentChoices.Count != 0; }
+    }
+
     public MyStory() : base(string.Empty) { }
 
     public MyStory(string text) : base(text) { }
@@ -25,4 +30,10 @@ public class MyStory : Ink.Runtime.Story
 
         return dialogue;
     }
+
+    public List<string> GetChoices()
+    {
+        return currentChoices.ConvertAll(x => x.text);
+    }
 }
+
