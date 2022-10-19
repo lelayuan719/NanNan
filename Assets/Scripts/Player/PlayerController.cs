@@ -35,6 +35,15 @@ public class PlayerController : GenericController
     // Update is called once per frame
     void Update()
     {
+        // DEBUG zooming
+        if (Input.GetKeyDown("]"))
+        {
+            speed *= 5;
+        }
+        else if (Input.GetKeyDown("["))
+        {
+            speed /= 5;
+        }
     }
 
     void FixedUpdate(){
