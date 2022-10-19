@@ -1359,11 +1359,6 @@ Transform:
   m_Father: {fileID: 1492231910}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &975317611 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 6239553776416047473, guid: 4db0f4852c5245542ba2747eac482ce6, type: 3}
-  m_PrefabInstance: {fileID: 7177278982847053827}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &995953781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,7 +1949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newCursor: {fileID: 2800000, guid: 5d8038ade9b3d794e9991542898cb3ac, type: 3}
+  newCursor: 2
   canPickUp: 0
 --- !u!114 &1217661764
 MonoBehaviour:
@@ -2407,7 +2402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newCursor: {fileID: 2800000, guid: 5d8038ade9b3d794e9991542898cb3ac, type: 3}
+  newCursor: 2
   canPickUp: 0
 --- !u!114 &1426314265
 MonoBehaviour:
@@ -3053,7 +3048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newCursor: {fileID: 2800000, guid: 5d8038ade9b3d794e9991542898cb3ac, type: 3}
+  newCursor: 2
   canPickUp: 0
 --- !u!61 &1772952178
 BoxCollider2D:
@@ -3121,7 +3116,9 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+  _choiceActions: []
   running: 0
+  choosing: 0
   completed: 0
 --- !u!1 &1801824895
 GameObject:
@@ -3166,7 +3163,9 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls: []
+  _choiceActions: []
   running: 0
+  choosing: 0
   completed: 0
 --- !u!114 &1801824897
 MonoBehaviour:
@@ -3209,6 +3208,7 @@ GameObject:
   - component: {fileID: 1816410366}
   - component: {fileID: 1816410365}
   - component: {fileID: 1816410364}
+  - component: {fileID: 1816410367}
   m_Layer: 0
   m_Name: Big Brother
   m_TagString: Untagged
@@ -3332,7 +3332,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _choiceActions: []
   running: 0
+  choosing: 0
   completed: 0
 --- !u!114 &1816410365
 MonoBehaviour:
@@ -3375,6 +3377,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 44.664883, y: 50}
   m_EdgeRadius: 0
+--- !u!114 &1816410367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816410361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newCursor: 3
+  canPickUp: 0
 --- !u!1 &1900887351
 GameObject:
   m_ObjectHideFlags: 0
@@ -3761,7 +3777,7 @@ PrefabInstance:
     - target: {fileID: 5567000178425534576, guid: 4db0f4852c5245542ba2747eac482ce6, type: 3}
       propertyPath: m_ColliderPaths.Array.data[0].m_Collider
       value: 
-      objectReference: {fileID: 975317611}
+      objectReference: {fileID: 0}
     - target: {fileID: 5567000178425534576, guid: 4db0f4852c5245542ba2747eac482ce6, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.size
       value: 4

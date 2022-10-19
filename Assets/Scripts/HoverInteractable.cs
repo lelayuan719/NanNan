@@ -5,9 +5,7 @@ using UnityEngine.EventSystems;
 
 public class HoverInteractable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    private Color startcolor;
-    private SpriteRenderer spriteRenderer;
-    public Texture2D newCursor;
+    public CursorTypes newCursor = CursorTypes.Question;
     [SerializeField] private bool canPickUp = false;
 
     // Start is called before the first frame update
@@ -28,7 +26,7 @@ public class HoverInteractable : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     void Hover()
     {
-        Cursor.SetCursor(newCursor, Vector2.zero, CursorMode.Auto);
+        CursorManager.SetCursor(newCursor);
 
         if (canPickUp)
         {
@@ -68,7 +66,7 @@ public class HoverInteractable : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     void ExitHover()
     {
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        CursorManager.SetCursor(null);
 
         if (canPickUp)
         {

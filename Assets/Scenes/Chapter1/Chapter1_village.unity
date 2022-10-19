@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newCursor: {fileID: 2800000, guid: 6f81427daae9f5b4e92c9162e5e6d800, type: 3}
+  newCursor: 4
   canPickUp: 0
 --- !u!1 &1321452
 GameObject:
@@ -3384,7 +3384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7177278981967339585, guid: 4db0f4852c5245542ba2747eac482ce6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.748276
+      value: -21.76897
       objectReference: {fileID: 0}
     - target: {fileID: 7177278981967339585, guid: 4db0f4852c5245542ba2747eac482ce6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3396,7 +3396,7 @@ PrefabInstance:
       objectReference: {fileID: 1257651137}
     - target: {fileID: 7177278981984282445, guid: 4db0f4852c5245542ba2747eac482ce6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.213408
+      value: -21.768963
       objectReference: {fileID: 0}
     - target: {fileID: 7177278981984282445, guid: 4db0f4852c5245542ba2747eac482ce6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3456,7 +3456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7177278983093898346, guid: 4db0f4852c5245542ba2747eac482ce6, type: 3}
       propertyPath: m_ScreenX
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7177278983093898346, guid: 4db0f4852c5245542ba2747eac482ce6, type: 3}
       propertyPath: m_ScreenY
@@ -5455,5 +5455,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newCursor: {fileID: 2800000, guid: 5d8038ade9b3d794e9991542898cb3ac, type: 3}
+  newCursor: 2
   canPickUp: 0

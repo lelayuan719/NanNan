@@ -2381,7 +2381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newCursor: {fileID: 2800000, guid: 5d8038ade9b3d794e9991542898cb3ac, type: 3}
+  newCursor: 2
   canPickUp: 0
 --- !u!114 &1217661764
 MonoBehaviour:
@@ -2693,7 +2693,6 @@ Transform:
   - {fileID: 1217661758}
   - {fileID: 570678431}
   - {fileID: 1816410363}
-  - {fileID: 1772952176}
   - {fileID: 1426314263}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -2746,7 +2745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newCursor: {fileID: 2800000, guid: 5d8038ade9b3d794e9991542898cb3ac, type: 3}
+  newCursor: 2
   canPickUp: 0
 --- !u!114 &1414713897
 MonoBehaviour:
@@ -2900,7 +2899,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1379602467}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1426314265
 MonoBehaviour:
@@ -3731,125 +3730,6 @@ Transform:
   m_Father: {fileID: 831372982}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1772952175
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1772952176}
-  - component: {fileID: 1772952178}
-  - component: {fileID: 1772952177}
-  - component: {fileID: 1772952179}
-  - component: {fileID: 1772952180}
-  m_Layer: 0
-  m_Name: Outside Door
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1772952176
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772952175}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.95, y: -0.2, z: 0.5545173}
-  m_LocalScale: {x: 0.71405506, y: 0.71405506, z: 0.71405506}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1379602467}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1772952177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772952175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newCursor: {fileID: 2800000, guid: 5d8038ade9b3d794e9991542898cb3ac, type: 3}
-  canPickUp: 0
---- !u!61 &1772952178
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772952175}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -2.99, y: -2.26}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 40.98, y: 20.49}
-    newSize: {x: 40.98, y: 20.49}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.11, y: 4.65}
-  m_EdgeRadius: 0
---- !u!114 &1772952179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772952175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae0def6236c646c41aece1b9bb4d64ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextScene: Chapter3_Maze
-  invalidDialog: {fileID: 1772952180}
-  open: 0
---- !u!114 &1772952180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772952175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d960aee2f2c0ab47b9ec814d58de5b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: af9ff5fdd1de14d49b21e6f15cc4000f, type: 3}
-  npc: {fileID: 1772952175}
-  background: {fileID: 0}
-  freezesCharacter: 0
-  canRepeat: 1
-  autoContinue: 1
-  typingSpeed: 0.05
-  onStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onComplete:
-    m_PersistentCalls:
-      m_Calls: []
-  _choiceActions: []
-  running: 0
-  choosing: 0
-  completed: 0
 --- !u!1 &1816410361
 GameObject:
   m_ObjectHideFlags: 0
@@ -4061,7 +3941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newCursor: {fileID: 2800000, guid: 30903ffc65596e04bbc7d3cb1a38eff9, type: 3}
+  newCursor: 3
   canPickUp: 0
 --- !u!114 &1816410368
 MonoBehaviour:

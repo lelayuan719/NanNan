@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1459864278782162465}
   - component: {fileID: 7553713860508703097}
   - component: {fileID: 2723711069063199488}
+  - component: {fileID: 2385373639583963996}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -53,6 +54,7 @@ MonoBehaviour:
   dialogManager: {fileID: 0}
   cam: {fileID: 0}
   gameIsRunning: 1
+  gaveAmulet: 0
 --- !u!114 &7553713860508703097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,6 +81,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5c2e35cf52c428b8fd869455e7fa42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2385373639583963996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483098598627986690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dfde61f38adfe04792dc87af8164a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursors:
+  - {fileID: 2800000, guid: e77e5edc92b797542a670e445953eebf, type: 3}
+  - {fileID: 2800000, guid: 6f81427daae9f5b4e92c9162e5e6d800, type: 3}
+  - {fileID: 2800000, guid: 5d8038ade9b3d794e9991542898cb3ac, type: 3}
+  - {fileID: 2800000, guid: 30903ffc65596e04bbc7d3cb1a38eff9, type: 3}
+  - {fileID: 2800000, guid: a8342d22cfb6c0f4693b0b48a0828b59, type: 3}
+  - {fileID: 2800000, guid: 6217bf4c4b78f9f428ad9441f0caeafe, type: 3}
 --- !u!1001 &4271562525123304579
 PrefabInstance:
   m_ObjectHideFlags: 0

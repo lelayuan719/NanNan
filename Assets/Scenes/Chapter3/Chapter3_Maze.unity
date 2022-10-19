@@ -1817,6 +1817,7 @@ GameObject:
   - component: {fileID: 497261508}
   - component: {fileID: 497261507}
   - component: {fileID: 497261506}
+  - component: {fileID: 497261510}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -1931,6 +1932,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &497261510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497261505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newCursor: 1
+  canPickUp: 0
 --- !u!1 &513810413
 GameObject:
   m_ObjectHideFlags: 0
@@ -4521,7 +4536,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _choiceActions: []
   running: 0
+  choosing: 0
   completed: 0
 --- !u!114 &945906165
 MonoBehaviour:
@@ -6593,7 +6610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newCursor: {fileID: 2800000, guid: 6f81427daae9f5b4e92c9162e5e6d800, type: 3}
+  newCursor: 4
   canPickUp: 1
 --- !u!114 &1377560964
 MonoBehaviour:
