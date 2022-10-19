@@ -5609,6 +5609,7 @@ GameObject:
   - component: {fileID: 1217661759}
   - component: {fileID: 1217661764}
   - component: {fileID: 1217661763}
+  - component: {fileID: 1217661765}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -5696,7 +5697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c251aec510f1742b38cb9d9a87ca82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invalidDialog: {fileID: 0}
+  invalidDialog: {fileID: 1217661765}
   consumeItem: 1
   itemCheck: key
   success: 0
@@ -5784,6 +5785,35 @@ MonoBehaviour:
   player: {fileID: 12542443}
   cam: {fileID: 1902762241}
   destination: {fileID: 2089485765}
+--- !u!114 &1217661765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217661756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d960aee2f2c0ab47b9ec814d58de5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: ce1ecd685eb09824b824ca4ce1b83469, type: 3}
+  npc: {fileID: 0}
+  background: {fileID: 0}
+  freezesCharacter: 0
+  canRepeat: 1
+  autoContinue: 1
+  typingSpeed: 0.05
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  _choiceActions: []
+  running: 0
+  choosing: 0
+  completed: 0
 --- !u!1 &1222756035
 GameObject:
   m_ObjectHideFlags: 0

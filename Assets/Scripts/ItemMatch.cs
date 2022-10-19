@@ -8,24 +8,16 @@ public class ItemMatch: MonoBehaviour
     public Item item;
     public Dialog invalidDialog;
     public bool consumeItem = true;
-    //public GameObject interactionItem;
     public string itemCheck;
     [HideInInspector] public bool success;
     private UIItem collectedItem;
     public UnityEvent onMatch;
 
-    // Start is called before the first frame update
     void Start()
     {
         collectedItem = GameManager.GM.inventoryUI.selectedItem;
         item = collectedItem.item;
         success = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void OnMouseDown()

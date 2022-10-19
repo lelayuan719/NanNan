@@ -47,7 +47,6 @@ public class Dialog : MonoBehaviour
         ExecuteAfterTime(1);
 
         dialogManager = GameManager.GM.dialogManager;
-        story = new MyStory(inkJSON.text);
         typer = null;
         completed = false;
     }
@@ -64,6 +63,7 @@ public class Dialog : MonoBehaviour
         if (freezesCharacter) dialogManager.FreezeCharacter();
         if (background) background.SetActive(true);
 
+        story = new MyStory(inkJSON.text);
         NextSentence();
         if (autoContinue) Invoke(nameof(StopDialog), autoContinueTime);
         onStart.Invoke();
