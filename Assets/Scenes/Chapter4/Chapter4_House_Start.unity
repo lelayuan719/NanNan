@@ -3088,7 +3088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0def6236c646c41aece1b9bb4d64ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: Chapter3_Maze
+  NextScene: Chapter4_Maze
   invalidDialog: {fileID: 1772952180}
   open: 0
 --- !u!114 &1772952180

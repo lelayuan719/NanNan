@@ -6733,7 +6733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0def6236c646c41aece1b9bb4d64ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: Chapter3_House_End
+  NextScene: Chapter4_House_End
   invalidDialog: {fileID: 0}
   open: 1
 --- !u!1 &1384195209
