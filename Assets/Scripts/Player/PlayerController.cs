@@ -13,12 +13,6 @@ public class PlayerController : GenericController
     public LayerMask whatIsLadder;
     private bool isClimbing;
     private float distWalked;
-    public int left;
-    public int right;
-    public int upper;
-    public int lower;
-    public int padding;
-    public string NextScene;
     public SpriteRenderer sr;
 
     Animator anim;
@@ -68,5 +62,22 @@ public class PlayerController : GenericController
                 anim.SetBool("isWalking", false);
             }
         }
+    }
+
+    public void MoveTo(Transform destination)
+    {
+        StartCoroutine(MoveTo(destination.position));
+    }
+
+    IEnumerator MoveTo(Vector2 destination)
+    {
+        playerCanMove = false;
+
+        while ((destination.x - transform.position.x) < 0.01)
+        {
+            yield return null;
+        }
+
+        playerCanMove = true;
     }
 }
