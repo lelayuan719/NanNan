@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : GenericController
@@ -64,20 +66,45 @@ public class PlayerController : GenericController
         }
     }
 
-    public void MoveTo(Transform destination)
+    public void MoveTo(Transform destination, UnityEvent onComplete)
     {
-        StartCoroutine(MoveTo(destination.position));
+        StartCoroutine(MoveTo(destination.position, onComplete));
     }
 
-    IEnumerator MoveTo(Vector2 destination)
+    public void MoveTo(Transform destination)
     {
-        playerCanMove = false;
+        StartCoroutine(MoveTo(destination.position, null));
+    }
 
-        while ((destination.x - transform.position.x) < 0.01)
+    IEnumerator MoveTo(Vector2 destination, UnityEvent onComplete)
+    {
+        // Check for already there
+        if (destination.x == transform.position.x)
         {
-            yield return null;
+            yield break;
         }
 
+        playerCanMove = false;
+        anim.SetBool("isWalking", true);
+        float directionToMove = Mathf.Sign(destination.x - transform.position.x);
+
+        // Flip
+        if (directionToMove < 0)
+            sr.flipX = true;
+        else
+            sr.flipX = false;
+
+        // Move while we are still on the same side
+        while (Mathf.Sign(destination.x - transform.position.x) == directionToMove)
+        {
+            rb.velocity = new Vector2(directionToMove * speed, rb.velocity.y);
+            yield return new WaitForFixedUpdate();
+        }
+        transform.position = new Vector2(destination.x, transform.position.y);
+
+        // Reset and do callback
         playerCanMove = true;
+        anim.SetBool("isWalking", false);
+        if (onComplete != null) onComplete.Invoke();
     }
 }

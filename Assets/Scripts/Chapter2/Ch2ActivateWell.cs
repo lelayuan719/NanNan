@@ -1,13 +1,24 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Ch2ActivateWell : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public PlayerController player;
+    public Transform playerDest;
+
+    public CinemachineConfiner2D confiner;
+    public PolygonCollider2D finalBoundingShape;
+
+    public UnityEvent onFinishedWalking;
+
+    private bool activated = false;
+
     void Start()
     {
-        
+
     }
 
     void OnMouseDown()
@@ -17,6 +28,14 @@ public class Ch2ActivateWell : MonoBehaviour
 
     public void Activate()
     {
-        print("Activated well");
+        // Starts walking and activates event when finished
+        player.MoveTo(playerDest, onFinishedWalking);
+    }
+
+    public void ChangeConfiner()
+    {
+        // Change camera
+        confiner.m_BoundingShape2D = finalBoundingShape;
+        confiner.InvalidateCache();
     }
 }
