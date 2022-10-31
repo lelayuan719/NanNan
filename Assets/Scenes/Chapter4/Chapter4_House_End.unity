@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4603072348880616938, guid: 65937e22227c9404cad29a23e623e3a2, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4603072348880616938, guid: 65937e22227c9404cad29a23e623e3a2, type: 3}
       propertyPath: m_LocalScale.x
@@ -2939,6 +2939,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _choiceActions: []
+  _midwayActions: []
   running: 0
   choosing: 0
   completed: 0
@@ -3135,7 +3136,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1492231909
 GameObject:
@@ -3173,7 +3174,7 @@ Transform:
   - {fileID: 1296920395}
   - {fileID: 1414713895}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1504302992
 GameObject:
@@ -3744,7 +3745,6 @@ GameObject:
   - component: {fileID: 1816410365}
   - component: {fileID: 1816410364}
   - component: {fileID: 1816410367}
-  - component: {fileID: 1816410368}
   - component: {fileID: 1816410369}
   m_Layer: 0
   m_Name: Big Brother
@@ -3843,17 +3843,17 @@ MonoBehaviour:
   onStart:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1816410368}
-        m_TargetAssemblyTypeName: GiveBearCh3, Assembly-CSharp
-        m_MethodName: Activate
-        m_Mode: 1
+      - m_Target: {fileID: 1881559087}
+        m_TargetAssemblyTypeName: EventInterface, Assembly-CSharp
+        m_MethodName: RemoveItem
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
+          m_StringArgument: bear
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 748458966}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -3885,6 +3885,7 @@ MonoBehaviour:
   _choiceActions:
   - name: giveAmulet
     choiceHandler: {fileID: 1816410369}
+  _midwayActions: []
   running: 0
   choosing: 0
   completed: 0
@@ -3943,18 +3944,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newCursor: 3
   canPickUp: 0
---- !u!114 &1816410368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816410361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99f6cd92ef2940141b1b881a14e1a665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1816410369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4009,6 +3998,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1881559087 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5169713010260750278, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+  m_PrefabInstance: {fileID: 7835613670486314226}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf4abd722f48644381662fc7764011b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1900887351
@@ -4359,3 +4359,60 @@ Transform:
   m_Father: {fileID: 1492231910}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &7835613670486314226
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.3643444
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5321623
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1748844
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5364458197311616267, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_Name
+      value: EventInterface
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
