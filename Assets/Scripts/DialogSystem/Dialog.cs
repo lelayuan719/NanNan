@@ -21,6 +21,8 @@ public class Dialog : MonoBehaviour
     public UnityEvent onComplete;
     [SerializeField] private ChoiceAction[] _choiceActions;
     public Dictionary<string, ChoiceHandler> choiceActions;
+    [SerializeField] private EventDictionary[] _midwayActions;
+    public Dictionary<string, UnityEvent> midwayActions;
 
     public MyStory story;
     [HideInInspector] public bool running = false;
@@ -39,6 +41,7 @@ public class Dialog : MonoBehaviour
     void Awake()
     {
         choiceActions = _choiceActions.ToDictionary(x => x.name, x => x.choiceHandler);
+        midwayActions = _midwayActions.ToDictionary(x => x.name, x => x.action);
         onChoose += MakeChoice;
     }
 
@@ -105,10 +108,11 @@ public class Dialog : MonoBehaviour
 
         if(story.canContinue)
         {
-            if (curAnim) curAnim.SetBool("isTalking",false);
             sentence = story.Continue();
             index++;
 
+            // Animation
+            if (curAnim) curAnim.SetBool("isTalking", false);
             if (dialogManager.aliases.ContainsKey(story.currentCharacter))
             {
                 curChar = dialogManager.aliases[story.currentCharacter];
@@ -116,7 +120,13 @@ public class Dialog : MonoBehaviour
                 curAnim.SetBool("isTalking", true);
             }
 
+            // Midway events
+            HandleMidwayEvents();
+
+            // Choices
             SetupChoices();
+
+            // Starting typing
             dialogManager.textDisplay.text = "";
             typer = StartCoroutine(Type());
         }
@@ -141,6 +151,17 @@ public class Dialog : MonoBehaviour
         else
         {
             dialogManager.RemoveChoices();
+        }
+    }
+
+    void HandleMidwayEvents()
+    {
+        if (story.currentTags.Count > 0)
+        {
+            string eventName = story.currentTags[0];
+            UnityEvent actions;
+            if (midwayActions.TryGetValue(eventName, out actions))
+                actions.Invoke();
         }
     }
 
@@ -186,4 +207,11 @@ public class ChoiceAction
 {
     public string name;
     public ChoiceHandler choiceHandler;
+}
+
+[System.Serializable]
+public class EventDictionary
+{
+    public string name;
+    public UnityEvent action;
 }
