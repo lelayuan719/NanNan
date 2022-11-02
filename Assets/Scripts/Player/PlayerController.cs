@@ -31,7 +31,7 @@ public class PlayerController : GenericController
     // Update is called once per frame
     void Update()
     {
-        // DEBUG zooming
+        // DEBUG fast speed
         if (Input.GetKeyDown("]"))
         {
             speed *= 5;

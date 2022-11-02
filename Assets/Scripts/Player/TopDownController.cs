@@ -7,17 +7,19 @@ public class TopDownController : GenericController
     public float speed = 5.0f;
 
     private Rigidbody2D rb;
+    private Animator anim;
+    private SpriteRenderer sr;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // DEBUG zooming
+        // DEBUG fast speed
         if (Input.GetKeyDown("]"))
         {
             speed *= 5;
@@ -29,23 +31,40 @@ public class TopDownController : GenericController
 
         if (!playerCanMove) return;
 
-        rb.velocity = Vector2.zero;
+        float inputHorizontal = Input.GetAxisRaw("Horizontal");
+        float inputVertical = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        rb.velocity = new Vector2(inputHorizontal * speed, inputVertical * speed);
+        if (rb.velocity != Vector2.zero)
         {
-            rb.velocity += new Vector2(-speed, 0);
+            anim.SetBool("isWalking", true);
+
+            print(inputVertical);
+
+            if (inputVertical > 0)
+            {
+                anim.SetInteger("direction", 1);
+            }
+            else if (inputVertical < 0)
+            {
+                anim.SetInteger("direction", 3);
+            }
+            else
+            {
+                if (inputHorizontal > 0)
+                {
+                    anim.SetInteger("direction", 2);
+                }
+                else
+                {
+                    anim.SetInteger("direction", 4);
+                }
+            }
         }
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        else
         {
-            rb.velocity += new Vector2(speed, 0);
-        }
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
-        {
-            rb.velocity += new Vector2(0, speed);
-        }
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
-        {
-            rb.velocity += new Vector2(0, -speed);
+            anim.SetBool("isWalking", false);
+            anim.SetInteger("direction", 0);
         }
     }
 }
