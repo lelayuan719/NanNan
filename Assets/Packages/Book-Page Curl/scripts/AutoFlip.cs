@@ -10,6 +10,7 @@ public class AutoFlip : MonoBehaviour {
     public Book ControledBook;
     public int AnimationFramesCount = 40;
     bool isFlipping = false;
+    bool prevInteractible;
     // Use this for initialization
     void Start () {
         if (!ControledBook)
@@ -30,6 +31,8 @@ public class AutoFlip : MonoBehaviour {
     {
         if (isFlipping) return;
         if (ControledBook.currentPage >= ControledBook.TotalPageCount) return;
+        prevInteractible = ControledBook.interactable;
+        ControledBook.interactable = false;
         isFlipping = true;
         float frameTime = PageFlipTime / AnimationFramesCount;
         float xc = (ControledBook.EndBottomRight.x + ControledBook.EndBottomLeft.x) / 2;
@@ -43,6 +46,8 @@ public class AutoFlip : MonoBehaviour {
     {
         if (isFlipping) return;
         if (ControledBook.currentPage <= 0) return;
+        prevInteractible = ControledBook.interactable;
+        ControledBook.interactable = false;
         isFlipping = true;
         float frameTime = PageFlipTime / AnimationFramesCount;
         float xc = (ControledBook.EndBottomRight.x + ControledBook.EndBottomLeft.x) / 2;
@@ -106,6 +111,7 @@ public class AutoFlip : MonoBehaviour {
             yield return new WaitForSeconds(frameTime);
             x -= dx;
         }
+        ControledBook.interactable = true;
         ControledBook.ReleasePage();
     }
     IEnumerator FlipLTR(float xc, float xl, float h, float frameTime, float dx)
@@ -120,6 +126,7 @@ public class AutoFlip : MonoBehaviour {
             yield return new WaitForSeconds(frameTime);
             x += dx;
         }
+        ControledBook.interactable = true;
         ControledBook.ReleasePage();
     }
 }

@@ -63,8 +63,13 @@ public class GameManager : MonoBehaviour
     {
         // Disables inventory in prologue
         // If we add prologue scene after Grandma this will need to be changed
-        if (scene.name.StartsWith("Prologue") || scene.name.StartsWith("menu")) {
+        if (scene.name.StartsWith("Prologue") || scene.name.StartsWith("menu") || 
+            (scene.name == "Chapter3_Book")) {
             inventoryObj.SetActive(false);
+        }
+        else
+        {
+            inventoryObj.SetActive(true);
         }
 
     }
