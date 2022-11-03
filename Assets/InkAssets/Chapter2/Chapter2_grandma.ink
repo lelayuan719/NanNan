@@ -1,3 +1,4 @@
+This is a placeholder right now. Some of this should happen in the storybook section.
 NanNan: Grandma! I met a man with a fox head by the well on the mountain!
 Grandma: Oh,  little NanNan met the Great Immortal! 
 NanNan: The Great Immortal? The Great Immortal mentioned in the song?

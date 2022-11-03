@@ -14,8 +14,6 @@ public class Ch2ActivateWell : MonoBehaviour
 
     public UnityEvent onFinishedWalking;
 
-    private bool activated = false;
-
     void Start()
     {
 
