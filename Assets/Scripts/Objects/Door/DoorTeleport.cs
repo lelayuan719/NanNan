@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,22 +6,32 @@ using UnityEngine.SceneManagement;
 
 public class DoorTeleport : MonoBehaviour
 {
-    private bool opened;
-    public GameObject Nannan;
-    private Transform destination;
+    public bool opened = true;
+    public GameObject player;
+    public CinemachineVirtualCamera cam;
+    public Transform destination;
 
     // Start is called before the first frame update
     private void Start()
     {
-        destination = transform.Find("Destination");
     }
 
     void OnMouseDown()
     {
-        opened = gameObject.GetComponent<ItemMatch>().success;
         if (opened)
         {
-            Nannan.transform.position = destination.position;
+            TransportPlayer();
         }
+    }
+
+    public void TransportPlayer()
+    {
+        cam.OnTargetObjectWarped(player.transform, destination.position - player.transform.position);
+        player.transform.position = destination.position;
+    }
+    
+    public void Unlock()
+    {
+        opened = true;
     }
 }

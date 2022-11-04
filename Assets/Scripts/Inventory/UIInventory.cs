@@ -9,7 +9,7 @@ public class UIInventory : MonoBehaviour
     public GameObject slotPrefab;
     public Transform slotPanel;
     public int numberOfSlots = 6;
-    public int mostRecentSlot;
+    public InventoryButtonHelper inventoryButtonHelper;
 
     private void Awake(){
         for(int i = 0; i < numberOfSlots; i++){
@@ -42,11 +42,17 @@ public class UIInventory : MonoBehaviour
     }
 
     public void RemoveItem(Item item){
+        // Try in top items
         int foundIndex = uIItems.FindIndex(i => i.item == item);
         if (foundIndex != -1)
         {
             UpdateSlot(foundIndex, null);
             Debug.Log("item removed");
+        }
+        // Try in selected item
+        else if (selectedItem.item == item)
+        {
+            selectedItem.UpdateItem(null);
         }
     }
 }

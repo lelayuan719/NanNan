@@ -1,0 +1,3669 @@
+fileFormatVersion: 2
+guid: a63f98bbd195d30489f1d0deb01ceb4b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: monster_spinning_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 14603
+        width: 847
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1fa97bc6499df4699dff17b1ca1c9c
+      internalID: -1077027481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_4
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 14608
+        width: 845
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de58ad8c5d082994b9b616781c48c2f6
+      internalID: 1334567562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_7
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 14606
+        width: 831
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74df0e44e9a0ee429971360df6f185d
+      internalID: 381837601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_12
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 14097
+        width: 853
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe9c55d3192a244b820b717828637fc
+      internalID: -1262835439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_15
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 14079
+        width: 854
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72228fb7aefcdc6428d6af7764a0f5c3
+      internalID: 1962250517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_18
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 14051
+        width: 831
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df0ec734d64ee1408d763a097fefc85
+      internalID: 573189149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_24
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 13546
+        width: 844
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a13936d30e4539143983badf86239928
+      internalID: -1117438419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_27
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 13567
+        width: 842
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5745a474229f86c44b65712bab084e8f
+      internalID: 119431709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_31
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 13534
+        width: 831
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d48dab0a1f3c1a46bf7ae045bae0c03
+      internalID: -299517882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_41
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 12987
+        width: 854
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8628b8cb4b6411a4bb78577404cbf0c5
+      internalID: 1624902859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_44
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 12981
+        width: 322
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14f152b5574f7b4c8965e3ca927411c
+      internalID: 310340524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_49
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 12949
+        width: 847
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0ebd57e016d94478c49a235016a202
+      internalID: -1914678282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12696
+        width: 4
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89fa6cbeb2aae9f459d0fb9e18106083
+      internalID: -1963931525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_54
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 12418
+        width: 322
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b944e7ebbee34a14fa3f4773bd77ac66
+      internalID: -217440684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_57
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 12411
+        width: 315
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc1dc5d0a2c40045888e462f1df18ca
+      internalID: -1495615211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_60
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 12410
+        width: 321
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee23832cf1209742a0a304fb3845dad
+      internalID: -1292176517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12535
+        width: 4
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8493b78142077e94dbe5d84c3d2215be
+      internalID: 633107070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12139
+        width: 4
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30437009091d6347a442aeb7b038855
+      internalID: -35662404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_67
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 11839
+        width: 315
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782944dcb3d656845870937d66add8eb
+      internalID: -1179166777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_68
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 12029
+        width: 191
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576b6ec2630e28248927c4a4d72d91b8
+      internalID: 1895310426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_69
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 11971
+        width: 315
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10fd3277ffcb8064a840bcb0d24225c9
+      internalID: -162329747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_70
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 11861
+        width: 315
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e214d4343bf415b438bafd28836da10a
+      internalID: -1405336062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_71
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 12029
+        width: 183
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10566c53b0c6ce4f9da3afacae463c0
+      internalID: -446235802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_72
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 11971
+        width: 315
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac134ffe2c89e444eb8ad6c3fb963f5d
+      internalID: 1656647065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_73
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 11861
+        width: 322
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92044d2986f2a2546965fcd744623dee
+      internalID: -1446604473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_74
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 12029
+        width: 186
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7649fcec71352364fbc7c0708cd025b8
+      internalID: 257040239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_75
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 11971
+        width: 304
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536476a0bade7f54d8690064bbf1a0fe
+      internalID: 279166952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11971
+        width: 4
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92fd61a4d3086f249bb741fe4ea26e04
+      internalID: 531625497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_77
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 11802
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 245030721133404488ec1c07ae3d56df
+      internalID: -1950637711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_78
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 11737
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c8f7dc0afeb06409fcb2b625ba4b27
+      internalID: -766678780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_79
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11597
+        width: 4
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f056d5a25d866449815b3a2c6ad89f2
+      internalID: 312479606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_80
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 11326
+        width: 329
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9292c77247515e42afe1256382c2907
+      internalID: 1467992752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_81
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 11487
+        width: 191
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9037fcb04b68f3942a7f10890235ac23
+      internalID: -127462909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_82
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 11509
+        width: 315
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57680f5f103175c44b7fc23245f3c7f8
+      internalID: -373180576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_83
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 11326
+        width: 329
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b64212ccb39a945b7c54bee5e7be9e
+      internalID: 1089262788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_84
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 11487
+        width: 183
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2041e37714b9b694a8356baa8e381137
+      internalID: -516322567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_85
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 11429
+        width: 315
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a8fc90f7452b3489dc74fa6dab46bc
+      internalID: 1230958317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_86
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 11326
+        width: 322
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d184f26f42c745e4a95b7c9c7083c992
+      internalID: 230038848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_87
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 11487
+        width: 188
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e72c838b9da2e418cf3a7a7799443d
+      internalID: -1790879186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_88
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 11517
+        width: 304
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a227922ededf7ff4c8899916cc9bb795
+      internalID: 1615651087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_89
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11436
+        width: 4
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91b3db3251755b46b046562011b3236
+      internalID: 1733363587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_90
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 11429
+        width: 59
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8809142e1c1aa4d9814cd8097692f8
+      internalID: 864834472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_91
+      rect:
+        serializedVersion: 2
+        x: 2822
+        y: 11436
+        width: 48
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb922619cd2f9364d93c3d5389263773
+      internalID: -210221686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_92
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11063
+        width: 4
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b13552a54610943bf30f7b75d50d42
+      internalID: 1089517902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_93
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 10792
+        width: 329
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be443e701ddc9943b8b7a01f99df07f
+      internalID: 1720940712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_94
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 10953
+        width: 191
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5094954100e3b94cb7e31a411d552a3
+      internalID: -1277128224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_95
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 10894
+        width: 315
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35d5fbb0c9b537429347bc06a102405
+      internalID: 61309342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_96
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 10792
+        width: 329
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b919822d87da2641b5c9f1556027ddd
+      internalID: 1583867015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_97
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 10953
+        width: 183
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff31561a509e69c47a42cc816d4ee843
+      internalID: 1767109587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_98
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 10901
+        width: 315
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f7209fbdab7fa42a698cb9a4afcb77
+      internalID: 383270931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_99
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 10792
+        width: 322
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48823976f1a3131419567863a6cf129c
+      internalID: 1003136204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_100
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 10953
+        width: 188
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95fe53bfa24f0a04788a5e53e77b9d4f
+      internalID: -1076655254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_101
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 10982
+        width: 304
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7ed2b2f307323489a3ec4b9eca3ed0
+      internalID: 2095186409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_102
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10901
+        width: 4
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d919f58e2c3d1a47b571cb98ca7accf
+      internalID: -1616507537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_103
+      rect:
+        serializedVersion: 2
+        x: 2822
+        y: 10901
+        width: 48
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3cae1bcee50d841869f7ef12fea13f
+      internalID: -1774726026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10514
+        width: 4
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9b228ee8dc4864181680ab04d68fa6
+      internalID: 1520300792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_105
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 10244
+        width: 329
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc730a52fe01b92448628414a4838a9f
+      internalID: -368938179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_106
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 10411
+        width: 191
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6a803b86048cd419183e32bb22b628
+      internalID: -2026600071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_107
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 10440
+        width: 315
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7a13b71ebdee64899290dcfa7f9937
+      internalID: -537498386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_108
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 10244
+        width: 322
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a43f28df530f54eb8b306e1c4b3ecb
+      internalID: -623458584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_109
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 10411
+        width: 183
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6936f161b0f096e49af2ef3827a5ba07
+      internalID: 542687018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_110
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 10440
+        width: 315
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a697721e4db6d40bc42b0d08fc175a
+      internalID: -2107442235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_111
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 10244
+        width: 315
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4158e07d637dc6b42bafff2d4a1eb424
+      internalID: 24523132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_112
+      rect:
+        serializedVersion: 2
+        x: 2369
+        y: 10403
+        width: 182
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9041097560f7b5041a6a74cd723e833b
+      internalID: 1418255833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_113
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 10440
+        width: 304
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2612fda80e2e1cd4a8778c52c21d7d91
+      internalID: 1254779604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_114
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10360
+        width: 4
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba7dd0ae30892840ad6b01d030eff27
+      internalID: 596473263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_115
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 10352
+        width: 59
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daaffcdb4f2546545b9111dcefe8e950
+      internalID: -947098558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_116
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 10352
+        width: 59
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c333dce7080464aa44c92d9ad50429
+      internalID: 1205763442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_117
+      rect:
+        serializedVersion: 2
+        x: 2822
+        y: 10359
+        width: 48
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a83a92d8bba494b921c373b7073258
+      internalID: -1474703838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_118
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10008
+        width: 4
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac24c8fd4c109284297f704716d5a1dd
+      internalID: 1338005965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_119
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 9693
+        width: 315
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dabb63c5f80aae42913737929b0505a
+      internalID: 103981468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_120
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 9817
+        width: 190
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687b0df699cbc0a4f90d65b40bb89ee7
+      internalID: 1992395860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_121
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 9796
+        width: 315
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061d71cc90ca94a46a27f37a8d1a77ff
+      internalID: 1872161039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_122
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 9686
+        width: 314
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7147454f0de2e244978fec05e0acd8f
+      internalID: 1944227880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_123
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 9803
+        width: 183
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe2bdab8b431b340839f4478139ff3e
+      internalID: -2031125551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_124
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 9796
+        width: 315
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e81c63a5293804ba2a69a8cfb74c91
+      internalID: 1743978896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_125
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 9686
+        width: 308
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f11bf70e8890125429c6a4d48e003bfa
+      internalID: -1741208319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_126
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 9847
+        width: 188
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a8b65111683bf4291d3b77e05b35ff
+      internalID: -823823906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_127
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 9796
+        width: 326
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4550eeb73c55b44922a4c39587de30
+      internalID: -946172234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_128
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9796
+        width: 4
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652370ad1c7e355428fbebcb9b7b5b13
+      internalID: 140513508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_129
+      rect:
+        serializedVersion: 2
+        x: 2390
+        y: 9810
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b283c75bc2992e46a00eec56dac3790
+      internalID: 314344422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9774
+        width: 4
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d4119d256c9fc41982a63ae9e1d5a0
+      internalID: 571786797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_131
+      rect:
+        serializedVersion: 2
+        x: 2859
+        y: 9774
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a93d35cdd9decd4abddb36e4ae36da7
+      internalID: 145596012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9217
+        width: 4
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bea060072ea7da43aeb0c3821000939
+      internalID: 930957039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_133
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 9129
+        width: 322
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798c40ba082bbaa439007c76d7e7eb25
+      internalID: 1914226417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_134
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 9305
+        width: 191
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6500ee23d79ba2646ad49ccf0e06db90
+      internalID: -209322227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_135
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 9210
+        width: 344
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a930e12ae4c217e4d8c5ba2056f0666e
+      internalID: -2006018296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_136
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 9122
+        width: 314
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77371791bc83664e89427fd1303def6
+      internalID: 625957353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_137
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 9320
+        width: 197
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626e10da612b127449c87928e5e4502c
+      internalID: -839756094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_138
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 9180
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df2535cf8c7b90428bf7e4ee1f6ce09
+      internalID: 110594794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_139
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 9114
+        width: 321
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26259f94cfee4b8409e68d1f779cdb36
+      internalID: 1614232369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_140
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 9320
+        width: 198
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c9b32533d856543baa95637052c41d
+      internalID: 835146514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_141
+      rect:
+        serializedVersion: 2
+        x: 2508
+        y: 9217
+        width: 362
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dab6e8ccb67882408f3a2915067e82f
+      internalID: -433112028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_142
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 9268
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e88bb15ca21df4eb95a115d14e3a72
+      internalID: 814975208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_143
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 9239
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9096695bfd70f20499f80729ca394031
+      internalID: 1424636243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8712
+        width: 4
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50b2aa8bbb1f3449b34051cd20379c1
+      internalID: 520842000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_145
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 8580
+        width: 322
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac13cf64f178d304b9c0eb256e911309
+      internalID: 959877596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_146
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 8785
+        width: 205
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57286cbe1d4d97447a2da5f081c390c1
+      internalID: 935996995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_147
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 8682
+        width: 373
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3230226f094b5843a9041e1c5fad431
+      internalID: 869765736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_148
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 8558
+        width: 329
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d1eb8ab92e1c148be469049f35b098
+      internalID: 536555871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_149
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 8792
+        width: 205
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3946b6c6f7649642b85cf2a91bae414
+      internalID: 1662604195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_150
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 8682
+        width: 373
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6969e689c39e2247ab7f6de1944db5e
+      internalID: 249040938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_151
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 8507
+        width: 249
+        height: 497
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6dec3a7d5560647b907f01521ffeb6
+      internalID: -152466410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_152
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 8829
+        width: 205
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484bf11bc0971eb4ca2017ea4fb1a6d7
+      internalID: -396635760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_153
+      rect:
+        serializedVersion: 2
+        x: 2449
+        y: 8946
+        width: 102
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f92f64d76df4b42aa6ea2330161c18
+      internalID: -66034031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_154
+      rect:
+        serializedVersion: 2
+        x: 2552
+        y: 8712
+        width: 318
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b5a673d0946be47a8540382b4bba5e
+      internalID: -2047282628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_155
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 8704
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8f03638fb6aee42a5d4c75c6fed043
+      internalID: -246107420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_156
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 8704
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6515f6ade7ad1f245ad27bbb199edbbd
+      internalID: 1549890128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_157
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 7972
+        width: 263
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb0dca0815e4974cbacc7d5e1a8166f
+      internalID: 1015793955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_158
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 8294
+        width: 197
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f471e60f9cdf01640a8949fd6df77bf0
+      internalID: 1118805548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_159
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 8419
+        width: 103
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c331b1e1769344b98eaf573bb8da25
+      internalID: -558701270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_160
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 8389
+        width: 146
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f366ecff4f3baa9489e0628680b56af5
+      internalID: -390859729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_161
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 8155
+        width: 234
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34221da329e06a49ad3cb542bbf3173
+      internalID: 1396748400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_162
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 7951
+        width: 278
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b83fdb4f781884991bfe86698dac5b
+      internalID: -156047459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_163
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 8301
+        width: 205
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead2058307bb9194eb078a81301ec4ad
+      internalID: -1867278957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_164
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 8419
+        width: 96
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59a1c5e0e0bb45419fcc39fe42e34f0
+      internalID: -1940189763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_165
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 8404
+        width: 139
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c889b3edb08d7b74b8db4c33f0f98590
+      internalID: -2060399185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_166
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 8089
+        width: 249
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ee62243bed4684caa8549fe6e4bcf6
+      internalID: 444924362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_167
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 7973
+        width: 359
+        height: 489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27591033b7c60984abdd78e19cdd97a4
+      internalID: 1657200466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_168
+      rect:
+        serializedVersion: 2
+        x: 2215
+        y: 8301
+        width: 219
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b253ea81a70214588ff21e45d32b6a
+      internalID: 459731410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_169
+      rect:
+        serializedVersion: 2
+        x: 2434
+        y: 8411
+        width: 139
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1bc2c0b1d7fb1f4a9cfc178c4d8f4f9
+      internalID: 516380779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_170
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 8111
+        width: 304
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155e70cf6fcd7a245ae2729d9f00da26
+      internalID: 1791856443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_171
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8250
+        width: 4
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9cd63eb615171f4f89f84b4caffbe75
+      internalID: 1510192949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_172
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8118
+        width: 4
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1fffa324ada97b4fb08e025ceeb878b
+      internalID: -1457417055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_174
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 7906
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6622000c2f9d4fd4a82213d1290ec872
+      internalID: 1129554428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_176
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7672
+        width: 4
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81adbba18f209fd4195af1fcafe01130
+      internalID: -1418789273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_177
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 7404
+        width: 911
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b405005d10dde44a3fc5c8ca9dd85f
+      internalID: 1590243351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_179
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 7408
+        width: 886
+        height: 491
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24c0e1bf09c9944da19dbfdcb70f7a2
+      internalID: 100008500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_180
+      rect:
+        serializedVersion: 2
+        x: 2061
+        y: 7393
+        width: 809
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61802818581879c4db8b1fe37bee76dd
+      internalID: -159017011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_181
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7650
+        width: 4
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7593917f48739bf4c9e19471447b6afc
+      internalID: -1875738249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_186
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 6821
+        width: 897
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7dafa4ec5f78c4f8b61cee41926931
+      internalID: -2048689228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_189
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 6778
+        width: 820
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74fb04f5fa61b8741848f787de5ee7cb
+      internalID: 1479919628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_190
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 6761
+        width: 920
+        height: 544
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3f50229f50e534f98a2b3438e6ab51
+      internalID: 68921739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_202
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 6075
+        width: 908
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234ed09212ecfa6468541edc5b8c39f1
+      internalID: 314954656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_203
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 6083
+        width: 842
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b287300b99f83ab48b04270a050c16b7
+      internalID: 299785502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_204
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 6134
+        width: 780
+        height: 476
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fded15175498e14a97d4b3225b914a3
+      internalID: -1972280961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_206
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5716
+        width: 4
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7fde2011af5d8c45819180447848ae6
+      internalID: -33325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_207
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 5387
+        width: 827
+        height: 476
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecb4a6921dbaee44999ec9878e143ab
+      internalID: 937637280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_208
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 5416
+        width: 901
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c490d05c393a224a8d17f3b095764d8
+      internalID: -1769564189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_209
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 5380
+        width: 890
+        height: 475
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324042281bcac0e4f9bc6512bb45d892
+      internalID: -1621768106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_211
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4764
+        width: 919
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe378e85c2951e4f9871c227a3a739f
+      internalID: -740811818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_212
+      rect:
+        serializedVersion: 2
+        x: 2866
+        y: 5066
+        width: 4
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507f8a2f29aea694ab4c3db988242153
+      internalID: -632814943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_213
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce259bc54e18674f9b354a244a61786
+      internalID: 172800335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_214
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 212
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c379f9ff9d73f0940be29c895b955cf0
+      internalID: 900811352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_215
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 0
+        width: 30
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8c15cc9d9f3354c9eeb0ffedc32731
+      internalID: 87467710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_216
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 0
+        width: 51
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380059bf7f0bfc94ea3f4e709e5f2871
+      internalID: 158556111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_217
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 0
+        width: 183
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f830584a16ab706478b06130fced06e3
+      internalID: -1216701994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_218
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 0
+        width: 124
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955c932d6d0b8c34da355ade72c12d79
+      internalID: 998925301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_219
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 0
+        width: 190
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc87a46ff1994a74c9bd2c4de8dc0493
+      internalID: 405110833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_220
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 0
+        width: 29
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fbd230ca10f8e748886ad7e6beb1726
+      internalID: 1226709268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_221
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 0
+        width: 51
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5c06c1a00b4a14ab4b4f71366be37d
+      internalID: 773015812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_222
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 0
+        width: 183
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0727cf5d5b1174cb33301f3a368951
+      internalID: 423714206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_223
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 0
+        width: 124
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce56298fb898c5440b00d37d38469ffa
+      internalID: -2143963396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_224
+      rect:
+        serializedVersion: 2
+        x: 2164
+        y: 0
+        width: 188
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adcbe8fa6eaf46f4082df56a1bb25e95
+      internalID: -1743362523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_225
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 0
+        width: 35
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92a3e29fa14fb8498fb71029f08446f
+      internalID: -694962155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_226
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 0
+        width: 56
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32eab0810c71ae045bd30d86ec17157e
+      internalID: -542348328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_227
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 0
+        width: 176
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5a48f8e05ad0a41a0f541b35255636
+      internalID: -973307978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_spinning_228
+      rect:
+        serializedVersion: 2
+        x: 2757
+        y: 0
+        width: 113
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6859cfd0e0ab1c84b94284fc64479c46
+      internalID: -1716235175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      monster_spinning_91: -210221686
+      monster_spinning_203: 299785502
+      monster_spinning_38: 1598257982
+      monster_spinning_125: -1741208319
+      monster_spinning_141: -433112028
+      monster_spinning_115: -947098558
+      monster_spinning_207: 937637280
+      monster_spinning_82: -373180576
+      monster_spinning_160: -390859729
+      monster_spinning_90: 864834472
+      monster_spinning_73: -1446604473
+      monster_spinning_18: 573189149
+      monster_spinning_96: 1583867015
+      monster_spinning_134: -209322227
+      monster_spinning_181: -1875738249
+      monster_spinning_155: -246107420
+      monster_spinning_158: 1118805548
+      monster_spinning_165: -2060399185
+      monster_spinning_72: 1656647065
+      monster_spinning_222: 423714206
+      monster_spinning_68: 1895310426
+      monster_spinning_1: -1077027481
+      monster_spinning_227: -973307978
+      monster_spinning_171: 1510192949
+      monster_spinning_159: -558701270
+      monster_spinning_204: -1972280961
+      monster_spinning_33: 332005018
+      monster_spinning_64: 1712648145
+      monster_spinning_17: 2008447197
+      monster_spinning_37: -393191092
+      monster_spinning_95: 61309342
+      monster_spinning_47: 814337162
+      monster_spinning_206: -33325
+      monster_spinning_205: -11377188
+      monster_spinning_211: -740811818
+      monster_spinning_151: -152466410
+      monster_spinning_23: 1442174745
+      monster_spinning_51: 1212477512
+      monster_spinning_194: -800267058
+      monster_spinning_212: -632814943
+      monster_spinning_199: 1345955083
+      monster_spinning_66: -35662404
+      monster_spinning_119: 103981468
+      monster_spinning_137: -839756094
+      monster_spinning_130: 571786797
+      monster_spinning_25: 698832358
+      monster_spinning_225: -694962155
+      monster_spinning_53: -1963931525
+      monster_spinning_57: -1495615211
+      monster_spinning_122: 1944227880
+      monster_spinning_180: -159017011
+      monster_spinning_93: 1720940712
+      monster_spinning_32: -2078551841
+      monster_spinning_27: 119431709
+      monster_spinning_103: -1774726026
+      monster_spinning_101: 2095186409
+      monster_spinning_173: -181916316
+      monster_spinning_54: -217440684
+      monster_spinning_120: 1992395860
+      monster_spinning_6: 1975097125
+      monster_spinning_143: 1424636243
+      monster_spinning_157: 1015793955
+      monster_spinning_118: 1338005965
+      monster_spinning_154: -2047282628
+      monster_spinning_133: 1914226417
+      monster_spinning_80: 1467992752
+      monster_spinning_4: 1334567562
+      monster_spinning_29: -2009084884
+      monster_spinning_65: -1405861157
+      monster_spinning_110: -2107442235
+      monster_spinning_139: 1614232369
+      monster_spinning_94: -1277128224
+      monster_spinning_228: -1716235175
+      monster_spinning_10: 2108632358
+      monster_spinning_34: -2052546272
+      monster_spinning_105: -368938179
+      monster_spinning_176: -1418789273
+      monster_spinning_20: 1051842900
+      monster_spinning_147: 869765736
+      monster_spinning_184: 761675505
+      monster_spinning_215: 87467710
+      monster_spinning_44: 310340524
+      monster_spinning_109: 542687018
+      monster_spinning_166: 444924362
+      monster_spinning_42: -1444272322
+      monster_spinning_187: 1276919841
+      monster_spinning_49: -1914678282
+      monster_spinning_83: 1089262788
+      monster_spinning_129: 314344422
+      monster_spinning_63: 633107070
+      monster_spinning_210: 606520127
+      monster_spinning_102: -1616507537
+      monster_spinning_87: -1790879186
+      monster_spinning_221: 773015812
+      monster_spinning_140: 835146514
+      monster_spinning_59: -1430903038
+      monster_spinning_15: 1962250517
+      monster_spinning_111: 24523132
+      monster_spinning_71: -446235802
+      monster_spinning_107: -537498386
+      monster_spinning_40: 185814215
+      monster_spinning_128: 140513508
+      monster_spinning_3: -933648632
+      monster_spinning_136: 625957353
+      monster_spinning_148: 536555871
+      monster_spinning_116: 1205763442
+      monster_spinning_21: 1915086912
+      monster_spinning_183: 473519165
+      monster_spinning_149: 1662604195
+      monster_spinning_197: -1842776486
+      monster_spinning_50: 95580660
+      monster_spinning_0: -59046576
+      monster_spinning_135: -2006018296
+      monster_spinning_99: 1003136204
+      monster_spinning_28: -1948066411
+      monster_spinning_167: 1657200466
+      monster_spinning_58: -1286431525
+      monster_spinning_85: 1230958317
+      monster_spinning_81: -127462909
+      monster_spinning_202: 314954656
+      monster_spinning_224: -1743362523
+      monster_spinning_217: -1216701994
+      monster_spinning_22: -1589036747
+      monster_spinning_164: -1940189763
+      monster_spinning_100: -1076655254
+      monster_spinning_30: -1999588022
+      monster_spinning_78: -766678780
+      monster_spinning_84: -516322567
+      monster_spinning_123: -2031125551
+      monster_spinning_8: -1473058322
+      monster_spinning_162: -156047459
+      monster_spinning_89: 1733363587
+      monster_spinning_113: 1254779604
+      monster_spinning_209: -1621768106
+      monster_spinning_175: 1889624176
+      monster_spinning_208: -1769564189
+      monster_spinning_189: 1479919628
+      monster_spinning_114: 596473263
+      monster_spinning_214: 900811352
+      monster_spinning_150: 249040938
+      monster_spinning_117: -1474703838
+      monster_spinning_198: -795198088
+      monster_spinning_145: 959877596
+      monster_spinning_16: -583420546
+      monster_spinning_74: 257040239
+      monster_spinning_62: 229036056
+      monster_spinning_46: -746672707
+      monster_spinning_190: 68921739
+      monster_spinning_92: 1089517902
+      monster_spinning_86: 230038848
+      monster_spinning_14: -1009826354
+      monster_spinning_77: -1950637711
+      monster_spinning_60: -1292176517
+      monster_spinning_9: 213766129
+      monster_spinning_196: 1216942790
+      monster_spinning_201: 997055740
+      monster_spinning_193: -462887237
+      monster_spinning_200: -489747502
+      monster_spinning_186: -2048689228
+      monster_spinning_169: 516380779
+      monster_spinning_213: 172800335
+      monster_spinning_153: -66034031
+      monster_spinning_218: 998925301
+      monster_spinning_156: 1549890128
+      monster_spinning_168: 459731410
+      monster_spinning_177: 1590243351
+      monster_spinning_223: -2143963396
+      monster_spinning_26: -1911275908
+      monster_spinning_108: -623458584
+      monster_spinning_19: -1067492657
+      monster_spinning_124: 1743978896
+      monster_spinning_226: -542348328
+      monster_spinning_39: -118672328
+      monster_spinning_132: 930957039
+      monster_spinning_69: -162329747
+      monster_spinning_172: -1457417055
+      monster_spinning_7: 381837601
+      monster_spinning_31: -299517882
+      monster_spinning_48: -1080108481
+      monster_spinning_112: 1418255833
+      monster_spinning_191: -1703706545
+      monster_spinning_185: -1409940287
+      monster_spinning_79: 312479606
+      monster_spinning_219: 405110833
+      monster_spinning_170: 1791856443
+      monster_spinning_11: 1927705278
+      monster_spinning_98: 383270931
+      monster_spinning_36: -613614197
+      monster_spinning_179: 100008500
+      monster_spinning_67: -1179166777
+      monster_spinning_56: -417934297
+      monster_spinning_55: 328852726
+      monster_spinning_35: 994141140
+      monster_spinning_41: 1624902859
+      monster_spinning_127: -946172234
+      monster_spinning_126: -823823906
+      monster_spinning_61: -1631390383
+      monster_spinning_142: 814975208
+      monster_spinning_188: -1521162445
+      monster_spinning_13: -1533121369
+      monster_spinning_52: 1385847176
+      monster_spinning_88: 1615651087
+      monster_spinning_195: 108976615
+      monster_spinning_24: -1117438419
+      monster_spinning_5: -974955832
+      monster_spinning_131: 145596012
+      monster_spinning_43: 1728425609
+      monster_spinning_104: 1520300792
+      monster_spinning_75: 279166952
+      monster_spinning_97: 1767109587
+      monster_spinning_146: 935996995
+      monster_spinning_12: -1262835439
+      monster_spinning_70: -1405336062
+      monster_spinning_182: -132052158
+      monster_spinning_152: -396635760
+      monster_spinning_144: 520842000
+      monster_spinning_106: -2026600071
+      monster_spinning_178: -2118250956
+      monster_spinning_76: 531625497
+      monster_spinning_174: 1129554428
+      monster_spinning_2: -2109724255
+      monster_spinning_216: 158556111
+      monster_spinning_138: 110594794
+      monster_spinning_161: 1396748400
+      monster_spinning_45: 263861355
+      monster_spinning_220: 1226709268
+      monster_spinning_121: 1872161039
+      monster_spinning_163: -1867278957
+      monster_spinning_192: 347837425
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

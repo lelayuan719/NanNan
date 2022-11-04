@@ -14,7 +14,6 @@ public class Item
         this.title = title;
         this.description = description;
         this.icon = Resources.Load<Sprite>("Sprites/Items/" + title);
-
     }
 
     public int getId(){

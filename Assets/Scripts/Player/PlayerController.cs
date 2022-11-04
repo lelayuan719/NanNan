@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : GenericController
 {
     public float speed;
     private Rigidbody2D rb;
@@ -13,13 +15,6 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsLadder;
     private bool isClimbing;
     private float distWalked;
-    public bool playerCanMove = true;
-    public int left;
-    public int right;
-    public int upper;
-    public int lower;
-    public int padding;
-    public string NextScene;
     public SpriteRenderer sr;
 
     Animator anim;
@@ -36,34 +31,80 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // DEBUG fast speed
+        if (Input.GetKeyDown("]"))
+        {
+            speed *= 5;
+        }
+        else if (Input.GetKeyDown("["))
+        {
+            speed /= 5;
+        }
     }
 
     void FixedUpdate(){
-        inputHorizontal = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(inputHorizontal * speed, rb.velocity.y);
-        if(inputHorizontal!=0){
-            anim.SetBool("isWalking",true);
-            if (inputHorizontal < 0) {
-               sr.flipX = true;
-            } else {
-                sr.flipX = false;
+        if (playerCanMove)
+        {
+            inputHorizontal = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(inputHorizontal * speed, rb.velocity.y);
+            if (inputHorizontal != 0)
+            {
+                anim.SetBool("isWalking", true);
+                if (inputHorizontal < 0)
+                {
+                    sr.flipX = true;
+                }
+                else
+                {
+                    sr.flipX = false;
+                }
             }
-        } else {
-            anim.SetBool("isWalking",false);
+            else
+            {
+                anim.SetBool("isWalking", false);
+            }
         }
-        
-        //if (rb.transform.position.x < left && inputHorizontal < 0){
-        //    rb.velocity = new Vector2(0, rb.velocity.y);
-        //} else if (rb.transform.position.x > right && inputHorizontal > 0){
-        //    rb.velocity = new Vector2(0, rb.velocity.y);
-        //}
+    }
 
-        //if ((rb.transform.position.x < left - padding) || 
-        //    (rb.transform.position.x > right + padding) ||
-        //    (rb.transform.position.y > upper + padding) ||
-        //    (rb.transform.position.y < lower - padding))
-        //{
-        //    SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
-        //}
+    public void MoveTo(Transform destination, UnityEvent onComplete)
+    {
+        StartCoroutine(MoveTo(destination.position, onComplete));
+    }
+
+    public void MoveTo(Transform destination)
+    {
+        StartCoroutine(MoveTo(destination.position, null));
+    }
+
+    IEnumerator MoveTo(Vector2 destination, UnityEvent onComplete)
+    {
+        // Check for already there
+        if (destination.x == transform.position.x)
+        {
+            yield break;
+        }
+
+        playerCanMove = false;
+        anim.SetBool("isWalking", true);
+        float directionToMove = Mathf.Sign(destination.x - transform.position.x);
+
+        // Flip
+        if (directionToMove < 0)
+            sr.flipX = true;
+        else
+            sr.flipX = false;
+
+        // Move while we are still on the same side
+        while (Mathf.Sign(destination.x - transform.position.x) == directionToMove)
+        {
+            rb.velocity = new Vector2(directionToMove * speed, rb.velocity.y);
+            yield return new WaitForFixedUpdate();
+        }
+        transform.position = new Vector2(destination.x, transform.position.y);
+
+        // Reset and do callback
+        playerCanMove = true;
+        anim.SetBool("isWalking", false);
+        if (onComplete != null) onComplete.Invoke();
     }
 }

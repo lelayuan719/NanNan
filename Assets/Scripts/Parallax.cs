@@ -5,14 +5,14 @@ using UnityEngine;
 public class Parallax : MonoBehaviour
 {
     private float startpos;
-    private float length = 4720.751f;
     private float startposY;
-    public GameObject cam;
+    private GameObject cam;
     public float parallaxEffect;
 
     // Start is called before the first frame update
     void Start()
     {
+        cam = GameManager.GM.cam;
         startpos = transform.position.x;
         startposY = transform.position.y;
         //length = GetComponent<SpriteRenderer>().bounds.size.x;
@@ -29,13 +29,13 @@ public class Parallax : MonoBehaviour
                                          transform.position.z);
 
         //infinite scrolling
-        if (temp > startpos + length/2)
-        {
-            startpos += length;
-        }
-        else if (temp < startpos - length/2)
-        {
-            startpos -= length;
-        }
+        //if (temp > startpos + length / 2)
+        //{
+        //    startpos += length;
+        //}
+        //else if (temp < startpos - length / 2)
+        //{
+        //    startpos -= length;
+        //}
     }
 }

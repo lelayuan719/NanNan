@@ -29,12 +29,10 @@ public class OpenNewSceneOnClick : MonoBehaviour
         Puzzle.SetActive(true);
         //pauseRootScene.SetActive(false);
        
-        print("what1");
         // print(Puzzle.name);
         //Time.timeScale = 0.00f;
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName(innerScene));
         //opened = true;
-        print("what2");
 
         //SceneManager.LoadScene(innerScene, LoadSceneMode.Additive);
   

@@ -1,0 +1,33 @@
+This is a placeholder right now. Some of this should happen in the storybook section.
+NanNan: Grandma! I met a man with a fox head by the well on the mountain!
+Grandma: Oh,  little NanNan met the Great Immortal! 
+NanNan: The Great Immortal? The Great Immortal mentioned in the song?
+Grandma: Yes, in the woods there is a Great Immortal that catches little children to go underground…
+NanNan: But, it looks really nice, and it said it wants to help me. 
+Grandma: … 
+NanNan: Grandma, it gave me this.
+Grandma: Ah, this is, this is its seed, its fruit...
+Grandma: Listen to Grandma tell a story.
+Grandma's storytelling can be presented with a slideshow of several paintings. 
+Grandma: The people in our village came here from far, far away. Our ancestors used to live near the sea.
+NanNan: Wow, I really want to see the sea. 
+Grandma: Good girl, you will see... Later, there was a disaster on the seaside. There was not enough to eat for our ancestors, so they walked a long way, climbed a very high mountain, and passed through a deep, deep forest, to reach where we are now.
+Grandma: The original residents here were very kind. They taught our ancestors how to hunt in the deep mountains and grow local crops. Gradually, the two ethnic groups lived together and merged, and later evolved into the current village.
+Grandma: However, many of our habits are still the same as when we lived by the sea. When the children are sleeping, their mother will tell them stories passed down from generation to generation. However, the stories of the original residents here barely remain. Among them is the story of the Great Immortal.
+Nan Nan: Is that the Great Immortal I saw today?
+Grandma: Yes...When the people at the seaside first arrived, those who lived here from a long time ago, told them that the mountains here are sacred and we must be in awe… The mountain people say that a long, long time ago, a colorful brilliance fell from the sky and landed in the mountains here. That is, the "Great Immortal" fell from the sky into the mortal world. The Great Immortal has boundless mana, allowing clear springs to flow in the mountains even during winter. The crops watered by these springs are extremely lush. If it gets angry, the mountains will tremble, the sky will crack, and the raging rain is its anger.
+Grandma: Our ancestors kept in touch with the "Great Immortal". They built a well for the "Great Immortal" spring, which was also used as a place to worship it. People would offer to it the bailing fruit from the mountain and the wine made from the spring water. It will also become the image of an animal, sometimes a fox, sometimes a tiger or a snake, giving people some inspiration. To the especially lucky people among them, the “Great Immortal” will give them a part of itself: an amulet. People will regard it as the incarnation of the "Great Immortal" and enshrine it at home, called a "home immortal". In the past, some people who had a "home immortal" in their homes could gain magical abilities through these amulets. When people encountered problems that could not be solved, they would turn to these "little gods". Some of them could talk to animals, and some of them could see ghost spirits. Some of them would treat illnesses, and some would give locations for people to live. It's been a long, long time since anyone has received one of these. 
+NanNan: Then can I talk to birds now?
+Grandma: Haha... I don't know.
+Grandma: But later, things from the outside world came to us, people saw cars, and people talking in small boxes... Fewer and fewer people actually remember these ancient traditions. Later, people became more and more disrespectful to the mountains and forests. They cut down the wood and sold it to people outside. Even the bailing fruit, which was only supplied to the Great Immortal, was picked and sold. A long time ago, the bailing fruit was really bailing fruit. No matter what you were sick with, you would feel better after eating bailing fruit. Now it is just an ordinary fruit.
+NanNan looked at the basket in her hand.
+Grandma: But the Great Immortal also has a temper... When people provoke it, it will retaliate... Twenty years ago, the second boy of the Li family from the next village cut down the thousand-year-old tree by the Great Immortal well. Later... later …
+NanNan: What happened to him later?
+Grandma: Then he went crazy! He made a bed out of the wood of that tree. When he slept on it, in the middle of the night, he always felt like he was being eaten by a big sticky mouth. He could never fall asleep and his wife was scared away… Later, he used the axe that chopped down the tree to kill his son and daughter, and then set himself and the children on fire in the house. That smell of burning flesh could be smelled from ten miles away...
+NanNan: Ah! That’s very scary! This, this is what the Great Immortal did? Is it pretending to be so nice to me?
+Grandma: Silly child, how can mortals understand what is good and bad to immortals...
+Grandma: Anyways, later, in the burnt ruins of his house, people found the unscathed wooden bed, and a shiny snake slough. But the kids’ bodies could not be found... Everyone knows that the Great Immortal is taking revenge. Up to now, how many people in the village have done bad things to the Great Immortal; cutting down trees, digging up the ground... no one will go to sacrifice to the Great Immortal anymore, so they dare not let children go up the mountain. They teach you those nursery songs, all because of their guilt...
+NanNan: Then why did my parents let me come to the mountain?
+Grandma: Cough! Cough cough! Guilty!
+Grandma: Your parents, your parents! Your parents are the most sorry for Daxian. They sinned and sinned and that Jia person, he will be punished by heaven! Cough, cough, cough... Oh, let's not mention it, NanNan, good girl, remember it, every time you go up the mountain to pick fruit, put a few on the edge of the Great Immortal's well and talk to it. And for the gifts it gives you, you must keep them safe, please keep them safe. Promise grandma, you must take them with you always, and keep them intact... Did you understand?
+Nan Nan: Okay, okay grandma.

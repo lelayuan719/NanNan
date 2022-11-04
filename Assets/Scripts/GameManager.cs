@@ -5,10 +5,16 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager GM;
 
+    public GameObject inventoryObj;
     public Inventory inventory;
     public UIInventory inventoryUI;
+    public DialogManager dialogManager;
+    public GameObject cam;
 
     public bool gameIsRunning = true;
+
+    // Game state
+    public bool gaveAmulet;
 
     // Runs before a scene gets loaded
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -45,7 +51,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -58,14 +63,33 @@ public class GameManager : MonoBehaviour
     {
         // Disables inventory in prologue
         // If we add prologue scene after Grandma this will need to be changed
-        if (scene.name.StartsWith("Prologue")) {
-            transform.Find("Inventory").gameObject.SetActive(false);
+        if (scene.name.StartsWith("Prologue") || scene.name.StartsWith("menu") || 
+            (scene.name == "Chapter3_Book")) {
+            inventoryObj.SetActive(false);
         }
+        else
+        {
+            inventoryObj.SetActive(true);
+        }
+
     }
 
     // Activates the inventory for the first time
     public void ActivateInventory()
     {
-        transform.Find("Inventory").gameObject.SetActive(true);
+        inventoryObj.SetActive(true);
+    }
+
+    public void GiveAmulet(bool didGive)
+    {
+        gaveAmulet = didGive;
+
+        if (didGive)
+        {
+            inventory.RemoveItem("amulet");
+            print("Gave amulet. Oh no.");
+        }
+        else
+            print("Didn't give amulet.");
     }
 }
