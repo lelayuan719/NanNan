@@ -27,7 +27,7 @@ public class Ch2ActivateWell : MonoBehaviour
     public void Activate()
     {
         // Starts walking and activates event when finished
-        player.MoveTo(playerDest, onFinishedWalking);
+        player.MoveTo(playerDest, onFinishedWalking, false);
     }
 
     public void ChangeConfiner()

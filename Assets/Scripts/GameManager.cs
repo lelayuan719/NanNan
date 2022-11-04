@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public UIInventory inventoryUI;
     public DialogManager dialogManager;
     public GameObject cam;
+    public string[] disableInvScenes;
 
     public bool gameIsRunning = true;
 
@@ -63,13 +64,21 @@ public class GameManager : MonoBehaviour
     {
         // Disables inventory in prologue
         // If we add prologue scene after Grandma this will need to be changed
-        if (scene.name.StartsWith("Prologue") || scene.name.StartsWith("menu") || 
-            (scene.name == "Chapter3_Book")) {
+        if (scene.name.StartsWith("Prologue") || scene.name.StartsWith("menu")) {
             inventoryObj.SetActive(false);
         }
         else
         {
             inventoryObj.SetActive(true);
+            
+            foreach (string disabledScene in disableInvScenes)
+            {
+                if (scene.name == disabledScene)
+                {
+                    inventoryObj.SetActive(false);
+                    break;
+                }
+            }
         }
 
     }

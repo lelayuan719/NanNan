@@ -14,6 +14,8 @@ public class Game2Script : MonoBehaviour
     private int[] disallowedSlots = { 2, 3, 0, 1, -1 }; // Which slot the tiles can't move into. Ex. index 0 can't move into index 2 because it's opposite
     public int emptySpaceLoc = 4;
     public TokenTracker playerController;
+    public GameObject mainPuzzle;
+    public GameObject rewardBox;
 
     void Awake()
     {
@@ -101,6 +103,7 @@ public class Game2Script : MonoBehaviour
             Debug.Log(message: "You Won!");
             glowTiles[4].Change(true);
             isSolved = true;
+            Invoke("AtSolved", 2);
         }
     }
 
@@ -162,5 +165,11 @@ public class Game2Script : MonoBehaviour
             sum += thisInvertion;
         }
         return sum;
+    }
+
+    void AtSolved()
+    {
+        rewardBox.SetActive(true);
+        mainPuzzle.SetActive(false);
     }
 }

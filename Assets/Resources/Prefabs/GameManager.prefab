@@ -53,6 +53,9 @@ MonoBehaviour:
   inventoryUI: {fileID: 5709118372592456033}
   dialogManager: {fileID: 0}
   cam: {fileID: 0}
+  disableInvScenes:
+  - Chapter3_Book
+  - Chapter2_Story
   gameIsRunning: 1
   gaveAmulet: 0
 --- !u!114 &7553713860508703097

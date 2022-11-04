@@ -66,17 +66,17 @@ public class PlayerController : GenericController
         }
     }
 
-    public void MoveTo(Transform destination, UnityEvent onComplete)
+    public void MoveTo(Transform destination, UnityEvent onComplete, bool canMoveAfter)
     {
-        StartCoroutine(MoveTo(destination.position, onComplete));
+        StartCoroutine(MoveTo(destination.position, onComplete, canMoveAfter));
     }
 
-    public void MoveTo(Transform destination)
+    public void MoveTo(Transform destination, bool canMoveAfter)
     {
-        StartCoroutine(MoveTo(destination.position, null));
+        StartCoroutine(MoveTo(destination.position, null, canMoveAfter));
     }
 
-    IEnumerator MoveTo(Vector2 destination, UnityEvent onComplete)
+    IEnumerator MoveTo(Vector2 destination, UnityEvent onComplete, bool canMoveAfter)
     {
         // Check for already there
         if (destination.x == transform.position.x)
@@ -103,7 +103,7 @@ public class PlayerController : GenericController
         transform.position = new Vector2(destination.x, transform.position.y);
 
         // Reset and do callback
-        playerCanMove = true;
+        if (canMoveAfter) playerCanMove = true;
         anim.SetBool("isWalking", false);
         if (onComplete != null) onComplete.Invoke();
     }
