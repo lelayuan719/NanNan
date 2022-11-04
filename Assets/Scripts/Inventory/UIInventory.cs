@@ -10,6 +10,7 @@ public class UIInventory : MonoBehaviour
     public Transform slotPanel;
     public int numberOfSlots = 6;
     public InventoryButtonHelper inventoryButtonHelper;
+    public int mostRecentSlot;
 
     private void Awake(){
         for(int i = 0; i < numberOfSlots; i++){
