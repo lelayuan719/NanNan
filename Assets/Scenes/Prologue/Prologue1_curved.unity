@@ -1903,6 +1903,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   _choiceActions: []
+  _midwayActions: []
   running: 0
   choosing: 0
   completed: 0
@@ -3047,6 +3048,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _choiceActions: []
+  _midwayActions: []
   running: 0
   choosing: 0
   completed: 0
