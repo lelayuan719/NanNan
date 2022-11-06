@@ -4494,6 +4494,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _choiceActions: []
+  _midwayActions: []
   running: 0
   choosing: 0
   completed: 0
@@ -5811,6 +5812,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _choiceActions: []
+  _midwayActions: []
   running: 0
   choosing: 0
   completed: 0
@@ -7923,6 +7925,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _choiceActions: []
+  _midwayActions: []
   running: 0
   choosing: 0
   completed: 0
