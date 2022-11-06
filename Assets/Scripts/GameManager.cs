@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +11,7 @@ public class GameManager : MonoBehaviour
     public UIInventory inventoryUI;
     public DialogManager dialogManager;
     public GameObject cam;
-    public string[] disableInvScenes;
+    public List<string> disableInvScenes;
 
     public bool gameIsRunning = true;
 
@@ -69,18 +70,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            inventoryObj.SetActive(true);
-            
-            foreach (string disabledScene in disableInvScenes)
-            {
-                if (scene.name == disabledScene)
-                {
-                    inventoryObj.SetActive(false);
-                    break;
-                }
-            }
+            if (disableInvScenes.Contains(scene.name))
+                inventoryObj.SetActive(false);
+            else
+                inventoryObj.SetActive(true);
         }
-
     }
 
     // Activates the inventory for the first time

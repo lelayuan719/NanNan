@@ -86,9 +86,14 @@ public class Dialog : MonoBehaviour
                 StopCoroutine(typer);
                 dialogManager.textDisplay.text = sentence;
             }
+            // DEBUG skip
             else if (Input.GetKeyDown("."))
             {
                 story.ContinueMaximally();
+                foreach (var midwayAction in midwayActions.Values)
+                {
+                    midwayAction.Invoke();
+                }
                 NextSentence();
             }
         }
