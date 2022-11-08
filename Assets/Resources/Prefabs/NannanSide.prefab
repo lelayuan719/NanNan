@@ -142,7 +142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4603072348880616931}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 416, y: 185, z: 0}
+  m_LocalPosition: {x: 416, y: 185, z: 1}
   m_LocalScale: {x: 2.0407202, y: 2.0407202, z: 0.80302334}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -220,12 +220,6 @@ MonoBehaviour:
   whatIsLadder:
     serializedVersion: 2
     m_Bits: 64
-  left: 0
-  right: 0
-  upper: 0
-  lower: 0
-  padding: 10
-  NextScene: 
   sr: {fileID: 4603072348880616937}
 --- !u!114 &4603072348880616936
 MonoBehaviour:
