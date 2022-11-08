@@ -5,27 +5,33 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(ClimbingController))]
 public class PlayerController : GenericController
 {
     public float speed;
-    private Rigidbody2D rb;
-    private float inputHorizontal;
-    private float inputVertical;
     public float distance;
     public LayerMask whatIsLadder;
-    private bool isClimbing;
-    private float distWalked;
-    public SpriteRenderer sr;
 
-    Animator anim;
+    private Rigidbody2D rb;
+    private ClimbingController climbCtrl;
+    private SpriteRenderer sr;
+    private Collider2D collide;
+    private Animator anim;
+
+    private float inputHorizontal;
+    private float inputVertical;
+    private bool touchingGround;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        anim.SetBool("isWalking",false);
+        collide = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
+        climbCtrl = GetComponent<ClimbingController>();
+
+        anim.SetBool("isWalking",false);
     }
 
     // Update is called once per frame
@@ -43,7 +49,7 @@ public class PlayerController : GenericController
     }
 
     void FixedUpdate(){
-        if (playerCanMove)
+        if (playerCanMove && CanMoveHorizClimbing())
         {
             inputHorizontal = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(inputHorizontal * speed, rb.velocity.y);
@@ -63,6 +69,34 @@ public class PlayerController : GenericController
             {
                 anim.SetBool("isWalking", false);
             }
+        }
+    }
+
+    // Determines if we can move horizontally while climbing
+    // True if we're not climbing or we're at the bottom
+    bool CanMoveHorizClimbing()
+    {
+        if (climbCtrl.isClimbing && !touchingGround)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            touchingGround = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            touchingGround = false;
         }
     }
 

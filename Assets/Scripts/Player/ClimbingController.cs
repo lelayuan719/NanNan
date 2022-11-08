@@ -7,13 +7,16 @@ public class ClimbingController : MonoBehaviour
     private float vertical;
     private float speed = 80f;
     private bool isLadder;
-    private bool isClimbing;
-    public Animator anim;
 
-    [SerializeField] private Rigidbody2D rb;
+    private Rigidbody2D rb;
+    private Animator anim;
+
+    public bool isClimbing;
 
     void Start(){
         anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+
         anim.SetBool("isClimbing",false);
     }
     // Update is called once per frame
@@ -35,7 +38,6 @@ public class ClimbingController : MonoBehaviour
             rb.gravityScale = 10f;
         }
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision){
         if (collision.CompareTag("Ladder")){
