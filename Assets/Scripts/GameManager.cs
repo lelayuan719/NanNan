@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
             else
                 inventoryObj.SetActive(true);
         }
+        CursorManager.SetCursor(null);
     }
 
     // Activates the inventory for the first time
