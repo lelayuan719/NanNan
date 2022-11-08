@@ -220,7 +220,6 @@ MonoBehaviour:
   whatIsLadder:
     serializedVersion: 2
     m_Bits: 64
-  sr: {fileID: 4603072348880616937}
 --- !u!114 &4603072348880616936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,8 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3187cf17f4b43b44ad3e59ee18f8b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  rb: {fileID: 4603072348880616935}
+  isClimbing: 0
 --- !u!114 &-1006225379511589630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +304,7 @@ Animator:
   m_GameObject: {fileID: 4603072348880616931}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c637a24ab7d0ef649be7ecdff3ed3d65, type: 2}
+  m_Controller: {fileID: 22100000, guid: c33f052894f0abf4e9519d094e2afb57, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

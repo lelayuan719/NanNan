@@ -1,0 +1,347 @@
+fileFormatVersion: 2
+guid: e9a69a88550df7a4b9cbbbe6f8845199
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8564080115084401036
+    second: nan nan talking sprite sheet (1)_0
+  - first:
+      213: -5470479322245810977
+    second: nan nan talking sprite sheet (1)_1
+  - first:
+      213: -2961819598104483875
+    second: nan nan talking sprite sheet (1)_2
+  - first:
+      213: 5371353353564660319
+    second: nan nan talking sprite sheet (1)_3
+  - first:
+      213: -4558835943641848769
+    second: nan nan talking sprite sheet (1)_4
+  - first:
+      213: 3529779034892855519
+    second: nan nan talking sprite sheet (1)_5
+  - first:
+      213: 3022900449599727160
+    second: nan nan talking sprite sheet (1)_6
+  - first:
+      213: 924397709242928522
+    second: nan nan talking sprite sheet (1)_7
+  - first:
+      213: -5658772435215190350
+    second: nan nan talking sprite sheet (1)_8
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 80
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nan nan talking sprite sheet right_0
+      rect:
+        serializedVersion: 2
+        x: 2047
+        y: 10456
+        width: 1392
+        height: 4079
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ddcb70d84675942b942641925dcc75
+      internalID: -1474042937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nan nan talking sprite sheet right_1
+      rect:
+        serializedVersion: 2
+        x: 7042
+        y: 10456
+        width: 1399
+        height: 4072
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c01036349d75c04db7c2ea13be4f464
+      internalID: 662263779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nan nan talking sprite sheet right_2
+      rect:
+        serializedVersion: 2
+        x: 12045
+        y: 10459
+        width: 1399
+        height: 4061
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc2d7f9b373c6248b8fa7ef23ada056
+      internalID: 210623296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nan nan talking sprite sheet right_3
+      rect:
+        serializedVersion: 2
+        x: 2047
+        y: 5460
+        width: 1392
+        height: 4080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb93af7a0f637294ba50730e1fa1d0f7
+      internalID: -1153721543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nan nan talking sprite sheet right_4
+      rect:
+        serializedVersion: 2
+        x: 7042
+        y: 5460
+        width: 1399
+        height: 4080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d730722576c3773499a2ecf72c9215db
+      internalID: 1274185841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nan nan talking sprite sheet right_5
+      rect:
+        serializedVersion: 2
+        x: 12045
+        y: 5460
+        width: 1399
+        height: 4080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d2510e57ad2da45b8747dd69c0b3b0
+      internalID: 1277449182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nan nan talking sprite sheet right_6
+      rect:
+        serializedVersion: 2
+        x: 2041
+        y: 458
+        width: 1398
+        height: 4072
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c2d64754f2c9f4895ab4bd71a40dca
+      internalID: -1597109627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nan nan talking sprite sheet right_7
+      rect:
+        serializedVersion: 2
+        x: 7042
+        y: 458
+        width: 1399
+        height: 4079
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eecd842220830b458f4cfbd088f87be
+      internalID: 1489254970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nan nan talking sprite sheet right_8
+      rect:
+        serializedVersion: 2
+        x: 12045
+        y: 458
+        width: 1399
+        height: 4087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e2b490e773ac04aa719ef12f540ef1
+      internalID: 463294471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      nan nan talking sprite sheet right_2: 210623296
+      nan nan talking sprite sheet right_6: -1597109627
+      nan nan talking sprite sheet right_4: 1274185841
+      nan nan talking sprite sheet right_8: 463294471
+      nan nan talking sprite sheet right_5: 1277449182
+      nan nan talking sprite sheet right_1: 662263779
+      nan nan talking sprite sheet right_0: -1474042937
+      nan nan talking sprite sheet right_3: -1153721543
+      nan nan talking sprite sheet right_7: 1489254970
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

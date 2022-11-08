@@ -5249,6 +5249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NanNan
       objectReference: {fileID: 0}
+    - target: {fileID: 4603072348880616933, guid: 65937e22227c9404cad29a23e623e3a2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 0fe25f3c226ae3d47848141ede845a4c, type: 2}
     - target: {fileID: 4603072348880616937, guid: 65937e22227c9404cad29a23e623e3a2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

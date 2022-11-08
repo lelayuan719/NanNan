@@ -231,15 +231,15 @@ PrefabInstance:
       objectReference: {fileID: 12542443}
     - target: {fileID: 126154492889194512, guid: f28f85e411d531b4ca754cfc43ef7ecf, type: 3}
       propertyPath: _aliases.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 126154492889194512, guid: f28f85e411d531b4ca754cfc43ef7ecf, type: 3}
       propertyPath: _aliases.Array.data[0].obj
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 12542443}
     - target: {fileID: 126154492889194512, guid: f28f85e411d531b4ca754cfc43ef7ecf, type: 3}
       propertyPath: _aliases.Array.data[0].name
-      value: Big Brother
+      value: NanNan
       objectReference: {fileID: 0}
     - target: {fileID: 126154492889194512, guid: f28f85e411d531b4ca754cfc43ef7ecf, type: 3}
       propertyPath: _aliases.Array.data[1].name
