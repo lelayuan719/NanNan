@@ -1334,6 +1334,74 @@ RectTransform:
   m_AnchoredPosition: {x: 760.8125, y: 461.89648}
   m_SizeDelta: {x: 131.3, y: 107.46}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &232758488
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.3643444
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5321623
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1748844
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187254998420157195, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5364458197311616267, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+      propertyPath: m_Name
+      value: EventInterface
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+--- !u!114 &232758489 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5169713010260750278, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
+  m_PrefabInstance: {fileID: 232758488}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf4abd722f48644381662fc7764011b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &235911903
 GameObject:
   m_ObjectHideFlags: 0
@@ -6932,8 +7000,6 @@ GameObject:
   - component: {fileID: 1490466616}
   - component: {fileID: 1490466619}
   - component: {fileID: 1490466618}
-  - component: {fileID: 1490466620}
-  - component: {fileID: 1490466621}
   - component: {fileID: 1490466622}
   m_Layer: 0
   m_Name: Shrine
@@ -7053,34 +7119,19 @@ MonoBehaviour:
   success: 0
   onMatch:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1490466620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490466615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bb2f978ab7e86b4b9054f591b491743, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amulet: {fileID: 897408700}
---- !u!114 &1490466621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490466615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e004baab7d1274d8dfbacbb7421bb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openDoor: {fileID: 0}
-  tiger: {fileID: 0}
+      m_Calls:
+      - m_Target: {fileID: 232758489}
+        m_TargetAssemblyTypeName: EventInterface, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Chapter2_Forest
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1490466622
 MonoBehaviour:
   m_ObjectHideFlags: 0
