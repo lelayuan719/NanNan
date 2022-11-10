@@ -151,7 +151,7 @@ public class Dialog : MonoBehaviour
             var actions = choiceActions[choiceName];
             List<string> choices = story.GetChoices();
 
-            dialogManager.SetupChoices(choices, actions, onChoose);
+            dialogManager.SetupChoices(choices, actions, onChoose, story);
         }
         else
         {
@@ -164,8 +164,7 @@ public class Dialog : MonoBehaviour
         if (story.currentTags.Count > 0)
         {
             string eventName = story.currentTags[0];
-            UnityEvent actions;
-            if (midwayActions.TryGetValue(eventName, out actions))
+            if (midwayActions.TryGetValue(eventName, out UnityEvent actions))
                 actions.Invoke();
         }
     }

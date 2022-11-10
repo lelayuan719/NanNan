@@ -6,9 +6,14 @@ public class GiveAmuletChoice : ChoiceHandler
 {
     public override void MakeChoice(int choiceIndex)
     {
-        if (choiceIndex == 0)
-            GameManager.GM.GiveAmulet(true);
-        else
-            GameManager.GM.GiveAmulet(false);
+        switch (choiceIndex)
+        {
+            case 0:
+                GameManager.GM.GiveAmulet(true);
+                break;
+            case 1:
+                GameManager.GM.GiveAmulet(false);
+                break;
+        }
     }
 }

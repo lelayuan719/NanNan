@@ -40,7 +40,7 @@ public class DialogManager : MonoBehaviour
         player.GetComponent<GenericController>().playerCanMove = true;
     }
 
-    public void SetupChoices(List<string> choices, ChoiceHandler actions, UnityAction onChoose)
+    public void SetupChoices(List<string> choices, ChoiceHandler actions, UnityAction onChoose, MyStory story)
     {
         buttonObject.SetActive(true);
 
@@ -51,9 +51,9 @@ public class DialogManager : MonoBehaviour
 
             Button choiceButton = choiceObject.GetComponent<Button>();
             (choiceButton.targetGraphic as TextMeshProUGUI).text = choices[i];
-
+            
             int j = i; // Very necessary to make the delegate closure work!
-            choiceButton.onClick.AddListener(delegate { actions.MakeChoice(j); });
+            choiceButton.onClick.AddListener(delegate { actions.MakeChoice(j); story.ChooseChoiceIndex(j); });
             choiceButton.onClick.AddListener(onChoose);
 
             choiceButtons.Add(choiceObject);
