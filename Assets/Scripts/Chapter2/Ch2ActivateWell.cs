@@ -28,6 +28,7 @@ public class Ch2ActivateWell : MonoBehaviour
     {
         // Starts walking and activates event when finished
         player.MoveTo(playerDest, onFinishedWalking, false);
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 
     public void ChangeConfiner()
