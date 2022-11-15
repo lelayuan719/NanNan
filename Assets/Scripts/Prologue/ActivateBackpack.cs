@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ActivateBackpack : MonoBehaviour
 {
+    bool collected = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +24,14 @@ public class ActivateBackpack : MonoBehaviour
 
     void Collect()
     {
-        GameManager.GM.ActivateInventory();
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-        gameObject.SetActive(false);
+        if (collected == false)
+        {
+            GameManager.GM.ActivateInventory();
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            GetComponent<Dialog>().TriggerDialog();
+            GetComponent<SpriteRenderer>().enabled=false;
+            collected = true;
+        }
+        // gameObject.SetActive(false);
     }
 }
