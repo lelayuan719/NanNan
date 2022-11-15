@@ -54,12 +54,11 @@ public class Dialog : MonoBehaviour
         completed = false;
     }
 
-    public void TriggerDialog()
+    IEnumerator TriggerDialogCoroutine()
     {
-        // If dialog is already playing, do nothing
-        if (dialogManager.dialogActive) return;
-
-        // Otherwise, start the dialog
+        // Stop double clicking
+        yield return new WaitForEndOfFrame();
+        
         running = true;
         dialogManager.dialogActive = true;
         dialogManager.textDisplay.enabled = true;
@@ -70,6 +69,15 @@ public class Dialog : MonoBehaviour
         NextSentence();
         if (autoContinue) Invoke(nameof(StopDialog), autoContinueTime);
         onStart.Invoke();
+    }
+
+    public void TriggerDialog()
+    {
+        // If dialog is already playing, do nothing
+        if (dialogManager.dialogActive) return;
+
+        // Otherwise, start the dialog
+        StartCoroutine(TriggerDialogCoroutine());
     }
 
     void Update(){
@@ -197,6 +205,7 @@ public class Dialog : MonoBehaviour
 
         onComplete.Invoke();
         if (autoContinue) CancelInvoke(); // Cancels auto continue invokes. This is unrelated to the previous line!
+        StopCoroutine(typer);
         if (!canRepeat) enabled = false;
     }
 
