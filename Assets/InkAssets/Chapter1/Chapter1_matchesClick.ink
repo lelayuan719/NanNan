@@ -1,0 +1,1 @@
+NanNan: When I was younger, I would run outside and head whenever my father smoked; he beat Mother once because she accidentally got his cigarettes wet. He has always been a smoker despite our poverty.

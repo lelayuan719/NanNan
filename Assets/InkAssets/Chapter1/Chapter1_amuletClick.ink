@@ -1,0 +1,1 @@
+NanNan: Grandma said this amulet would give me good luck.
