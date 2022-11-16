@@ -7,16 +7,35 @@ using UnityEngine.EventSystems;
 public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Item item;
+    public GameObject notificationDot;
     private Image spriteImage;
     private UIItem selectedItem;
     private Tooltip tooltip;
     public int slot;
+    public bool seen = true;
+
+    bool _read = true;
+    public bool read
+    {
+        get
+        {
+            return _read;
+        }
+        set
+        {
+            _read = value;
+            if (notificationDot) notificationDot.SetActive(!_read);
+        }
+    }
+
+    public string Name { get; } = "Some Name";
 
     private void Awake(){
         spriteImage = GetComponent<Image>();
         UpdateItem(null);
         selectedItem = GameManager.GM.inventoryUI.selectedItem;
         tooltip = GameObject.Find("Tooltip").GetComponent<Tooltip>();
+        seen = true;
     }
 
     public void UpdateItem(Item item){
@@ -29,12 +48,12 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
             spriteImage.color = Color.clear;
         }
     }
-    
-    
 
     public void OnPointerClick(PointerEventData eventData){
-        if(this.item != null){
-            if(selectedItem.item != null){
+        if(this.item != null)
+        {
+            if(selectedItem.item != null)
+            {
                 Item clone = new Item(selectedItem.item);
                 selectedItem.UpdateItem(this.item);
                 UpdateItem(clone);
@@ -42,13 +61,12 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
                 GameManager.GM.inventoryUI.mostRecentSlot = slot;
             }
             else {
-
                 selectedItem.UpdateItem(this.item);
                 UpdateItem(null);
             }
         }
-        else if(selectedItem.item != null){
-           
+        else if(selectedItem.item != null)
+        {
             UpdateItem(selectedItem.item);
             print("new item set" + selectedItem.item.title);
             selectedItem.UpdateItem(null);
@@ -58,6 +76,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
     public void OnPointerEnter(PointerEventData eventData){
         if(this.item != null){
             tooltip.GenerateTooltip(this.item);
+            read = true;
         }
     }
 

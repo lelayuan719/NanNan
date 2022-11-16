@@ -7,16 +7,20 @@ public class UIInventory : MonoBehaviour
     public List<UIItem> uIItems = new List<UIItem>();
     public UIItem selectedItem;
     public GameObject slotPrefab;
+    public GameObject notificationDot;
     public Transform slotPanel;
     public int numberOfSlots = 6;
     public InventoryButtonHelper inventoryButtonHelper;
     public int mostRecentSlot;
+    [HideInInspector] public bool hasNewItem;
+    [HideInInspector] public bool isOpen;
 
     private void Awake(){
         for(int i = 0; i < numberOfSlots; i++){
             GameObject instance = Instantiate(slotPrefab);
             instance.transform.SetParent(slotPanel);
             instance.GetComponentInChildren<UIItem>().slot = i;
+            instance.GetComponentInChildren<UIItem>().seen = true;
             uIItems.Add(instance.GetComponentInChildren<UIItem>());
         }
     }
@@ -39,7 +43,18 @@ public class UIInventory : MonoBehaviour
     }
 
     public void AddNewItem(Item item){
-        UpdateSlot(uIItems.FindIndex(i => i.item == null), item);
+        int slotIndex = uIItems.FindIndex(i => i.item == null);
+        UpdateSlot(slotIndex, item);
+
+        // Display notification dot if unopened
+        if (!isOpen)
+        {
+            uIItems[slotIndex].seen = false;
+            RefreshNotification();
+        }
+
+        // Make it unread
+        uIItems[slotIndex].read = false;
     }
 
     public void RemoveItem(Item item){
@@ -48,12 +63,57 @@ public class UIInventory : MonoBehaviour
         if (foundIndex != -1)
         {
             UpdateSlot(foundIndex, null);
-            Debug.Log("item removed");
+            uIItems[foundIndex].seen = true;
+            RefreshNotification();
         }
         // Try in selected item
         else if (selectedItem.item == item)
         {
             selectedItem.UpdateItem(null);
+        }
+    }
+
+    public void ToggleOpen()
+    {
+        ChangeOpen(!isOpen);
+    }
+
+    public void ChangeOpen(bool open)
+    {
+        isOpen = open;
+
+        // Makes all items seen
+        if (isOpen)
+        {
+            foreach (var item in uIItems)
+            {
+                item.seen = true;
+            }
+        }
+
+        RefreshNotification();
+    }
+
+    // Changes the visibility of the notification dot
+    public void RefreshNotification()
+    {
+        // Open definitely hides it
+        if (isOpen)
+        {
+            notificationDot.SetActive(false);
+        }
+        // Closed hides it if there's something we haven't seen
+        else
+        {
+            notificationDot.SetActive(false);
+            foreach (var item in uIItems)
+            {
+                if (!item.seen)
+                {
+                    notificationDot.SetActive(true);
+                    break;
+                }
+            }
         }
     }
 }
