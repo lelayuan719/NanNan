@@ -375,6 +375,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8394005560038656646}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8394005558692221339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,7 +993,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 4552fc82e83424b8e9920bc223b62d25, type: 3}
-    m_PressedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: 4552fc82e83424b8e9920bc223b62d25, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 21300000, guid: f747fcc8ca933457ea0dcf1f3969d584, type: 3}
   m_AnimationTriggers:
@@ -1528,6 +1540,7 @@ MonoBehaviour:
   slotPanel: {fileID: 8394005560393301570}
   numberOfSlots: 6
   inventoryButtonHelper: {fileID: 8239863830743776155}
+  mostRecentSlot: 0
 --- !u!1 &8394005559542264955
 GameObject:
   m_ObjectHideFlags: 0
