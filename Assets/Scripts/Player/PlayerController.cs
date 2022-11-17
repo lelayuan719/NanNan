@@ -55,6 +55,7 @@ public class PlayerController : GenericController
             rb.velocity = new Vector2(inputHorizontal * speed, rb.velocity.y);
             if (inputHorizontal != 0)
             {
+                anim.SetBool("isTalking", false);
                 anim.SetBool("isWalking", true);
                 if (inputHorizontal < 0)
                 {
