@@ -22,7 +22,7 @@ public class DoorTeleport : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (opened)
+        if (opened && player.GetComponent<GenericController>().playerCanMove)
         {
             TransportPlayer();
         }
