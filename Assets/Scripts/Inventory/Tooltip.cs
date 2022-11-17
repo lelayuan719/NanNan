@@ -14,7 +14,7 @@ public class Tooltip : MonoBehaviour
     }
 
     public void GenerateTooltip(Item item){
-        string tooltip = string.Format("<b>{0}</b>\n{1}",item.title, item.description);
+        string tooltip = string.Format("<b>{0}</b>\n{1}", item.displayName, item.description);
         gameObject.SetActive(true);
         tooltipText.gameObject.SetActive(true);
         tooltipText.text = tooltip;

@@ -4,25 +4,21 @@ using UnityEngine;
 
 public class Item
 {
-    public int id;
     public string title;
+    public string displayName;
     public string description;
     public Sprite icon;
 
-    public Item(int id, string title, string description){
-        this.id = id;
+    public Item(string title, string displayName, string description){
         this.title = title;
+        this.displayName = displayName;
         this.description = description;
         this.icon = Resources.Load<Sprite>("Sprites/Items/" + title);
     }
 
-    public int getId(){
-        return id;
-    }
-
     public Item(Item item){
-        this.id = item.id;
         this.title = item.title;
+        this.displayName = item.displayName;
         this.description = item.description;
         this.icon = Resources.Load<Sprite>("Sprites/Items/" + item.title);
     }
