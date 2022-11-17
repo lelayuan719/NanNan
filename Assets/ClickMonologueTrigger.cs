@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class ClickMonologueTrigger : MonoBehaviour
 {
-    void onMouseDown()
+    void OnMouseDown()
     {
         ActivateDialog();
     }
@@ -16,10 +16,10 @@ public class ClickMonologueTrigger : MonoBehaviour
         ActivateDialog();
     }
 
-    void OnTriggerEnter2D()
-    {
-        ActivateDialog();
-    }
+    // void OnTriggerEnter2D()
+    // {
+    //     ActivateDialog();
+    // }
     
     void ActivateDialog()
     {

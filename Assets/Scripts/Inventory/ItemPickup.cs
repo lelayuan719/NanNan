@@ -30,7 +30,9 @@ public class ItemPickup : MonoBehaviour, IPointerClickHandler
     {
         inv.GiveItem(gameObject.name);
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-        gameObject.SetActive(false);
+        // gameObject.SetActive(false);
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
 
         onPickup.Invoke();
     }
