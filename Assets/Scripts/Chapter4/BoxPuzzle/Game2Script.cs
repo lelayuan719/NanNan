@@ -12,8 +12,9 @@ public class Game2Script : MonoBehaviour
     [HideInInspector] public List<Vector3> slotPositions = new List<Vector3>();
     [HideInInspector] public bool canPlay = false;
     private int[] disallowedSlots = { 2, 3, 0, 1, -1 }; // Which slot the tiles can't move into. Ex. index 0 can't move into index 2 because it's opposite
+    private string[] tokenTypes = new string[] { "Rat", "Hedgehog", "Fox", "Snake" };
     public int emptySpaceLoc = 4;
-    public TokenTracker playerController;
+    public TokenTracker tokenTracker;
     public GameObject mainPuzzle;
     public GameObject rewardBox;
     public GameObject minimap;
@@ -55,9 +56,18 @@ public class Game2Script : MonoBehaviour
     // Check if we can play the game
     private void OnEnable()
     {
+        // Disable minimap
         minimap.SetActive(false);
 
-        if (!canPlay && (playerController.tokens == 4))
+        // Remove tokens from inventory
+        foreach (string tokenType in tokenTypes)
+        {
+            string tokenName = "token" + tokenType;
+            GameManager.GM.inventory.RemoveItem(tokenName);
+        }
+
+        // Check to see if we can play the game
+        if (!canPlay && (tokenTracker.tokens == 4))
         {
             canPlay = true;
             StartGame();

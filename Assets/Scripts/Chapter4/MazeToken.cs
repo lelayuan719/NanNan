@@ -14,6 +14,7 @@ public class MazeToken : MonoBehaviour
             boxPuzzleTile.SetActive(true);
             minimapIcon.SetActive(false);
             other.GetComponent<TokenTracker>().AddToken();
+            GameManager.GM.inventory.GiveItem(gameObject.name);
             gameObject.SetActive(false);
         }
     }

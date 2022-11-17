@@ -64,6 +64,7 @@ public class UIInventory : MonoBehaviour
         {
             UpdateSlot(foundIndex, null);
             uIItems[foundIndex].seen = true;
+            uIItems[foundIndex].read = true;
             RefreshNotification();
         }
         // Try in selected item

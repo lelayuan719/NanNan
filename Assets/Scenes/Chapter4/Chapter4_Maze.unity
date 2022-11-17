@@ -1408,7 +1408,7 @@ GameObject:
   - component: {fileID: 357950293}
   - component: {fileID: 357950296}
   m_Layer: 0
-  m_Name: snake
+  m_Name: tokenSnake
   m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1755,7 +1755,7 @@ GameObject:
   - component: {fileID: 454639835}
   - component: {fileID: 454639836}
   m_Layer: 0
-  m_Name: hedgehog
+  m_Name: tokenHedgehog
   m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5148,7 +5148,7 @@ GameObject:
   - component: {fileID: 1097359978}
   - component: {fileID: 1097359981}
   m_Layer: 0
-  m_Name: rat
+  m_Name: tokenRat
   m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5552,7 +5552,7 @@ GameObject:
   - component: {fileID: 1157452003}
   - component: {fileID: 1157452004}
   m_Layer: 0
-  m_Name: fox
+  m_Name: tokenFox
   m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8684,7 +8684,7 @@ GameObject:
   - component: {fileID: 1762903427}
   - component: {fileID: 1762903429}
   m_Layer: 0
-  m_Name: weasel
+  m_Name: tokenWeasel
   m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9653,7 +9653,7 @@ MonoBehaviour:
   slotPositions: []
   canPlay: 0
   emptySpaceLoc: 4
-  playerController: {fileID: 1842099266}
+  tokenTracker: {fileID: 0}
   mainPuzzle: {fileID: 88094696}
   rewardBox: {fileID: 36585385}
   minimap: {fileID: 356434323}
