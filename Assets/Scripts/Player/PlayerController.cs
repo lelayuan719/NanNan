@@ -141,4 +141,10 @@ public class PlayerController : GenericController
         anim.SetBool("isWalking", false);
         if (onComplete != null) onComplete.Invoke();
     }
+
+    public override void FreezeCharacter()
+    {
+        base.FreezeCharacter();
+        GetComponent<Animator>().SetBool("isWalking", false);
+    }
 }

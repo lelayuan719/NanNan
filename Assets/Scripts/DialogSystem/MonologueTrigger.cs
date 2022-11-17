@@ -8,7 +8,10 @@ public class MonologueTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        ActivateDialog();
+        if (collision.CompareTag("Player"))
+        {
+            ActivateDialog();
+        }
     }
 
     void ActivateDialog()

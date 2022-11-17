@@ -39,8 +39,6 @@ public class TopDownController : GenericController
         {
             anim.SetBool("isWalking", true);
 
-            print(inputVertical);
-
             if (inputVertical > 0)
             {
                 anim.SetInteger("direction", 1);
@@ -66,5 +64,11 @@ public class TopDownController : GenericController
             anim.SetBool("isWalking", false);
             anim.SetInteger("direction", 0);
         }
+    }
+
+    public override void FreezeCharacter()
+    {
+        base.FreezeCharacter();
+        GetComponent<Animator>().SetInteger("direction", 0);
     }
 }

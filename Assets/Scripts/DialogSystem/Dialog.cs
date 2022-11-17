@@ -180,6 +180,7 @@ public class Dialog : MonoBehaviour
     void MakeChoice()
     {
         choosing = false;
+        StopCoroutine(typer);
         NextSentence();
     }
 

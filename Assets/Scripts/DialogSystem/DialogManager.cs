@@ -30,9 +30,7 @@ public class DialogManager : MonoBehaviour
 
     public void FreezeCharacter()
     {
-        player.GetComponent<GenericController>().playerCanMove = false;
-        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        player.GetComponent<Animator>().SetBool("isWalking", false);
+        player.GetComponent<GenericController>().FreezeCharacter();
     }
 
     public void UnfreezeCharacter()
@@ -53,7 +51,7 @@ public class DialogManager : MonoBehaviour
             (choiceButton.targetGraphic as TextMeshProUGUI).text = choices[i];
             
             int j = i; // Very necessary to make the delegate closure work!
-            choiceButton.onClick.AddListener(delegate { actions.MakeChoice(j); story.ChooseChoiceIndex(j); });
+            choiceButton.onClick.AddListener(delegate { story.ChooseChoiceIndex(j); actions.MakeChoice(j); });
             choiceButton.onClick.AddListener(onChoose);
 
             choiceButtons.Add(choiceObject);

@@ -31,6 +31,21 @@ public class MyStory : Ink.Runtime.Story
         return dialogue;
     }
 
+    public new void ChooseChoiceIndex(int idx)
+    {
+        base.ChooseChoiceIndex(idx);
+
+        // Sees if we are at the end, then rewinds if necessary
+        var storedState = state.ToJson();
+        Continue();
+
+        if (currentText != "")
+        {
+            // return to original state
+            state.LoadJson(storedState);
+        }
+    }
+
     public List<string> GetChoices()
     {
         return currentChoices.ConvertAll(x => x.text);
