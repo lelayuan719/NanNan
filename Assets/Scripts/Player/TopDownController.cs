@@ -10,8 +10,9 @@ public class TopDownController : GenericController
     private Animator anim;
     private SpriteRenderer sr;
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();

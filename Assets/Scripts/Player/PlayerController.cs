@@ -23,8 +23,9 @@ public class PlayerController : GenericController
     private bool touchingGround;
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         collide = GetComponent<Collider2D>();

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public UIInventory inventoryUI;
     public DialogManager dialogManager;
     public GameObject cam;
+    public GameObject player;
     public List<string> disableInvScenes;
 
     public bool gameIsRunning = true;

@@ -6,6 +6,11 @@ public class GenericController : MonoBehaviour
 {
     public bool playerCanMove = true;
 
+    protected virtual void Start()
+    {
+        GameManager.GM.player = gameObject;
+    }
+
     public virtual void FreezeCharacter()
     {
         playerCanMove = false;
