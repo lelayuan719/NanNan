@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
+using System.Text.RegularExpressions;
 
 public class MyStory : Ink.Runtime.Story
 {
+    public static Regex emphRgx = new Regex(@"\[\[(.*?)\]\]", RegexOptions.Compiled);
     public string currentCharacter;
 
     public bool canChoose
@@ -18,17 +20,19 @@ public class MyStory : Ink.Runtime.Story
 
     public new string Continue()
     {
-        string dialogue = base.Continue();
-
-        string[] splits = dialogue.Split(':');
+        string dialog = base.Continue();
 
         // Get the current talking character
+        string[] splits = dialog.Split(':');
         if (splits.Length > 0)
             currentCharacter = splits[0];
         else
             currentCharacter = "";
 
-        return dialogue;
+        // Add emphasis colors if necessary
+        dialog = emphRgx.Replace(dialog, @"<color=yellow>$1</color>");
+
+        return dialog;
     }
 
     public new void ChooseChoiceIndex(int idx)

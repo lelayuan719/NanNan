@@ -109,8 +109,27 @@ public class Dialog : MonoBehaviour
 
     IEnumerator Type(){
         if (!spacePressed){
-           foreach(char letter in sentence){
+            int i = 0;
+            char letter;
+            while (i < sentence.Length)
+            {
+                letter = sentence[i];
                 dialogManager.textDisplay.text += letter;
+                i++;
+                // Immediately apply rich text tags
+                if ((letter == '<') && (i < sentence.Length))
+                {
+                    do
+                    {
+                        letter = sentence[i];
+                        dialogManager.textDisplay.text += letter;
+                        i++;
+                    } while ((letter != '>') && (i < sentence.Length));
+
+                    letter = sentence[i];
+                    dialogManager.textDisplay.text += letter;
+                    i++;
+                }
                 yield return new WaitForSeconds(typingSpeed);
             }
         }
