@@ -16,6 +16,7 @@ public class Game2Script : MonoBehaviour
     public TokenTracker playerController;
     public GameObject mainPuzzle;
     public GameObject rewardBox;
+    public GameObject minimap;
 
     void Awake()
     {
@@ -54,6 +55,8 @@ public class Game2Script : MonoBehaviour
     // Check if we can play the game
     private void OnEnable()
     {
+        minimap.SetActive(false);
+
         if (!canPlay && (playerController.tokens == 4))
         {
             canPlay = true;
