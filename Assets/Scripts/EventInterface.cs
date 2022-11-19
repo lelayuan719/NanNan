@@ -17,6 +17,6 @@ public class EventInterface : MonoBehaviour
 
     public void ChangeScene(string name)
     {
-        SceneManager.LoadScene(name, LoadSceneMode.Single);
+        GameManager.GM.LoadScene(name);
     }
 }

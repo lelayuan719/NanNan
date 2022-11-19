@@ -13,8 +13,7 @@ public class DoorClicked : MonoBehaviour
     void OnMouseDown(){
         if (open)
         {
-            SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
-            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            GameManager.GM.LoadScene(NextScene);
         } else if (invalidDialog)
         {
             invalidDialog.TriggerDialog();

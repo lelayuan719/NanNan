@@ -85,6 +85,12 @@ public class GameManager : MonoBehaviour
         inventoryObj.SetActive(true);
     }
 
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+    }
+
     public void GiveAmulet(bool didGive)
     {
         gaveAmulet = didGive;

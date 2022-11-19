@@ -13,8 +13,7 @@ public class TakeBearChoice : ChoiceHandler
         {
             case 0:
                 GameManager.GM.inventory.GiveItem("bear");
-                SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
-                Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+                GameManager.GM.LoadScene(NextScene);
                 break;
             case 1:
                 break;
