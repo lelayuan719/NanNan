@@ -8,6 +8,9 @@ public class NextSceneTrigger : MonoBehaviour
 {
     public string sceneName;
 
+    [SerializeField] SceneTransitionSettings outSceneTransition;
+    [SerializeField] SceneTransitionSettings inSceneTransition;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameManager.GM.LoadScene(sceneName);

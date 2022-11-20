@@ -1,20 +1,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    // Instance
     public static GameManager GM;
 
+    // References
     public GameObject inventoryObj;
     public Inventory inventory;
     public UIInventory inventoryUI;
     public DialogManager dialogManager;
     public GameObject cam;
     public GameObject player;
-    public List<string> disableInvScenes;
 
+    [HideInInspector] public SceneLoader sceneLoader;
+
+    // Variables
     public bool gameIsRunning = true;
+    public List<string> disableInvScenes;
 
     // Game state
     public bool gaveAmulet;
@@ -50,6 +56,7 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
 
         inventory = GetComponent<Inventory>();
+        sceneLoader = GetComponent<SceneLoader>();
     }
 
     private void Start()
@@ -87,8 +94,12 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        sceneLoader.LoadScene(sceneName, new SceneTransitionSettings(), new SceneTransitionSettings());
+    }
+
+    public void LoadScene(string sceneName, SceneTransitionSettings outTransition, SceneTransitionSettings inTransition)
+    {
+        sceneLoader.LoadScene(sceneName, outTransition, inTransition);
     }
 
     public void GiveAmulet(bool didGive)

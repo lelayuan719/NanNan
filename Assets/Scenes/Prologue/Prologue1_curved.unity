@@ -719,7 +719,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Chapter1_village
-  sceneExitEvents: []
 --- !u!61 &203841759
 BoxCollider2D:
   m_ObjectHideFlags: 0
