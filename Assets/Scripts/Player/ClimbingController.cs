@@ -10,12 +10,14 @@ public class ClimbingController : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator anim;
+    private PlayerController normalController;
 
     public bool isClimbing;
 
     void Start(){
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        normalController = GetComponent<PlayerController>();
 
         anim.SetBool("isClimbing",false);
     }
@@ -27,11 +29,15 @@ public class ClimbingController : MonoBehaviour
         if (isLadder && Mathf.Abs(vertical) > 0f){
             isClimbing = true;
         }
-
     }
 
     private void FixedUpdate(){
-        if (isClimbing){
+        if (!normalController.playerCanMove)
+        {
+            rb.gravityScale = 0f;
+            rb.velocity = new Vector2(0, 0);
+        }
+        else if (isClimbing) {
             rb.gravityScale = 0f;
             rb.velocity = new Vector2(0, vertical * speed);
         } else {

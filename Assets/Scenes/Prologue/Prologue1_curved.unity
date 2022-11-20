@@ -719,6 +719,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Chapter1_village
+  outSceneTransition:
+    transitionType: 1
+    transitionTime: 2
+  inSceneTransition:
+    transitionType: 1
+    transitionTime: 1
 --- !u!61 &203841759
 BoxCollider2D:
   m_ObjectHideFlags: 0

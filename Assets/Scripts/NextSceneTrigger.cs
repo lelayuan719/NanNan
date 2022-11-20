@@ -13,6 +13,6 @@ public class NextSceneTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.GM.LoadScene(sceneName);
+        GameManager.GM.LoadScene(sceneName, outSceneTransition, inSceneTransition);
     }
 }
