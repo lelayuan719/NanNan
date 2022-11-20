@@ -7,13 +7,15 @@ public class UIInventory : MonoBehaviour
     public List<UIItem> uIItems = new List<UIItem>();
     public UIItem selectedItem;
     public GameObject slotPrefab;
-    public GameObject notificationDot;
+    public GameObject notification;
     public Transform slotPanel;
     public int numberOfSlots = 6;
     public InventoryButtonHelper inventoryButtonHelper;
     public int mostRecentSlot;
     [HideInInspector] public bool hasNewItem;
     [HideInInspector] public bool isOpen;
+
+    Animator notifAnim;
 
     private void Awake(){
         for(int i = 0; i < numberOfSlots; i++){
@@ -23,6 +25,11 @@ public class UIInventory : MonoBehaviour
             instance.GetComponentInChildren<UIItem>().seen = true;
             uIItems.Add(instance.GetComponentInChildren<UIItem>());
         }
+    }
+
+    private void Start()
+    {
+        notifAnim = notification.GetComponent<Animator>();
     }
 
     private void Update(){
@@ -98,23 +105,26 @@ public class UIInventory : MonoBehaviour
     // Changes the visibility of the notification dot
     public void RefreshNotification()
     {
-        // Open definitely hides it
+        // Open hides it
         if (isOpen)
         {
-            notificationDot.SetActive(false);
+            notifAnim.SetBool("isPulsating", false);
         }
         // Closed hides it if there's something we haven't seen
         else
         {
-            notificationDot.SetActive(false);
             foreach (var item in uIItems)
             {
+                // If there's something new, make it pulsating
                 if (!item.seen)
                 {
-                    notificationDot.SetActive(true);
-                    break;
+                    notifAnim.SetBool("isPulsating", true);
+                    return;
                 }
             }
+
+            // Otherwise, set it to not pulsating
+            notifAnim.SetBool("isPulsating", false);
         }
     }
 }
