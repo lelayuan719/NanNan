@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ItemPickup : MonoBehaviour, IPointerClickHandler
 {
@@ -31,7 +32,10 @@ public class ItemPickup : MonoBehaviour, IPointerClickHandler
         inv.GiveItem(gameObject.name);
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         // gameObject.SetActive(false);
-        GetComponent<SpriteRenderer>().enabled = false;
+        if (TryGetComponent(out SpriteRenderer render))
+            render.enabled = false;
+        else if (TryGetComponent(out Image image))
+            image.enabled = false;
         GetComponent<Collider2D>().enabled = false;
 
         onPickup.Invoke();
