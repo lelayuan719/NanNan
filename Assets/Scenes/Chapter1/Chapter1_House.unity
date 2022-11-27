@@ -8581,6 +8581,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1379602467}
     m_Modifications:
+    - target: {fileID: -6918520780191530671, guid: 55ec76ba1ab5ce14d9d93a66cd1d8c84, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6918520780191530671, guid: 55ec76ba1ab5ce14d9d93a66cd1d8c84, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6918520780191530671, guid: 55ec76ba1ab5ce14d9d93a66cd1d8c84, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 232758489}
+    - target: {fileID: -6918520780191530671, guid: 55ec76ba1ab5ce14d9d93a66cd1d8c84, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6918520780191530671, guid: 55ec76ba1ab5ce14d9d93a66cd1d8c84, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnlockWarlockBook
+      objectReference: {fileID: 0}
+    - target: {fileID: -6918520780191530671, guid: 55ec76ba1ab5ce14d9d93a66cd1d8c84, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: EventInterface, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -6918520780191530671, guid: 55ec76ba1ab5ce14d9d93a66cd1d8c84, type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2039950736012209241, guid: 55ec76ba1ab5ce14d9d93a66cd1d8c84, type: 3}
       propertyPath: inkJSON
       value: 

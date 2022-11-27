@@ -33,4 +33,10 @@ public class EventInterface : MonoBehaviour
     {
         GameManager.GM.LoadScene(name);
     }
+
+    // Specific triggers
+    public void UnlockWarlockBook()
+    {
+        GameManager.GM.inventoryUI.UnlockWarlockBook();
+    }
 }

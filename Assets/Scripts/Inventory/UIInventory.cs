@@ -9,6 +9,7 @@ public class UIInventory : MonoBehaviour
     public GameObject slotPrefab;
     public GameObject notification;
     public Transform slotPanel;
+    public GameObject warlockBookButton;
     public int numberOfSlots = 6;
     public InventoryButtonHelper inventoryButtonHelper;
     public int mostRecentSlot;
@@ -126,5 +127,11 @@ public class UIInventory : MonoBehaviour
             // Otherwise, set it to not pulsating
             notifAnim.SetBool("isPulsating", false);
         }
+    }
+
+    // Unlocks the Warlock book
+    public void UnlockWarlockBook()
+    {
+        warlockBookButton.SetActive(true);
     }
 }
