@@ -5,11 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-   public void PlayGame ()
+    [SerializeField] SceneTransitionSettings outSceneTransition;
+    [SerializeField] SceneTransitionSettings inSceneTransition;
+
+    public void PlayGame ()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        GameManager.GM.LoadScene("Prologue_intro", outSceneTransition, inSceneTransition);
     }
-   public void QuitGame ()
+
+    public void QuitGame ()
     {
         Debug.Log("Quit!");
         Application.Quit();

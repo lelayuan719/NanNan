@@ -67,7 +67,6 @@ public class Dialog : MonoBehaviour
 
         story = new MyStory(inkJSON.text);
         NextSentence();
-        if (autoContinue) Invoke(nameof(StopDialog), autoContinueTime);
         onStart.Invoke();
     }
 
@@ -87,11 +86,18 @@ public class Dialog : MonoBehaviour
                 && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) 
                 && !choosing)
             {
+                // Stops auto-continuing the next line
+                if (autoContinue) CancelInvoke();
+
                 NextSentence();
             }
             else if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
             {
                 StopCoroutine(typer);
+
+                // Stops auto-continuing the next line
+                if (autoContinue) CancelInvoke();
+
                 dialogManager.textDisplay.text = sentence;
             }
             // DEBUG skip
@@ -132,6 +138,9 @@ public class Dialog : MonoBehaviour
                 }
                 yield return new WaitForSeconds(typingSpeed);
             }
+
+            // If we're done typing, start the next line soon
+            if (autoContinue) Invoke(nameof(NextSentence), autoContinueTime);
         }
     }
     
@@ -224,8 +233,8 @@ public class Dialog : MonoBehaviour
         if (freezesCharacter) dialogManager.UnfreezeCharacter();
 
         onComplete.Invoke();
-        if (autoContinue) CancelInvoke(); // Cancels auto continue invokes. This is unrelated to the previous line!
         StopCoroutine(typer);
+        if (autoContinue) CancelInvoke(); // Cancels auto continue invokes. This is unrelated to the previous line!
         if (!canRepeat) enabled = false;
     }
 

@@ -14,7 +14,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(string sceneName, SceneTransitionSettings outTransition, SceneTransitionSettings inTransition)
     {
-        GameManager.GM.player.GetComponent<GenericController>().playerCanMove = false;
+        if (GameManager.GM.player) GameManager.GM.player.GetComponent<GenericController>().playerCanMove = false;
         loadedScene = false;
         this.sceneName = sceneName;
         this.outTransition = outTransition;
