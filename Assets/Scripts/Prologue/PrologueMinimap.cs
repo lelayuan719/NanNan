@@ -9,13 +9,13 @@ public class PrologueMinimap : MonoBehaviour
     private float startX;
     private float spiralM;
     private float minimapSpiralM;
+    private float markerStartRotation;
     private int rotations = 0;
 
     private float[] distances = new float[1000];
     private float[] thetas = new float[1000];
     private int posIndex = 0;
     private float alpha = 0.0f;
-    private Image render;
     private Image markerRender;
 
     [SerializeField] private float outerR = 4720.751f;
@@ -23,11 +23,11 @@ public class PrologueMinimap : MonoBehaviour
     [SerializeField] private float fadeRate;
     [Range(0,1)][SerializeField] private float maxAlpha;
     public Transform player;
+    public Image render;
     public RectTransform marker;
 
     private void Awake()
     {
-        render = GetComponent<Image>();
         markerRender = marker.GetComponent<Image>();
 
         spiralM = outerR / 4;
@@ -39,6 +39,7 @@ public class PrologueMinimap : MonoBehaviour
     void Start()
     {
         startX = player.position.x;
+        markerStartRotation = marker.rotation.eulerAngles.z;
 
         render.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
         markerRender.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
@@ -97,7 +98,7 @@ public class PrologueMinimap : MonoBehaviour
         float theta = Mathf.Lerp(thetas[posIndex], thetas[posIndex + 1], (distance - distances[posIndex]) / (distances[posIndex + 1] - distances[posIndex]));
 
         marker.localPosition = GetMarkerPos(theta);
-
+        marker.eulerAngles = new Vector3(0, 0, Mathf.Rad2Deg*theta + markerStartRotation);
         if (theta/(2*Mathf.PI) >= 1+rotations) {
             rotations++;
             Debug.LogFormat("Completed {0} rotation(s)", rotations);
