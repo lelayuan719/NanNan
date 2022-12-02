@@ -34,8 +34,6 @@ public class ClimbingController : MonoBehaviour
     private void FixedUpdate(){
         if (!normalController.playerCanMove)
         {
-            rb.gravityScale = 0f;
-            rb.velocity = new Vector2(0, 0);
         }
         else if (isClimbing) {
             rb.gravityScale = 0f;
