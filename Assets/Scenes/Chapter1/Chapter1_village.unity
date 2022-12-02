@@ -6255,10 +6255,10 @@ MonoBehaviour:
   NextScene: Chapter1_House
   invalidDialog: {fileID: 0}
   outSceneTransition:
-    transitionType: 0
-    transitionTime: 1
+    transitionType: 1
+    transitionTime: 2
   inSceneTransition:
-    transitionType: 0
+    transitionType: 1
     transitionTime: 1
   open: 1
 --- !u!61 &2127429160

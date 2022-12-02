@@ -6968,6 +6968,7 @@ GameObject:
   - component: {fileID: 1490466619}
   - component: {fileID: 1490466618}
   - component: {fileID: 1490466622}
+  - component: {fileID: 1490466623}
   m_Layer: 0
   m_Name: Shrine
   m_TagString: Untagged
@@ -7087,10 +7088,10 @@ MonoBehaviour:
   onMatch:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 232758489}
-        m_TargetAssemblyTypeName: EventInterface, Assembly-CSharp
+      - m_Target: {fileID: 1490466623}
+        m_TargetAssemblyTypeName: SimpleSceneChange, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7113,6 +7114,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newCursor: 1
   canPickUp: 0
+--- !u!114 &1490466623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490466615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d3a570f4cd20242a221bcdfafb421d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: Chapter2_Forest
+  outSceneTransition:
+    transitionType: 1
+    transitionTime: 2
+  inSceneTransition:
+    transitionType: 1
+    transitionTime: 1
 --- !u!1001 &1490974207
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3079,10 +3079,10 @@ MonoBehaviour:
   NextScene: Chapter4_Maze
   invalidDialog: {fileID: 1772952180}
   outSceneTransition:
-    transitionType: 0
-    transitionTime: 1
+    transitionType: 1
+    transitionTime: 2
   inSceneTransition:
-    transitionType: 0
+    transitionType: 1
     transitionTime: 1
   open: 0
 --- !u!114 &1772952180

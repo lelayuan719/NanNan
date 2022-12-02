@@ -7140,6 +7140,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextScene: Chapter4_House_End
+  outSceneTransition:
+    transitionType: 1
+    transitionTime: 2
+  inSceneTransition:
+    transitionType: 1
+    transitionTime: 1
 --- !u!1 &1384195209
 GameObject:
   m_ObjectHideFlags: 0
