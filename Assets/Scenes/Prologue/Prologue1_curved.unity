@@ -4717,7 +4717,7 @@ MonoBehaviour:
   outerR: 250
   minimapR: 224
   fadeRate: 1
-  maxAlpha: 0.4
+  maxAlpha: 1
   player: {fileID: 1657466529}
   render: {fileID: 1306232731}
   marker: {fileID: 1756214263}
@@ -6620,9 +6620,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -41.53}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.4417, y: -192.21198}
+  m_AnchoredPosition: {x: -2.4181366, y: -206.62509}
   m_SizeDelta: {x: 79.4167, y: 79.4167}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.58394355, y: 0.33191383}
 --- !u!114 &1756214264
 MonoBehaviour:
   m_ObjectHideFlags: 0
