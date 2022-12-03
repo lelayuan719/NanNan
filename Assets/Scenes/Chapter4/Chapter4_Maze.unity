@@ -9659,7 +9659,7 @@ MonoBehaviour:
   slotPositions: []
   canPlay: 0
   emptySpaceLoc: 4
-  tokenTracker: {fileID: 0}
+  tokenTracker: {fileID: 1842099266}
   mainPuzzle: {fileID: 88094696}
   rewardBox: {fileID: 36585385}
   minimap: {fileID: 356434323}
