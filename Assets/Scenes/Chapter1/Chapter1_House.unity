@@ -1917,6 +1917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invalidDialog: {fileID: 0}
+  successDialog: {fileID: 0}
   consumeItem: 1
   itemCheck: bear
   newCursor: 0
@@ -3101,6 +3102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invalidDialog: {fileID: 0}
+  successDialog: {fileID: 0}
   consumeItem: 1
   itemCheck: matches
   newCursor: 0
@@ -3131,6 +3133,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1490466618}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &570678435
 MonoBehaviour:
@@ -3582,10 +3596,12 @@ GameObject:
   - component: {fileID: 661188150}
   - component: {fileID: 661188153}
   - component: {fileID: 661188152}
+  - component: {fileID: 661188156}
   - component: {fileID: 661188151}
   - component: {fileID: 661188154}
+  - component: {fileID: 661188155}
   m_Layer: 0
-  m_Name: amulet
+  m_Name: brokenAmulet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3677,7 +3693,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: acbf69a1516664af6b76f168aa685e34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a88b4e9870f9d004885edd28d2738e37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3714,6 +3730,48 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.43, y: 7.72}
   m_EdgeRadius: 0
+--- !u!114 &661188155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661188149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1330398d9fe69e4fbdd64ac5019bb02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &661188156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661188149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d960aee2f2c0ab47b9ec814d58de5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: 1d078db5ecdc90d4c8f43e4660220ddc, type: 3}
+  npc: {fileID: 0}
+  background: {fileID: 0}
+  freezesCharacter: 1
+  canRepeat: 0
+  autoContinue: 0
+  typingSpeed: 0.05
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  _choiceActions: []
+  _midwayActions: []
+  running: 0
+  choosing: 0
+  completed: 0
 --- !u!1 &681015942
 GameObject:
   m_ObjectHideFlags: 0
@@ -5778,6 +5836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invalidDialog: {fileID: 1217661765}
+  successDialog: {fileID: 0}
   consumeItem: 1
   itemCheck: key
   newCursor: 2
@@ -7048,6 +7107,7 @@ GameObject:
   - component: {fileID: 1490466617}
   - component: {fileID: 1490466616}
   - component: {fileID: 1490466619}
+  - component: {fileID: 1490466624}
   - component: {fileID: 1490466618}
   - component: {fileID: 1490466622}
   - component: {fileID: 1490466623}
@@ -7133,7 +7193,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490466615}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -7164,9 +7224,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c251aec510f1742b38cb9d9a87ca82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invalidDialog: {fileID: 0}
+  invalidDialog: {fileID: 1490466624}
+  successDialog: {fileID: 0}
   consumeItem: 1
-  itemCheck: amulet
+  itemCheck: brokenAmulet
   newCursor: 0
   success: 0
   onMatch:
@@ -7217,6 +7278,36 @@ MonoBehaviour:
   inSceneTransition:
     transitionType: 1
     transitionTime: 1
+--- !u!114 &1490466624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490466615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d960aee2f2c0ab47b9ec814d58de5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: b83ab44faf8ce9e47ae6c893bd15ef7f, type: 3}
+  npc: {fileID: 0}
+  background: {fileID: 0}
+  freezesCharacter: 0
+  canRepeat: 1
+  autoContinue: 1
+  typingSpeed: 0.05
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  _choiceActions: []
+  _midwayActions: []
+  running: 0
+  choosing: 0
+  completed: 0
 --- !u!1001 &1490974207
 PrefabInstance:
   m_ObjectHideFlags: 0

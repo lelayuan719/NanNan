@@ -1,1 +1,0 @@
-NanNan: The Warlock never let us see what he wrote in his notebook; he said it was the god’s secret.
