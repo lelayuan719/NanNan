@@ -1919,6 +1919,7 @@ MonoBehaviour:
   invalidDialog: {fileID: 0}
   consumeItem: 1
   itemCheck: bear
+  newCursor: 0
   success: 0
   onMatch:
     m_PersistentCalls:
@@ -1987,6 +1988,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newCursor: 0
   canPickUp: 0
+--- !u!1 &318643221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4077053920039138946, guid: bd83f6bb734d8ba4b804bba820d04026, type: 3}
+  m_PrefabInstance: {fileID: 147238772}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &318643222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1247821802447644521, guid: bd83f6bb734d8ba4b804bba820d04026, type: 3}
@@ -3097,6 +3103,7 @@ MonoBehaviour:
   invalidDialog: {fileID: 0}
   consumeItem: 1
   itemCheck: matches
+  newCursor: 0
   success: 0
   onMatch:
     m_PersistentCalls:
@@ -3105,6 +3112,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PuzzleCandle, Assembly-CSharp
         m_MethodName: Activate
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 318643221}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5761,6 +5780,7 @@ MonoBehaviour:
   invalidDialog: {fileID: 1217661765}
   consumeItem: 1
   itemCheck: key
+  newCursor: 2
   success: 0
   onMatch:
     m_PersistentCalls:
@@ -5815,7 +5835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newCursor: 2
+  newCursor: 1
   canPickUp: 0
 --- !u!114 &1217661763
 MonoBehaviour:
@@ -7147,6 +7167,7 @@ MonoBehaviour:
   invalidDialog: {fileID: 0}
   consumeItem: 1
   itemCheck: amulet
+  newCursor: 0
   success: 0
   onMatch:
     m_PersistentCalls:

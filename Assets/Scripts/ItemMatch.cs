@@ -9,6 +9,7 @@ public class ItemMatch: MonoBehaviour
     public Dialog invalidDialog;
     public bool consumeItem = true;
     public string itemCheck;
+    [SerializeField] CursorTypes newCursor = CursorTypes.Default;
     [HideInInspector] public bool success;
     private UIItem collectedItem;
     public UnityEvent onMatch;
@@ -31,9 +32,20 @@ public class ItemMatch: MonoBehaviour
             success = true;
             print(itemCheck + " match successful");
 
+            // Update inventory
             collectedItem.UpdateItem(null);
             GameManager.GM.inventory.RemoveItem(item);
+
+            // Change hover icon
+            if (TryGetComponent(out HoverInteractable interactable))
+            {
+                interactable.newCursor = newCursor;
+                CursorManager.SetCursor(newCursor);
+            }
+
+            // Invoke other events
             onMatch.Invoke();
+
         } else if (!success && invalidDialog)
         {
             invalidDialog.TriggerDialog();
