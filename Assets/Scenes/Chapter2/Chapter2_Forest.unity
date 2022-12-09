@@ -378,6 +378,7 @@ GameObject:
   - component: {fileID: 185693303}
   - component: {fileID: 185693302}
   - component: {fileID: 185693304}
+  - component: {fileID: 185693306}
   m_Layer: 0
   m_Name: grandma with legs
   m_TagString: Untagged
@@ -476,7 +477,19 @@ MonoBehaviour:
       m_Calls: []
   onComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 185693306}
+        m_TargetAssemblyTypeName: SimpleSceneChange, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _choiceActions: []
   _midwayActions: []
   running: 0
@@ -537,6 +550,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 68.22659, y: 50}
   m_EdgeRadius: 0
+--- !u!114 &185693306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185693299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d3a570f4cd20242a221bcdfafb421d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: Chapter4_House_Start
+  outSceneTransition:
+    transitionType: 1
+    transitionTime: 2
+  inSceneTransition:
+    transitionType: 1
+    transitionTime: 1
 --- !u!1 &188871466
 GameObject:
   m_ObjectHideFlags: 0
