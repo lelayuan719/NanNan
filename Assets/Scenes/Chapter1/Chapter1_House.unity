@@ -1986,7 +1986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newCursor: 0
+  newCursor: 1
   canPickUp: 0
 --- !u!1 &318643221 stripped
 GameObject:
