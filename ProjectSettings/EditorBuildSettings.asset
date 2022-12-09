@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter4/Chapter4_House_End.unity
     guid: c90901cb6cb6edf49b0338c96a522750
+  - enabled: 1
+    path: Assets/Scenes/EndDemo.unity
+    guid: 3409a218712afea4582eefe9a2e82e52
   m_configObjects: {}

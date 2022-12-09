@@ -61,6 +61,7 @@ MonoBehaviour:
   disableInvScenes:
   - Chapter3_Book
   - Chapter2_Story
+  - EndDemo
   gaveAmulet: 0
 --- !u!114 &7553713860508703097
 MonoBehaviour:

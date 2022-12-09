@@ -2983,7 +2983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95d3a570f4cd20242a221bcdfafb421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: menu
+  NextScene: EndDemo
   outSceneTransition:
     transitionType: 1
     transitionTime: 2
