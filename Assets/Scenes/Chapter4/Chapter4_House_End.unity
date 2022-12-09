@@ -2853,6 +2853,7 @@ GameObject:
   - component: {fileID: 1426314259}
   - component: {fileID: 1426314266}
   - component: {fileID: 1426314265}
+  - component: {fileID: 1426314267}
   m_Layer: 0
   m_Name: DoorFinalDialog
   m_TagString: Untagged
@@ -2937,7 +2938,19 @@ MonoBehaviour:
         m_CallState: 2
   onComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1426314267}
+        m_TargetAssemblyTypeName: SimpleSceneChange, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _choiceActions: []
   _midwayActions: []
   running: 0
@@ -2958,6 +2971,25 @@ MonoBehaviour:
   dialog: {fileID: 1426314265}
   dialogStarted: 0
   maxDist: 0
+--- !u!114 &1426314267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426314258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d3a570f4cd20242a221bcdfafb421d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: menu
+  outSceneTransition:
+    transitionType: 1
+    transitionTime: 2
+  inSceneTransition:
+    transitionType: 1
+    transitionTime: 1
 --- !u!1 &1478627951
 GameObject:
   m_ObjectHideFlags: 0
