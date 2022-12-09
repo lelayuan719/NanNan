@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class DoorTeleport : MonoBehaviour
 {
     public bool opened = true;
-    public GameObject player;
     public CinemachineVirtualCamera cam;
     public Transform destination;
 
@@ -22,7 +21,7 @@ public class DoorTeleport : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (opened && player.GetComponent<GenericController>().playerCanMove)
+        if (opened && GameManager.GM.player.GetComponent<GenericController>().playerCanMove)
         {
             TransportPlayer();
         }
@@ -30,8 +29,8 @@ public class DoorTeleport : MonoBehaviour
 
     public void TransportPlayer()
     {
-        cam.OnTargetObjectWarped(player.transform, destPos - player.transform.position);
-        player.transform.position = destPos;
+        cam.OnTargetObjectWarped(GameManager.GM.player.transform, destPos - GameManager.GM.player.transform.position);
+        GameManager.GM.player.transform.position = destPos;
     }
     
     public void Unlock()
