@@ -7,6 +7,7 @@ public class ItemMatch: MonoBehaviour
 {
     public Item item;
     public Dialog invalidDialog;
+    public Dialog successDialog;
     public bool consumeItem = true;
     public string itemCheck;
     [SerializeField] CursorTypes newCursor = CursorTypes.Default;
@@ -42,6 +43,10 @@ public class ItemMatch: MonoBehaviour
                 interactable.newCursor = newCursor;
                 CursorManager.SetCursor(newCursor);
             }
+
+            // Invoke dialog
+            if (successDialog)
+                successDialog.TriggerDialog();
 
             // Invoke other events
             onMatch.Invoke();
