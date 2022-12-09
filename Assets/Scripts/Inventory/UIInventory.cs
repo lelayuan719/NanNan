@@ -34,15 +34,15 @@ public class UIInventory : MonoBehaviour
     }
 
     private void Update(){
-        if (Input.GetKeyDown(KeyCode.Escape)){
-            if (selectedItem != null) {
-                print("Escape key was pressed");
-                //AddNewItem(selectedItem.item);
-                UpdateSlot(mostRecentSlot, selectedItem.item);
-                //Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-                selectedItem.UpdateItem(null);
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape)){
+        //    if (selectedItem != null) {
+        //        print("Escape key was pressed");
+        //        //AddNewItem(selectedItem.item);
+        //        UpdateSlot(mostRecentSlot, selectedItem.item);
+        //        //Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        //        selectedItem.UpdateItem(null);
+        //    }
+        //}
     }
 
     public void UpdateSlot(int slot, Item item){
