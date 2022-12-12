@@ -1,4 +1,4 @@
-NanNan: Grandma! I met a man with a fox head by the well on the mountain!
+NanNan: Grandma! I met a talking fox by the well on the mountain!
 Grandma: Oh,  little NanNan met the Great Immortal! 
 NanNan: The Great Immortal? The Great Immortal mentioned in the song?
 Grandma: Yes, in the woods there is a Great Immortal that catches little children to go underground…
