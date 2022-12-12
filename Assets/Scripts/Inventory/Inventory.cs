@@ -40,4 +40,12 @@ public class Inventory : MonoBehaviour
             Debug.Log("Item removed: " + item.title);
         }
     }
+
+    public void Clear()
+    {
+        foreach (var item in characterItems)
+        {
+            RemoveItem(item);
+        }
+    }
 }
