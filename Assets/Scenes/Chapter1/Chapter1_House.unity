@@ -7149,7 +7149,7 @@ GameObject:
   - component: {fileID: 1490466624}
   - component: {fileID: 1490466618}
   - component: {fileID: 1490466622}
-  - component: {fileID: 1490466623}
+  - component: {fileID: 1490466625}
   m_Layer: 0
   m_Name: Shrine
   m_TagString: Untagged
@@ -7272,8 +7272,8 @@ MonoBehaviour:
   onMatch:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1490466623}
-        m_TargetAssemblyTypeName: SimpleSceneChange, Assembly-CSharp
+      - m_Target: {fileID: 1490466625}
+        m_TargetAssemblyTypeName: ChapterTransitionSceneChange, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
@@ -7298,23 +7298,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newCursor: 1
   canPickUp: 0
---- !u!114 &1490466623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490466615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d3a570f4cd20242a221bcdfafb421d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextScene: Chapter2_Forest
-  outTransitionType: 0
-  outTransitionTime: 0
-  inTransitionType: 0
-  inTransitionTime: 0
 --- !u!114 &1490466624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7345,6 +7328,27 @@ MonoBehaviour:
   running: 0
   choosing: 0
   completed: 0
+--- !u!114 &1490466625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490466615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57faa669611da6949ad5c8a3cbfd9b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: Chapter2_Forest
+  outTransitionType: 1
+  outTransitionTime: 2
+  textInTime: 3
+  title: Chapter 2
+  subtitle: Promise
+  textOutTime: 2
+  inTransitionType: 1
+  inTransitionTime: 1
 --- !u!1001 &1490974207
 PrefabInstance:
   m_ObjectHideFlags: 0

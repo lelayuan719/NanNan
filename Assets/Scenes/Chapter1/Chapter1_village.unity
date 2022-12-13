@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IsGlobal: 0
   priority: 0
-  blendDistance: 50
+  blendDistance: 40
   weight: 1
   sharedProfile: {fileID: 11400000, guid: c11080d4953721946bd13618225bfb97, type: 2}
 --- !u!65 &362688605
@@ -6165,6 +6165,7 @@ GameObject:
   - component: {fileID: 2127429157}
   - component: {fileID: 2127429160}
   - component: {fileID: 2127429159}
+  - component: {fileID: 2127429162}
   - component: {fileID: 2127429161}
   m_Layer: 7
   m_Name: "Nannan\u2019s house"
@@ -6252,14 +6253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0def6236c646c41aece1b9bb4d64ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: Chapter1_House
   invalidDialog: {fileID: 0}
-  outSceneTransition:
-    transitionType: 1
-    transitionTime: 2
-  inSceneTransition:
-    transitionType: 1
-    transitionTime: 1
   open: 1
 --- !u!61 &2127429160
 BoxCollider2D:
@@ -6301,3 +6295,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newCursor: 2
   canPickUp: 0
+--- !u!114 &2127429162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127429156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d3a570f4cd20242a221bcdfafb421d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: Chapter1_House
+  outTransitionType: 1
+  outTransitionTime: 2
+  inTransitionType: 1
+  inTransitionTime: 1

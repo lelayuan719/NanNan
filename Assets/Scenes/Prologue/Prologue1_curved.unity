@@ -699,6 +699,7 @@ GameObject:
   - component: {fileID: 203841760}
   - component: {fileID: 203841759}
   - component: {fileID: 203841758}
+  - component: {fileID: 203841762}
   m_Layer: 0
   m_Name: NextSceneTrigger
   m_TagString: Untagged
@@ -718,13 +719,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e765e98027c514c4abcf3158e5f5e8f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Chapter1_village
-  outSceneTransition:
-    transitionType: 1
-    transitionTime: 2
-  inSceneTransition:
-    transitionType: 1
-    transitionTime: 1
 --- !u!61 &203841759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -818,6 +812,27 @@ Transform:
   m_Father: {fileID: 2010936023}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &203841762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203841757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57faa669611da6949ad5c8a3cbfd9b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: Chapter1_village
+  outTransitionType: 1
+  outTransitionTime: 2
+  textInTime: 3
+  title: Chapter 1
+  subtitle: Going home
+  textOutTime: 2
+  inTransitionType: 1
+  inTransitionTime: 1
 --- !u!1 &237768774
 GameObject:
   m_ObjectHideFlags: 0

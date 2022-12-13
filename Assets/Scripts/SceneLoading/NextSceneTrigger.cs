@@ -6,13 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class NextSceneTrigger : MonoBehaviour
 {
-    public string sceneName;
+    SceneChange sceneChange;
 
-    [SerializeField] SceneTransitionSettings outSceneTransition;
-    [SerializeField] SceneTransitionSettings inSceneTransition;
+    private void Start()
+    {
+        sceneChange = GetComponent<SceneChange>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.GM.LoadScene(sceneName, outSceneTransition, inSceneTransition);
+        sceneChange.ChangeScene();
     }
 }

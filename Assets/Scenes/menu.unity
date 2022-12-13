@@ -1433,6 +1433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2136438558}
   - component: {fileID: 2136438559}
+  - component: {fileID: 2136438560}
   m_Layer: 5
   m_Name: mainmenu
   m_TagString: Untagged
@@ -1475,9 +1476,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c7a60a02b834ca1b90a323ce596639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outSceneTransition:
-    transitionType: 1
-    transitionTime: 5
-  inSceneTransition:
-    transitionType: 1
-    transitionTime: 2
+--- !u!114 &2136438560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136438557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d3a570f4cd20242a221bcdfafb421d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: Prologue_intro
+  outTransitionType: 1
+  outTransitionTime: 2
+  inTransitionType: 1
+  inTransitionTime: 1

@@ -479,7 +479,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 185693306}
-        m_TargetAssemblyTypeName: SimpleSceneChange, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChapterTransitionSceneChange, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
@@ -559,16 +559,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 185693299}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d3a570f4cd20242a221bcdfafb421d, type: 3}
+  m_Script: {fileID: 11500000, guid: 57faa669611da6949ad5c8a3cbfd9b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   NextScene: Chapter4_House_Start
-  outSceneTransition:
-    transitionType: 1
-    transitionTime: 2
-  inSceneTransition:
-    transitionType: 1
-    transitionTime: 1
+  outTransitionType: 1
+  outTransitionTime: 2
+  textInTime: 3
+  title: Chapter 4
+  subtitle: Crossroads of Time
+  textOutTime: 2
+  inTransitionType: 1
+  inTransitionTime: 1
 --- !u!1 &188871466
 GameObject:
   m_ObjectHideFlags: 0
@@ -3915,6 +3917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1636211997}
+  - component: {fileID: 1636211998}
   m_Layer: 0
   m_Name: Ch2Start
   m_TagString: Untagged
@@ -3937,6 +3940,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1636211998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636211996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e9da2d46152bc43953ea9603c4e68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1641574509
 GameObject:
   m_ObjectHideFlags: 0

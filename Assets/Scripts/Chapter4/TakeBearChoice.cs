@@ -7,8 +7,12 @@ public class TakeBearChoice : ChoiceHandler
 {
     [SerializeField] private string NextScene;
 
-    [SerializeField] SceneTransitionSettings outSceneTransition;
-    [SerializeField] SceneTransitionSettings inSceneTransition;
+    private SceneChange sceneChange;
+
+    private void Start()
+    {
+        sceneChange = GetComponent<SceneChange>();
+    }
 
     public override void MakeChoice(int choiceIndex)
     {
@@ -16,7 +20,7 @@ public class TakeBearChoice : ChoiceHandler
         {
             case 0:
                 GameManager.GM.inventory.GiveItem("bear");
-                GameManager.GM.LoadScene(NextScene, outSceneTransition, inSceneTransition);
+                sceneChange.ChangeScene();
             break;
             case 1:
                 break;

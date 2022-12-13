@@ -94,12 +94,12 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        sceneLoader.LoadScene(sceneName, new SceneTransitionSettings(), new SceneTransitionSettings());
+        sceneLoader.LoadScene(sceneName);
     }
 
-    public void LoadScene(string sceneName, SceneTransitionSettings outTransition, SceneTransitionSettings inTransition)
+    public void LoadScene(string sceneName, SceneTransitionSettings[] transitionSequence)
     {
-        sceneLoader.LoadScene(sceneName, outTransition, inTransition);
+        sceneLoader.LoadScene(sceneName, transitionSequence);
     }
 
     public void GiveAmulet(bool didGive)

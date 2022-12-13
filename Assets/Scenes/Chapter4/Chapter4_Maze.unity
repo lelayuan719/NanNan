@@ -2979,6 +2979,7 @@ GameObject:
   - component: {fileID: 1377560969}
   - component: {fileID: 1377560970}
   - component: {fileID: 1377560968}
+  - component: {fileID: 1377560971}
   m_Layer: 0
   m_Name: bear
   m_TagString: Untagged
@@ -3150,12 +3151,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextScene: Chapter4_House_End
-  outSceneTransition:
-    transitionType: 1
-    transitionTime: 2
-  inSceneTransition:
-    transitionType: 1
-    transitionTime: 1
+--- !u!114 &1377560971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377560962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d3a570f4cd20242a221bcdfafb421d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: Chapter4_House_End
+  outTransitionType: 1
+  outTransitionTime: 2
+  inTransitionType: 1
+  inTransitionTime: 1
 --- !u!1 &1384195209
 GameObject:
   m_ObjectHideFlags: 0

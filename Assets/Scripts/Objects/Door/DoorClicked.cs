@@ -5,17 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class DoorClicked : MonoBehaviour
 {
-    public string NextScene;
     public Dialog invalidDialog;
-    [SerializeField] SceneTransitionSettings outSceneTransition;
-    [SerializeField] SceneTransitionSettings inSceneTransition;
+    SceneChange sceneChange;
     public bool open = true;
+
+    private void Start()
+    {
+        sceneChange = GetComponent<SceneChange>();
+    }
 
     // Start is called before the first frame update
     void OnMouseDown(){
         if (open)
         {
-            GameManager.GM.LoadScene(NextScene, outSceneTransition, inSceneTransition);
+            sceneChange.ChangeScene();
         }
         else if (invalidDialog)
         {

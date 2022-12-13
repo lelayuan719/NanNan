@@ -5,12 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] SceneTransitionSettings outSceneTransition;
-    [SerializeField] SceneTransitionSettings inSceneTransition;
+    SceneChange sceneChange;
+
+    private void Start()
+    {
+        sceneChange = GetComponent<SceneChange>();
+    }
 
     public void PlayGame ()
     {
-        GameManager.GM.LoadScene("Prologue_intro", outSceneTransition, inSceneTransition);
+        sceneChange.ChangeScene();
     }
 
     public void QuitGame ()

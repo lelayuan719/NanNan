@@ -680,12 +680,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextScene: Prologue1_curved
-  outSceneTransition:
-    transitionType: 1
-    transitionTime: 5
-  inSceneTransition:
-    transitionType: 0
-    transitionTime: 1
+  outTransitionType: 1
+  outTransitionTime: 2
+  inTransitionType: 0
+  inTransitionTime: 1
 --- !u!1001 &232758488
 PrefabInstance:
   m_ObjectHideFlags: 0

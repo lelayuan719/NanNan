@@ -2986,6 +2986,7 @@ GameObject:
   - component: {fileID: 1772952177}
   - component: {fileID: 1772952179}
   - component: {fileID: 1772952180}
+  - component: {fileID: 1772952181}
   m_Layer: 0
   m_Name: Outside Door
   m_TagString: Untagged
@@ -3060,14 +3061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0def6236c646c41aece1b9bb4d64ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: Chapter4_Maze
   invalidDialog: {fileID: 1772952180}
-  outSceneTransition:
-    transitionType: 1
-    transitionTime: 2
-  inSceneTransition:
-    transitionType: 1
-    transitionTime: 1
   open: 0
 --- !u!114 &1772952180
 MonoBehaviour:
@@ -3099,6 +3093,23 @@ MonoBehaviour:
   running: 0
   choosing: 0
   completed: 0
+--- !u!114 &1772952181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772952175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d3a570f4cd20242a221bcdfafb421d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: Chapter4_Maze
+  outTransitionType: 1
+  outTransitionTime: 2
+  inTransitionType: 1
+  inTransitionTime: 1
 --- !u!1 &1801824895
 GameObject:
   m_ObjectHideFlags: 0
