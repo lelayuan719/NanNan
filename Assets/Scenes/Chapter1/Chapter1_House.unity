@@ -1468,7 +1468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5169713010260750278, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
       propertyPath: onLoaded.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5169713010260750278, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
       propertyPath: onLoaded.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1512,7 +1512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5169713010260750278, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
       propertyPath: onLoaded.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: key
+      value: matches
       objectReference: {fileID: 0}
     - target: {fileID: 5169713010260750278, guid: cd1806d32c10ba847a0e2d04bebe62b1, type: 3}
       propertyPath: onLoaded.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -7311,12 +7311,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextScene: Chapter2_Forest
-  outSceneTransition:
-    transitionType: 1
-    transitionTime: 2
-  inSceneTransition:
-    transitionType: 1
-    transitionTime: 1
+  outTransitionType: 0
+  outTransitionTime: 0
+  inTransitionType: 0
+  inTransitionTime: 0
 --- !u!114 &1490466624
 MonoBehaviour:
   m_ObjectHideFlags: 0
