@@ -13,7 +13,9 @@ public class UIInventory : MonoBehaviour
     public GameObject warlockBookButton;
     public int numberOfSlots = 6;
     public InventoryButtonHelper inventoryButtonHelper;
-    public int mostRecentSlot;
+    [Range(0, 0.5f)] public float dragTimeThreshold;
+    [Range(0, 50f)] public float dragDistThreshold;
+    [HideInInspector] public int mostRecentSlot;
     [HideInInspector] public bool hasNewItem;
     [HideInInspector] public bool isOpen;
 

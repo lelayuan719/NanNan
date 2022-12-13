@@ -2186,6 +2186,8 @@ MonoBehaviour:
   warlockBookButton: {fileID: 5082175796788209725}
   numberOfSlots: 6
   inventoryButtonHelper: {fileID: 8239863830743776155}
+  dragTimeThreshold: 0.302
+  dragDistThreshold: 20
   mostRecentSlot: 0
   hasNewItem: 0
   isOpen: 0

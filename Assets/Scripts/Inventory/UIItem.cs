@@ -13,6 +13,7 @@ public class UIItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPo
     private UIInventory inventoryUI;
     private Tooltip tooltip;
     private Vector2 startDragPos;
+    private float dragTimeStart;
     public int slot;
     public bool seen = true;
 
@@ -59,61 +60,53 @@ public class UIItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPo
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        dragTimeStart = Time.unscaledTime;
         startDragPos = eventData.position;
         inventoryUI.SwapItems(slot);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        // Don't put down if not moving at all
+        if (eventData.position == startDragPos) return;
 
-        if (eventData.position != startDragPos)
+        // Don't put down if within time and distance thresholds
+        if ((Time.unscaledTime - dragTimeStart) < inventoryUI.dragTimeThreshold && 
+            Vector2.Distance(eventData.position, startDragPos) < inventoryUI.dragDistThreshold)
+            return;
+
+        // Swapping
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
+
+        foreach (var result in results)
         {
-            // Swapping
-            List<RaycastResult> results = new List<RaycastResult>();
-            EventSystem.current.RaycastAll(eventData, results);
-
-            foreach (var result in results)
+            if (result.gameObject.TryGetComponent(out UIItem uiItem))
             {
-                if (result.gameObject.TryGetComponent(out UIItem uiItem))
+                if (uiItem.slot != inventoryUI.mostRecentSlot)
                 {
-                    if (uiItem.slot != inventoryUI.mostRecentSlot)
-                    {
-                        inventoryUI.SwapItems(uiItem.slot);
-                        return;
-                    }
+                    inventoryUI.SwapItems(uiItem.slot);
+                    return;
                 }
             }
-            
-            // Checking for item matches
-            Vector2 point = Camera.main.ScreenToWorldPoint(eventData.position);
-            Collider2D[] hits = Physics2D.OverlapPointAll(point);
-            foreach (var hit in hits)
-            {
-                if (hit.TryGetComponent(out ItemMatch match))
-                {
-                    match.CheckItemMatch();
-                }
-            }
-
-            // Finally, swap back to most recent slot
-            inventoryUI.SwapItems(slot);
         }
+            
+        // Checking for item matches
+        Vector2 point = Camera.main.ScreenToWorldPoint(eventData.position);
+        Collider2D[] hits = Physics2D.OverlapPointAll(point);
+        foreach (var hit in hits)
+        {
+            if (hit.TryGetComponent(out ItemMatch match))
+            {
+                match.CheckItemMatch();
+            }
+        }
+
+        // Finally, swap back to most recent slot
+        inventoryUI.SwapItems(slot);
     }
 
-    // Following
-    public void StartFollowing()
-    {
-        inventoryUI.tooltip.gameObject.SetActive(false);
-        inventoryUI.mostRecentSlot = slot;
-        inventoryUI.selectedItem = this;
-    }
-
-    public void StopFollowing()
-    {
-        transform.localPosition = Vector2.zero;
-        inventoryUI.selectedItem = null;
-    }
-
+    // Tooltip
     public void OnPointerEnter(PointerEventData eventData){
         if(this.item != null){
             tooltip.GenerateTooltip(this.item);
