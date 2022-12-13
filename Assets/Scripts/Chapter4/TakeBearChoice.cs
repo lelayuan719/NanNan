@@ -19,6 +19,7 @@ public class TakeBearChoice : ChoiceHandler
         switch (choiceIndex)
         {
             case 0:
+                GetComponent<SpriteRenderer>().enabled = false;
                 GameManager.GM.inventory.GiveItem("bear");
                 sceneChange.ChangeScene();
             break;

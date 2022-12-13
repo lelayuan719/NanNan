@@ -9,5 +9,5 @@ Give your brother the amulet? # giveAmulet
     You feel a sense of unease.
 * [No]
     Brother: You’re mean! I want it now!
-    NanNan: You have your tiger. Go to bed.
+    NanNan: You have your bear. Go to bed.
 - (continue)

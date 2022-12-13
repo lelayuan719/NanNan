@@ -43,9 +43,9 @@ public class Inventory : MonoBehaviour
 
     public void Clear()
     {
-        foreach (var item in characterItems)
+        while (characterItems.Count > 0)
         {
-            RemoveItem(item);
+            RemoveItem(characterItems[0]);
         }
     }
 }
