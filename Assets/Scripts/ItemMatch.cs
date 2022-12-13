@@ -24,10 +24,15 @@ public class ItemMatch: MonoBehaviour
 
     void OnMouseDown()
     {
+        CheckItemMatch();
+    }
+
+    public void CheckItemMatch()
+    {
         //gets the information from inventory UI to figure out what item is currently selected 
         item = collectedItem.item;
         //checks if item is correct to assigned item
-        if((item != null) && (item.title == itemCheck))
+        if ((item != null) && (item.title == itemCheck))
         {
             //if correct item is selected success bool will be true
             success = true;
@@ -51,7 +56,8 @@ public class ItemMatch: MonoBehaviour
             // Invoke other events
             onMatch.Invoke();
 
-        } else if (!success && invalidDialog)
+        }
+        else if (!success && invalidDialog)
         {
             invalidDialog.TriggerDialog();
         }

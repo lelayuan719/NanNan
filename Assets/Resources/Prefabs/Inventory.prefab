@@ -2177,10 +2177,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afcbd0cfdff624ed68b87a85b058ac6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uIItems: []
+  uiItems: []
   selectedItem: {fileID: 8394005559718697862}
   slotPrefab: {fileID: 7340811065773967487, guid: cd7f792a5df58473781812fdcc50852e, type: 3}
   notification: {fileID: 4429162502865740108}
+  tooltip: {fileID: 8394005560302786581}
   slotPanel: {fileID: 8394005560393301570}
   warlockBookButton: {fileID: 5082175796788209725}
   numberOfSlots: 6

@@ -4,13 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class UIItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Item item;
     public GameObject notificationDot;
     private Image spriteImage;
     private UIItem selectedItem;
+    private UIInventory inventoryUI;
     private Tooltip tooltip;
+    private Vector2 startDragPos;
     public int slot;
     public bool seen = true;
 
@@ -38,7 +40,13 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
         seen = true;
     }
 
-    public void UpdateItem(Item item){
+    void Start()
+    {
+        inventoryUI = GameManager.GM.inventoryUI;
+    }
+
+    public void UpdateItem(Item item)
+    {
         this.item = item;
         if (this.item != null){
             spriteImage.color = Color.white;
@@ -49,28 +57,61 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
         }
     }
 
-    public void OnPointerClick(PointerEventData eventData){
-        if(this.item != null)
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        startDragPos = eventData.position;
+        inventoryUI.SwapItems(slot);
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+
+        if (eventData.position != startDragPos)
         {
-            if(selectedItem.item != null)
+            // Swapping
+            List<RaycastResult> results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(eventData, results);
+
+            foreach (var result in results)
             {
-                Item clone = new Item(selectedItem.item);
-                selectedItem.UpdateItem(this.item);
-                UpdateItem(clone);
-                slot = GameManager.GM.inventoryUI.uIItems.FindIndex(i => i.item == this.item);
-                GameManager.GM.inventoryUI.mostRecentSlot = slot;
+                if (result.gameObject.TryGetComponent(out UIItem uiItem))
+                {
+                    if (uiItem.slot != inventoryUI.mostRecentSlot)
+                    {
+                        inventoryUI.SwapItems(uiItem.slot);
+                        return;
+                    }
+                }
             }
-            else {
-                selectedItem.UpdateItem(this.item);
-                UpdateItem(null);
+            
+            // Checking for item matches
+            Vector2 point = Camera.main.ScreenToWorldPoint(eventData.position);
+            Collider2D[] hits = Physics2D.OverlapPointAll(point);
+            foreach (var hit in hits)
+            {
+                if (hit.TryGetComponent(out ItemMatch match))
+                {
+                    match.CheckItemMatch();
+                }
             }
+
+            // Finally, swap back to most recent slot
+            inventoryUI.SwapItems(slot);
         }
-        else if(selectedItem.item != null)
-        {
-            UpdateItem(selectedItem.item);
-            print("new item set" + selectedItem.item.title);
-            selectedItem.UpdateItem(null);
-        }
+    }
+
+    // Following
+    public void StartFollowing()
+    {
+        inventoryUI.tooltip.gameObject.SetActive(false);
+        inventoryUI.mostRecentSlot = slot;
+        inventoryUI.selectedItem = this;
+    }
+
+    public void StopFollowing()
+    {
+        transform.localPosition = Vector2.zero;
+        inventoryUI.selectedItem = null;
     }
 
     public void OnPointerEnter(PointerEventData eventData){
@@ -83,5 +124,4 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
     public void OnPointerExit(PointerEventData eventData){
         tooltip.gameObject.SetActive(false);
     }
-    
 }
