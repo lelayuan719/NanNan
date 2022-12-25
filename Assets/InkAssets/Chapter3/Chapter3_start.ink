@@ -1,0 +1,1 @@
+NanNan: The red girl... Teachers use this story to scare their students, and parents use this story to scare their children. But I have a memory here that is worse than the story.
