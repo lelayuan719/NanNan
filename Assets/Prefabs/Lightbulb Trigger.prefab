@@ -178,8 +178,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d1257dbfa320984fbe8b6af66195a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unfreeze: 1
+  onTransition:
+    m_PersistentCalls:
+      m_Calls: []
   outTransitionType: 1
-  outTransitionTime: 2
+  outTransitionTime: 1
   inTransitionType: 1
   inTransitionTime: 1
 --- !u!1 &2762250412169695460
