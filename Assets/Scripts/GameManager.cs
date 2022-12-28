@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject player;
 
     [HideInInspector] public SceneLoader sceneLoader;
+    [HideInInspector] public CinemachineBrain cine;
 
     // Variables
     public bool gameIsRunning = true;

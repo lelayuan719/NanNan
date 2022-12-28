@@ -102,6 +102,19 @@ public class PlayerController : GenericController
         }
     }
 
+    public void TeleportTo(Vector3 destPos)
+    {
+        GameManager.GM.cine.ActiveVirtualCamera.OnTargetObjectWarped(transform, destPos - transform.position);
+        transform.position = destPos;
+    }
+
+    public void TeleportTo(Transform destination)
+    {
+        // This makes sure we can still raycast through NanNan
+        Vector3 destPos = new Vector3(destination.position.x, destination.position.y, 1);
+        TeleportTo(destPos);
+    }
+
     public void MoveTo(Transform destination, UnityEvent onComplete, bool canMoveAfter)
     {
         StartCoroutine(MoveTo(destination.position, onComplete, canMoveAfter));

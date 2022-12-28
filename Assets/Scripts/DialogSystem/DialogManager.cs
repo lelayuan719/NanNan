@@ -31,11 +31,13 @@ public class DialogManager : MonoBehaviour
     public void FreezeCharacter()
     {
         player.GetComponent<GenericController>().FreezeCharacter();
+        print("Freeze");
     }
 
     public void UnfreezeCharacter()
     {
         player.GetComponent<GenericController>().playerCanMove = true;
+        print("Unfreeze");
     }
 
     public void SetupChoices(List<string> choices, ChoiceHandler actions, UnityAction onChoose, MyStory story)

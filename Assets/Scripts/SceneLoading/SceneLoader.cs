@@ -3,18 +3,27 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
     string sceneName;
+    UnityEvent onTransition;
     bool canLoad = true;
+    bool unfreeze;
     int idx = 0;
     [SerializeField] TextMeshProUGUI titleText;
     [SerializeField] TextMeshProUGUI subtitleText;
     SceneTransitionSettings[] transitionSequence;
 
     [SerializeField] SceneTransition[] transitions;
+
+    List<SceneTransitionSettings.SceneTransitionType> noCleanupTransitions = new List<SceneTransitionSettings.SceneTransitionType> { 
+        SceneTransitionSettings.SceneTransitionType.Instant, 
+        SceneTransitionSettings.SceneTransitionType.LoadScene, 
+        SceneTransitionSettings.SceneTransitionType.Event 
+    };
 
     public void LoadScene(string sceneName)
     {
@@ -23,6 +32,7 @@ public class SceneLoader : MonoBehaviour
         if (GameManager.GM.player) GameManager.GM.player.GetComponent<GenericController>().playerCanMove = false;
         idx = 0;
         this.sceneName = sceneName;
+        this.onTransition = null;
         StartCoroutine(LoadSceneInternal());
     }
 
@@ -38,6 +48,25 @@ public class SceneLoader : MonoBehaviour
         StartTransition(transitionSequence[idx]);
     }
 
+    public void TransitionSameScene(UnityEvent onTransition, SceneTransitionSettings[] transitionSequence, bool unfreeze)
+    {
+        if (!canLoad) return;
+
+        canLoad = false;
+        if (GameManager.GM.player) GameManager.GM.player.GetComponent<GenericController>().playerCanMove = false;
+        idx = 0;
+        this.sceneName = "";
+        this.onTransition = onTransition;
+        this.unfreeze = unfreeze;
+        this.transitionSequence = transitionSequence;
+        StartTransition(transitionSequence[idx]);
+    }
+
+    public void TransitionSameScene(UnityEvent onTransition, SceneTransitionSettings[] transitionSequence)
+    {
+        TransitionSameScene(onTransition, transitionSequence, true);
+    }
+
     void StartTransition(SceneTransitionSettings transition)
     {
         if (transition.transitionType == SceneTransitionSettings.SceneTransitionType.Instant)
@@ -48,6 +77,11 @@ public class SceneLoader : MonoBehaviour
         else if (transition.transitionType == SceneTransitionSettings.SceneTransitionType.LoadScene)
         {
             StartCoroutine(LoadSceneInternal());
+        }
+        else if (transition.transitionType == SceneTransitionSettings.SceneTransitionType.Event)
+        {
+            onTransition.Invoke();
+            ContinueLoad();
         }
         else
         {
@@ -71,11 +105,8 @@ public class SceneLoader : MonoBehaviour
 
     void StopTransition(SceneTransitionSettings transition)
     {
-        if (transition.transitionType == SceneTransitionSettings.SceneTransitionType.Instant || transition.transitionType == SceneTransitionSettings.SceneTransitionType.LoadScene)
-        {
-            // Nothing
-        }
-        else
+        // Only cleanup if we need to
+        if (!noCleanupTransitions.Contains(transition.transitionType))
         {
             SceneTransition transitionObj = transitions[(int)transition.transitionType - 1];
             transitionObj.gameObject.SetActive(false);
@@ -93,6 +124,7 @@ public class SceneLoader : MonoBehaviour
         {
             StopTransition(transitionSequence[idx - 1]);
             canLoad = true;
+            if (unfreeze) GameManager.GM.player.GetComponent<GenericController>().playerCanMove = true;
         }
     }
 
@@ -120,6 +152,7 @@ public class SceneTransitionSettings
         Fade,
         TextFade,
         LoadScene,
+        Event,
     }
 
     public SceneTransitionType transitionType;

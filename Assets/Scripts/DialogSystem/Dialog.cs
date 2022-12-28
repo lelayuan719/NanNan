@@ -47,8 +47,6 @@ public class Dialog : MonoBehaviour
 
     void Start()
     {
-        ExecuteAfterTime(1);
-
         dialogManager = GameManager.GM.dialogManager;
         typer = null;
         completed = false;
@@ -72,6 +70,8 @@ public class Dialog : MonoBehaviour
 
     public void TriggerDialog()
     {
+        dialogManager = GameManager.GM.dialogManager;
+
         // If dialog is already playing, do nothing
         if (dialogManager.dialogActive) return;
 
