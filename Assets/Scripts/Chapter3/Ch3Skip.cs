@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Ch3Skip : MonoBehaviour
 {
-    [SerializeField] bool skipFlashbacks;
-    [SerializeField] bool skipLiFetch;
+    [SerializeField] Skips skipAfter;
 
     [SerializeField] FlashbackTrigger finalFlashback;
 
@@ -16,12 +15,15 @@ public class Ch3Skip : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (skipFlashbacks)
+        int skipI = (int)skipAfter;
+
+        // Flashbacks
+        if (skipI >= 1)
         {
             finalFlashback.onReturn.Invoke();
         }
-
-        if (skipLiFetch)
+        // Li Fetch
+        if (skipI >= 2)
         {
             GameManager.GM.inventory.GiveItem("waterCup");
             GameManager.GM.inventory.GiveItem("mathBook");
@@ -29,5 +31,12 @@ public class Ch3Skip : MonoBehaviour
             GameManager.GM.cine.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
             skipLiFetchCam.SetActive(true);
         }
+    }
+
+    enum Skips
+    {
+        Nothing,
+        Flashbacks,
+        LiFetch,
     }
 }
