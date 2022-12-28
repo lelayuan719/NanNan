@@ -1452,6 +1452,7 @@ GameObject:
   - component: {fileID: 201004569}
   - component: {fileID: 201004571}
   - component: {fileID: 201004570}
+  - component: {fileID: 201004572}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -1529,6 +1530,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &201004572
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201004568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 0
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &212276023
 GameObject:
   m_ObjectHideFlags: 0
@@ -5791,8 +5809,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4329ff219b07a342865d180c75e20bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skipFlashbacks: 0
-  skipLiFetch: 0
+  skipFlashbacks: 1
+  skipLiFetch: 1
   finalFlashback: {fileID: 2092837707}
   skipLiFetchDest: {fileID: 2073675469}
   skipLiFetchCam: {fileID: 1411649035}
@@ -6562,6 +6580,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1633086169}
         m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
         m_MethodName: TriggerDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2028191084}
+        m_TargetAssemblyTypeName: CameraShaker, Assembly-CSharp
+        m_MethodName: Shake
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8414,6 +8444,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba9f493994ffada4c9371f8b7b1188cc, type: 3}
+--- !u!114 &2028191084 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1714427091818424813, guid: 4db0f4852c5245542ba2747eac482ce6, type: 3}
+  m_PrefabInstance: {fileID: 90552152}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27cea9a5680c6074fa45e8ee43e88b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2055840140
 GameObject:
   m_ObjectHideFlags: 0
