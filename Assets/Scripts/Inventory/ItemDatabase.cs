@@ -39,6 +39,8 @@ public class ItemDatabase : MonoBehaviour
             ("tokenHedgehog", "Hedgehog Token", "An embossed hedgehog token"),
             ("tokenFox", "Fox Token", "An embossed fox token"),
             ("tokenSnake", "Snake Token", "An embossed snake token"),
+            ("waterCup", "Water Cup", "A cup of water."),
+            ("mathBook", "Math Textbook", "A worn out textbook, put through years of use."),
         };
 
         items = _items.ToDictionary(x => x.Item1, x => new Item(x.Item1, x.Item2, x.Item3));

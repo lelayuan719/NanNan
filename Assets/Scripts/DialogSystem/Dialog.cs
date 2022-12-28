@@ -200,6 +200,7 @@ public class Dialog : MonoBehaviour
         if (story.currentTags.Count > 0)
         {
             string eventName = story.currentTags[0];
+            print(eventName);
             if (midwayActions.TryGetValue(eventName, out UnityEvent actions))
                 actions.Invoke();
         }
@@ -238,9 +239,9 @@ public class Dialog : MonoBehaviour
         if (!canRepeat) enabled = false;
     }
 
-    IEnumerator ExecuteAfterTime(float time)
+    private void OnDisable()
     {
-        yield return new WaitForSeconds(time);
+        if (running) StopDialog();
     }
 }
 

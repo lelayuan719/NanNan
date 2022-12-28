@@ -12,7 +12,7 @@ public class FlashbackTrigger : MonoBehaviour
     [SerializeField] GameObject[] disableMe;
     [SerializeField] GameObject[] enableMe;
     [SerializeField] UnityEvent onTriggered;
-    [SerializeField] UnityEvent onReturn;
+    public UnityEvent onReturn;
 
     private Vector3 returnPos;
 

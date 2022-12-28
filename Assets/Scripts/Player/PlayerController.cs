@@ -130,6 +130,7 @@ public class PlayerController : GenericController
         // Check for already there
         if (destination.x == transform.position.x)
         {
+            if (onComplete != null) onComplete.Invoke();
             yield break;
         }
 
