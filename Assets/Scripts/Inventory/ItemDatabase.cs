@@ -42,6 +42,7 @@ public class ItemDatabase : MonoBehaviour
             ("waterCup", "Water Cup", "A cup of water."),
             ("mathBook", "Math Textbook", "A worn out textbook, put through years of use."),
             ("stairKey", "Stairwell Key", "A shabby copper key."),
+            ("emptyCup", "Empty Cup", "An empty paper cup."),
         };
 
         items = _items.ToDictionary(x => x.Item1, x => new Item(x.Item1, x.Item2, x.Item3));

@@ -6,6 +6,7 @@ public class Ch3Skip : MonoBehaviour
 {
     [SerializeField] Skips skipAfter;
 
+    [Header("Flashback Skip")]
     [SerializeField] FlashbackTrigger finalFlashback;
 
     [Header("Li Skip")]
@@ -21,6 +22,9 @@ public class Ch3Skip : MonoBehaviour
         if (skipI >= 1)
         {
             finalFlashback.onReturn.Invoke();
+
+            // Notify the player of skipping
+            print("To stop skipping, change Debug Skip > Ch 3 Skip > Skip After to \"Nothing\".");
         }
         // Li Fetch
         if (skipI >= 2)

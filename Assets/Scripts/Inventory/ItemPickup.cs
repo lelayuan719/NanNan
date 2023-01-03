@@ -36,7 +36,9 @@ public class ItemPickup : MonoBehaviour, IPointerClickHandler
             render.enabled = false;
         else if (TryGetComponent(out Image image))
             image.enabled = false;
-        GetComponent<Collider2D>().enabled = false;
+
+        if (TryGetComponent(out Collider2D collider))
+            collider.enabled = false;
 
         onPickup.Invoke();
     }

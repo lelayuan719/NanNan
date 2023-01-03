@@ -1,0 +1,1 @@
+NanNan: It's a water cooler. There's an empty paper cup next to it.
