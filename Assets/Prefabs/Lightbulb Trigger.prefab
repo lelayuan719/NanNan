@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: d3b36ec223fdc8dfdd175510c9174f395d19785c00000000bf2f6477578ea9fa
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -158,6 +158,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
+  oldCamera: {fileID: 0}
+  newCamera: {fileID: 0}
   disableMe: []
   enableMe: []
   onTriggered:

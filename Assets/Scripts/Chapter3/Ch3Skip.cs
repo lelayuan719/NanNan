@@ -13,6 +13,11 @@ public class Ch3Skip : MonoBehaviour
     [SerializeField] Transform skipLiFetchDest;
     [SerializeField] GameObject skipLiFetchCam;
 
+    [Header("Unlock Second Floor")]
+    [SerializeField] Transform unlockSecondFloorDest;
+    [SerializeField] GameObject unlockSecondFloorCam;
+    [SerializeField] GameObject[] unlockSecondFloorDisable;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +40,15 @@ public class Ch3Skip : MonoBehaviour
             GameManager.GM.cine.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
             skipLiFetchCam.SetActive(true);
         }
+        // Second floor
+        if (skipI >= 3)
+        {
+            GameManager.GM.inventory.GiveItem("stairKey");
+            GameManager.GM.player.transform.position = unlockSecondFloorDest.position;
+            GameManager.GM.cine.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
+            unlockSecondFloorCam.SetActive(true);
+            foreach (var obj in unlockSecondFloorDisable) obj.SetActive(false);
+        }
     }
 
     enum Skips
@@ -42,5 +56,6 @@ public class Ch3Skip : MonoBehaviour
         Nothing,
         Flashbacks,
         LiFetch,
+        UnlockSecondFloor,
     }
 }

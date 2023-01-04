@@ -28,16 +28,25 @@ public class DoorTeleport2 : MonoBehaviour
 
     public void Teleport()
     {
-        GetDestPos();
-
-        GameManager.GM.player.transform.position = destPos;
-        GameManager.GM.cine.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
-        endCam.gameObject.SetActive(true);
+        TeleportSomething(GameManager.GM.player, true);
     }
 
-    void GetDestPos()
+    public void TeleportSomething(GameObject obj, bool changeCamera = false)
     {
-        float halfHeight = GameManager.GM.player.GetComponent<BoxCollider2D>().size.y * GameManager.GM.player.transform.lossyScale.y / 2;
+        GetDestPos(obj);
+
+        obj.transform.position = destPos;
+
+        if (changeCamera)
+        {
+            GameManager.GM.cine.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
+            endCam.gameObject.SetActive(true);
+        }
+    }
+
+    void GetDestPos(GameObject obj)
+    {
+        float halfHeight = obj.GetComponent<Collider2D>().bounds.size.y * obj.transform.lossyScale.y / 2;
         Vector2 halfHeightOffset = new Vector2(0, halfHeight);
 
         var raycasts = Physics2D.RaycastAll(destination.position, Vector2.down, 4);

@@ -12,11 +12,16 @@ public class CameraShaker : MonoBehaviour
 
     public void Shake()
     {
-        noise = GetComponent<CinemachineBrain>().ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        StartCoroutine(ShakeCR());
+        Shake(amplitudeGain);
     }
 
-    IEnumerator ShakeCR(float duration = 0.5f)
+    public void Shake(float amplitudeGain, float duration = 0.5f)
+    {
+        noise = GetComponent<CinemachineBrain>().ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        StartCoroutine(ShakeCR(amplitudeGain, duration));
+    }
+
+    IEnumerator ShakeCR(float amplitudeGain, float duration)
     {
         SetNoise(amplitudeGain, frequencyGain);
         yield return new WaitForSeconds(duration);

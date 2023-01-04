@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 768379935454810534}
   - component: {fileID: 8995298470134578030}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 4603072348880616935}
   - component: {fileID: 4603072348880616934}
   - component: {fileID: 4603072348880616933}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NannanSide
   m_TagString: Player
   m_Icon: {fileID: 0}
