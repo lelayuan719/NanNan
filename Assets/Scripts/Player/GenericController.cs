@@ -16,4 +16,9 @@ public class GenericController : MonoBehaviour
         playerCanMove = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
+
+    public virtual void UnfreezeCharacter()
+    {
+        playerCanMove = true;
+    }
 }

@@ -235,7 +235,7 @@ public class Dialog : MonoBehaviour
 
         onComplete.Invoke();
         StopCoroutine(typer);
-        if (autoContinue) CancelInvoke(); // Cancels auto continue invokes. This is unrelated to the previous line!
+        if (autoContinue) CancelInvoke(); // Cancels auto continue invokes. This is unrelated to the previous lines!
         if (!canRepeat) enabled = false;
     }
 
