@@ -1,7 +1,9 @@
-Mr. Li: First place again? Eh... not bad...
-Mr. Li: But, you’re just a girl from a poor family. There’s no chance that they’ll pay for you to go to school. You get good test grades... but what are they even good for?
-Mr. Li: Don’t do so well next time. Get a bad test grade and give up your spot to the boys in your class. How will you take responsibility if they don’t get into middle school because of you?
+Mr. Li: First place again? Eh...not bad...
+Mr. Li: You’re a girl and your family is poor, though. There’s no chance that they’ll pay for you to go to school. You get good test grades, but they really aren’t good for anything.
+Mr. Li: You don’t need to do so well next time. There’s nothing wrong with a bad test grade when it means one of the boys in your class can rank higher, right?
+Mr. Li: Think about this: what are you going to do if they don’t get into middle school because of you?
 NanNan: But...
-Mr. Li: Here, think about it. One of the boys in your class will probably become your husband in the future. You’ll rely on him for the rest of your life. Let them get into middle school, marry one of them, and give him two healthy little sons. Simple, easy, and your life is fulfilled.
-Mr. Li: Little girls shouldn’t study in the first place. It’s best to stay at home. Besides, what if something happens to your fragile body while you’re running around outside? Will your parents be able to take care of you? 
-Mr. Li: NanNan, listen to your teacher. All this time you use to study could be better used to help with chores at home. Find a good husband when you’re older, and your parents will never have to worry about you.
+Mr. Li: NanNan, let’s be reasonable. You’ll probably marry one of these boys in the future. You’ll rely on him for the rest of your life. Help them go to middle school, marry one of them, and have two healthy little sons with him. It’s a simple, easy way to live a good life.
+Mr. Li: Little girls shouldn’t be studying anyways. It’s best to stay at home. Running around outside, going to school... it’s easy to get hurt, or for accidents to happen, you know? The world is dangerous for girls...
+Mr. Li: If something happens to you, who’s going to take care of you? Your parents? Listen to me, I know more about the world than you... I’m your teacher after all. 
+Mr. Li: Stop studying so much and go help with the chores at home. Then find a good husband when you’re older, and you’ll never be a liability to your parents again.
