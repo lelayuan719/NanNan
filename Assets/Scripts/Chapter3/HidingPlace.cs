@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Rendering.Universal;
 
 public class HidingPlace : MonoBehaviour
@@ -8,6 +9,8 @@ public class HidingPlace : MonoBehaviour
     [SerializeField] float canHideDistance = 0.3f;
     [SerializeField] bool hidesBehind = true;
     [SerializeField] LightFader[] externalLights;
+    [SerializeField] UnityEvent onHide;
+    [SerializeField] GameObject hiddenObject;
 
     float hideTime = 1f;
     float emergeTime = 0.5f;
@@ -71,6 +74,11 @@ public class HidingPlace : MonoBehaviour
             GameManager.GM.player.GetComponent<ChangeSortingLayer>().ChangeLayer("Default");
         }
 
+        // Events and hidden object
+        onHide.Invoke();
+        if (hiddenObject != null) hiddenObject.SetActive(true);
+
+        // Player controller
         playerHide.Hide();
     }
 
@@ -90,6 +98,10 @@ public class HidingPlace : MonoBehaviour
             GameManager.GM.player.GetComponent<ChangeSortingLayer>().ChangeLayer("Player");
         }
 
+        // Hidden object
+        if (hiddenObject != null) hiddenObject.SetActive(false);
+
+        // Player controller
         playerHide.Emerge();
     }
 }

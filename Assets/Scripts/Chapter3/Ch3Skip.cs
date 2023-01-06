@@ -67,7 +67,6 @@ public class Ch3Skip : MonoBehaviour
         if (skipI >= 4)
         {
             GameManager.GM.inventory.RemoveItem("stairKey");
-            GameManager.GM.inventory.RemoveItem("noteFragment");
             principal.transform.position = principalDest.position;
             player.transform.position = startHideSeekDest.position;
             GameManager.GM.cine.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);

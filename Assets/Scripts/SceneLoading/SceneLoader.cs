@@ -53,7 +53,7 @@ public class SceneLoader : MonoBehaviour
         if (!canLoad) return;
 
         canLoad = false;
-        if (GameManager.GM.player) GameManager.GM.player.GetComponent<GenericController>().playerCanMove = false;
+        if (GameManager.GM.player) GameManager.GM.player.GetComponent<GenericController>().FreezeCharacter();
         idx = 0;
         this.sceneName = "";
         this.onTransition = onTransition;
@@ -133,7 +133,7 @@ public class SceneLoader : MonoBehaviour
         yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
 
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-        if (unfreeze) GameManager.GM.player.GetComponent<GenericController>().playerCanMove = true;
+        if (unfreeze) GameManager.GM.player.GetComponent<GenericController>().UnfreezeCharacter();
         ContinueLoad();
     }
 

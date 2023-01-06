@@ -9,13 +9,9 @@ public class HidingController : MonoBehaviour
     public bool hiding;
     public bool canHide = false;
 
-    SpriteRenderer sr;
-    float hideDarken = 0.4f;
-
     void Start()
     {
         ctrl = GetComponent<PlayerController>();
-        sr = GetComponent<SpriteRenderer>();
     }
 
     public void ToggleHide()
@@ -28,14 +24,12 @@ public class HidingController : MonoBehaviour
 
     public void Hide()
     {
-        //sr.color = Color.HSVToRGB(0, 0, hideDarken);
         ctrl.FreezeCharacter();
         hiding = true;
     }
 
     public void Emerge()
     {
-        //sr.color = Color.white;
         ctrl.UnfreezeCharacter();
         hiding = false;
     }

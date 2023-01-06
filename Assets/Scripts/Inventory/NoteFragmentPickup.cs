@@ -5,19 +5,17 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemPickup : MonoBehaviour, IPointerClickHandler
+public class NoteFragmentPickup : MonoBehaviour, IPointerClickHandler
 {
-    public Texture2D texture;
-    private Inventory inv;
-
     public UnityEvent onPickup;
 
     private void Start()
     {
-        inv = GameManager.GM.inventory;
+
     }
 
-    void OnMouseDown(){
+    void OnMouseDown()
+    {
         Collect();
     }
 
@@ -28,9 +26,8 @@ public class ItemPickup : MonoBehaviour, IPointerClickHandler
 
     public void Collect()
     {
-        inv.GiveItem(gameObject.name);
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-        // gameObject.SetActive(false);
+
         if (TryGetComponent(out SpriteRenderer render))
             render.enabled = false;
         else if (TryGetComponent(out Image image))
@@ -40,5 +37,6 @@ public class ItemPickup : MonoBehaviour, IPointerClickHandler
             collider.enabled = false;
 
         onPickup.Invoke();
+        GameManager.GM.player.GetComponent<NoteFragmentHandler>().CollectNote();
     }
 }

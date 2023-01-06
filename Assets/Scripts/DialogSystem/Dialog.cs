@@ -43,13 +43,13 @@ public class Dialog : MonoBehaviour
         choiceActions = _choiceActions.ToDictionary(x => x.name, x => x.choiceHandler);
         midwayActions = _midwayActions.ToDictionary(x => x.name, x => x.action);
         onChoose += MakeChoice;
+        completed = false;
     }
 
     void Start()
     {
         dialogManager = GameManager.GM.dialogManager;
         typer = null;
-        completed = false;
     }
 
     IEnumerator TriggerDialogCoroutine()
@@ -70,9 +70,14 @@ public class Dialog : MonoBehaviour
 
     public void TriggerDialog()
     {
-        dialogManager = GameManager.GM.dialogManager;
+        // If can't repeat and already completed, do nothing
+        if (!canRepeat && completed) return;
+
+        // If component is disabled, do nothing
+        if (!enabled) return;
 
         // If dialog is already playing, do nothing
+        dialogManager = GameManager.GM.dialogManager;
         if (dialogManager.dialogActive) return;
 
         // Otherwise, start the dialog
