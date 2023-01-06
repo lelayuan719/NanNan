@@ -146,10 +146,6 @@ PrefabInstance:
       propertyPath: NextScene
       value: chapter_1
       objectReference: {fileID: 0}
-    - target: {fileID: 4603072348880616937, guid: 65937e22227c9404cad29a23e623e3a2, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4603072348880616938, guid: 65937e22227c9404cad29a23e623e3a2, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -568,7 +564,7 @@ MonoBehaviour:
   m_Intensity: 1.5
   m_LightVolumeIntensity: 0
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: d3b36ec223fdc8dfdd175510c9174f395d19785c00000000bf2f6477578ea9fa
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -817,7 +813,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 1
-  cam: {fileID: 1299523405}
   destination: {fileID: 392738712}
 --- !u!114 &393360225
 MonoBehaviour:
@@ -1662,7 +1657,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b69d725ebebeaab4c93535f0477887a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1915,12 +1910,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 050f39aacd784eb488481b9cc2ca99d6, type: 3}
+  m_Sprite: {fileID: -169402441, guid: 050f39aacd784eb488481b9cc2ca99d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 40.98, y: 20.49}
+  m_Size: {x: 5.89, y: 3.251587}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1934,8 +1929,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092435220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.2379675, y: 0.40666813, z: 0.5330074}
-  m_LocalScale: {x: 0.61871624, y: 0.61871624, z: 0.61871624}
+  m_LocalPosition: {x: 14.29, y: -1.95, z: 0.5330074}
+  m_LocalScale: {x: 0.58641833, y: 0.58641833, z: 0.58641833}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 831372982}
@@ -2204,17 +2199,6 @@ Transform:
   m_Father: {fileID: 1492231910}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1299523405 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7177278981984282446, guid: 4db0f4852c5245542ba2747eac482ce6, type: 3}
-  m_PrefabInstance: {fileID: 7177278982847053827}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1379602466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2390,7 +2374,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opened: 1
-  cam: {fileID: 1299523405}
   destination: {fileID: 2133598283}
 --- !u!1 &1478627951
 GameObject:
@@ -2429,7 +2412,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 0
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: d3b36ec223fdc8dfdd175510c9174f395d19785c00000000bf2f6477578ea9fa
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -3420,7 +3403,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 0
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: d3b36ec223fdc8dfdd175510c9174f395d19785c00000000bf2f6477578ea9fa
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
