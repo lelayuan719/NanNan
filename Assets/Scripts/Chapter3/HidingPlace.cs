@@ -6,6 +6,7 @@ using UnityEngine.Rendering.Universal;
 public class HidingPlace : MonoBehaviour
 {
     [SerializeField] float canHideDistance = 0.3f;
+    [SerializeField] bool hidesBehind = true;
     [SerializeField] LightFader[] externalLights;
 
     float hideTime = 1f;
@@ -14,9 +15,14 @@ public class HidingPlace : MonoBehaviour
 
     HidingController playerHide;
     LightFader thisFader;
+    ChangeSortingLayer[] behindSprites = new ChangeSortingLayer[] { };
 
     private void Start()
     {
+        if (hidesBehind)
+        {
+            behindSprites = GetComponentsInChildren<ChangeSortingLayer>();
+        }
         StartCoroutine(AfterStart());
     }
 
@@ -51,15 +57,39 @@ public class HidingPlace : MonoBehaviour
 
     public void Hide()
     {
+        // Fade in/out lights
         thisFader.FadeIn(hideTime);
         foreach (var externalFader in externalLights) externalFader.FadeOut(hideTime);
+
+        // Change sprite order to put player behind things
+        if (hidesBehind)
+        {
+            foreach (var behindSprite in behindSprites) behindSprite.PutInFrontPlayer();
+        }
+        else
+        {
+            GameManager.GM.player.GetComponent<ChangeSortingLayer>().ChangeLayer("Default");
+        }
+
         playerHide.Hide();
     }
 
     public void Emerge()
     {
+        // Restore lights
         thisFader.FadeOut(emergeTime);
         foreach (var externalFader in externalLights) externalFader.FadeIn(emergeTime);
+
+        // Restore sprite order
+        if (hidesBehind)
+        {
+            foreach (var behindSprite in behindSprites) behindSprite.PutBehindPlayer();
+        }
+        else
+        {
+            GameManager.GM.player.GetComponent<ChangeSortingLayer>().ChangeLayer("Player");
+        }
+
         playerHide.Emerge();
     }
 }
