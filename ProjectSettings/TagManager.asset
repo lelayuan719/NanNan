@@ -15,6 +15,7 @@ TagManager:
   - Info Item
   - darkness
   - Ground
+  - Note Fragment
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - No Post Processing
   - Not Touch Player
   - Player
-  - 
+  - Ground
   - 
   - 
   - 

@@ -6,7 +6,6 @@ using UnityEngine.Events;
 
 public class Ch2ActivateWell : MonoBehaviour
 {
-    public PlayerController player;
     public Transform playerDest;
 
     public CinemachineConfiner2D confiner;
@@ -27,7 +26,7 @@ public class Ch2ActivateWell : MonoBehaviour
     public void Activate()
     {
         // Starts walking and activates event when finished
-        player.MoveTo(playerDest, onFinishedWalking, false);
+        GameManager.GM.player.GetComponent<PlayerController>().MoveTo(playerDest, onFinishedWalking, false);
         GetComponent<BoxCollider2D>().enabled = false;
     }
 

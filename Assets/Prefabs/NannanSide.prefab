@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 4603072348880616936}
   - component: {fileID: -1006225379511589630}
   - component: {fileID: 4603072348880616935}
-  - component: {fileID: 4603072348880616934}
+  - component: {fileID: 6499003183399939074}
   - component: {fileID: 4603072348880616933}
   m_Layer: 9
   m_Name: NannanSide
@@ -268,8 +268,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &4603072348880616934
-BoxCollider2D:
+--- !u!70 &6499003183399939074
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -281,19 +281,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.3895464, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 50, y: 50}
-    newSize: {x: 50, y: 50}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 21.471369, y: 47}
-  m_EdgeRadius: 0
+  m_Offset: {x: -1.2394557, y: -1.3852704}
+  m_Size: {x: 13.39968, y: 45.479637}
+  m_Direction: 0
 --- !u!95 &4603072348880616933
 Animator:
   serializedVersion: 4

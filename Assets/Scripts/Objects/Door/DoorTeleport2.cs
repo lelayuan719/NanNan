@@ -46,19 +46,12 @@ public class DoorTeleport2 : MonoBehaviour
 
     void GetDestPos(GameObject obj)
     {
-        float halfHeight = obj.GetComponent<Collider2D>().bounds.size.y * obj.transform.lossyScale.y / 2;
-        Vector2 halfHeightOffset = new Vector2(0, halfHeight);
+        Collider2D collider = obj.GetComponent<Collider2D>();
+        float halfHeight = collider.bounds.size.y / 2;
+        float halfOffset = halfHeight - (collider.offset.y * obj.transform.lossyScale.y);
 
-        var raycasts = Physics2D.RaycastAll(destination.position, Vector2.down, 4);
-        foreach(var raycast in raycasts)
-        {
-            if (raycast.transform.gameObject.name == "Ground")
-            {
-                destPos = raycast.point + halfHeightOffset;
-                break;
-            }
-        }
-
+        var raycast = Physics2D.Raycast(destination.position, Vector2.down, 4, LayerMask.GetMask("Ground"));
+        destPos = raycast.point + new Vector2(0, halfOffset);
         destPos.z = 1;
     }
 

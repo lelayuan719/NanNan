@@ -1,6 +1,6 @@
 NanNan: This looks important. Where’s the rest of it?
 Principal: Who’s there?
-Principal: Who is that…? What do you want? #moveForward
+Principal: Who is that...? What do you want? #moveForward
 Principal: Ah, it’s NanNan! I almost didn’t recognize your pretty little face...
 Principal: NanNan, are you alone? 
 NanNan: Yes, and I’m scared... It’s so creepy in here, Mr. Principal.
