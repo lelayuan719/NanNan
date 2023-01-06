@@ -16,6 +16,7 @@ TagManager:
   - darkness
   - Ground
   - Note Fragment
+  - Hiding Place
   layers:
   - Default
   - TransparentFX

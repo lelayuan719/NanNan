@@ -15,9 +15,10 @@ public class PrincipalHideAndSeek : MonoBehaviour
     [SerializeField] string startNodeId;
 
     bool started = false;
-    PrincipalStates state = PrincipalStates.Seeking;
+    States state = States.Seeking;
     PrincipalNode nodeDest;
     Rigidbody2D rb;
+    HidingController playerHide;
     Dictionary<string, PrincipalNode> nodes;
     float direction = +1;
 
@@ -35,7 +36,16 @@ public class PrincipalHideAndSeek : MonoBehaviour
         nodeDest = nodes[startNodeId];
 
         print(nodeDest.transform.position);
+
+        StartCoroutine(AfterStart());
     }
+
+    IEnumerator AfterStart()
+    {
+        yield return new WaitForEndOfFrame();
+        playerHide = GameManager.GM.player.GetComponent<HidingController>();
+    }
+
 
     public void StartSeeking()
     {
@@ -48,16 +58,16 @@ public class PrincipalHideAndSeek : MonoBehaviour
 
         switch (state)
         {
-            case PrincipalStates.Seeking:
+            case States.Seeking:
                 DoSeekState();
                 break;
-            case PrincipalStates.Chasing:
+            case States.Chasing:
                 DoChaseState();
                 break;
-            case PrincipalStates.EnteringDoor:
+            case States.EnteringDoor:
                 DoEnteringDoorState();
                 break;
-            case PrincipalStates.Waiting:
+            case States.Waiting:
                 DoWaitingState();
                 break;
         }
@@ -74,13 +84,13 @@ public class PrincipalHideAndSeek : MonoBehaviour
 
             if (doorDest != null)
             {
-                state = PrincipalStates.EnteringDoor;
+                state = States.EnteringDoor;
                 StartCoroutine(DoDoorStateCR());
                 return;
             }
             else
             {
-                state = PrincipalStates.Waiting;
+                state = States.Waiting;
                 StartCoroutine(DoWaitingStateCR());
                 return;
             }
@@ -89,7 +99,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
         // Check for seeing player
         if (CanSeePlayer())
         {
-            state = PrincipalStates.Chasing;
+            state = States.Chasing;
             return;
         }
 
@@ -103,7 +113,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
         // Checks for seeing player
         if (!CanSeePlayer())
         {
-            state = PrincipalStates.Seeking;
+            state = States.Seeking;
             return;
         }
 
@@ -115,6 +125,10 @@ public class PrincipalHideAndSeek : MonoBehaviour
 
     bool CanSeePlayer()
     {
+        // Hiding means player is invisible, unless principal is in chase state
+        if (playerHide.hiding && state != States.Chasing) return false;
+
+        // See if player is in LOS
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * direction, sightRange, playerLayer);
         if ((hit.collider != null) && hit.transform.CompareTag("Player"))
         {
@@ -144,7 +158,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         // Change state
-        state = PrincipalStates.Seeking;
+        state = States.Seeking;
     }
 
     void DoWaitingState()
@@ -157,7 +171,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         nodeDest = nodes[nodeDest.GetWalkDestination()];
-        state = PrincipalStates.Seeking;
+        state = States.Seeking;
     }
 
     private void OnDrawGizmos()
@@ -165,7 +179,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + new Vector3(direction * sightRange, 0));
     }
 
-    enum PrincipalStates
+    enum States
     {
         Seeking,
         Chasing,
