@@ -213,7 +213,7 @@ public class Dialog : MonoBehaviour
         NextSentence();
     }
 
-    void StopDialog()
+    public void StopDialog()
     {
         if (!running) return;
 

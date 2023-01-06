@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Principal : MonoBehaviour
+public class PrincipalHideAndSeek : MonoBehaviour
 {
     [SerializeField] float seekSpeed = 3;
     [SerializeField] float chaseSpeed = 6;
@@ -13,7 +13,8 @@ public class Principal : MonoBehaviour
     [SerializeField] LayerMask playerLayer;
     public List<PrincipalNode> _nodes;
     [SerializeField] string startNodeId;
-    
+
+    bool started = false;
     PrincipalStates state = PrincipalStates.Seeking;
     PrincipalNode nodeDest;
     Rigidbody2D rb;
@@ -36,8 +37,15 @@ public class Principal : MonoBehaviour
         print(nodeDest.transform.position);
     }
 
+    public void StartSeeking()
+    {
+        started = true;
+    }
+
     void Update()
     {
+        if (!started) return;
+
         switch (state)
         {
             case PrincipalStates.Seeking:
