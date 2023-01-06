@@ -13,6 +13,8 @@ public class Ch3Skip : MonoBehaviour
     [Header("Li Skip")]
     [SerializeField] Transform skipLiFetchDest;
     [SerializeField] GameObject skipLiFetchCam;
+    [SerializeField] GameObject[] liSkipDisable;
+    [SerializeField] UnityEvent onLiSkip;
 
     [Header("Unlock Second Floor")]
     [SerializeField] Transform unlockSecondFloorDest;
@@ -51,6 +53,8 @@ public class Ch3Skip : MonoBehaviour
             player.transform.position = skipLiFetchDest.position;
             GameManager.GM.cine.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
             skipLiFetchCam.SetActive(true);
+            foreach (var obj in liSkipDisable) obj.SetActive(false);
+            onLiSkip.Invoke();
         }
         // Second floor
         if (skipI >= 3)
@@ -72,6 +76,10 @@ public class Ch3Skip : MonoBehaviour
             GameManager.GM.cine.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
             hallwayCam.SetActive(true);
             player.GetComponent<HidingController>().SetCanHide(true);
+            player.GetComponent<NoteFragmentHandler>().SpawnNotes();
+            player.GetComponent<NoteFragmentHandler>().CollectNote();
+            principal.SetActive(true);
+            principal.GetComponent<PrincipalHideAndSeek>().StartSeeking();
             foreach (var obj in startHideSeekDisable) obj.SetActive(false);
             onStartHideSeek.Invoke();
         }
