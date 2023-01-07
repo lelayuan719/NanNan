@@ -86,13 +86,11 @@ public class MoveAnimation : MonoBehaviour
 
             // Move
             float elapsedTime;
-            do
+            while ((elapsedTime = Time.time - startTime) < newTime)
             {
-                elapsedTime = Time.time - startTime;
                 transform.position = Vector3.Lerp(startPos, destination.position, elapsedTime / newTime);
                 yield return new WaitForEndOfFrame();
             }
-            while (elapsedTime < newTime);
         }
 
         // Grounded applies rigidbody velocity
