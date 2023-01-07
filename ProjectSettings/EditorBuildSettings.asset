@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter2/Chapter2_Story.unity
     guid: 329295c21d3294e4e826f58320b47308
+  - enabled: 1
+    path: Assets/Scenes/Chapter3/Chapter3_main.unity
+    guid: 5c8bf3ade7f2eb541b540a8d3b66f758
   - enabled: 0
     path: Assets/Scenes/Chapter2/chapter_2_Grandma.unity
     guid: f37ad7a73ea4c45f39294e7b2fb3e3c5
