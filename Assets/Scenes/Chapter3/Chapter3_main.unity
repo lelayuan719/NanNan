@@ -318,6 +318,10 @@ PrefabInstance:
       propertyPath: max
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 7612520637596499472, guid: 65937e22227c9404cad29a23e623e3a2, type: 3}
+      propertyPath: minMax.y
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8995298470134578030, guid: 65937e22227c9404cad29a23e623e3a2, type: 3}
       propertyPath: m_PointLightInnerRadius
       value: 0.3
@@ -861,8 +865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a615076f7d63f74c80fb9e6506a2fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 0
-  max: 1
+  minMax: {x: 0, y: 1}
 --- !u!1 &42709365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2008,8 +2011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a615076f7d63f74c80fb9e6506a2fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 0
-  max: 0.1
+  minMax: {x: 0, y: 0.1}
 --- !u!1 &181745458
 GameObject:
   m_ObjectHideFlags: 0
@@ -7593,8 +7595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22516802fd1829a4585c4a9de0ef3cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 0
-  max: 0.6
+  minMax: {x: 0, y: 0.7}
 --- !u!212 &990692314
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7987,8 +7988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a615076f7d63f74c80fb9e6506a2fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 0
-  max: 1
+  minMax: {x: 0, y: 1}
 --- !u!1 &1021735125 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2762250411937458987, guid: ba9f493994ffada4c9371f8b7b1188cc, type: 3}
@@ -10982,8 +10982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a615076f7d63f74c80fb9e6506a2fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 0
-  max: 0.5
+  minMax: {x: 0, y: 0.5}
 --- !u!4 &1547554450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9075290600459526105, guid: 4f1088d0927b8f74ba342a37b1a42b01, type: 3}
@@ -12409,8 +12408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a615076f7d63f74c80fb9e6506a2fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 0
-  max: 0.5
+  minMax: {x: 0, y: 0.5}
 --- !u!1 &1676812301
 GameObject:
   m_ObjectHideFlags: 0
@@ -13205,8 +13203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a615076f7d63f74c80fb9e6506a2fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 0
-  max: 0.6
+  minMax: {x: 0, y: 0.6}
 --- !u!1 &1814610611
 GameObject:
   m_ObjectHideFlags: 0
@@ -14669,8 +14666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a615076f7d63f74c80fb9e6506a2fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 0
-  max: 1
+  minMax: {x: 0, y: 1}
 --- !u!1 &1942813999
 GameObject:
   m_ObjectHideFlags: 0
@@ -16860,8 +16856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a615076f7d63f74c80fb9e6506a2fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 0
-  max: 1
+  minMax: {x: 0, y: 1}
 --- !u!1001 &857067751434778552
 PrefabInstance:
   m_ObjectHideFlags: 0

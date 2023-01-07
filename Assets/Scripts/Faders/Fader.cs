@@ -1,11 +1,11 @@
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Fader : MonoBehaviour
 {
-    [Range(0f, 1f)] [SerializeField] float min = 0;
-    [Range(0f, 1f)] [SerializeField] float max = 1;
+    [MinMaxSlider(0, 1)] [SerializeField] Vector2 minMax;
 
     Coroutine cr;
 
@@ -17,7 +17,7 @@ public abstract class Fader : MonoBehaviour
     private void Reset()
     {
         Awake();
-        max = InitStartValue();
+        minMax.y = InitStartValue();
     }
 
     protected abstract float InitStartValue();
@@ -44,7 +44,7 @@ public abstract class Fader : MonoBehaviour
     {
         float startTime = Time.time;
         float startValue = InitStartValue();
-        float endValue = direction == +1 ? max : min; // Set end to either min or max
+        float endValue = direction == +1 ? minMax.y : minMax.x; // Set end to either min or max
         float elapsedTime;
         float value;
 
