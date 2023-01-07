@@ -81,7 +81,7 @@ public class SceneLoader : MonoBehaviour
         else if (transition.transitionType == SceneTransitionSettings.TransitionType.Event)
         {
             onTransition.Invoke();
-            if (unfreeze) GameManager.GM.player.GetComponent<GenericController>().playerCanMove = true;
+            if (unfreeze) GameManager.GM.player.GetComponent<GenericController>().UnfreezeCharacter();
             ContinueLoad();
         }
         else
@@ -133,7 +133,7 @@ public class SceneLoader : MonoBehaviour
         yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
 
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-        if (unfreeze) GameManager.GM.player.GetComponent<GenericController>().UnfreezeCharacter();
+        //if (unfreeze) GameManager.GM.player.GetComponent<GenericController>().UnfreezeCharacter();
         ContinueLoad();
     }
 
