@@ -1111,18 +1111,18 @@ PrefabInstance:
     - target: {fileID: 25166844399875977, guid: 4bfa9f757a1f0d948ad45b5362946cbb, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 934642597}
+      objectReference: {fileID: 1320920149}
     - target: {fileID: 25166844399875977, guid: 4bfa9f757a1f0d948ad45b5362946cbb, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 25166844399875977, guid: 4bfa9f757a1f0d948ad45b5362946cbb, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Activate
+      value: Move
       objectReference: {fileID: 0}
     - target: {fileID: 25166844399875977, guid: 4bfa9f757a1f0d948ad45b5362946cbb, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Ch2ActivateWell, Assembly-CSharp
+      value: PlayerMoveTo, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 25166844399875977, guid: 4bfa9f757a1f0d948ad45b5362946cbb, type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -6025,6 +6025,7 @@ GameObject:
   - component: {fileID: 773841276}
   - component: {fileID: 773841274}
   - component: {fileID: 773841275}
+  - component: {fileID: 773841277}
   m_Layer: 0
   m_Name: 2nd Floor Walk Camera
   m_TagString: Untagged
@@ -6101,6 +6102,18 @@ Transform:
   m_Father: {fileID: 1825381322}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &773841277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773841273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e4b1373e7eb4c458cd269a3314f352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &780549224
 GameObject:
   m_ObjectHideFlags: 0
@@ -7296,9 +7309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 934642595}
-  - component: {fileID: 934642597}
   - component: {fileID: 934642596}
-  - component: {fileID: 934642598}
   - component: {fileID: 934642599}
   m_Layer: 0
   m_Name: Chase Dialog
@@ -7347,6 +7358,18 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 773841277}
+        m_TargetAssemblyTypeName: ChangeCameraConfiner, Assembly-CSharp
+        m_MethodName: ChangeConfiner
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 201508802}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.PolygonCollider2D, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 629714184}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -7363,18 +7386,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 934642597}
-        m_TargetAssemblyTypeName: Ch2ActivateWell, Assembly-CSharp
-        m_MethodName: ChangeConfiner
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7407,9 +7418,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 934642599}
-        m_TargetAssemblyTypeName: Floor2Chase, Assembly-CSharp
-        m_MethodName: StartChase
+      - m_Target: {fileID: 1869375212}
+        m_TargetAssemblyTypeName: PlayerMoveTo, Assembly-CSharp
+        m_MethodName: Move
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7464,86 +7475,6 @@ MonoBehaviour:
   running: 0
   choosing: 0
   completed: 0
---- !u!114 &934642597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934642594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: facb3069087e57240b9c7cc184b0a9bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerDest: {fileID: 1320920148}
-  confiner: {fileID: 773841275}
-  finalBoundingShape: {fileID: 201508802}
-  onFinishedWalking:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 773841273}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 629714184}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 934642596}
-        m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
-        m_MethodName: TriggerDialog
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!61 &934642598
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934642594}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &934642599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10001,6 +9932,11 @@ PolygonCollider2D:
       - {x: -0.5, y: 0}
       - {x: 0, y: -0.25}
       - {x: 0.5, y: 0}
+--- !u!1 &1289793837 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 857067750672233483, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+  m_PrefabInstance: {fileID: 1106065573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1293373492
 GameObject:
   m_ObjectHideFlags: 0
@@ -10260,6 +10196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1320920148}
+  - component: {fileID: 1320920149}
   m_Layer: 0
   m_Name: Player Walk
   m_TagString: Untagged
@@ -10282,6 +10219,59 @@ Transform:
   m_Father: {fileID: 704119437}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1320920149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320920147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827341ea28a4a184cb527238f658357e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 1320920148}
+  canMoveAfter: 0
+  onComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 773841273}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 629714184}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 934642596}
+        m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
+        m_MethodName: TriggerDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1328645326
 GameObject:
   m_ObjectHideFlags: 0
@@ -11520,7 +11510,7 @@ MonoBehaviour:
     stairDoor: {fileID: 353182918}
     principal: {fileID: 1942813999}
     principalDest: {fileID: 1328645327}
-    confinerChange: {fileID: 934642597}
+    confinerChange: {fileID: 0}
     disableme:
     - {fileID: 316461752}
     - {fileID: 1855017403}
@@ -11564,7 +11554,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 934642597}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: Ch2ActivateWell, Assembly-CSharp
           m_MethodName: ChangeConfiner
           m_Mode: 1
@@ -12236,8 +12226,9 @@ GameObject:
   - component: {fileID: 1633086171}
   - component: {fileID: 1633086170}
   - component: {fileID: 1633086169}
-  - component: {fileID: 1633086172}
   - component: {fileID: 1633086173}
+  - component: {fileID: 1633086175}
+  - component: {fileID: 1633086174}
   m_Layer: 0
   m_Name: Reachable
   m_TagString: Untagged
@@ -12368,7 +12359,7 @@ Transform:
   m_Father: {fileID: 891581485}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1633086172
+--- !u!114 &1633086173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12377,12 +12368,53 @@ MonoBehaviour:
   m_GameObject: {fileID: 1633086167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e886b73e91fa904fb24cdfb9b2d411e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 12542443}
-  playerDest: {fileID: 396413738}
-  onFinishedWalking:
+  newCursor: 1
+  canPickUp: 0
+--- !u!114 &1633086174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633086167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7224564e5cac4d935748c26fe76de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1633086175}
+        m_TargetAssemblyTypeName: PlayerMoveTo, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1633086175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633086167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827341ea28a4a184cb527238f658357e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 396413738}
+  canMoveAfter: 0
+  onComplete:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1633086169}
@@ -12409,20 +12441,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1633086173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633086167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9983dc9a8f795c44c8310865ee6e60ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newCursor: 1
-  canPickUp: 0
 --- !u!1 &1636991548
 GameObject:
   m_ObjectHideFlags: 0
@@ -14143,6 +14161,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 857067750672233484, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
   m_PrefabInstance: {fileID: 1106065573}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1869375207 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+  m_PrefabInstance: {fileID: 1106065573}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289793837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1257dbfa320984fbe8b6af66195a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1869375212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289793837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827341ea28a4a184cb527238f658357e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 1869375206}
+  canMoveAfter: 1
+  onComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1869375207}
+        m_TargetAssemblyTypeName: SimpleTransitionSameScene, Assembly-CSharp
+        m_MethodName: Transition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1869511234
 GameObject:
   m_ObjectHideFlags: 0
