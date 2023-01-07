@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,28 +8,24 @@ public class Ch3Skip : MonoBehaviour
 {
     [SerializeField] Skips skipAfter;
 
-    [Header("Flashback Skip")]
-    [SerializeField] FlashbackTrigger finalFlashback;
+    [Foldout("Flashback Skip")] [SerializeField] FlashbackTrigger finalFlashback;
 
-    [Header("Li Skip")]
-    [SerializeField] Transform skipLiFetchDest;
-    [SerializeField] GameObject skipLiFetchCam;
-    [SerializeField] GameObject[] liSkipDisable;
-    [SerializeField] UnityEvent onLiSkip;
+    [Foldout("Li Skip")] [SerializeField] Transform skipLiFetchDest;
+    [Foldout("Li Skip")] [SerializeField] GameObject skipLiFetchCam;
+    [Foldout("Li Skip")] [SerializeField] GameObject[] liSkipDisable;
+    [Foldout("Li Skip")] [SerializeField] UnityEvent onLiSkip;
 
-    [Header("Unlock Second Floor")]
-    [SerializeField] Transform unlockSecondFloorDest;
-    [SerializeField] GameObject hallwayCam;
-    [SerializeField] GameObject[] unlockSecondFloorDisable;
+    [Foldout("Unlock Second Floor")] [SerializeField] Transform unlockSecondFloorDest;
+    [Foldout("Unlock Second Floor")] [SerializeField] GameObject hallwayCam;
+    [Foldout("Unlock Second Floor")] [SerializeField] GameObject[] unlockSecondFloorDisable;
 
-    [Header("Start Hide and Seek")]
-    [SerializeField] Transform startHideSeekDest;
-    [SerializeField] DoorTeleport2 stairDoor;
-    [SerializeField] GameObject principal;
-    [SerializeField] Transform principalDest;
-    [SerializeField] Ch2ActivateWell confinerChange;
-    [SerializeField] GameObject[] startHideSeekDisable;
-    [SerializeField] UnityEvent onStartHideSeek;
+    [Foldout("Start Hide and Seek")] [SerializeField] Transform startHideSeekDest;
+    [Foldout("Start Hide and Seek")] [SerializeField] DoorTeleport2 stairDoor;
+    [Foldout("Start Hide and Seek")] [SerializeField] GameObject principal;
+    [Foldout("Start Hide and Seek")] [SerializeField] Transform principalDest;
+    [Foldout("Start Hide and Seek")] [SerializeField] Ch2ActivateWell confinerChange;
+    [Foldout("Start Hide and Seek")] [SerializeField] GameObject[] startHideSeekDisable;
+    [Foldout("Start Hide and Seek")] [SerializeField] UnityEvent onStartHideSeek;
 
     // Start is called before the first frame update
     void Start()
