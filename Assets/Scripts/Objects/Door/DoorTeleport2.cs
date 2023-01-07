@@ -36,7 +36,7 @@ public class DoorTeleport2 : MonoBehaviour
         TeleportSomething(GameManager.GM.player, true);
 
         // Reset transition
-        transition.outTransitionType = SceneTransitionSettings.SceneTransitionType.Instant;
+        transition.outTransitionType = SceneTransitionSettings.SceneTransitionType.Fade;
     }
 
     public void TeleportSomething(GameObject obj, bool changeCamera = false)
