@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NoteFragmentHandler : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class NoteFragmentHandler : MonoBehaviour
 
     [SerializeField] GameObject notePrefab;
     [SerializeField] List<GameObject> noteLocations;
+    [SerializeField] UnityEvent onCompleteNote;
 
     List<GameObject> spawnedNotes = new List<GameObject>();
 
@@ -50,9 +52,14 @@ public class NoteFragmentHandler : MonoBehaviour
         CollectNote();
 
         // Respawn notes
+        DestroySceneNotes();
+        SpawnNotes();
+    }
+
+    public void DestroySceneNotes()
+    {
         foreach (var note in spawnedNotes) Destroy(note);
         spawnedNotes = new List<GameObject>();
-        SpawnNotes();
     }
 
     void SpawnNoteAt(Transform location)
@@ -79,5 +86,17 @@ public class NoteFragmentHandler : MonoBehaviour
         {
             noteItem.description = "Fragments of a suicide note.";
         }
+        // TEMP
+        else if (collectedFragments == MAX_FRAGMENTS)
+        {
+            CompleteNote();
+        }
+    }
+
+    public void CompleteNote()
+    {
+        GameManager.GM.inventory.RemoveItem("noteFragments");
+        GameManager.GM.inventory.GiveItem("noteComplete");
+        onCompleteNote.Invoke();
     }
 }

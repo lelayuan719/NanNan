@@ -44,6 +44,7 @@ public class ItemDatabase : MonoBehaviour
             ("stairKey", "Stairwell Key", "A shabby copper key."),
             ("emptyCup", "Empty Cup", "An empty paper cup."),
             ("noteFragments", "Note Fragments", "A fragment of a suicide note."),
+            ("noteComplete", "Suicide Note", "Xiaoying's suicide note."),
         };
 
         items = _items.ToDictionary(x => x.Item1, x => new Item(x.Item1, x.Item2, x.Item3));
