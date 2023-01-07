@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using NaughtyAttributes;
 
 public class PrincipalHideAndSeek : MonoBehaviour
 {
@@ -12,10 +13,20 @@ public class PrincipalHideAndSeek : MonoBehaviour
     [SerializeField] float sightRange;
     [SerializeField] LayerMask playerLayer;
     public List<PrincipalNode> _nodes;
-    [SerializeField] string startNodeId;
+    [ResizableTextArea] [SerializeField] string edges;
+    [SerializeField] string[] startNodeIdOptions;
+    [ShowNonSerializedField] string goingTo = "";
+
+    enum State
+    {
+        Seeking,
+        Chasing,
+        EnteringDoor,
+        Waiting,
+    }
+    State state = State.Seeking;
 
     bool started = false;
-    State state = State.Seeking;
     PrincipalNode nodeDest;
     GameObject principal;
     Rigidbody2D rb;
@@ -26,12 +37,14 @@ public class PrincipalHideAndSeek : MonoBehaviour
     private void Awake()
     {
         // Initialize nodes
+        var connections = ProcessEdges(_nodes, edges);
         foreach (var node in _nodes)
         {
-            node.Init();
+            node.Init(connections[node.id]);
         }
         nodes = _nodes.ToDictionary(x => x.id, x => x);
-        nodeDest = nodes[startNodeId];
+
+        ResetState();
     }
 
     void Start()
@@ -50,8 +63,15 @@ public class PrincipalHideAndSeek : MonoBehaviour
 
     public void ResetState()
     {
-        nodeDest = nodes[startNodeId];
+        string startNodeId = startNodeIdOptions.RandomElement();
+        ChangeDest(startNodeId);
         state = State.Seeking;
+    }
+
+    void ChangeDest(string nodeId)
+    {
+        nodeDest = nodes[nodeId];
+        goingTo = nodeId;
     }
 
     public void StartSeeking()
@@ -159,7 +179,8 @@ public class PrincipalHideAndSeek : MonoBehaviour
         nodeDest.transform.gameObject.GetComponent<DoorTeleport2>().TeleportSomething(principal.gameObject);
 
         PrincipalNode newNode = nodes[nodeDest.GetDoorDestination()];
-        nodeDest = nodes[newNode.GetWalkDestination()];
+        string nodeId = newNode.GetWalkDestination();
+        ChangeDest(nodeId);
 
         // Wait on other side of door
         yield return new WaitForSeconds(waitTime);
@@ -177,7 +198,8 @@ public class PrincipalHideAndSeek : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
 
-        nodeDest = nodes[nodeDest.GetWalkDestination()];
+        string nodeId = nodeDest.GetWalkDestination();
+        ChangeDest(nodeId);
         state = State.Seeking;
     }
 
@@ -194,12 +216,67 @@ public class PrincipalHideAndSeek : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + new Vector3(direction * sightRange, 0));
     }
 
-    enum State
+    Dictionary<string, List<PrincipalDestination>> ProcessEdges(List<PrincipalNode> nodes, string rawEdges)
     {
-        Seeking,
-        Chasing,
-        EnteringDoor,
-        Waiting,
+        var connections = nodes.ToDictionary(x => x.id, x => new List<PrincipalDestination>());
+
+        // Each line is an edge group of "TT node1 node2"
+        // TT is traversal type
+        // Following nodes are all connected
+        string[] edgeGroups = rawEdges.Split('\n');
+        foreach (string edgeGroup in edgeGroups)
+        {
+            string[] edgeTokens = edgeGroup.Split(' ');
+
+            // Get traversal type
+            PrincipalDestination.TraversalType? traversalType = PrincipalDestination.StrToTT(edgeTokens[0]);
+            if (traversalType == null)
+            {
+                Debug.LogErrorFormat("Invalid traversal type '{0}'", edgeTokens[0]);
+                continue;
+            }
+
+            // Connect nodes
+            string[] nodesInGroup = edgeTokens[1..];
+            List<List<string>> edges = GetPermutations(nodesInGroup, 2);
+            foreach (var edge in edges)
+            {
+                string from = edge[0];
+                string to = edge[1];
+
+                var dest = new PrincipalDestination(to, (PrincipalDestination.TraversalType)traversalType);
+                connections[from].Add(dest);
+            }
+        }
+
+        return connections;
+    }
+
+    public static List<List<string>> GetPermutations(string[] arr, int n)
+    {
+        List<List<string>> permutations = new List<List<string>>();
+        if (n == 1)
+        {
+            foreach (string e in arr)
+            {
+                permutations.Add(new List<string>() { e });
+            }
+        }
+        else
+        {
+            foreach (string e in arr)
+            {
+                List<string> newArr = arr.Where(x => x != e).ToList();
+                List<List<string>> subPermutations = GetPermutations(newArr.ToArray(), n - 1);
+                foreach (List<string> subPermutation in subPermutations)
+                {
+                    subPermutation.Insert(0, e);
+                    permutations.Add(subPermutation);
+                }
+            }
+        }
+
+        return permutations;
     }
 
     [System.Serializable]
@@ -207,23 +284,22 @@ public class PrincipalHideAndSeek : MonoBehaviour
     {
         public string id;
         public Transform transform;
-        public List<PrincipalEdge> edges;
 
         string doorDest;
         List<string> walkDest = new List<string>();
 
-        public void Init()
+        public void Init(IEnumerable<PrincipalDestination> destinations)
         {
-            foreach (var edge in edges)
+            foreach (var destination in destinations)
             {
-                if (edge.traversalType == PrincipalEdge.TraversalType.Door)
+                if (destination.traversalType == PrincipalDestination.TraversalType.Door)
                 {
-                    doorDest = edge.to;
+                    doorDest = destination.to;
                 }
 
-                else if (edge.traversalType == PrincipalEdge.TraversalType.Walk)
+                else if (destination.traversalType == PrincipalDestination.TraversalType.Walk)
                 {
-                    walkDest.Add(edge.to);
+                    walkDest.Add(destination.to);
                 }
             }
         }
@@ -235,12 +311,11 @@ public class PrincipalHideAndSeek : MonoBehaviour
 
         public string GetWalkDestination()
         {
-            return walkDest[Random.Range(0, walkDest.Count)];
+            return walkDest.RandomElement();
         }
     }
 
-    [System.Serializable]
-    public class PrincipalEdge
+    public class PrincipalDestination
     {
         public string to;
         public TraversalType traversalType;
@@ -249,6 +324,28 @@ public class PrincipalHideAndSeek : MonoBehaviour
         {
             Walk,
             Door,
+        }
+
+        public PrincipalDestination(string to, TraversalType traversalType)
+        {
+            this.to = to;
+            this.traversalType = traversalType;
+        }
+
+        public static TraversalType? StrToTT(string traversalType)
+        {
+            if (traversalType == "WALK")
+            {
+                return TraversalType.Walk;
+            }
+            else if (traversalType == "DOOR")
+            {
+                return TraversalType.Door;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

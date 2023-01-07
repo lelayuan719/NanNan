@@ -11936,7 +11936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4329ff219b07a342865d180c75e20bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skipAfter: 5
+  skipAfter: 0
   flashbacks:
     finalFlashback: {fileID: 2092837707}
   liFetchSkip:
@@ -16016,71 +16016,51 @@ MonoBehaviour:
   _nodes:
   - id: h_b
     transform: {fileID: 1629695988}
-    edges:
-    - to: b_h
-      traversalType: 1
-    - to: h_c
-      traversalType: 0
-    - to: h_o
-      traversalType: 0
-  - id: h_c
+  - id: h_c1
     transform: {fileID: 70411536}
-    edges:
-    - to: c_h
-      traversalType: 1
-    - to: h_b
-      traversalType: 0
-    - to: h_o
-      traversalType: 0
+  - id: h_c2
+    transform: {fileID: 17289969}
   - id: h_o
     transform: {fileID: 276669754}
-    edges:
-    - to: o_h
-      traversalType: 1
-    - to: h_c
-      traversalType: 0
-    - to: h_b
-      traversalType: 0
-  - id: c_h
+  - id: c1_h
     transform: {fileID: 871662516}
-    edges:
-    - to: h_c
-      traversalType: 1
-    - to: c1
-      traversalType: 0
-  - id: c1
+  - id: c1_w
     transform: {fileID: 762305365}
-    edges:
-    - to: c_h
-      traversalType: 0
+  - id: c2_h
+    transform: {fileID: 925292539}
+  - id: c2_w
+    transform: {fileID: 451162860}
   - id: b_h
     transform: {fileID: 1459819401}
-    edges:
-    - to: h_b
-      traversalType: 1
-    - to: b1
-      traversalType: 0
-  - id: b1
+  - id: b_w
     transform: {fileID: 1239838179}
-    edges:
-    - to: b_h
-      traversalType: 0
   - id: o_h
     transform: {fileID: 2073675469}
-    edges:
-    - to: h_o
-      traversalType: 1
-    - to: o1
-      traversalType: 0
-  - id: o1
+  - id: o_w
     transform: {fileID: 2063393229}
-    edges:
-    - to: o_h
-      traversalType: 0
-  - id: 
-    transform: {fileID: 0}
-    edges: []
-  startNodeId: h_b
+  edges: 'WALK h_b h_c1 h_c2 h_o
+
+    DOOR h_b b_h
+
+    WALK b_h b_w
+
+    DOOR h_c1
+    c1_h
+
+    WALK c1_h c1_w
+
+    DOOR h_c2 c2_h
+
+    WALK c2_h c2_w
+
+    DOOR h_o
+    o_h
+
+    WALK o_h o_w'
+  startNodeIdOptions:
+  - h_b
+  - h_c1
+  - h_c2
 --- !u!70 &1963146848
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
