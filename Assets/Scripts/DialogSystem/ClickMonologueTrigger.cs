@@ -15,11 +15,6 @@ public class ClickMonologueTrigger : MonoBehaviour
     {
         ActivateDialog();
     }
-
-    // void OnTriggerEnter2D()
-    // {
-    //     ActivateDialog();
-    // }
     
     void ActivateDialog()
     {

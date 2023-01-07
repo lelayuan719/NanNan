@@ -6,9 +6,18 @@ using UnityEngine.Events;
 
 public class Ch3Skip : MonoBehaviour
 {
-    [SerializeField] Skips skipAfter;
+    enum Skip
+    {
+        Nothing,
+        Flashbacks,
+        LiFetch,
+        UnlockSecondFloor,
+        StartHideAndSeek,
+        EndHideAndSeek,
+    }
+    [SerializeField] Skip skipAfter;
 
-    [Foldout("Flashback Skip")] [SerializeField] FlashbackTrigger finalFlashback;
+    [Foldout("Skip Flashback")] [SerializeField] FlashbackTrigger finalFlashback;
 
     [Foldout("Li Skip")] [SerializeField] Transform skipLiFetchDest;
     [Foldout("Li Skip")] [SerializeField] GameObject skipLiFetchCam;
@@ -26,6 +35,8 @@ public class Ch3Skip : MonoBehaviour
     [Foldout("Start Hide and Seek")] [SerializeField] Ch2ActivateWell confinerChange;
     [Foldout("Start Hide and Seek")] [SerializeField] GameObject[] startHideSeekDisable;
     [Foldout("Start Hide and Seek")] [SerializeField] UnityEvent onStartHideSeek;
+
+    //[Foldout("End Hide and Seek")] [SerializeField]
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +56,7 @@ public class Ch3Skip : MonoBehaviour
         // Li Fetch
         if (skipI >= 2)
         {
+            StartCoroutine(StopStartDialog());
             GameManager.GM.inventory.GiveItem("waterCup");
             GameManager.GM.inventory.GiveItem("mathBook");
             player.transform.position = skipLiFetchDest.position;
@@ -77,14 +89,19 @@ public class Ch3Skip : MonoBehaviour
             foreach (var obj in startHideSeekDisable) obj.SetActive(false);
             onStartHideSeek.Invoke();
         }
+        // Finishing hide and seek
+        if (skipI >= 5)
+        {
+            var fragHandler = player.GetComponent<NoteFragmentHandler>();
+            fragHandler.collectedFragments = NoteFragmentHandler.MAX_FRAGMENTS;
+            fragHandler.DestroySceneNotes();
+            fragHandler.CompleteNote();
+        }
     }
 
-    enum Skips
+    IEnumerator StopStartDialog()
     {
-        Nothing,
-        Flashbacks,
-        LiFetch,
-        UnlockSecondFloor,
-        StartHideAndSeek,
+        yield return new WaitForEndOfFrame();
+        GameManager.GM.dialogManager.StopDialog();
     }
 }

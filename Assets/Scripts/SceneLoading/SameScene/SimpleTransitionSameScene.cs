@@ -5,9 +5,9 @@ using UnityEngine.Events;
 
 public class SimpleTransitionSameScene : TransitionSameScene
 {
-    public SceneTransitionSettings.SceneTransitionType outTransitionType = SceneTransitionSettings.SceneTransitionType.Fade;
+    public SceneTransitionSettings.TransitionType outTransitionType = SceneTransitionSettings.TransitionType.Fade;
     public float outTransitionTime = 2;
-    public SceneTransitionSettings.SceneTransitionType inTransitionType = SceneTransitionSettings.SceneTransitionType.Fade;
+    public SceneTransitionSettings.TransitionType inTransitionType = SceneTransitionSettings.TransitionType.Fade;
     public float inTransitionTime = 1;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class SimpleTransitionSameScene : TransitionSameScene
             outTransitionType, outTransitionTime, +1, 1);
 
         SceneTransitionSettings eventTransitionSettings = new SceneTransitionSettings(
-            SceneTransitionSettings.SceneTransitionType.Event, 0, 0, 0);
+            SceneTransitionSettings.TransitionType.Event, 0, 0, 0);
 
         SceneTransitionSettings inSceneTransitionSettings = new SceneTransitionSettings(
             inTransitionType, inTransitionTime, -1, 1);

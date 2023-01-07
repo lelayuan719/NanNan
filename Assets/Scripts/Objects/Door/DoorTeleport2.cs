@@ -25,7 +25,7 @@ public class DoorTeleport2 : MonoBehaviour
             // Make transition instant if being chased
             if (GameManager.GM.player.GetComponent<PlayerController>().instantDoors)
             {
-                transition.outTransitionType = SceneTransitionSettings.SceneTransitionType.Instant;
+                transition.outTransitionType = SceneTransitionSettings.TransitionType.Instant;
             }
             transition.Transition();
         }
@@ -36,7 +36,7 @@ public class DoorTeleport2 : MonoBehaviour
         TeleportSomething(GameManager.GM.player, true);
 
         // Reset transition
-        transition.outTransitionType = SceneTransitionSettings.SceneTransitionType.Fade;
+        transition.outTransitionType = SceneTransitionSettings.TransitionType.Fade;
     }
 
     public void TeleportSomething(GameObject obj, bool changeCamera = false)

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SimpleSceneChange : SceneChange
 {
-    [SerializeField] private SceneTransitionSettings.SceneTransitionType outTransitionType = SceneTransitionSettings.SceneTransitionType.Fade;
+    [SerializeField] private SceneTransitionSettings.TransitionType outTransitionType = SceneTransitionSettings.TransitionType.Fade;
     [SerializeField] private float outTransitionTime = 2;
-    [SerializeField] private SceneTransitionSettings.SceneTransitionType inTransitionType = SceneTransitionSettings.SceneTransitionType.Fade;
+    [SerializeField] private SceneTransitionSettings.TransitionType inTransitionType = SceneTransitionSettings.TransitionType.Fade;
     [SerializeField] private float inTransitionTime = 1;
 
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class SimpleSceneChange : SceneChange
             outTransitionType, outTransitionTime, +1, 1);
 
         SceneTransitionSettings loadScene = new SceneTransitionSettings(
-            SceneTransitionSettings.SceneTransitionType.LoadScene, 0, 0, 0);
+            SceneTransitionSettings.TransitionType.LoadScene, 0, 0, 0);
 
         SceneTransitionSettings inSceneTransitionSettings = new SceneTransitionSettings(
             inTransitionType, inTransitionTime, -1, 1);

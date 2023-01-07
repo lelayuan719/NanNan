@@ -60,6 +60,7 @@ public class Dialog : MonoBehaviour
         running = true;
         dialogManager.dialogActive = true;
         dialogManager.textDisplay.enabled = true;
+        dialogManager.activeDialog = this;
         if (freezesCharacter) dialogManager.FreezeCharacter();
         if (background) background.SetActive(true);
 
@@ -225,6 +226,7 @@ public class Dialog : MonoBehaviour
         completed = true;
         running = false;
         dialogManager.dialogActive = false;
+        dialogManager.activeDialog = null;
 
         if (background) background.SetActive(false);
         if (dialogManager.aliases.ContainsKey(story.currentCharacter))

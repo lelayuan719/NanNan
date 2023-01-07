@@ -19,10 +19,10 @@ public class SceneLoader : MonoBehaviour
 
     [SerializeField] SceneTransition[] transitions;
 
-    List<SceneTransitionSettings.SceneTransitionType> noCleanupTransitions = new List<SceneTransitionSettings.SceneTransitionType> { 
-        SceneTransitionSettings.SceneTransitionType.Instant, 
-        SceneTransitionSettings.SceneTransitionType.LoadScene, 
-        SceneTransitionSettings.SceneTransitionType.Event 
+    List<SceneTransitionSettings.TransitionType> noCleanupTransitions = new List<SceneTransitionSettings.TransitionType> { 
+        SceneTransitionSettings.TransitionType.Instant, 
+        SceneTransitionSettings.TransitionType.LoadScene, 
+        SceneTransitionSettings.TransitionType.Event 
     };
 
     public void LoadScene(string sceneName)
@@ -69,16 +69,16 @@ public class SceneLoader : MonoBehaviour
 
     void StartTransition(SceneTransitionSettings transition)
     {
-        if (transition.transitionType == SceneTransitionSettings.SceneTransitionType.Instant)
+        if (transition.transitionType == SceneTransitionSettings.TransitionType.Instant)
         {
             ContinueLoad();
             idx--;
         }
-        else if (transition.transitionType == SceneTransitionSettings.SceneTransitionType.LoadScene)
+        else if (transition.transitionType == SceneTransitionSettings.TransitionType.LoadScene)
         {
             StartCoroutine(LoadSceneInternal());
         }
-        else if (transition.transitionType == SceneTransitionSettings.SceneTransitionType.Event)
+        else if (transition.transitionType == SceneTransitionSettings.TransitionType.Event)
         {
             onTransition.Invoke();
             if (unfreeze) GameManager.GM.player.GetComponent<GenericController>().playerCanMove = true;
@@ -147,7 +147,7 @@ public class SceneLoader : MonoBehaviour
 [System.Serializable]
 public class SceneTransitionSettings
 {
-    public enum SceneTransitionType
+    public enum TransitionType
     {
         Instant,
         Fade,
@@ -156,20 +156,20 @@ public class SceneTransitionSettings
         Event,
     }
 
-    public SceneTransitionType transitionType;
+    public TransitionType transitionType;
     public float transitionTime;
     public int direction;
     public int persistence;
 
     public SceneTransitionSettings()
     {
-        transitionType = SceneTransitionType.Instant;
+        transitionType = TransitionType.Instant;
         transitionTime = 1;
         direction = +1;
         persistence = 1;
     }
 
-    public SceneTransitionSettings(SceneTransitionType transitionType, float transitionTime, int direction, int persistence)
+    public SceneTransitionSettings(TransitionType transitionType, float transitionTime, int direction, int persistence)
     {
         this.transitionType = transitionType;
         this.transitionTime = transitionTime;

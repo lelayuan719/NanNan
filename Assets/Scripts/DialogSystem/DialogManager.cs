@@ -15,6 +15,7 @@ public class DialogManager : MonoBehaviour
     public GameObject player;
     public GameObject choiceButtonPrefab;
     public bool dialogActive = false;
+    public Dialog activeDialog;
     [SerializeField] private Alias[] _aliases;
 
     private List<GameObject> choiceButtons = new List<GameObject>();
@@ -67,6 +68,11 @@ public class DialogManager : MonoBehaviour
 
         choiceButtons = new List<GameObject>();
         buttonObject.SetActive(false);
+    }
+
+    public void StopDialog()
+    {
+        if (activeDialog != null) activeDialog.StopDialog();
     }
 }
 

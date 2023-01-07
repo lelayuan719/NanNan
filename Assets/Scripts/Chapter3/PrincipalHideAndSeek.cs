@@ -15,7 +15,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
     [SerializeField] string startNodeId;
 
     bool started = false;
-    States state = States.Seeking;
+    State state = State.Seeking;
     PrincipalNode nodeDest;
     GameObject principal;
     Rigidbody2D rb;
@@ -51,7 +51,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
     public void ResetState()
     {
         nodeDest = nodes[startNodeId];
-        state = States.Seeking;
+        state = State.Seeking;
     }
 
     public void StartSeeking()
@@ -65,16 +65,16 @@ public class PrincipalHideAndSeek : MonoBehaviour
 
         switch (state)
         {
-            case States.Seeking:
+            case State.Seeking:
                 DoSeekState();
                 break;
-            case States.Chasing:
+            case State.Chasing:
                 DoChaseState();
                 break;
-            case States.EnteringDoor:
+            case State.EnteringDoor:
                 DoEnteringDoorState();
                 break;
-            case States.Waiting:
+            case State.Waiting:
                 DoWaitingState();
                 break;
         }
@@ -91,13 +91,13 @@ public class PrincipalHideAndSeek : MonoBehaviour
 
             if (doorDest != null)
             {
-                state = States.EnteringDoor;
+                state = State.EnteringDoor;
                 StartCoroutine(DoDoorStateCR());
                 return;
             }
             else
             {
-                state = States.Waiting;
+                state = State.Waiting;
                 StartCoroutine(DoWaitingStateCR());
                 return;
             }
@@ -106,7 +106,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
         // Check for seeing player
         if (CanSeePlayer())
         {
-            state = States.Chasing;
+            state = State.Chasing;
             return;
         }
 
@@ -120,7 +120,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
         // Checks for seeing player
         if (!CanSeePlayer())
         {
-            state = States.Seeking;
+            state = State.Seeking;
             return;
         }
 
@@ -133,7 +133,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
     bool CanSeePlayer()
     {
         // Hiding means player is invisible, unless principal is in chase state
-        if (playerHide.hiding && state != States.Chasing) return false;
+        if (playerHide.hiding && state != State.Chasing) return false;
 
         // See if player is in LOS
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * direction, sightRange, playerLayer);
@@ -165,7 +165,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         // Change state
-        state = States.Seeking;
+        state = State.Seeking;
     }
 
     void DoWaitingState()
@@ -178,12 +178,12 @@ public class PrincipalHideAndSeek : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         nodeDest = nodes[nodeDest.GetWalkDestination()];
-        state = States.Seeking;
+        state = State.Seeking;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (state == States.Chasing && collision.gameObject.CompareTag("Player"))
+        if (state == State.Chasing && collision.gameObject.CompareTag("Player"))
         {
             GetComponentInParent<HideAndSeekReset>().ResetScene();
         }
@@ -194,7 +194,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + new Vector3(direction * sightRange, 0));
     }
 
-    enum States
+    enum State
     {
         Seeking,
         Chasing,
@@ -216,12 +216,12 @@ public class PrincipalHideAndSeek : MonoBehaviour
         {
             foreach (var edge in edges)
             {
-                if (edge.traversalType == PrincipalEdge.TraversalTypes.Door)
+                if (edge.traversalType == PrincipalEdge.TraversalType.Door)
                 {
                     doorDest = edge.to;
                 }
 
-                else if (edge.traversalType == PrincipalEdge.TraversalTypes.Walk)
+                else if (edge.traversalType == PrincipalEdge.TraversalType.Walk)
                 {
                     walkDest.Add(edge.to);
                 }
@@ -243,9 +243,9 @@ public class PrincipalHideAndSeek : MonoBehaviour
     public class PrincipalEdge
     {
         public string to;
-        public TraversalTypes traversalType;
+        public TraversalType traversalType;
 
-        public enum TraversalTypes
+        public enum TraversalType
         {
             Walk,
             Door,
