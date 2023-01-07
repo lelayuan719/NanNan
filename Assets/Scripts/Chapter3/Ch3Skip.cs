@@ -51,8 +51,7 @@ public class Ch3Skip : MonoBehaviour
             GameManager.GM.inventory.GiveItem("waterCup");
             GameManager.GM.inventory.GiveItem("mathBook");
             player.transform.position = skipLiFetchDest.position;
-            GameManager.GM.cine.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
-            skipLiFetchCam.SetActive(true);
+            GameManager.GM.ChangeActiveCam(skipLiFetchCam);
             foreach (var obj in liSkipDisable) obj.SetActive(false);
             onLiSkip.Invoke();
         }
@@ -63,8 +62,7 @@ public class Ch3Skip : MonoBehaviour
             GameManager.GM.inventory.RemoveItem("mathBook");
             GameManager.GM.inventory.GiveItem("stairKey");
             player.transform.position = unlockSecondFloorDest.position;
-            GameManager.GM.cine.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
-            hallwayCam.SetActive(true);
+            GameManager.GM.ChangeActiveCam(hallwayCam);
             foreach (var obj in unlockSecondFloorDisable) obj.SetActive(false);
         }
         // Starting hide and seek
@@ -73,13 +71,12 @@ public class Ch3Skip : MonoBehaviour
             GameManager.GM.inventory.RemoveItem("stairKey");
             principal.transform.position = principalDest.position;
             player.transform.position = startHideSeekDest.position;
-            GameManager.GM.cine.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
-            hallwayCam.SetActive(true);
             player.GetComponent<HidingController>().SetCanHide(true);
             player.GetComponent<NoteFragmentHandler>().SpawnNotes();
             player.GetComponent<NoteFragmentHandler>().CollectNote();
+            player.GetComponent<PlayerController>().SetInstantDoors(true);
             principal.SetActive(true);
-            principal.GetComponent<PrincipalHideAndSeek>().StartSeeking();
+            principal.GetComponentInChildren<PrincipalHideAndSeek>().StartSeeking();
             foreach (var obj in startHideSeekDisable) obj.SetActive(false);
             onStartHideSeek.Invoke();
         }

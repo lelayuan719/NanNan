@@ -12,15 +12,16 @@ public class PlayerController : GenericController
     public float distance;
     public LayerMask whatIsLadder;
 
-    private Rigidbody2D rb;
-    private ClimbingController climbCtrl;
-    private SpriteRenderer sr;
-    private Collider2D collide;
-    private Animator anim;
+    Rigidbody2D rb;
+    ClimbingController climbCtrl;
+    SpriteRenderer sr;
+    Collider2D collide;
+    Animator anim;
 
-    private float inputHorizontal;
-    private float inputVertical;
-    private bool touchingGround;
+    [HideInInspector] public bool instantDoors;
+    float inputHorizontal;
+    float inputVertical;
+    bool touchingGround;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -162,5 +163,10 @@ public class PlayerController : GenericController
     {
         base.FreezeCharacter();
         GetComponent<Animator>().SetBool("isWalking", false);
+    }
+
+    public void SetInstantDoors(bool instantDoors)
+    {
+        this.instantDoors = instantDoors;
     }
 }

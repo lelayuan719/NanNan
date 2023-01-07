@@ -17,25 +17,27 @@ public class PrincipalHideAndSeek : MonoBehaviour
     bool started = false;
     States state = States.Seeking;
     PrincipalNode nodeDest;
+    GameObject principal;
     Rigidbody2D rb;
     HidingController playerHide;
     Dictionary<string, PrincipalNode> nodes;
     float direction = +1;
 
-    void Start()
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-
         // Initialize nodes
         foreach (var node in _nodes)
         {
             node.Init();
         }
         nodes = _nodes.ToDictionary(x => x.id, x => x);
-
         nodeDest = nodes[startNodeId];
+    }
 
-        print(nodeDest.transform.position);
+    void Start()
+    {
+        principal = transform.parent.gameObject;
+        rb = principal.GetComponent<Rigidbody2D>();
 
         StartCoroutine(AfterStart());
     }
@@ -46,6 +48,11 @@ public class PrincipalHideAndSeek : MonoBehaviour
         playerHide = GameManager.GM.player.GetComponent<HidingController>();
     }
 
+    public void ResetState()
+    {
+        nodeDest = nodes[startNodeId];
+        state = States.Seeking;
+    }
 
     public void StartSeeking()
     {
@@ -149,7 +156,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         // Teleport and reset nodes
-        nodeDest.transform.gameObject.GetComponent<DoorTeleport2>().TeleportSomething(gameObject);
+        nodeDest.transform.gameObject.GetComponent<DoorTeleport2>().TeleportSomething(principal.gameObject);
 
         PrincipalNode newNode = nodes[nodeDest.GetDoorDestination()];
         nodeDest = nodes[newNode.GetWalkDestination()];
@@ -172,6 +179,14 @@ public class PrincipalHideAndSeek : MonoBehaviour
 
         nodeDest = nodes[nodeDest.GetWalkDestination()];
         state = States.Seeking;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (state == States.Chasing && collision.gameObject.CompareTag("Player"))
+        {
+            GetComponentInParent<HideAndSeekReset>().ResetScene();
+        }
     }
 
     private void OnDrawGizmos()

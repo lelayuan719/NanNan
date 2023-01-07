@@ -22,6 +22,11 @@ public class DoorTeleport2 : MonoBehaviour
     {
         if (opened && GameManager.GM.player.GetComponent<GenericController>().playerCanMove)
         {
+            // Make transition instant if being chased
+            if (GameManager.GM.player.GetComponent<PlayerController>().instantDoors)
+            {
+                transition.outTransitionType = SceneTransitionSettings.SceneTransitionType.Instant;
+            }
             transition.Transition();
         }
     }
@@ -29,6 +34,9 @@ public class DoorTeleport2 : MonoBehaviour
     public void Teleport()
     {
         TeleportSomething(GameManager.GM.player, true);
+
+        // Reset transition
+        transition.outTransitionType = SceneTransitionSettings.SceneTransitionType.Instant;
     }
 
     public void TeleportSomething(GameObject obj, bool changeCamera = false)
@@ -39,8 +47,7 @@ public class DoorTeleport2 : MonoBehaviour
 
         if (changeCamera)
         {
-            GameManager.GM.cine.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
-            endCam.gameObject.SetActive(true);
+            GameManager.GM.ChangeActiveCam(endCam.gameObject);
         }
     }
 

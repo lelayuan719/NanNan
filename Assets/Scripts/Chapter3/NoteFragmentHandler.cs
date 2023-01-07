@@ -10,6 +10,8 @@ public class NoteFragmentHandler : MonoBehaviour
     [SerializeField] GameObject notePrefab;
     [SerializeField] List<GameObject> noteLocations;
 
+    List<GameObject> spawnedNotes = new List<GameObject>();
+
     public void SpawnNotes()
     {
         // Get which room has two notes in it
@@ -39,10 +41,25 @@ public class NoteFragmentHandler : MonoBehaviour
         }
     }
 
+    // On game over, returns everything to where it was
+    public void ResetNotes()
+    {
+        // Inventory
+        GameManager.GM.inventory.RemoveItem("noteFragments");
+        collectedFragments = 0;
+        CollectNote();
+
+        // Respawn notes
+        foreach (var note in spawnedNotes) Destroy(note);
+        spawnedNotes = new List<GameObject>();
+        SpawnNotes();
+    }
+
     void SpawnNoteAt(Transform location)
     {
         GameObject note = Instantiate(notePrefab, location);
         note.transform.localPosition = Vector3.zero;
+        spawnedNotes.Add(note);
     }
 
     public void CollectNote()

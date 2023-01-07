@@ -2,7 +2,6 @@ using Cinemachine;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -102,6 +101,12 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string sceneName, SceneTransitionSettings[] transitionSequence)
     {
         sceneLoader.LoadScene(sceneName, transitionSequence);
+    }
+
+    public void ChangeActiveCam(GameObject newCam)
+    {
+        cine.ActiveVirtualCamera.VirtualCameraGameObject.SetActive(false);
+        newCam.gameObject.SetActive(true);
     }
 
     public void GiveAmulet(bool didGive)
