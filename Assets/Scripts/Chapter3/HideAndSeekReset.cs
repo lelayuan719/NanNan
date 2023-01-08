@@ -16,6 +16,15 @@ public class HideAndSeekReset : MonoBehaviour
         GetComponent<PrincipalHideAndSeek>().ResetState();
 
         // Player
+        if (GameManager.GM.dialogManager.dialogActive)
+        {
+            GameManager.GM.dialogManager.StopDialog();
+        }
+        var hideCtrl = GameManager.GM.player.gameObject.GetComponent<HidingController>();
+        if (hideCtrl.hiding)
+        {
+            hideCtrl.hidingAt.Emerge();
+        }
         GameManager.GM.player.transform.position = playerReset.position;
         GameManager.GM.player.gameObject.GetComponent<NoteFragmentHandler>().ResetNotes();
 

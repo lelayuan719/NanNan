@@ -79,6 +79,7 @@ public class HidingPlace : MonoBehaviour
         if (hiddenObject != null) hiddenObject.SetActive(true);
 
         // Player controller
+        playerHide.hidingAt = this;
         playerHide.Hide();
     }
 

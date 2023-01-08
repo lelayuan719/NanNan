@@ -203,7 +203,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
         state = State.Seeking;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (state == State.Chasing && collision.gameObject.CompareTag("Player"))
         {

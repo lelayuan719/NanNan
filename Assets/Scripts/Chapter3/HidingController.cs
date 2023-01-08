@@ -9,6 +9,8 @@ public class HidingController : MonoBehaviour
     public bool hiding;
     public bool canHide = false;
 
+    [HideInInspector] public HidingPlace hidingAt;
+
     void Start()
     {
         ctrl = GetComponent<PlayerController>();
