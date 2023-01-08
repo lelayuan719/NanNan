@@ -61,7 +61,7 @@ public class MoveAnimation : MonoBehaviour
         }
 
         // Get direction and flip sprite if necessary
-        float distance = (destination.position - transform.position).magnitude;
+        float distance = Vector2.Distance(destination.position, transform.position);
         if (flipSprite)
         {
             if (directionToMove < 0)

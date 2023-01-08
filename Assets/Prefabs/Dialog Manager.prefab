@@ -310,6 +310,7 @@ MonoBehaviour:
   player: {fileID: 0}
   choiceButtonPrefab: {fileID: 1805106909785411556, guid: 836d980b979457b4eba4f8d6dd4dde7a, type: 3}
   dialogActive: 0
+  activeDialog: {fileID: 0}
   _aliases: []
   nextDialogSound: {fileID: 0}
 --- !u!82 &126154492889194515
@@ -323,7 +324,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
