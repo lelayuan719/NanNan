@@ -8,6 +8,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
 {
     [SerializeField] float seekSpeed = 3;
     [SerializeField] float chaseSpeed = 6;
+    [SerializeField] float memoryTime = 2;
     [SerializeField] float moveThreshold = 0.2f;
     [SerializeField] float waitTime = 1f;
     [SerializeField] float sightRange;
@@ -17,21 +18,26 @@ public class PrincipalHideAndSeek : MonoBehaviour
     [SerializeField] string[] startNodeIdOptions;
     [ShowNonSerializedField] string goingTo = "";
 
+    float speed;
+
     enum State
     {
         Seeking,
         Chasing,
+        Aware,
         EnteringDoor,
         Waiting,
     }
     State state = State.Seeking;
 
-    bool started = false;
     PrincipalNode nodeDest;
     GameObject principal;
     Rigidbody2D rb;
     HidingController playerHide;
+    Coroutine awareCr;
+
     Dictionary<string, PrincipalNode> nodes;
+    bool started = false;
     float direction = +1;
 
     private void Awake()
@@ -43,6 +49,8 @@ public class PrincipalHideAndSeek : MonoBehaviour
             node.Init(connections[node.id]);
         }
         nodes = _nodes.ToDictionary(x => x.id, x => x);
+
+        speed = seekSpeed;
 
         ResetState();
     }
@@ -68,6 +76,15 @@ public class PrincipalHideAndSeek : MonoBehaviour
         state = State.Seeking;
     }
 
+    public void ChangePlayerLocation(string nodeId)
+    {
+        // If we're chasing the player, follow the player into a door
+        if (state == State.Chasing)
+        {
+            ChangeDest(nodeId);
+        }
+    }
+
     void ChangeDest(string nodeId)
     {
         nodeDest = nodes[nodeId];
@@ -91,6 +108,9 @@ public class PrincipalHideAndSeek : MonoBehaviour
             case State.Chasing:
                 DoChaseState();
                 break;
+            case State.Aware:
+                DoAwareState();
+                break;
             case State.EnteringDoor:
                 DoEnteringDoorState();
                 break;
@@ -98,6 +118,47 @@ public class PrincipalHideAndSeek : MonoBehaviour
                 DoWaitingState();
                 break;
         }
+    }
+
+    void ChangeState(State newState)
+    {
+        switch (newState)
+        {
+            // Ending at seeking
+            case State.Seeking:
+                speed = seekSpeed;
+                break;
+
+            // Ending at chasing
+            case State.Chasing:
+                speed = chaseSpeed;
+                break;
+                
+            // Ending at aware
+            case State.Aware:
+                speed = chaseSpeed;
+                awareCr = StartCoroutine(AwareRevertState());
+                break;
+
+            // Ending at entering door
+            case State.EnteringDoor:
+                StartCoroutine(DoDoorStateCR());
+                break;
+
+            // Ending at waiting
+            case State.Waiting:
+                StartCoroutine(DoWaitingStateCR());
+                break;
+        }
+
+        // Stopping aware coroutine if necessary
+        if (state != State.Aware)
+        {
+            if (awareCr != null) StopCoroutine(awareCr);
+        }
+
+        // Changing state
+        state = newState;
     }
 
     void DoSeekState()
@@ -111,14 +172,12 @@ public class PrincipalHideAndSeek : MonoBehaviour
 
             if (doorDest != null)
             {
-                state = State.EnteringDoor;
-                StartCoroutine(DoDoorStateCR());
+                ChangeState(State.EnteringDoor);
                 return;
             }
             else
             {
-                state = State.Waiting;
-                StartCoroutine(DoWaitingStateCR());
+                ChangeState(State.Waiting);
                 return;
             }
         }
@@ -126,13 +185,13 @@ public class PrincipalHideAndSeek : MonoBehaviour
         // Check for seeing player
         if (CanSeePlayer())
         {
-            state = State.Chasing;
+            ChangeState(State.Chasing);
             return;
         }
 
         // Move
         direction = Mathf.Sign(vectorTo.x);
-        rb.velocity = new Vector2(direction * seekSpeed, 0);
+        rb.velocity = new Vector2(direction * speed, 0);
     }
 
     void DoChaseState()
@@ -140,14 +199,14 @@ public class PrincipalHideAndSeek : MonoBehaviour
         // Checks for seeing player
         if (!CanSeePlayer())
         {
-            state = State.Seeking;
+            ChangeState(State.Aware);
             return;
         }
 
         Vector2 vectorTo = GameManager.GM.player.transform.position - transform.position;
         direction = Mathf.Sign(vectorTo.x);
 
-        rb.velocity = new Vector2(direction * chaseSpeed, 0);
+        rb.velocity = new Vector2(direction * speed, 0);
     }
 
     bool CanSeePlayer()
@@ -163,6 +222,19 @@ public class PrincipalHideAndSeek : MonoBehaviour
         }
 
         return false;
+    }
+
+    // Aware is seeking but faster
+    void DoAwareState()
+    {
+        DoSeekState();
+    }
+
+    // Changes to seeking after some time
+    IEnumerator AwareRevertState()
+    {
+        yield return new WaitForSeconds(memoryTime);
+        ChangeState(State.Seeking);
     }
 
     void DoEnteringDoorState()
@@ -186,7 +258,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         // Change state
-        state = State.Seeking;
+        ChangeState(State.Seeking);
     }
 
     void DoWaitingState()
@@ -200,7 +272,7 @@ public class PrincipalHideAndSeek : MonoBehaviour
 
         string nodeId = nodeDest.GetWalkDestination();
         ChangeDest(nodeId);
-        state = State.Seeking;
+        ChangeState(State.Seeking);
     }
 
     private void OnTriggerStay2D(Collider2D collision)

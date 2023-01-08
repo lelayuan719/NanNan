@@ -536,6 +536,38 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -28.79
       objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1963146847}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangePlayerLocation
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PrincipalHideAndSeek, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: h_c2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6966998262922857700, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
       propertyPath: endCam
       value: 
@@ -2976,6 +3008,22 @@ PrefabInstance:
     - target: {fileID: 857067750672233487, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DoorTeleport2, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6966998262922857700, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
       propertyPath: endCam
@@ -10087,6 +10135,38 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -28.79
       objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1963146847}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangePlayerLocation
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PrincipalHideAndSeek, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: h_c1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6966998262922857700, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
       propertyPath: endCam
       value: 
@@ -14808,6 +14888,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1963146847}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangePlayerLocation
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PrincipalHideAndSeek, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: h_b
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6966998262922857700, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
       propertyPath: endCam
       value: 
@@ -15177,6 +15289,38 @@ PrefabInstance:
     - target: {fileID: 857067750672233487, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1963146847}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ChangePlayerLocation
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PrincipalHideAndSeek, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: h_o
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365771139845521860, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: onTransition.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6966998262922857700, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
       propertyPath: endCam
@@ -16559,6 +16703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seekSpeed: 3
   chaseSpeed: 6
+  memoryTime: 2
   moveThreshold: 0.2
   waitTime: 1
   sightRange: 7.34
