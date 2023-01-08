@@ -33,6 +33,7 @@ public class Ch3Skip : MonoBehaviour
         public Transform playerDest;
         public GameObject cam;
         public GameObject[] disableme;
+        public UnityEvent onStart;
     }
     [System.Serializable]
     public struct UnlockSecondFloor
@@ -77,6 +78,7 @@ public class Ch3Skip : MonoBehaviour
             player.transform.position = liFetchSkip.playerDest.position;
             GameManager.GM.ChangeActiveCam(liFetchSkip.cam);
             foreach (var obj in liFetchSkip.disableme) obj.SetActive(false);
+            liFetchSkip.onStart.Invoke();
         }
         // Second floor
         if (skipI >= 3)
@@ -111,6 +113,7 @@ public class Ch3Skip : MonoBehaviour
             fragHandler.DestroySceneNotes();
             fragHandler.CompleteNote();
         }
+        player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 1);
     }
 
     IEnumerator StopStartDialog()
