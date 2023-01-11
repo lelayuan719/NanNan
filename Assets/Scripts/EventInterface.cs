@@ -29,6 +29,11 @@ public class EventInterface : MonoBehaviour
         GameManager.GM.inventory.RemoveItem(name);
     }
 
+    public void ClearInventory()
+    {
+        GameManager.GM.inventory.Clear();
+    }
+
     public void ChangeScene(string name)
     {
         GameManager.GM.LoadScene(name);

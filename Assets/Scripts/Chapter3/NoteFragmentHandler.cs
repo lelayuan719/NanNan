@@ -89,7 +89,7 @@ public class NoteFragmentHandler : MonoBehaviour
         }
 
         Item noteItem = GameManager.GM.inventory.CheckForItem("noteFragments");
-        noteItem.displayName = string.Format("Note Fragments ({0} / {1})", collectedFragments, MAX_FRAGMENTS);
+        noteItem.displayName = $"Note Fragments ({collectedFragments} / {MAX_FRAGMENTS})";
 
         if (collectedFragments == 2)
         {

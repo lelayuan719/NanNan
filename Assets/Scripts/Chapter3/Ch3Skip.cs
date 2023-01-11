@@ -49,7 +49,6 @@ public class Ch3Skip : MonoBehaviour
         public DoorTeleport2 stairDoor;
         public GameObject principal;
         public Transform principalDest;
-        public Ch2ActivateWell confinerChange;
         public GameObject[] disableme;
         public UnityEvent onStart;
     }
