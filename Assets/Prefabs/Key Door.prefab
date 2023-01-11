@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6622874120580077447
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 857067750672233483, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: m_Name
+      value: Key Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 857067750672233484, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857067750672233484, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857067750672233484, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857067750672233484, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857067750672233484, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 857067750672233484, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857067750672233484, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857067750672233484, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857067750672233484, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857067750672233484, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857067750672233484, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966998262922857700, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+      propertyPath: opened
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+--- !u!114 &4271361802229144419 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6966998262922857700, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+  m_PrefabInstance: {fileID: 6622874120580077447}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5768484918007915404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f512c32299739c4cbd18fdcc093047a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5768484918007915404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 857067750672233483, guid: 2da8334f766aace4797bb508e9181fb8, type: 3}
+  m_PrefabInstance: {fileID: 6622874120580077447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3311921033740124663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5768484918007915404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d960aee2f2c0ab47b9ec814d58de5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: ce1ecd685eb09824b824ca4ce1b83469, type: 3}
+  npc: {fileID: 0}
+  background: {fileID: 0}
+  freezesCharacter: 0
+  canRepeat: 1
+  autoContinue: 1
+  typingSpeed: 0.05
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  _choiceActions: []
+  _midwayActions: []
+  running: 0
+  choosing: 0
+  completed: 0
+--- !u!114 &8391214680664866376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5768484918007915404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c251aec510f1742b38cb9d9a87ca82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invalidDialog: {fileID: 3311921033740124663}
+  successDialog: {fileID: 0}
+  consumeItem: 1
+  itemCheck: 
+  newCursor: 2
+  success: 0
+  onMatch:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4271361802229144419}
+        m_TargetAssemblyTypeName: DoorTeleport2, Assembly-CSharp
+        m_MethodName: Unlock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
