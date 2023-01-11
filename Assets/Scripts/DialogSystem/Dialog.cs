@@ -85,6 +85,12 @@ public class Dialog : MonoBehaviour
         StartCoroutine(TriggerDialogCoroutine());
     }
 
+    public void ResetDialog()
+    {
+        completed = false;
+        enabled = true;
+    }
+
     void Update(){
         if (running)
         {
