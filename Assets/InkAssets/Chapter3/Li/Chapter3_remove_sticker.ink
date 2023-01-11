@@ -1,0 +1,1 @@
+NanNan: The sticker disappeared!?
