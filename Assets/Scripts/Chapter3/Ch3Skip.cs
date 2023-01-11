@@ -57,12 +57,10 @@ public class Ch3Skip : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int skipI = (int)skipAfter;
-
         GameObject player = GameManager.GM.player;
 
         // Flashbacks
-        if (skipI >= 1)
+        if (skipAfter >= Skip.Flashbacks)
         {
             flashbacks.finalFlashback.onReturn.Invoke();
 
@@ -70,7 +68,7 @@ public class Ch3Skip : MonoBehaviour
             print("To stop skipping, change Debug Skip > Ch 3 Skip > Skip After to \"Nothing\".");
         }
         // Li Fetch
-        if (skipI >= 2)
+        if (skipAfter >= Skip.LiFetch)
         {
             StartCoroutine(StopStartDialog());
             GameManager.GM.inventory.GiveItem("waterCup");
@@ -81,7 +79,7 @@ public class Ch3Skip : MonoBehaviour
             liFetchSkip.onStart.Invoke();
         }
         // Second floor
-        if (skipI >= 3)
+        if (skipAfter >= Skip.UnlockSecondFloor)
         {
             GameManager.GM.inventory.RemoveItem("waterCup");
             GameManager.GM.inventory.RemoveItem("mathBook");
@@ -91,7 +89,7 @@ public class Ch3Skip : MonoBehaviour
             foreach (var obj in unlockSecondFloor.disableme) obj.SetActive(false);
         }
         // Starting hide and seek
-        if (skipI >= 4)
+        if (skipAfter >= Skip.StartHideAndSeek)
         {
             GameManager.GM.inventory.RemoveItem("stairKey");
             startHideAndSeek.principal.transform.position = startHideAndSeek.principalDest.position;
@@ -106,7 +104,7 @@ public class Ch3Skip : MonoBehaviour
             startHideAndSeek.onStart.Invoke();
         }
         // Finishing hide and seek
-        if (skipI >= 5)
+        if (skipAfter >= Skip.EndHideAndSeek)
         {
             var fragHandler = player.GetComponent<NoteFragmentHandler>();
             fragHandler.collectedFragments = NoteFragmentHandler.MAX_FRAGMENTS;
