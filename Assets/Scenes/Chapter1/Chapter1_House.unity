@@ -1710,7 +1710,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a846bbcfafda49489edcd6371406f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 0}
   onPickup:
     m_PersistentCalls:
       m_Calls:
@@ -3290,7 +3289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a846bbcfafda49489edcd6371406f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 0}
   onPickup:
     m_PersistentCalls:
       m_Calls: []
@@ -3717,7 +3715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a846bbcfafda49489edcd6371406f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 0}
   onPickup:
     m_PersistentCalls:
       m_Calls: []
@@ -5707,7 +5704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a846bbcfafda49489edcd6371406f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 0}
   onPickup:
     m_PersistentCalls:
       m_Calls: []
@@ -8896,7 +8892,8 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8935083345162120580, guid: 55ec76ba1ab5ce14d9d93a66cd1d8c84, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 55ec76ba1ab5ce14d9d93a66cd1d8c84, type: 3}
 --- !u!1 &2075642917
 GameObject:

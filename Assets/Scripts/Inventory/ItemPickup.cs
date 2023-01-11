@@ -7,14 +7,15 @@ using UnityEngine.UI;
 
 public class ItemPickup : MonoBehaviour, IPointerClickHandler
 {
-    public Texture2D texture;
-    private Inventory inv;
-
     public UnityEvent onPickup;
+
+    private Inventory inv;
+    Dialog pickupDialog;
 
     private void Start()
     {
         inv = GameManager.GM.inventory;
+        TryGetComponent(out pickupDialog);
     }
 
     void OnMouseDown(){
@@ -30,14 +31,19 @@ public class ItemPickup : MonoBehaviour, IPointerClickHandler
     {
         inv.GiveItem(gameObject.name);
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-        // gameObject.SetActive(false);
+        
+        // Disable image
         if (TryGetComponent(out SpriteRenderer render))
             render.enabled = false;
         else if (TryGetComponent(out Image image))
             image.enabled = false;
 
+        // Disable collider
         if (TryGetComponent(out Collider2D collider))
             collider.enabled = false;
+
+        // Start dialog
+        if (pickupDialog != null) pickupDialog.TriggerDialog();
 
         onPickup.Invoke();
     }
