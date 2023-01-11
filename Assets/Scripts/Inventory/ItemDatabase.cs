@@ -45,6 +45,7 @@ public class ItemDatabase : MonoBehaviour
             ("emptyCup", "Empty Cup", "An empty paper cup."),
             ("noteFragments", "Note Fragments", "A fragment of a suicide note."),
             ("noteComplete", "Suicide Note", "Xiaoying's suicide note."),
+            ("instrumentNecklace", "Strange Object", "A ritual instrument with a necklace tightly wrapped around it."),
         };
 
         items = _items.ToDictionary(x => x.Item1, x => new Item(x.Item1, x.Item2, x.Item3));
