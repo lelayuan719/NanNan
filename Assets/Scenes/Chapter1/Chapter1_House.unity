@@ -1562,13 +1562,14 @@ GameObject:
   m_Component:
   - component: {fileID: 235911905}
   - component: {fileID: 235911904}
+  - component: {fileID: 235911906}
   m_Layer: 0
   m_Name: Candle light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &235911904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1663,6 +1664,18 @@ Transform:
   m_Father: {fileID: 570678431}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &235911906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235911903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a51b739e217dd046903376a9b2efc1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &240442916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3041,7 +3054,6 @@ GameObject:
   - component: {fileID: 570678431}
   - component: {fileID: 570678432}
   - component: {fileID: 570678433}
-  - component: {fileID: 570678435}
   - component: {fileID: 570678434}
   - component: {fileID: 570678436}
   m_Layer: 0
@@ -3166,10 +3178,10 @@ MonoBehaviour:
   onMatch:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 570678435}
-        m_TargetAssemblyTypeName: PuzzleCandle, Assembly-CSharp
-        m_MethodName: Activate
-        m_Mode: 1
+      - m_Target: {fileID: 2125480669}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3177,6 +3189,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 235911903}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 318643221}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -3202,20 +3226,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
---- !u!114 &570678435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570678430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a51b739e217dd046903376a9b2efc1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  darkness: {fileID: 2125480669}
-  candleLight: {fileID: 235911904}
 --- !u!114 &570678436
 MonoBehaviour:
   m_ObjectHideFlags: 0

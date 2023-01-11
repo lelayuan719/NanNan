@@ -12,20 +12,10 @@ public class ItemDatabase : MonoBehaviour
     }
 
     public Item GetItem(string itemName){
-        //return items.Find(item => item.title == itemName);
         return items[itemName];
     }
 
     void BuildDatabase(){
-        //List<Item> _items = new List<Item>(){
-        //    new Item("bear","A stuffed bear"),
-        //    new Item("book","A book"),
-        //    new Item("amulet","A magical amulet"),
-        //    new Item("matches","Matches"),
-        //    new Item("shard","A sharp shard"),
-        //    new Item("key", "A strange key"),
-        //    new Item("fruit","A tasty fruit"),
-        //};
         var _items = new List<(string, string, string)>(){
             ("bear", "Bear", "A stuffed bear"),
             ("book", "Book", "A book"),

@@ -1,34 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
-
-public class PuzzleCandle : MonoBehaviour
+public class CandleFlicker : MonoBehaviour
 {
-    public GameObject darkness;
-    public UnityEngine.Rendering.Universal.Light2D candleLight;
-    private bool updated = false;
     private bool isFlickering = false;
+    private Light2D candleLight;
     private float timeDelay;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+        candleLight = GetComponent<Light2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         /*if (updated && !isFlickering){
             StartCoroutine(CandleEffect());
         }*/
-    }
-
-    public void Activate()
-    {
-        updated = true;
-        darkness.SetActive(false);
-        candleLight.enabled = true;
     }
 
     IEnumerator CandleEffect(){
