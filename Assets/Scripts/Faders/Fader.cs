@@ -40,6 +40,12 @@ public abstract class Fader : MonoBehaviour
         Fade(time, -1);
     }
 
+    // Symmetric fade in and out
+    public void FadeInOut(float time)
+    {
+        StartCoroutine(FadeInOutCR(time));
+    }
+
     IEnumerator FadeCR(float time, int direction)
     {
         float startTime = Time.time;
@@ -60,5 +66,14 @@ public abstract class Fader : MonoBehaviour
 
         // Set value to final value
         SetValue(endValue);
+    }
+
+    IEnumerator FadeInOutCR(float time)
+    {
+        float halfTime = time / 2;
+        Coroutine cr = StartCoroutine(FadeCR(halfTime, +1));
+        yield return new WaitForSeconds(halfTime);
+        StopCoroutine(cr);
+        StartCoroutine(FadeCR(halfTime, -1));
     }
 }
