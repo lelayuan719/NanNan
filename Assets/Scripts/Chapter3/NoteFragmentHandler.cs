@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,7 +10,7 @@ public class NoteFragmentHandler : MonoBehaviour
     public int collectedFragments = 0;
 
     [SerializeField] GameObject notePrefab;
-    [SerializeField] List<GameObject> noteLocations;
+    [SerializeField] List<Transform> noteLocations;
     [SerializeField] UnityEvent onCompleteNote;
 
     List<GameObject> spawnedNotes = new List<GameObject>();
@@ -22,22 +23,29 @@ public class NoteFragmentHandler : MonoBehaviour
         // Iterate through rooms
         for (int roomI = 0; roomI < noteLocations.Count; roomI++)
         {
-            int[] allNoteI;
+            int[] spawnNoteI;
 
             // Get which rooms have a note in
             if (roomI == doubleRoom)
             {
-                allNoteI = new int[] { 0, 1 };
+                spawnNoteI = new int[] { 0, 1 };
             }
             else
             {
-                allNoteI = new int[] { Random.Range(0, 2) };
+                spawnNoteI = new int[] { Random.Range(0, 2) };
+            }
+
+            // Enable movable objects
+            foreach (var collider in noteLocations[roomI].GetComponentsInChildren<Collider2D>())
+            {
+                collider.enabled = true;
+                collider.gameObject.transform.Translate(0, 0, -1);
             }
 
             // Spawn notes
-            foreach (int noteI in allNoteI)
+            foreach (int noteI in spawnNoteI)
             {
-                Transform noteLocation = noteLocations[roomI].transform.GetChild(noteI);
+                Transform noteLocation = noteLocations[roomI].GetChild(noteI);
                 SpawnNoteAt(noteLocation);
             }
         }
@@ -64,6 +72,7 @@ public class NoteFragmentHandler : MonoBehaviour
 
     void SpawnNoteAt(Transform location)
     {
+        // Spawn note
         GameObject note = Instantiate(notePrefab, location);
         note.transform.localPosition = Vector3.zero;
         spawnedNotes.Add(note);

@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b9fb53778d5a082459a97f6b6d260eb9, type: 3}
+    - target: {fileID: 2487823935105111040, guid: d6711d25a2c2b3f4a99d9de00699c787, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2487823935105111051, guid: d6711d25a2c2b3f4a99d9de00699c787, type: 3}
       propertyPath: m_Name
       value: Note Fragment
@@ -21,11 +25,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2487823935105111052, guid: d6711d25a2c2b3f4a99d9de00699c787, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5599465
+      value: 0.36738086
       objectReference: {fileID: 0}
     - target: {fileID: 2487823935105111052, guid: d6711d25a2c2b3f4a99d9de00699c787, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.31593528
+      value: 0.18428504
       objectReference: {fileID: 0}
     - target: {fileID: 2487823935105111052, guid: d6711d25a2c2b3f4a99d9de00699c787, type: 3}
       propertyPath: m_LocalPosition.x
