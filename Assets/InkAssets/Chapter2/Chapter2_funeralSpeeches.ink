@@ -1,0 +1,6 @@
+Principal: … and [grandma’s name] will live on forever in our hearts. 
+Principal: Before we end the ceremony, let’s listen to a few words from my friend, the Warlock. He was a student of hers many years ago.
+Warlock: (crying/tears on face) Ahem… Hello everyone. I am deeply sorry that Miss [grandma] is no longer with us. She was an amazing teacher that went above and beyond for every student in her class. May she rest in peace. *sniff* 
+Warlock: I never had the chance to express my gratitude to her for changing my life. If possible, I would like to get in contact with her family to see if I can do anything for them…
+Mother: Unless you can save my sick son, there is nothing you can do for us.
+Warlock: Actually, I learned some medicine in the city that may be useful…
