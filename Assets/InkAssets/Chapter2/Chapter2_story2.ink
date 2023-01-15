@@ -1,0 +1,4 @@
+Grandma: Yes...When the people at the seaside first arrived, those who lived here from a long time ago, told them that the mountains here are sacred and we must be in awe… 
+Grandma: The mountain people say that a long, long time ago, a colorful brilliance fell from the sky and landed in the mountains here. That is, the "Great Immortal" fell from the sky into the mortal world. 
+Grandma: The Great Immortal has boundless mana, allowing clear springs to flow in the mountains even during winter. The crops watered by these springs are extremely lush.
+Grandma: If it gets angry, the mountains will tremble, the sky will crack, and the raging rain is its anger.

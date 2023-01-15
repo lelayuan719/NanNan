@@ -1,0 +1,5 @@
+Grandma: Our ancestors kept in touch with the "Great Immortal". They built a well for the "Great Immortal" spring, which was also used as a place to worship it. 
+Grandma: People would offer to it the bailing fruit from the mountain and the wine made from the spring water. It will also become the image of an animal, sometimes a fox, sometimes a tiger or a snake, giving people some inspiration. 
+Grandma: To the especially lucky people among them, the “Great Immortal” will give them a part of itself: an amulet. People will regard it as the incarnation of the "Great Immortal" and enshrine it at home, called a "home immortal". 
+Grandma: In the past, some people who had a "home immortal" in their homes could gain magical abilities through these amulets. When people encountered problems that could not be solved, they would turn to these "little gods". 
+Grandma: Some of them could talk to animals, and some of them could see ghost spirits. Some of them would treat illnesses, and some would give locations for people to live. It's been a long, long time since anyone has received one of these.
