@@ -33,6 +33,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter2/Chapter2_End.unity
     guid: 85015cee274f72f40a4a61ceed706a6b
   - enabled: 1
+    path: Assets/Scenes/Chapter2/Chapter2_Funeral.unity
+    guid: cb5988efdd9238042bb4c29210dac269
+  - enabled: 1
     path: Assets/Scenes/Chapter3/Chapter3_Book.unity
     guid: cb05489caf01e6940bd01742c106e953
   - enabled: 1
@@ -50,7 +53,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndDemo.unity
     guid: 3409a218712afea4582eefe9a2e82e52
-  - enabled: 1
-    path: Assets/Scenes/Chapter2/Chapter2_Funeral.unity
-    guid: cb5988efdd9238042bb4c29210dac269
   m_configObjects: {}

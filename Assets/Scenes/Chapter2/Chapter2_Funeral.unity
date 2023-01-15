@@ -1283,7 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57faa669611da6949ad5c8a3cbfd9b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: Chapter3_main
+  NextScene: Chapter3_Book
   outTransitionType: 1
   outTransitionTime: 2
   textInTime: 3
