@@ -3,7 +3,6 @@ Grandma: Haha... I don't know.
 Grandma: But later, things from the outside world came to us, people saw cars, and people talking in small boxes... Fewer and fewer people actually remember these ancient traditions. 
 Grandma: Later, people became more and more disrespectful to the mountains and forests. They cut down the wood and sold it to people outside. Even the bailing fruit, which was only supplied to the Great Immortal, was picked and sold. 
 Grandma: A long time ago, the bailing fruit was really bailing fruit. No matter what you were sick with, you would feel better after eating bailing fruit. Now it is just an ordinary fruit.
-NanNan looked at the basket in her hand.
 Grandma: But the Great Immortal also has a temper... When people provoke it, it will retaliate... Twenty years ago, the second boy of the Li family from the next village cut down the thousand-year-old tree by the Great Immortal well. Later... later …
 NanNan: What happened to him later?
 Grandma: Then he went crazy! He made a bed out of the wood of that tree. When he slept on it, in the middle of the night, he always felt like he was being eaten by a big sticky mouth. He could never fall asleep and his wife was scared away… 
