@@ -50,6 +50,7 @@ public class Book : MonoBehaviour {
     public Image Right;
     public Image RightNext;
     public UnityEvent OnFlip;
+    public UnityEvent onReachEnd;
     float radius1, radius2;
     //Spine Bottom
     Vector3 sb;
@@ -394,6 +395,13 @@ public class Book : MonoBehaviour {
         ShadowLTR.gameObject.SetActive(false);
         if (OnFlip != null)
             OnFlip.Invoke();
+
+        // Test for end and change scene
+        if (currentPage >= bookPages.Length )
+        {
+            print("Reached end");
+            onReachEnd.Invoke();
+        }
     }
     public void TweenBack()
     {

@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57faa669611da6949ad5c8a3cbfd9b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: Chapter3_main
+  NextScene: Chapter3_Book
   outTransitionType: 1
   outTransitionTime: 2
   textInTime: 3
@@ -1534,11 +1534,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4603072348880616938, guid: 65937e22227c9404cad29a23e623e3a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -59.63
+      value: -60.44
       objectReference: {fileID: 0}
     - target: {fileID: 4603072348880616938, guid: 65937e22227c9404cad29a23e623e3a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7
+      value: -3.02
       objectReference: {fileID: 0}
     - target: {fileID: 4603072348880616938, guid: 65937e22227c9404cad29a23e623e3a2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2404,11 +2404,11 @@ PrefabInstance:
       objectReference: {fileID: 763737524}
     - target: {fileID: 7177278981984282445, guid: 4db0f4852c5245542ba2747eac482ce6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -84.37341
+      value: -85.18341
       objectReference: {fileID: 0}
     - target: {fileID: 7177278981984282445, guid: 4db0f4852c5245542ba2747eac482ce6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.4199963
+      value: -7.739996
       objectReference: {fileID: 0}
     - target: {fileID: 7177278981984282445, guid: 4db0f4852c5245542ba2747eac482ce6, type: 3}
       propertyPath: m_LocalPosition.z
