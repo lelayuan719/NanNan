@@ -39,7 +39,12 @@ public class NoteFragmentHandler : MonoBehaviour
             foreach (var collider in noteLocations[roomI].GetComponentsInChildren<Collider2D>())
             {
                 collider.enabled = true;
-                collider.gameObject.transform.Translate(0, 0, -1);
+                if (collider.TryGetComponent(out ToggleMoveObject toggleMove))
+                    toggleMove.RestorePos();
+
+                Vector3 newPos = collider.transform.position;
+                newPos.z = -1;
+                collider.transform.position = newPos;
             }
 
             // Spawn notes

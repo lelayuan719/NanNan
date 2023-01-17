@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2216807265274391997}
   - component: {fileID: 2216807265274391969}
   - component: {fileID: 2216807265274391968}
-  - component: {fileID: 2216807265274391996}
   - component: {fileID: 2216807265274391971}
+  - component: {fileID: 8882176840202098319}
   m_Layer: 0
   m_Name: Movable Object
   m_TagString: Untagged
@@ -152,49 +152,11 @@ MonoBehaviour:
   moveTime: 1
   moveSpeed: -1
   flipSprite: 0
+  trackDestination: 0
   destination: {fileID: 0}
   onComplete:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2216807265274391969}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2216807265274391996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2216807265274391973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71c7224564e5cac4d935748c26fe76de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2216807265274391968}
-        m_TargetAssemblyTypeName: MoveAnimation, Assembly-CSharp
-        m_MethodName: Move
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2216807265274391971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,3 +171,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newCursor: 5
   canPickUp: 0
+--- !u!114 &8882176840202098319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2216807265274391973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fb76dff8e890a4d8d2f5408824ecc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cycleOnClick: 1
+  destination: {fileID: 0}
+  canMoveAgain: 1

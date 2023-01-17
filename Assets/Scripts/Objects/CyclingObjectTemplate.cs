@@ -47,7 +47,7 @@ public abstract class CyclingObjectTemplate : MonoBehaviour
     public void RestorePos()
     {
         positionI = 0;
-        transform.position = otherDestinations[positionI].position;
+        transform.position = positions[0];
     }
 
     protected virtual void StopMoving()
