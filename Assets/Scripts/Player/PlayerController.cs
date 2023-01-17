@@ -15,7 +15,6 @@ public class PlayerController : GenericController
     Rigidbody2D rb;
     ClimbingController climbCtrl;
     SpriteRenderer sr;
-    Collider2D collide;
     Animator anim;
 
     [HideInInspector] public bool instantDoors;
@@ -29,11 +28,8 @@ public class PlayerController : GenericController
         base.Start();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        collide = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
         climbCtrl = GetComponent<ClimbingController>();
-
-        anim.SetBool("isWalking",false);
     }
 
     // Update is called once per frame
@@ -54,24 +50,29 @@ public class PlayerController : GenericController
         if (playerCanMove && CanMoveHorizClimbing())
         {
             inputHorizontal = Input.GetAxisRaw("Horizontal");
-            rb.velocity = new Vector2(inputHorizontal * speed, rb.velocity.y);
-            if (inputHorizontal != 0)
+            TryMove(inputHorizontal);
+        }
+    }
+
+    public void TryMove(float direction)
+    {
+        rb.velocity = new Vector2(direction * speed, rb.velocity.y);
+        if (direction != 0)
+        {
+            anim.SetBool("isTalking", false);
+            anim.SetBool("isWalking", true);
+            if (direction < 0)
             {
-                anim.SetBool("isTalking", false);
-                anim.SetBool("isWalking", true);
-                if (inputHorizontal < 0)
-                {
-                    sr.flipX = true;
-                }
-                else
-                {
-                    sr.flipX = false;
-                }
+                sr.flipX = true;
             }
             else
             {
-                anim.SetBool("isWalking", false);
+                sr.flipX = false;
             }
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
         }
     }
 

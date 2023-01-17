@@ -72,7 +72,7 @@ public class SceneLoader : MonoBehaviour
         if (transition.transitionType == SceneTransitionSettings.TransitionType.Instant)
         {
             ContinueLoad();
-            idx--;
+            //idx--;
         }
         else if (transition.transitionType == SceneTransitionSettings.TransitionType.LoadScene)
         {
@@ -110,8 +110,8 @@ public class SceneLoader : MonoBehaviour
         if (!noCleanupTransitions.Contains(transition.transitionType))
         {
             SceneTransition transitionObj = transitions[(int)transition.transitionType - 1];
-            transitionObj.gameObject.SetActive(false);
             transitionObj.StopTransition();
+            transitionObj.gameObject.SetActive(false);
         }
     }
 
