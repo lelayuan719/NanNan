@@ -2,10 +2,14 @@ using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class Fader : MonoBehaviour
 {
     [MinMaxSlider(0, 1)] [SerializeField] Vector2 minMax;
+
+    public UnityEvent onFadeIn;
+    public UnityEvent onFadeOut;
 
     Coroutine cr;
 
@@ -66,6 +70,12 @@ public abstract class Fader : MonoBehaviour
 
         // Set value to final value
         SetValue(endValue);
+
+        // Activate callback
+        if (direction == +1)
+            onFadeIn.Invoke();
+        else
+            onFadeOut.Invoke();
     }
 
     IEnumerator FadeInOutCR(float time)
