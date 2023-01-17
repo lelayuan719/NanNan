@@ -15,13 +15,15 @@ public class MoveAnimation : MonoBehaviour
     [ShowIf("IsTimeBased")] [SerializeField] float moveTime = 0;
     [HideIf("IsTimeBased")] [SerializeField] float moveSpeed = 0;
     [SerializeField] bool flipSprite;
-    [SerializeField] Transform destination;
-    [SerializeField] UnityEvent onComplete;
+    [Tooltip("Updates the destination's location while moving, instead of on awake.")] [SerializeField] bool trackDestination;
+    [SerializeField] public Transform destination;
+    public UnityEvent onComplete;
 
     Coroutine cr;
     SpriteRenderer sr;
     Rigidbody2D rb;
     bool isFloating = true; // Floating bodies move to both x and y
+    Vector2 destVec;
 
     bool IsTimeBased() => typeOfMove == MoveType.TimeBased;
 
@@ -35,6 +37,8 @@ public class MoveAnimation : MonoBehaviour
         {
             isFloating = false;
         }
+
+        destVec = destination.position;
     }
 
     public void Move()
@@ -47,21 +51,32 @@ public class MoveAnimation : MonoBehaviour
         StopCoroutine(cr);
     }
 
+    public void ChangeDest(Vector2 newDest)
+    {
+        destVec = newDest;
+    }
+
+    public void ChangeDest(Transform newDest)
+    {
+        destVec = newDest.position;
+    }
+
     IEnumerator MoveCR()
     {
         Vector3 startPos = transform.position;
+        if (trackDestination) destVec = destination.position;
         float startTime = Time.time;
-        float directionToMove = Mathf.Sign(destination.position.x - transform.position.x);
+        float directionToMove = Mathf.Sign(destVec.x - transform.position.x);
 
         // Check for already there
-        if ((Vector2)destination.position == (Vector2)transform.position)
+        if (destVec == (Vector2)transform.position)
         {
             if (onComplete != null) onComplete.Invoke();
             yield break;
         }
 
         // Get direction and flip sprite if necessary
-        float distance = Vector2.Distance(destination.position, transform.position);
+        float distance = Vector2.Distance(destVec, transform.position);
         if (flipSprite)
         {
             if (directionToMove < 0)
@@ -88,7 +103,8 @@ public class MoveAnimation : MonoBehaviour
             float elapsedTime;
             while ((elapsedTime = Time.time - startTime) < newTime)
             {
-                transform.position = Vector3.Lerp(startPos, destination.position, elapsedTime / newTime);
+                if (trackDestination) destVec = destination.position;
+                transform.position = Vector3.Lerp(startPos, destVec, elapsedTime / newTime);
                 yield return new WaitForEndOfFrame();
             }
         }
@@ -107,8 +123,13 @@ public class MoveAnimation : MonoBehaviour
                 newSpeed = moveSpeed;
             }
 
-            while (Mathf.Sign(destination.position.x - transform.position.x) == directionToMove)
+            while (Mathf.Sign(destVec.x - transform.position.x) == directionToMove)
             {
+                if (trackDestination)
+                {
+                    destVec = destination.position;
+                    directionToMove = Mathf.Sign(destVec.x - transform.position.x);
+                }
                 rb.velocity = new Vector2(directionToMove * newSpeed, rb.velocity.y);
                 yield return new WaitForFixedUpdate();
             }
@@ -116,10 +137,10 @@ public class MoveAnimation : MonoBehaviour
         }
 
         // Clean up
-        Vector2 destPos = destination.position;
+        Vector2 newVec = destVec;
         if (!isFloating)
-            destPos.y = transform.position.y;
-        transform.position = destPos;
+            newVec.y = transform.position.y;
+        transform.position = newVec;
 
         // Reset and do callback
         if (onComplete != null) onComplete.Invoke();
