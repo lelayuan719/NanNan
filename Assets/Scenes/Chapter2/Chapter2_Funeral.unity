@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 504697376}
   - component: {fileID: 504697375}
   - component: {fileID: 504697379}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mother
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1537,7 +1537,7 @@ GameObject:
   - component: {fileID: 1768837624}
   - component: {fileID: 1768837623}
   - component: {fileID: 1768837622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Warlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
