@@ -370,6 +370,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 126154493164068963, guid: f28f85e411d531b4ca754cfc43ef7ecf, type: 3}
+      propertyPath: m_fontSize
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 126154493164068963, guid: f28f85e411d531b4ca754cfc43ef7ecf, type: 3}
       propertyPath: m_fontColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -383,7 +387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 126154493164068963, guid: f28f85e411d531b4ca754cfc43ef7ecf, type: 3}
       propertyPath: m_fontSizeBase
-      value: 400
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 126154493164068963, guid: f28f85e411d531b4ca754cfc43ef7ecf, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -887,8 +891,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64
-  m_fontSizeBase: 400
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
