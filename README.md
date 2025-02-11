@@ -1,5 +1,9 @@
 # NanNan
 
+## Overview
+
+Nannan is a 2D, story-driven RPG horror game developed using Unity and C#. The game immerses players in a psychological thriller where they navigate a mysterious world filled with intricate puzzles, dynamic interactions, and a haunting narrative. With a strong emphasis on atmospheric storytelling and immersive gameplay mechanics, Nannan challenges players to uncover hidden secrets while making critical choices that shape the outcome. Through multiple rounds of playtesting, the game was refined to deliver a compelling user experience, balancing suspense, strategy, and interactive storytelling.
+
 ## Quick Fixes
 
 * If the main menu screen or dialog is hidden, change the game's aspect ratio
